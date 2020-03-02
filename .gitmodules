@@ -1,0 +1,3 @@
+[submodule "themes/book"]
+	path = themes/book
+	url = git@gitee.com:fencex/hugo-book.git
