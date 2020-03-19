@@ -1,6 +1,6 @@
 ---
 menu:
-  after:
-    weight: 5
-title: Blog
+  after: 
+    weight: 10
+title: 个人随笔
 ---

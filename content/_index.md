@@ -1,41 +1,28 @@
 ---
-title: Introduction
+title: X
 type: docs
 ---
 
-# Acerbo datus maxime
+*Do not go gentle into that good night*
+
+
+## 技术栈
+
+2013-2016: PHP web, 使用**yii framework**, **zend framework**,
+
+2016-2017:  ReactNative, 开发3个上线app, 使用PHP作后端;
+
+2017-2018:  Java web开发:ReactNative, 开发3个上线app, 使用PHP作后端;
+
+2019-至今: 从事大数据开发，工作内容从**集群管理**和**监控**到**数仓开发**和**实时运算**均有所涉及，重心放在 spark 和 flink 的实时运算研发。
 
 {{< columns >}}
-## Astris ipse furtiva
-
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
 
 <--->
 
-## Suis quot vota
-
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
 {{< /columns >}}
 
 
-## Tempora nisi nunc
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+### [邮箱联系](mailto:yagoodidea@gmail.com)
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
