@@ -26,7 +26,7 @@ menu = "main"
 
 ### 1. 克隆bare项目 纯仓库
 
-```
+```sh
 git clone --bare https://github.com/user/repo.git
 cd repo.git
 
@@ -34,7 +34,7 @@ cd repo.git
 
 ### 2. 修改信息
 
-```
+```sh
 
 #!/bin/sh
 
@@ -61,12 +61,13 @@ fi
 
 ### 3. 修正的任务推送到远程
 
-```
+```sh
 git push --force --tags origin 'refs/heads/*'
 ```
 
 ### 4. 清理多余文件
-```
+
+```sh
 cd ..
 rm -rf repo.git
 

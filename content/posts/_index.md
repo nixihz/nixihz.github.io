@@ -1,6 +1,3 @@
 ---
-menu:
-  after: 
-    weight: 10
-title: 个人随笔
+title: 随笔
 ---

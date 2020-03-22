@@ -1,9 +1,8 @@
 ---
-title: X
-type: docs
+title: 关于我
+weight: 0
 bookToc: false
 ---
-
 
 <div style="width: 100%;
     display: block;
@@ -24,14 +23,12 @@ bookToc: false
     font-weight: 400;font-size: 50px;margin-top:20px;">
 
 <div style="width: 100%;display: block;text-align: center;font-weight: 400;margin-top:20px;margin-bottom:20px;font-size: 20px;">
-<img src="/image/roodblauw.png" style="height:350px;"/>
+<img src="/image/roodblauw.png" style="height:350px;">
 </div>
 
-<p style="font-size:17px;font-style: italic;">
-Do not go gentle into that good night
-</p>
-
 </div>
+
+</img>
 
 
 <--->
@@ -69,3 +66,4 @@ Web方向
 
 
 {{< /columns >}}
+
