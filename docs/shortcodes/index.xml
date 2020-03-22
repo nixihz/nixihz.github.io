@@ -77,7 +77,7 @@ Example {{&amp;lt; mermaid [class=&amp;#34;text-center&amp;#34;]&amp;gt;}} seque
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fencex.github.io/docs/shortcodes/tabs/</guid>
-      <description>Tabs Tabs let you organize content by context, for example installation instructions for each supported platform.
+      <description>Tabs32 Tabs let you organize content by context, for example installation instructions for each supported platform.
 {{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example MacOS  MacOS This is tab MacOS content.
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
     </item>

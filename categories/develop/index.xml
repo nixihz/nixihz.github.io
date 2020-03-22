@@ -11,11 +11,38 @@
     
     
     <item>
+      <title>Mysql 介绍</title>
+      <link>https://fencex.github.io/posts/mysql/mysql-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/mysql/mysql-intro/</guid>
+      <description>&lt;p&gt;todo&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Redis 介绍</title>
+      <link>https://fencex.github.io/posts/redis/redis-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/redis/redis-intro/</guid>
+      <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Redis 版本信息</title>
+      <link>https://fencex.github.io/posts/redis/redis-version/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/redis/redis-version/</guid>
+      <description>&lt;p&gt;本文介绍 Redis发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>git重刷提交的email和name信息</title>
-      <link>https://fencex.github.io/posts/2018/git-refresh-commit-email/</link>
+      <link>https://fencex.github.io/posts/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/2018/git-refresh-commit-email/</guid>
+      <guid>https://fencex.github.io/posts/git/git-refresh-commit-email/</guid>
       <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;

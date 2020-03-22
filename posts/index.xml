@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>个人随笔 on fencex</title>
+    <title>随笔 on fencex</title>
     <link>https://fencex.github.io/posts/</link>
-    <description>Recent content in 个人随笔 on fencex</description>
+    <description>Recent content in 随笔 on fencex</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fencex.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>git重刷提交的email和name信息</title>
-      <link>https://fencex.github.io/posts/2018/git-refresh-commit-email/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fencex.github.io/posts/2018/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
-&lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
-&lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
-&lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>hugo最棒的blog主题</title>
@@ -30,6 +18,53 @@
       <guid>https://fencex.github.io/posts/hugo-start/</guid>
       <description>Hugo 测试了这么多主题，book真的非常非常趁手。
 特点  支持搜索 自定义菜单 支持TOC 支持分类和标签 支持按钮|tab|分栏等样式 支持HTML代码  </description>
+    </item>
+    
+    <item>
+      <title>个人简历-WEB开发</title>
+      <link>https://fencex.github.io/posts/about-me-develop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/about-me-develop/</guid>
+      <description>Fence X 后端研发工程师      邮箱
+yagoodidea@gmail.com  微信
+fencex  网站
+fencex.github.io  住址
+上海，浦东   教育经历  2009 - 2013
+电子信息工程(大学本科) 南昌航空大学
+工作经历  2345.COM - 上海二三四五网络 2016.4 - 至今
+ php - 用户账号体系（亿万）和支付体系前后台开发 react native - 上线 3 个app，月流水数千万 golang/vue - 公司合作医疗科研项目 ecrf 独立设计研发从0到1 大数据 - 公司广告平台数据分析和报表开发，Spark Streaming 实时etl，实时报表开发，数仓建模，大数据平台 Ambari 运维.  S·P·D - 北京速派得货运 2014.8 - 2016.4
+ php - O2O时代，货运公司，负责 web 管理系统和客户端 RESTful Api 设计开发 简单运维能力  个人技能  Web方向</description>
+    </item>
+    
+    <item>
+      <title>个人简历-大数据开发</title>
+      <link>https://fencex.github.io/posts/about-me-datacenter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/about-me-datacenter/</guid>
+      <description>Fence X 后端研发工程师      邮箱
+yagoodidea@gmail.com  微信
+fencex  网站
+fencex.github.io  住址
+上海，浦东   教育经历  2009 - 2013
+电子信息工程(大学本科) 南昌航空大学
+工作经历  2345.COM - 上海二三四五网络 2016.4 - 至今
+ php - 用户账号体系（亿万）和支付体系前后台开发 react native - 上线 3 个app，月流水数千万 golang/vue - 公司合作医疗科研项目 ecrf 独立设计研发从0到1 大数据 - 公司广告平台数据分析和报表开发，Spark Streaming 实时etl，实时报表开发，数仓建模，大数据平台 Ambari 运维.  S·P·D - 北京速派得货运 2014.8 - 2016.4
+ php - O2O时代，货运公司，负责 web 管理系统和客户端 RESTful Api 设计开发 简单运维能力  个人技能  Web方向</description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>https://fencex.github.io/posts/about-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/about-me/</guid>
+      <description>Fence X 后端研发工程师       邮箱
+yagoodidea@gmail.com  网站
+fencex.github.io  个人技能  Web方向
+Go  PHP  Java  MySQL  Redis  高并发  大数据方向
+Scala  Spark  Hive  Ambari  Flink  ...    </description>
     </item>
     
   </channel>

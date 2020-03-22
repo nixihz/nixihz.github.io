@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Redis 事务"><meta property="og:title" content="Redis 事务" />
+<meta property="og:description" content="Redis 事务" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fencex.github.io/posts/redis/redis-transaction/" />
+<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" />
+<title>Redis 事务 | fencex</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
+
+
+<script defer src="/en.search.min.e83be4daa96664bb8efe236a7e87b8ae8f512da7379c6795697d96b561590abb.js" integrity="sha256-6Dvk2qlmZLuO/iNqfoe4ro9RLac3nGeVaX2WtWFZCrs="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>fencex</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><strong>组件</strong>
+<ul>
+<li><a href="/posts/redis/">Redis</a></li>
+<li><a href="/posts/mysql/">Mysql</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/posts/git/">Git</a></li>
+<li><a href="/docs/shortcodes/buttons/">Buttons</a></li>
+<li><a href="/docs/shortcodes/columns/">Columns</a></li>
+<li><a href="/docs/shortcodes/expand/">Expand</a></li>
+<li><a href="/docs/shortcodes/hints/">Hints</a></li>
+<li><a href="/docs/shortcodes/katex/">Katex</a></li>
+<li><a href="/docs/shortcodes/mermaid/">Mermaid</a></li>
+<li><a href="/docs/shortcodes/tabs/">Tabs</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><a href="/posts/"><strong>随笔</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
+</li>
+</ul>
+<hr>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Redis 事务</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#redis-事务">Redis 事务</a>
+      <ul>
+        <li><a href="#实例">实例</a></li>
+        <li><a href="#redis-事务命令">Redis 事务命令</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/redis/redis-transaction/">Redis 事务</a>
+  </h1>
+  
+
+<div>
+
+  <h5>March 2, 2020</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/web/">web</a>, 
+        <a href="/categories/redis/">redis</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/redis/">redis</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h1 id="redis-事务">Redis 事务</h1>
+<p>Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
+<ul>
+<li>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</li>
+<li>事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。</li>
+</ul>
+<p>一个事务从开始到执行会经历以下三个阶段：</p>
+<ul>
+<li>开始事务。</li>
+<li>命令入队。</li>
+<li>执行事务。</li>
+</ul>
+<hr>
+<h2 id="实例">实例</h2>
+<p>以下是一个事务的例子， 它先以 <strong>MULTI</strong> 开始一个事务， 然后将多个命令入队到事务中， 最后由 <strong>EXEC</strong> 命令触发事务， 一并执行事务中的所有命令：</p>
+<pre><code>redis 127.0.0.1:6379&gt; MULTI
+OK
+ 
+redis 127.0.0.1:6379&gt; SET book-name &quot;Mastering C++ in 21 days&quot;
+QUEUED
+ 
+redis 127.0.0.1:6379&gt; GET book-name
+QUEUED
+ 
+redis 127.0.0.1:6379&gt; SADD tag &quot;C++&quot; &quot;Programming&quot; &quot;Mastering Series&quot;
+QUEUED
+ 
+redis 127.0.0.1:6379&gt; SMEMBERS tag
+QUEUED
+ 
+redis 127.0.0.1:6379&gt; EXEC
+1) OK
+2) &quot;Mastering C++ in 21 days&quot;
+3) (integer) 3
+4) 1) &quot;Mastering Series&quot;
+   2) &quot;C++&quot;
+   3) &quot;Programming&quot;
+</code></pre><hr>
+<h2 id="redis-事务命令">Redis 事务命令</h2>
+<p>下表列出了 redis 事务的相关命令：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">命令及描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><a href="https://redis.io/commands/discard">DISCARD</a> 取消事务，放弃执行事务块内的所有命令。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><a href="https://redis.io/commands/exec">EXEC</a> 执行所有事务块内的命令。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><a href="https://redis.io/commands/multi">MULTI</a> 标记一个事务块的开始。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><a href="https://redis.io/commands/unwatch">UNWATCH</a> 取消 WATCH 命令对所有 key 的监视。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><a href="https://redis.io/commands/watch">WATCH key [key &hellip;]</a> 监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断。</td>
+</tr>
+</tbody>
+</table></p>
+</article>
+
+
+<script src=""></script>
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#redis-事务">Redis 事务</a>
+      <ul>
+        <li><a href="#实例">实例</a></li>
+        <li><a href="#redis-事务命令">Redis 事务命令</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
