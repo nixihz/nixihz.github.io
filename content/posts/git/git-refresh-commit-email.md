@@ -1,18 +1,16 @@
-+++
-title = "git重刷提交的email和name信息"
-description = "git 重刷提交的email和name信息"
-tags = [
-    "git",
-]
-date = "2020-03-02"
-categories = [
-    "develop",
-    "git",
-]
-menu = "main"
-+++
+---
+title : "git重刷提交的email和name信息"
+description : "git 重刷提交的email和name信息"
+tags :
+  - "git"
+date : "2020-03-02"
+categories : 
+  - "develop"
+  -  "git"
+menu : "main"
+---
 
-## 场景
+## 场景 <audio src="/" preload="none" />
 
 公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；
 

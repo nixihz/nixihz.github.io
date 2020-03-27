@@ -7,6 +7,11 @@ headless: true
   - [Mysql]({{< relref "/posts/mysql" >}})
 ----
 
+- **备忘**
+  - [Golang]({{< relref "/posts/cheatsheet/golang" >}})
+----
+
+
 - **工具**
   - [Git]({{< relref "/posts/git" >}})
   - [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
