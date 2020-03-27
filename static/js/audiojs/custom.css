@@ -1,4 +1,6 @@
-p { clear: both; display:inline-block;margin-block-start: 0em;margin-block-end: 1em;}
+p { clear: both; 
+	/* display:inline-block; */
+	margin-block-start: 0em;margin-block-end: 1em;}
 .audiojs { float:left; height: 25px; width:25px;background: rgba(255,255,255,0);box-shadow: 1px 1px 8px rgba(0, 0, 0, 0);}
 .audiojs .play-pause { width: 25px; height: 25px; padding: 0px 0px 0px 0px; border-right:0}
 .audiojs .play { width: 25px; height: 25px; background: url(/js/includes/play.png) 0px 0px no-repeat; 
