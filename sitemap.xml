@@ -3,233 +3,233 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-interview/</loc>
+    <loc>https://keli.tech/posts/redis/redis-interview/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/cheatsheet/golang/golang-module-usage/</loc>
+    <loc>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/mysql/mysql-intro/</loc>
+    <loc>https://keli.tech/posts/mysql/mysql-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-intro/</loc>
+    <loc>https://keli.tech/posts/redis/redis-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/</loc>
+    <loc>https://keli.tech/docs/example/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/table-of-contents/with-toc/</loc>
+    <loc>https://keli.tech/docs/example/table-of-contents/with-toc/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/table-of-contents/without-toc/</loc>
+    <loc>https://keli.tech/docs/example/table-of-contents/without-toc/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-data-types/</loc>
+    <loc>https://keli.tech/posts/redis/redis-data-types/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-version/</loc>
+    <loc>https://keli.tech/posts/redis/redis-version/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-replication/</loc>
+    <loc>https://keli.tech/posts/redis/redis-replication/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-transaction/</loc>
+    <loc>https://keli.tech/posts/redis/redis-transaction/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-pipelined/</loc>
+    <loc>https://keli.tech/posts/redis/redis-pipelined/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-rdb-aof/</loc>
+    <loc>https://keli.tech/posts/redis/redis-rdb-aof/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/redis-module/</loc>
+    <loc>https://keli.tech/posts/redis/redis-module/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/table-of-contents/</loc>
+    <loc>https://keli.tech/docs/example/table-of-contents/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/collapsed/</loc>
+    <loc>https://keli.tech/docs/example/collapsed/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/</loc>
+    <loc>https://keli.tech/categories/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/redis/</loc>
+    <loc>https://keli.tech/tags/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/tags/redis/</loc>
+    <loc>https://keli.tech/categories/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/redis/</loc>
+    <loc>https://keli.tech/posts/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/tags/</loc>
+    <loc>https://keli.tech/tags/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/web/</loc>
+    <loc>https://keli.tech/categories/web/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/</loc>
+    <loc>https://keli.tech/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/develop/</loc>
+    <loc>https://keli.tech/categories/develop/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/tags/git/</loc>
+    <loc>https://keli.tech/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/git/</loc>
+    <loc>https://keli.tech/tags/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/git/</loc>
+    <loc>https://keli.tech/posts/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/git/git-refresh-commit-email/</loc>
+    <loc>https://keli.tech/posts/git/git-refresh-commit-email/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/tags/golang/</loc>
+    <loc>https://keli.tech/tags/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/golang/</loc>
+    <loc>https://keli.tech/categories/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/cheatsheet/golang/</loc>
+    <loc>https://keli.tech/posts/cheatsheet/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/tags/mysql/</loc>
+    <loc>https://keli.tech/tags/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/categories/mysql/</loc>
+    <loc>https://keli.tech/categories/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/mysql/</loc>
+    <loc>https://keli.tech/posts/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/collapsed/3rd-level/4th-level/</loc>
+    <loc>https://keli.tech/docs/example/collapsed/3rd-level/4th-level/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/collapsed/3rd-level/</loc>
+    <loc>https://keli.tech/docs/example/collapsed/3rd-level/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/example/hidden/</loc>
+    <loc>https://keli.tech/docs/example/hidden/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/</loc>
+    <loc>https://keli.tech/docs/shortcodes/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/buttons/</loc>
+    <loc>https://keli.tech/docs/shortcodes/buttons/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/columns/</loc>
+    <loc>https://keli.tech/docs/shortcodes/columns/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/expand/</loc>
+    <loc>https://keli.tech/docs/shortcodes/expand/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/hints/</loc>
+    <loc>https://keli.tech/docs/shortcodes/hints/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/katex/</loc>
+    <loc>https://keli.tech/docs/shortcodes/katex/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/mermaid/</loc>
+    <loc>https://keli.tech/docs/shortcodes/mermaid/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/shortcodes/tabs/</loc>
+    <loc>https://keli.tech/docs/shortcodes/tabs/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/docs/</loc>
+    <loc>https://keli.tech/docs/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/about-me/</loc>
+    <loc>https://keli.tech/posts/about-me/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/blog/posts/</loc>
+    <loc>https://keli.tech/posts/</loc>
   </url>
   
 </urlset>

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fencex</title>
-    <link>https://keli.tech/blog/docs/example/collapsed/</link>
+    <link>https://keli.tech/docs/example/collapsed/</link>
     <description>Recent content on fencex</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://keli.tech/blog/docs/example/collapsed/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/docs/example/collapsed/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
