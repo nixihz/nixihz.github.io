@@ -10,7 +10,8 @@ categories:
 weight: 1
 ---
 
-<audio src="/" preload="none"></audio>  终于，在go1.11 版本中，新增了module管理模块功能，用来管理依赖包。
+## Golang Module 备忘 <audio src="/" preload="none"/>
+终于，在go1.11 版本中，新增了module管理模块功能，用来管理依赖包。
 文章包你  
 一招鲜，走天下
 
