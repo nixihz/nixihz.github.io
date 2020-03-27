@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="(Hu)go Template Primer"><meta property="og:title" content="(Hu)go Template Primer" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="(Hu)go Template Primer"/><meta property="og:title" content="(Hu)go Template Primer"/>
 <meta property="og:description" content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fencex.github.io/posts/goisforlovers/" />
-<meta property="article:published_time" content="2014-04-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2014-04-02T00:00:00+00:00" />
+This document is a brief primer on using Go templates."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://fencex.github.io/posts/goisforlovers/"/>
+<meta property="article:published_time" content="2014-04-02T00:00:00+00:00"/>
+<meta property="article:modified_time" content="2014-04-02T00:00:00+00:00"/>
 <title>(Hu)go Template Primer | fencex</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/x-icon"/>
 
 
-<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="/>
 
 
-<script defer src="/en.search.min.b6c04dd5097faa8565aab74b659f8d714b1755404aeeaa1fe465b33c1e1bda2d.js" integrity="sha256-tsBN1Ql/qoVlqrdLZZ&#43;NcUsXVUBK7qof5GWzPB4b2i0="></script>
+<script defer="" src="/en.search.min.b6c04dd5097faa8565aab74b659f8d714b1755404aeeaa1fe465b33c1e1bda2d.js" integrity="sha256-tsBN1Ql/qoVlqrdLZZ+NcUsXVUBK7qof5GWzPB4b2i0="></script>
 
 <!--
 Made with Book Theme
@@ -29,7 +26,7 @@ https://github.com/alex-shpak/hugo-book
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+  <input type="checkbox" class="hidden" id="menu-control"/>
   <main class="container flex">
     <aside class="book-menu">
       
@@ -41,7 +38,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -73,7 +70,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
   
   <li>
-    <a href="/posts/" >
+    <a href="/posts/">
         Blog
       </a>
   </li>
@@ -98,19 +95,19 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
   </label>
 
   <strong>(Hu)go Template Primer</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
+    <input type="checkbox" class="hidden" id="toc-control"/>
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
@@ -150,7 +147,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel=stylesheet href="" >
+<link rel="stylesheet" href=""/>
 
 
 <article class="markdown">
@@ -188,7 +185,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><p>Hugo uses the excellent <a href="https://golang.org/">Go</a> <a href="https://golang.org/pkg/html/template/">html/template</a> library for
+  <p></p><p>Hugo uses the excellent <a href="https://golang.org/">Go</a> <a href="https://golang.org/pkg/html/template/">html/template</a> library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website. If you have used other
@@ -207,7 +204,7 @@ details can be found in the <a href="https://golang.org/pkg/html/template/">Go d
 <p>Golang templates are HTML files with the addition of variables and
 functions.</p>
 <p><strong>Go variables and functions are accessible within {{ }}</strong></p>
-<p>Accessing a predefined variable &ldquo;foo&rdquo;:</p>
+<p>Accessing a predefined variable “foo”:</p>
 <pre><code>{{ foo }}
 </code></pre>
 <p><strong>Parameters are separated using spaces</strong></p>
@@ -215,11 +212,11 @@ functions.</p>
 <pre><code>{{ add 1 2 }}
 </code></pre>
 <p><strong>Methods and fields are accessed via dot notation</strong></p>
-<p>Accessing the Page Parameter &ldquo;bar&rdquo;</p>
+<p>Accessing the Page Parameter “bar”</p>
 <pre><code>{{ .Params.bar }}
 </code></pre>
 <p><strong>Parentheses can be used to group items together</strong></p>
-<pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
+<pre><code>{{ if or (isset .Params &#34;alt&#34;) (isset .Params &#34;caption&#34;) }} Caption {{ end }}
 </code></pre>
 <h2 id="variables">Variables</h2>
 <p>Each Go template has a struct (object) made available to it. In hugo each
@@ -230,7 +227,7 @@ page you are rendering. More details are available on the
 <pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
 </code></pre>
 <p>Variables can also be defined and referenced.</p>
-<pre><code>{{ $address := &quot;123 Main St.&quot;}}
+<pre><code>{{ $address := &#34;123 Main St.&#34;}}
 {{ $address }}
 </code></pre>
 <h2 id="functions">Functions</h2>
@@ -250,7 +247,7 @@ able to access. To pass along the current context please remember to
 include a trailing dot. The templates location will always be starting at
 the /layout/ directory within Hugo.</p>
 <p><strong>Example:</strong></p>
-<pre><code>{{ template &quot;chrome/header.html&quot; . }}
+<pre><code>{{ template &#34;chrome/header.html&#34; . }}
 </code></pre>
 <h2 id="logic">Logic</h2>
 <p>Go templates provide the most basic iteration and conditional logic.</p>
@@ -284,36 +281,36 @@ logic in Go Templates. Like range, each statement is closed with <code>end</code
 <li>any array, slice, map, or string of length zero</li>
 </ul>
 <p><strong>Example 1: If</strong></p>
-<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
+<pre><code>{{ if isset .Params &#34;title&#34; }}&lt;h4&gt;{{ index .Params &#34;title&#34; }}&lt;/h4&gt;{{ end }}
 </code></pre>
 <p><strong>Example 2: If -&gt; Else</strong></p>
-<pre><code>{{ if isset .Params &quot;alt&quot; }}
-    {{ index .Params &quot;alt&quot; }}
+<pre><code>{{ if isset .Params &#34;alt&#34; }}
+    {{ index .Params &#34;alt&#34; }}
 {{else}}
-    {{ index .Params &quot;caption&quot; }}
+    {{ index .Params &#34;caption&#34; }}
 {{ end }}
 </code></pre>
 <p><strong>Example 3: And &amp; Or</strong></p>
-<pre><code>{{ if and (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+<pre><code>{{ if and (or (isset .Params &#34;title&#34;) (isset .Params &#34;caption&#34;)) (isset .Params &#34;attr&#34;)}}
 </code></pre>
 <p><strong>Example 4: With</strong></p>
-<p>An alternative way of writing &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
+<p>An alternative way of writing “if” and then referencing the same value
+is to use “with” instead. With rebinds the context <code>.</code> within its scope,
 and skips the block if the variable is absent.</p>
 <p>The first example above could be simplified as:</p>
 <pre><code>{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}
 </code></pre>
 <p><strong>Example 5: If -&gt; Else If</strong></p>
-<pre><code>{{ if isset .Params &quot;alt&quot; }}
-    {{ index .Params &quot;alt&quot; }}
-{{ else if isset .Params &quot;caption&quot; }}
-    {{ index .Params &quot;caption&quot; }}
+<pre><code>{{ if isset .Params &#34;alt&#34; }}
+    {{ index .Params &#34;alt&#34; }}
+{{ else if isset .Params &#34;caption&#34; }}
+    {{ index .Params &#34;caption&#34; }}
 {{ end }}
 </code></pre>
 <h2 id="pipes">Pipes</h2>
 <p>One of the most powerful components of Go templates is the ability to
 stack actions one after another. This is done by using pipes. Borrowed
-from unix pipes, the concept is simple, each pipeline&rsquo;s output becomes the
+from unix pipes, the concept is simple, each pipeline’s output becomes the
 input of the following pipe.</p>
 <p>Because of the very simple syntax of Go templates, the pipe is essential
 to being able to chain together function calls. One limitation of the
@@ -329,16 +326,16 @@ becomes the last parameter of the next pipeline.</p>
 <p>It does look odd to place the if at the end, but it does provide a good
 illustration of how to use the pipes.</p>
 <p><strong>Example 2 :</strong></p>
-<pre><code>{{ index .Params &quot;disqus_url&quot; | html }}
+<pre><code>{{ index .Params &#34;disqus_url&#34; | html }}
 </code></pre>
-<p>Access the page parameter called &ldquo;disqus_url&rdquo; and escape the HTML.</p>
+<p>Access the page parameter called “disqus_url” and escape the HTML.</p>
 <p><strong>Example 3 :</strong></p>
-<pre><code>{{ if or (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+<pre><code>{{ if or (or (isset .Params &#34;title&#34;) (isset .Params &#34;caption&#34;)) (isset .Params &#34;attr&#34;)}}
 Stuff Here
 {{ end }}
 </code></pre>
 <p>Could be rewritten as</p>
-<pre><code>{{  isset .Params &quot;caption&quot; | or isset .Params &quot;title&quot; | or isset .Params &quot;attr&quot; | if }}
+<pre><code>{{  isset .Params &#34;caption&#34; | or isset .Params &#34;title&#34; | or isset .Params &#34;attr&#34; | if }}
 Stuff Here
 {{ end }}
 </code></pre>
@@ -353,7 +350,7 @@ instead of depending on the context.</p>
 <p><strong>Example:</strong></p>
 <pre><code>  {{ $title := .Site.Title }}
   {{ range .Params.tags }}
-    &lt;li&gt; &lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
+    &lt;li&gt; &lt;a href=&#34;{{ $baseurl }}/tags/{{ . | urlize }}&#34;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
   {{ end }}
 </code></pre>
 <p>Notice how once we have entered the loop the value of {{ . }} has changed. We
@@ -370,21 +367,21 @@ you want to inside of your templates.</p>
 templates. This happens in the <a href="/content/front-matter">front matter</a>.</p>
 <p>An example of this is used in this documentation site. Most of the pages
 benefit from having the table of contents provided. Sometimes the TOC just
-doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
+doesn’t make a lot of sense. We’ve defined a variable in our front matter
 of some pages to turn off the TOC from being displayed.</p>
 <p>Here is the example front matter:</p>
 <pre><code>---
-title: &quot;Permalinks&quot;
-date: &quot;2013-11-18&quot;
+title: &#34;Permalinks&#34;
+date: &#34;2013-11-18&#34;
 aliases:
-  - &quot;/doc/permalinks/&quot;
-groups: [&quot;extras&quot;]
+  - &#34;/doc/permalinks/&#34;
+groups: [&#34;extras&#34;]
 groups_weight: 30
 notoc: true
 ---
 </code></pre><p>Here is the corresponding code inside of the template:</p>
 <pre><code>  {{ if not .Params.notoc }}
-    &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
+    &lt;div id=&#34;toc&#34; class=&#34;well col-md-4 col-sm-6&#34;&gt;
     {{ .TableOfContents }}
     &lt;/div&gt;
   {{ end }}
@@ -403,25 +400,25 @@ you would declare it to be HTML-safe, so that the HTML entity is not escaped
 again.  This would let you easily update just your top-level config file each
 January 1st, instead of hunting through your templates.</p>
 <pre><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
-&lt;div class=&quot;text-center&quot;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
+&lt;div class=&#34;text-center&#34;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
 &lt;/footer&gt;{{end}}
-</code></pre><p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
+</code></pre><p>An alternative way of writing the “if” and then referencing the same value
+is to use “with” instead. With rebinds the context <code>.</code> within its scope,
 and skips the block if the variable is absent:</p>
-<pre><code>{{with .Site.Params.TwitterUser}}&lt;span class=&quot;twitter&quot;&gt;
-&lt;a href=&quot;https://twitter.com/{{.}}&quot; rel=&quot;author&quot;&gt;
-&lt;img src=&quot;/images/twitter.png&quot; width=&quot;48&quot; height=&quot;48&quot; title=&quot;Twitter: {{.}}&quot;
- alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+<pre><code>{{with .Site.Params.TwitterUser}}&lt;span class=&#34;twitter&#34;&gt;
+&lt;a href=&#34;https://twitter.com/{{.}}&#34; rel=&#34;author&#34;&gt;
+&lt;img src=&#34;/images/twitter.png&#34; width=&#34;48&#34; height=&#34;48&#34; title=&#34;Twitter: {{.}}&#34;
+ alt=&#34;Twitter&#34;&gt;&lt;/a&gt;
 &lt;/span&gt;{{end}}
-</code></pre><p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
+</code></pre><p>Finally, if you want to pull “magic constants” out of your layouts, you can do
 so, such as in this example:</p>
-<pre><code>&lt;nav class=&quot;recent&quot;&gt;
+<pre><code>&lt;nav class=&#34;recent&#34;&gt;
   &lt;h1&gt;Recent Posts&lt;/h1&gt;
   &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
-    &lt;li&gt;&lt;a href=&quot;{{.RelPermalink}}&quot;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;{{.RelPermalink}}&#34;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
   {{end}}&lt;/ul&gt;
 &lt;/nav&gt;
-</code></pre></p>
+</code></pre><p></p>
 </article>
 
 
@@ -492,9 +489,6 @@ so, such as in this example:</p>
   </main>
 
   
-</body>
-
-</html>
 
 
 
@@ -507,3 +501,7 @@ so, such as in this example:</p>
 
 
 
+
+
+
+</body></html>

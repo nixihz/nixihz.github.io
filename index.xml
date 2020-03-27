@@ -5,10 +5,30 @@
     <link>https://fencex.github.io/</link>
     <description>Recent content in X on fencex</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fencex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redis 面试题</title>
+      <link>https://fencex.github.io/posts/redis/redis-interview/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/redis/redis-interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang Module 备忘</title>
+      <link>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</guid>
+      <description>&lt;p&gt;&lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34;&gt;&lt;/audio&gt;  终于，在go1.11 版本中，新增了module管理模块功能，用来管理依赖包。
+文章包你&lt;br&gt;
+一招鲜，走天下&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Mysql 介绍</title>
@@ -68,7 +88,7 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     </item>
     
     <item>
-      <title>Redis 主从</title>
+      <title>Redis 主从复制</title>
       <link>https://fencex.github.io/posts/redis/redis-replication/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -95,6 +115,15 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     </item>
     
     <item>
+      <title>Redis 持久化方式RDB和AOF比较</title>
+      <link>https://fencex.github.io/posts/redis/redis-rdb-aof/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fencex.github.io/posts/redis/redis-rdb-aof/</guid>
+      <description>&lt;p&gt;Redis的所有数据都是保存在内存中，然后不定期的通过异步方式保存到磁盘上(这称为“半持久化模式”)；也可以把每一次数据变化都写入到一个append only file(aof)里面(这称为“全持久化模式”)。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Redis Module 模块</title>
       <link>https://fencex.github.io/posts/redis/redis-module/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
@@ -109,20 +138,10 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fencex.github.io/posts/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>hugo最棒的blog主题</title>
-      <link>https://fencex.github.io/posts/hugo-start/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fencex.github.io/posts/hugo-start/</guid>
-      <description>Hugo 测试了这么多主题，book真的非常非常趁手。
-特点  支持搜索 自定义菜单 支持TOC 支持分类和标签 支持按钮|tab|分栏等样式 支持HTML代码  </description>
     </item>
     
     <item>
@@ -224,32 +243,16 @@ Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat str
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fencex.github.io/posts/about-me-develop/</guid>
-      <description>Fence X 后端研发工程师      邮箱
-yagoodidea@gmail.com  微信
-fencex  网站
-fencex.github.io  住址
-上海，浦东   教育经历  2009 - 2013
-电子信息工程(大学本科) 南昌航空大学
+      <description>谢志新 - 资深后端研发工程师      基本信息  姓名：谢志新
+出生年月: 1990.05
+学历: 大学本科
+电话：175-212-56756
+邮箱：yagoodidea@gmail.com
+住址: 上海·浦东  教育经历  2009.09 - 2013.06
+南昌航空大学 - 电子信息工程(统招二类本科)
 工作经历  2345.COM - 上海二三四五网络 2016.4 - 至今
- php - 用户账号体系（亿万）和支付体系前后台开发 react native - 上线 3 个app，月流水数千万 golang/vue - 公司合作医疗科研项目 ecrf 独立设计研发从0到1 大数据 - 公司广告平台数据分析和报表开发，Spark Streaming 实时etl，实时报表开发，数仓建模，大数据平台 Ambari 运维.  S·P·D - 北京速派得货运 2014.8 - 2016.4
- php - O2O时代，货运公司，负责 web 管理系统和客户端 RESTful Api 设计开发 简单运维能力  个人技能  Web方向</description>
-    </item>
-    
-    <item>
-      <title>个人简历-大数据开发</title>
-      <link>https://fencex.github.io/posts/about-me-datacenter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fencex.github.io/posts/about-me-datacenter/</guid>
-      <description>Fence X 后端研发工程师      邮箱
-yagoodidea@gmail.com  微信
-fencex  网站
-fencex.github.io  住址
-上海，浦东   教育经历  2009 - 2013
-电子信息工程(大学本科) 南昌航空大学
-工作经历  2345.COM - 上海二三四五网络 2016.4 - 至今
- php - 用户账号体系（亿万）和支付体系前后台开发 react native - 上线 3 个app，月流水数千万 golang/vue - 公司合作医疗科研项目 ecrf 独立设计研发从0到1 大数据 - 公司广告平台数据分析和报表开发，Spark Streaming 实时etl，实时报表开发，数仓建模，大数据平台 Ambari 运维.  S·P·D - 北京速派得货运 2014.8 - 2016.4
- php - O2O时代，货运公司，负责 web 管理系统和客户端 RESTful Api 设计开发 简单运维能力  个人技能  Web方向</description>
+ php - 用户账号体系（亿万）和支付体系前后台开发 react native - 上线 3 个react native app，月流水数千万 golang/vue - 公司合作医疗科研项目 ecrf 独立设计研发从0到1 大数据 - 公司广告平台数据分析和报表开发，Spark Streaming 实时etl，实时报表开发，数仓建模，大数据平台 Ambari 运维.  S·P·D - 北京速派得货运 2014.8 - 2016.4
+ php - O2O货运web管理系统和客户端 RESTful Api 设计开发 简单运维能力  7K7K.</description>
     </item>
     
     <item>

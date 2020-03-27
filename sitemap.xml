@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fencex.github.io/posts/redis/redis-interview/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fencex.github.io/posts/mysql/mysql-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
@@ -50,6 +60,11 @@
   </url>
   
   <url>
+    <loc>https://fencex.github.io/posts/redis/redis-rdb-aof/</loc>
+    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fencex.github.io/posts/redis/redis-module/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
@@ -64,42 +79,37 @@
   
   <url>
     <loc>https://fencex.github.io/categories/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/tags/redis/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/categories/redis/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/posts/redis/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/tags/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/categories/web/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fencex.github.io/categories/Blog/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -128,32 +138,27 @@
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/Hugo/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+    <loc>https://fencex.github.io/tags/golang/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/tags/hugo/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+    <loc>https://fencex.github.io/categories/golang/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/hugo-start/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fencex.github.io/posts/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fencex.github.io/tags/mysql/</loc>
+    <loc>https://fencex.github.io/posts/cheatsheet/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fencex.github.io/categories/mysql/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fencex.github.io/tags/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -224,11 +229,11 @@
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/about-me-datacenter/</loc>
+    <loc>https://fencex.github.io/posts/about-me/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/about-me/</loc>
+    <loc>https://fencex.github.io/posts/</loc>
   </url>
   
 </urlset>
