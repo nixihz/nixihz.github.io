@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://keli.tech/posts/tools/hugo/hugo/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/hugo-audio/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/hugo-speech/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/redis/redis-interview/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
@@ -78,6 +93,16 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/categories/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
@@ -108,11 +133,6 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/categories/develop/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
@@ -128,12 +148,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/git/</loc>
+    <loc>https://keli.tech/posts/tools/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/git/git-refresh-commit-email/</loc>
+    <loc>https://keli.tech/posts/tools/git/git-refresh-commit-email/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -153,12 +173,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/mysql/</loc>
+    <loc>https://keli.tech/categories/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/mysql/</loc>
+    <loc>https://keli.tech/tags/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -226,10 +246,6 @@
   
   <url>
     <loc>https://keli.tech/posts/about-me/</loc>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/</loc>
   </url>
   
 </urlset>

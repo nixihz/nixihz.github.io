@@ -5,10 +5,40 @@
     <link>https://keli.tech/</link>
     <description>Recent content in X on fencex</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 基本技巧</title>
+      <link>https://keli.tech/posts/tools/hugo/hugo/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
+      <description>todo</description>
+    </item>
+    
+    <item>
+      <title>Hugo 支持audio播放</title>
+      <link>https://keli.tech/posts/tools/hugo/hugo-audio/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
+      <description>todo</description>
+    </item>
+    
+    <item>
+      <title>Hugo 支持博客朗读</title>
+      <link>https://keli.tech/posts/tools/hugo/hugo-speech/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/tools/hugo/hugo-speech/</guid>
+      <description>&lt;h2 id=&#34;博客朗读-audio-preloadnone&#34;&gt;博客朗读 &lt;audio preload=&#34;none&#34;/&gt;&lt;/h2&gt;
+&lt;p&gt;如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
+如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。&lt;/p&gt;
+&lt;p&gt;说干就干。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Redis 面试题</title>
@@ -26,7 +56,7 @@
       
       <guid>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</guid>
       <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
-&lt;p&gt;终于，在go1.11 版本中，新增了module管理模块功能，用来管理依赖包。
+&lt;p&gt;终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
 文章包你&lt;br&gt;
 一招鲜，走天下&lt;/p&gt;</description>
     </item>
@@ -135,10 +165,10 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     
     <item>
       <title>git重刷提交的email和name信息</title>
-      <link>https://keli.tech/posts/git/git-refresh-commit-email/</link>
+      <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/git/git-refresh-commit-email/</guid>
+      <guid>https://keli.tech/posts/tools/git/git-refresh-commit-email/</guid>
       <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
