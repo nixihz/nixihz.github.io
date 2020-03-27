@@ -3,233 +3,233 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-interview/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-interview/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</loc>
+    <loc>https://keli.tech/blog/posts/cheatsheet/golang/golang-module-usage/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/mysql/mysql-intro/</loc>
+    <loc>https://keli.tech/blog/posts/mysql/mysql-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-intro/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/</loc>
+    <loc>https://keli.tech/blog/docs/example/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/table-of-contents/with-toc/</loc>
+    <loc>https://keli.tech/blog/docs/example/table-of-contents/with-toc/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/table-of-contents/without-toc/</loc>
+    <loc>https://keli.tech/blog/docs/example/table-of-contents/without-toc/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-data-types/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-data-types/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-version/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-version/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-replication/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-replication/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-transaction/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-transaction/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-pipelined/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-pipelined/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-rdb-aof/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-rdb-aof/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/redis-module/</loc>
+    <loc>https://keli.tech/blog/posts/redis/redis-module/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/table-of-contents/</loc>
+    <loc>https://keli.tech/blog/docs/example/table-of-contents/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/collapsed/</loc>
+    <loc>https://keli.tech/blog/docs/example/collapsed/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/</loc>
+    <loc>https://keli.tech/blog/categories/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/tags/redis/</loc>
+    <loc>https://keli.tech/blog/categories/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/redis/</loc>
+    <loc>https://keli.tech/blog/tags/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/redis/</loc>
+    <loc>https://keli.tech/blog/posts/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/tags/</loc>
+    <loc>https://keli.tech/blog/tags/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/web/</loc>
+    <loc>https://keli.tech/blog/categories/web/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/</loc>
+    <loc>https://keli.tech/blog/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/develop/</loc>
+    <loc>https://keli.tech/blog/categories/develop/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/tags/git/</loc>
+    <loc>https://keli.tech/blog/tags/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/git/</loc>
+    <loc>https://keli.tech/blog/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/git/</loc>
+    <loc>https://keli.tech/blog/posts/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/git/git-refresh-commit-email/</loc>
+    <loc>https://keli.tech/blog/posts/git/git-refresh-commit-email/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/tags/golang/</loc>
+    <loc>https://keli.tech/blog/tags/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/golang/</loc>
+    <loc>https://keli.tech/blog/categories/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/cheatsheet/golang/</loc>
+    <loc>https://keli.tech/blog/posts/cheatsheet/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/tags/mysql/</loc>
+    <loc>https://keli.tech/blog/tags/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/categories/mysql/</loc>
+    <loc>https://keli.tech/blog/categories/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/mysql/</loc>
+    <loc>https://keli.tech/blog/posts/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/collapsed/3rd-level/4th-level/</loc>
+    <loc>https://keli.tech/blog/docs/example/collapsed/3rd-level/4th-level/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/collapsed/3rd-level/</loc>
+    <loc>https://keli.tech/blog/docs/example/collapsed/3rd-level/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/example/hidden/</loc>
+    <loc>https://keli.tech/blog/docs/example/hidden/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/buttons/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/buttons/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/columns/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/columns/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/expand/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/expand/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/hints/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/hints/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/katex/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/katex/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/mermaid/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/mermaid/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/shortcodes/tabs/</loc>
+    <loc>https://keli.tech/blog/docs/shortcodes/tabs/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/docs/</loc>
+    <loc>https://keli.tech/blog/docs/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/about-me/</loc>
+    <loc>https://keli.tech/blog/posts/about-me/</loc>
   </url>
   
   <url>
-    <loc>https://fencex.github.io/posts/</loc>
+    <loc>https://keli.tech/blog/posts/</loc>
   </url>
   
 </urlset>

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>X on fencex</title>
-    <link>https://fencex.github.io/</link>
+    <link>https://keli.tech/blog/</link>
     <description>Recent content in X on fencex</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fencex.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Redis 面试题</title>
-      <link>https://fencex.github.io/posts/redis/redis-interview/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-interview/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-interview/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang Module 备忘</title>
-      <link>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</link>
+      <link>https://keli.tech/blog/posts/cheatsheet/golang/golang-module-usage/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</guid>
-      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/blog/posts/cheatsheet/golang/golang-module-usage/</guid>
+      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/blog/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
 &lt;p&gt;终于，在go1.11 版本中，新增了module管理模块功能，用来管理依赖包。
 文章包你&lt;br&gt;
 一招鲜，走天下&lt;/p&gt;</description>
@@ -33,113 +33,113 @@
     
     <item>
       <title>Mysql 介绍</title>
-      <link>https://fencex.github.io/posts/mysql/mysql-intro/</link>
+      <link>https://keli.tech/blog/posts/mysql/mysql-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/mysql/mysql-intro/</guid>
+      <guid>https://keli.tech/blog/posts/mysql/mysql-intro/</guid>
       <description>&lt;p&gt;todo&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 介绍</title>
-      <link>https://fencex.github.io/posts/redis/redis-intro/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-intro/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-intro/</guid>
       <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>With ToC</title>
-      <link>https://fencex.github.io/docs/example/table-of-contents/with-toc/</link>
+      <link>https://keli.tech/blog/docs/example/table-of-contents/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/table-of-contents/with-toc/</guid>
+      <guid>https://keli.tech/blog/docs/example/table-of-contents/with-toc/</guid>
       <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
  Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
     </item>
     
     <item>
       <title>Without ToC</title>
-      <link>https://fencex.github.io/docs/example/table-of-contents/without-toc/</link>
+      <link>https://keli.tech/blog/docs/example/table-of-contents/without-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/table-of-contents/without-toc/</guid>
+      <guid>https://keli.tech/blog/docs/example/table-of-contents/without-toc/</guid>
       <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
 Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
     </item>
     
     <item>
       <title>Redis 数据类型与适用场景</title>
-      <link>https://fencex.github.io/posts/redis/redis-data-types/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-data-types/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-data-types/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-data-types/</guid>
       <description>&lt;p&gt;redis 常被拿来与 memcached 来比较，但非常不通的地方就在于 Redis 有非常出色的数据结构，使用非常简便。
 本文介绍常用的数据类型和使用场景 Strings Lists Hashes Sets Sorted-Sets 等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 版本信息</title>
-      <link>https://fencex.github.io/posts/redis/redis-version/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-version/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-version/</guid>
       <description>&lt;p&gt;本文介绍 Redis发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 主从复制</title>
-      <link>https://fencex.github.io/posts/redis/redis-replication/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-replication/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-replication/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-replication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 事务</title>
-      <link>https://fencex.github.io/posts/redis/redis-transaction/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-transaction/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-transaction/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-transaction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis pipelined 管道</title>
-      <link>https://fencex.github.io/posts/redis/redis-pipelined/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-pipelined/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-pipelined/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-pipelined/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 持久化方式RDB和AOF比较</title>
-      <link>https://fencex.github.io/posts/redis/redis-rdb-aof/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-rdb-aof/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-rdb-aof/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-rdb-aof/</guid>
       <description>&lt;p&gt;Redis的所有数据都是保存在内存中，然后不定期的通过异步方式保存到磁盘上(这称为“半持久化模式”)；也可以把每一次数据变化都写入到一个append only file(aof)里面(这称为“全持久化模式”)。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis Module 模块</title>
-      <link>https://fencex.github.io/posts/redis/redis-module/</link>
+      <link>https://keli.tech/blog/posts/redis/redis-module/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-module/</guid>
+      <guid>https://keli.tech/blog/posts/redis/redis-module/</guid>
       <description>&lt;p&gt;todo&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git重刷提交的email和name信息</title>
-      <link>https://fencex.github.io/posts/git/git-refresh-commit-email/</link>
+      <link>https://keli.tech/blog/posts/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/blog/posts/git/git-refresh-commit-email/</guid>
+      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/blog/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
@@ -147,60 +147,60 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/example/collapsed/3rd-level/4th-level/</link>
+      <link>https://keli.tech/blog/docs/example/collapsed/3rd-level/4th-level/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/collapsed/3rd-level/4th-level/</guid>
+      <guid>https://keli.tech/blog/docs/example/collapsed/3rd-level/4th-level/</guid>
       <description>2344th Level of Menu Caesorum illa tu sentit micat vestes papyriferi Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
 Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto! Sedes ante dum superest extrema.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/example/hidden/</link>
+      <link>https://keli.tech/blog/docs/example/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/hidden/</guid>
+      <guid>https://keli.tech/blog/docs/example/hidden/</guid>
       <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
  Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/buttons/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/buttons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/buttons/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/buttons/</guid>
       <description>Buttons Buttons are styled links that can lead to local page or external link.
 Example {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}}  Get Home  Contribute  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/columns/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/columns/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/columns/</guid>
       <description>Columns Columns help organize shorter pieces of content horizontally for readability.
 {{&amp;lt; columns &amp;gt;}} &amp;lt;!--begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!--magic sparator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!--magic sparator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example Left Content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/expand/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/expand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/expand/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/expand/</guid>
       <description>Expand Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
 Example Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/hints/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/hints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/hints/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/hints/</guid>
       <description>Hints Hint shortcode can be used as hint/alerts/notification block.
 There are 3 colors to choose: info, warning and danger.
 {{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example Markdown content
@@ -209,30 +209,30 @@ Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat str
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/katex/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/katex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/katex/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/katex/</guid>
       <description>KaTeX KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
 Example {{&amp;lt; katex [display] [class=&amp;#34;text-center&amp;#34;] &amp;gt;}} x = \begin{cases} a &amp;amp;\text{if } b \\ c &amp;amp;\text{if } d \end{cases} {{&amp;lt; /katex &amp;gt;}}     \( x = \begin{cases} a &amp;\text{if } b \\ c &amp;\text{if } d \end{cases} \)    Display Mode Example Here is some inline example: \(\pi(x)\)  , rendered in the same line.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/mermaid/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/mermaid/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/mermaid/</guid>
       <description>Mermaid Chart Mermaid is library for generating svg charts and diagrams from text.
 Example {{&amp;lt; mermaid [class=&amp;#34;text-center&amp;#34;]&amp;gt;}} sequenceDiagram Alice-&amp;gt;&amp;gt;Bob: Hello Bob, how are you? alt is sick Bob-&amp;gt;&amp;gt;Alice: Not so good :( else is well Bob-&amp;gt;&amp;gt;Alice: Feeling fresh like a daisy end opt Extra response Bob-&amp;gt;&amp;gt;Alice: Thanks for asking end {{&amp;lt; /mermaid &amp;gt;}}    sequenceDiagram Alice-Bob: Hello Bob, how are you? alt is sick Bob-Alice: Not so good :( else is well Bob-Alice: Feeling fresh like a daisy end opt Extra response Bob-Alice: Thanks for asking end   </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/shortcodes/tabs/</link>
+      <link>https://keli.tech/blog/docs/shortcodes/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/shortcodes/tabs/</guid>
+      <guid>https://keli.tech/blog/docs/shortcodes/tabs/</guid>
       <description>Tabs32 Tabs let you organize content by context, for example installation instructions for each supported platform.
 {{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example MacOS  MacOS This is tab MacOS content.
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
@@ -240,10 +240,10 @@ Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat str
     
     <item>
       <title>关于我</title>
-      <link>https://fencex.github.io/posts/about-me/</link>
+      <link>https://keli.tech/blog/posts/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/about-me/</guid>
+      <guid>https://keli.tech/blog/posts/about-me/</guid>
       <description>Fence X 后端研发工程师       邮箱
 yagoodidea@gmail.com  网站
 fencex.github.io  个人技能  Web方向
