@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Redis 博客 on fencex</title>
+    <title>Redis 博客 on FenceX的技术博客</title>
     <link>https://keli.tech/posts/redis/</link>
-    <description>Recent content in Redis 博客 on fencex</description>
+    <description>Recent content in Redis 博客 on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
     
