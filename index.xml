@@ -16,7 +16,15 @@
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
-      <description>todo</description>
+      <description>以 book theme 示例
+Hugo 添加自定义 css 和 javascript public 目录是最终目录，
+Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例
+/public /static ├── audio ├── css │ └── audio.css ├── js │ └── audio.js └── speech.mp3 http://localhost:1313/js/audio.js
+http://localhost:1313/css/audio.css
+http://localhost:1313/speech.mp3
+编辑 theme/book/layouts/_default/baseof.html
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; ... &amp;lt;link rel=stylesheet href=&amp;#34;/css/audio.css&amp;#34; &amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; ... &amp;lt;script src=&amp;#34;/js/audio.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 为每个特定 post 页面指定 js 和 css 文件 hugo 模版支持变量， 如下即可自定义参数。
+--- title : Hugo 基本技巧 description : Hugo 基本技巧 tags: date: 2020-03-27 js1: &amp;#34;/se/js/audiojs/audio.</description>
     </item>
     
     <item>
@@ -25,7 +33,13 @@
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
-      <description>todo</description>
+      <description>hugo如何播放mp3文件 纯文本博客有时枯燥无味，试试让网站闹出点声响。
+Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:
+&amp;lt;audio src=&amp;quot;/speech.mp3&amp;quot; preload=&amp;quot;none&amp;quot; controls=&amp;quot;controls&amp;quot;/&amp;gt;
+
+ audio 自定义样式 http://kolber.github.io/audiojs/
+上篇文章中讲到如何在文章中自定义 js css 文件 《Hugo自定义js css 文件》
+下载文件根据上篇文章添加到博客模版中。</description>
     </item>
     
     <item>
@@ -196,76 +210,66 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/buttons/</link>
+      <title>Buttons 按钮</title>
+      <link>https://keli.tech/posts/tools/hugo/book/buttons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/buttons/</guid>
-      <description>Buttons Buttons are styled links that can lead to local page or external link.
-Example {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}}  Get Home  Contribute  </description>
+      <guid>https://keli.tech/posts/tools/hugo/book/buttons/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/columns/</link>
+      <title>Columns 分列布局</title>
+      <link>https://keli.tech/posts/tools/hugo/book/columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/columns/</guid>
-      <description>Columns Columns help organize shorter pieces of content horizontally for readability.
-{{&amp;lt; columns &amp;gt;}} &amp;lt;!--begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!--magic sparator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!--magic sparator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example Left Content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+      <guid>https://keli.tech/posts/tools/hugo/book/columns/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/expand/</link>
+      <title>Expand 展开和隐藏</title>
+      <link>https://keli.tech/posts/tools/hugo/book/expand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/expand/</guid>
-      <description>Expand Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
-Example Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne.</description>
+      <guid>https://keli.tech/posts/tools/hugo/book/expand/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/hints/</link>
+      <title>Hints 提示</title>
+      <link>https://keli.tech/posts/tools/hugo/book/hints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/hints/</guid>
-      <description>Hints Hint shortcode can be used as hint/alerts/notification block.
-There are 3 colors to choose: info, warning and danger.
-{{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example Markdown content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa  Markdown content</description>
+      <guid>https://keli.tech/posts/tools/hugo/book/hints/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/katex/</link>
+      <title>KaTex 公式</title>
+      <link>https://keli.tech/posts/tools/hugo/book/katex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/katex/</guid>
-      <description>KaTeX KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
-Example {{&amp;lt; katex [display] [class=&amp;#34;text-center&amp;#34;] &amp;gt;}} x = \begin{cases} a &amp;amp;\text{if } b \\ c &amp;amp;\text{if } d \end{cases} {{&amp;lt; /katex &amp;gt;}}     \( x = \begin{cases} a &amp;\text{if } b \\ c &amp;\text{if } d \end{cases} \)    Display Mode Example Here is some inline example: \(\pi(x)\)  , rendered in the same line.</description>
+      <guid>https://keli.tech/posts/tools/hugo/book/katex/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/mermaid/</link>
+      <title>Mermaid Chart 图标</title>
+      <link>https://keli.tech/posts/tools/hugo/book/mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/mermaid/</guid>
-      <description>Mermaid Chart Mermaid is library for generating svg charts and diagrams from text.
-Example {{&amp;lt; mermaid [class=&amp;#34;text-center&amp;#34;]&amp;gt;}} sequenceDiagram Alice-&amp;gt;&amp;gt;Bob: Hello Bob, how are you? alt is sick Bob-&amp;gt;&amp;gt;Alice: Not so good :( else is well Bob-&amp;gt;&amp;gt;Alice: Feeling fresh like a daisy end opt Extra response Bob-&amp;gt;&amp;gt;Alice: Thanks for asking end {{&amp;lt; /mermaid &amp;gt;}}    sequenceDiagram Alice-Bob: Hello Bob, how are you? alt is sick Bob-Alice: Not so good :( else is well Bob-Alice: Feeling fresh like a daisy end opt Extra response Bob-Alice: Thanks for asking end   </description>
+      <guid>https://keli.tech/posts/tools/hugo/book/mermaid/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/shortcodes/tabs/</link>
+      <title>Tabs Tab页面</title>
+      <link>https://keli.tech/posts/tools/hugo/book/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/shortcodes/tabs/</guid>
-      <description>Tabs32 Tabs let you organize content by context, for example installation instructions for each supported platform.
-{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example MacOS  MacOS This is tab MacOS content.
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
+      <guid>https://keli.tech/posts/tools/hugo/book/tabs/</guid>
+      <description></description>
     </item>
     
     <item>

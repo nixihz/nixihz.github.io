@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="/>
 
 
-<script defer="" src="/en.search.min.cc774458505997b6f2bec881bc14c5f39800986a167186647a8d5382ea658df8.js" integrity="sha256-zHdEWFBZl7byvsiBvBTF85gAmGoWcYZkeo1Tgupljfg="></script>
+<script defer="" src="/en.search.min.2871e9ef30ee5a7ce766c60dfc72c7ec580f24cd10dc54276bb1953567ffcd2f.js" integrity="sha256-KHHp7zDuWnznZsYN/HLH7FgPJM0Q3FQna7GVNWf/zS8="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://keli.tech/posts/index.xml" title="FenceX的技术博客"/>
 <!--
@@ -51,7 +51,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone">提示:本博客支持朗读<audio src="/audio/f9edff9d177edb293d8d63f08cd6579f.mp3" preload="none"></audio></h2>
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></audio></h2>
 <hr/>
 <ul>
 <li><strong>组件</strong>
@@ -74,13 +74,6 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>工具</strong>
 <ul>
 <li><a href="/posts/tools/git/">Git</a></li>
-<li><a href="/docs/shortcodes/buttons/">Buttons</a></li>
-<li><a href="/docs/shortcodes/columns/">Columns</a></li>
-<li><a href="/docs/shortcodes/expand/">Expand</a></li>
-<li><a href="/docs/shortcodes/hints/">Hints</a></li>
-<li><a href="/docs/shortcodes/katex/">Katex</a></li>
-<li><a href="/docs/shortcodes/mermaid/">Mermaid</a></li>
-<li><a href="/docs/shortcodes/tabs/">Tabs</a></li>
 </ul>
 </li>
 </ul>
@@ -88,6 +81,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>博客工具 – 介绍本博客涉及工具</strong>
 <ul>
+<li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
 <li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
 <li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
 <li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
@@ -246,7 +240,17 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-    <p>todo
+    <p>以 book theme 示例
+Hugo 添加自定义 css 和 javascript public 目录是最终目录，
+Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例
+/public /static ├── audio ├── css │ └── audio.css ├── js │ └── audio.js └── speech.mp3 http://localhost:1313/js/audio.js
+http://localhost:1313/css/audio.css
+http://localhost:1313/speech.mp3
+编辑 theme/book/layouts/_default/baseof.html
+&lt;html&gt; &lt;head&gt; ... &lt;link rel=stylesheet href=&#34;/css/audio.css&#34; &gt; &lt;/head&gt; &lt;body&gt; ... &lt;script src=&#34;/js/audio.js&#34;&gt;&lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 为每个特定 post 页面指定 js 和 css 文件 hugo 模版支持变量， 如下即可自定义参数。
+--- title : Hugo 基本技巧 description : Hugo 基本技巧 tags: date: 2020-03-27 js1: &#34;/se/js/audiojs/audio.
+        <a href="/posts/tools/hugo/hugo/">...</a>
+      
     </p>
   </article>
   
@@ -270,7 +274,13 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-    <p>todo
+    <p>hugo如何播放mp3文件 纯文本博客有时枯燥无味，试试让网站闹出点声响。
+Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:
+&lt;audio src=&#34;/speech.mp3&#34; preload=&#34;none&#34; controls=&#34;controls&#34;/&gt;
+
+ audio 自定义样式 http://kolber.github.io/audiojs/
+上篇文章中讲到如何在文章中自定义 js css 文件 《Hugo自定义js css 文件》
+下载文件根据上篇文章添加到博客模版中。
     </p>
   </article>
   
@@ -393,6 +403,17 @@ https://github.com/alex-shpak/hugo-book
 
 
 </div>
+
+
+    <p>
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/tools/hugo/book/"></a>
+    </h2>
+    
 
 
     <p>

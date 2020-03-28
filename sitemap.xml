@@ -108,12 +108,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/redis/</loc>
+    <loc>https://keli.tech/categories/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/redis/</loc>
+    <loc>https://keli.tech/tags/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -138,12 +138,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/git/</loc>
+    <loc>https://keli.tech/tags/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/git/</loc>
+    <loc>https://keli.tech/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -158,12 +158,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/golang/</loc>
+    <loc>https://keli.tech/categories/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/golang/</loc>
+    <loc>https://keli.tech/tags/golang/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -173,12 +173,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/mysql/</loc>
+    <loc>https://keli.tech/tags/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/mysql/</loc>
+    <loc>https://keli.tech/categories/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -202,46 +202,39 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/docs/shortcodes/</loc>
+    <loc>https://keli.tech/posts/tools/hugo/book/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/docs/shortcodes/buttons/</loc>
-    <priority>0</priority>
+    <loc>https://keli.tech/posts/tools/hugo/book/buttons/</loc>
   </url>
   
   <url>
-    <loc>https://keli.tech/docs/shortcodes/columns/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/docs/shortcodes/expand/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/docs/shortcodes/hints/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/docs/shortcodes/katex/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/docs/shortcodes/mermaid/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/docs/shortcodes/tabs/</loc>
-    <priority>0</priority>
+    <loc>https://keli.tech/posts/tools/hugo/book/columns/</loc>
   </url>
   
   <url>
     <loc>https://keli.tech/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/book/expand/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/book/hints/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/book/katex/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/book/mermaid/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/tools/hugo/book/tabs/</loc>
   </url>
   
   <url>
