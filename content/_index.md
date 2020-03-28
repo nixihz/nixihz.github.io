@@ -27,8 +27,9 @@ bookToc: false
 <img src="/image/roodblauw.png" style="height:350px;"/>
 </div>
 
+
 <p style="font-size:17px;font-style: italic;">
-Do not go gentle into that good night
+Do not go gentle into that good night <audio src="/goodnight.mp3" preload="none" speech="none">
 </p>
 
 </div>
