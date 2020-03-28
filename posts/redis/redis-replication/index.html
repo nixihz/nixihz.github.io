@@ -1,20 +1,23 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Redis 主从复制"/><meta property="og:title" content="Redis 主从复制"/>
-<meta property="og:description" content="Redis 主从复制"/>
-<meta property="og:type" content="article"/>
-<meta property="og:url" content="https://keli.tech/posts/redis/redis-replication/"/>
-<meta property="article:published_time" content="2020-03-02T00:00:00+00:00"/>
-<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00"/>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Redis 主从复制"><meta property="og:title" content="Redis 主从复制" />
+<meta property="og:description" content="Redis 主从复制" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/posts/redis/redis-replication/" />
+<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" />
 <title>Redis 主从复制 | FenceX的技术博客</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="/>
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
 
 
-<script defer="" src="/en.search.min.2871e9ef30ee5a7ce766c60dfc72c7ec580f24cd10dc54276bb1953567ffcd2f.js" integrity="sha256-KHHp7zDuWnznZsYN/HLH7FgPJM0Q3FQna7GVNWf/zS8="></script>
+<script defer src="/en.search.min.2871e9ef30ee5a7ce766c60dfc72c7ec580f24cd10dc54276bb1953567ffcd2f.js" integrity="sha256-KHHp7zDuWnznZsYN/HLH7FgPJM0Q3FQna7GVNWf/zS8="></script>
 
 <!--
 Made with Book Theme
@@ -22,11 +25,11 @@ https://github.com/alex-shpak/hugo-book
 -->
 
   
-  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control"/>
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -38,7 +41,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -51,8 +54,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></audio></h2>
-<hr/>
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></h2>
+<hr>
 <ul>
 <li><strong>组件</strong>
 <ul>
@@ -61,7 +64,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>备忘</strong>
 <ul>
@@ -69,7 +72,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>工具</strong>
 <ul>
@@ -77,9 +80,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
-<li><strong>博客工具 – 介绍本博客涉及工具</strong>
+<li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
 <ul>
 <li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
 <li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
@@ -88,7 +91,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li>
 <p><a href="/posts/"><strong>随笔</strong></a></p>
@@ -97,7 +100,7 @@ https://github.com/alex-shpak/hugo-book
 <p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
 </li>
 </ul>
-<hr/>
+<hr>
 
 
 
@@ -122,19 +125,19 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>Redis 主从复制</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control"/>
+    <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
@@ -161,7 +164,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel="stylesheet" href=""/>
+<link rel=stylesheet href="" >
 
 
 <article class="markdown">
@@ -195,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p></p><h1 id="redis-主从复制">Redis 主从复制</h1>
+  <p><h1 id="redis-主从复制">Redis 主从复制</h1>
 <p>主服复制功能，断开的话，从库会自动重新连接到从库。</p>
 <p>以下操作将会同步到从库</p>
 <ul>
@@ -210,12 +213,12 @@ https://github.com/alex-shpak/hugo-book
 <li>一个 Master可以有多个 Slave 。</li>
 <li>Slave 支持级联， 所有的 Slave 将从 Master 获取相同的数据流。</li>
 <li>非阻塞主从复制，同步的同时 Master 支持查询。</li>
-<li>复制的同时 Slave 也基本上没有阻塞。<br/>
+<li>复制的同时 Slave 也基本上没有阻塞。<br>
 执行初始同步时，Slave 可以使用旧版数据处理查询。否则，您可以配置Redis副本以在复制流关闭时将错误返回给客户端。
 但是，在初始同步之后，必须删除旧的数据集，并且必须加载新的数据集。副本将在此短暂的窗口内阻止传入的连接（对于非常大的数据集，该连接可能长达数秒）。从Redis 4.0开始，可以对Redis进行配置，以在其他线程删除旧数据，但是加载新的初始数据集仍将在主线程中进行，并会阻塞 Slave。</li>
 <li>主从复制可以用于可伸缩性，也可以用于只读查询的多个副本（例如，可以将慢速O（N）操作放在Slave），也可以只用作备份，用于提高数据安全性和高可用性，Slave 可以随之提升为 Master</li>
-<li>主从复制有一个非常有用的用法：Master 关闭落盘逻辑，仅仅让Slave落盘，规避落盘带来的性能降低<br/>
-RDB数据大的时候容易出现问题，AOF是同步也会有性能<br/>
+<li>主从复制有一个非常有用的用法：Master 关闭落盘逻辑，仅仅让Slave落盘，规避落盘带来的性能降低<br>
+RDB数据大的时候容易出现问题，AOF是同步也会有性能<br>
 <strong><code>但是，必须小心处理此设置，下面会讲，因为重新启动的 Master 将以空数据集开始：如果副本尝试与其同步，则副本也将被清空。</code></strong></li>
 </ul>
 <h1 id="强烈建master设置持久化">强烈建Master设置持久化</h1>
@@ -261,7 +264,7 @@ repl_backlog_histlen:0
 <p>要配置基本的Redis复制很简单：只需将以下行添加到副本配置文件中：</p>
 <pre><code>replicaof 192.168.1.1 6379
 </code></pre><h2 id="配置只读">配置只读</h2>
-<h2 id="heading"></h2><p></p>
+<h2 id="heading"></h2></p>
 </article>
 
 
@@ -319,6 +322,9 @@ repl_backlog_histlen:0
 
   <script src="/js/audiojs/audio.min.js"></script>
   <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
 
 
 
@@ -331,7 +337,3 @@ repl_backlog_histlen:0
 
 
 
-
-
-
-</body></html>
