@@ -1,6 +1,7 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://keli.tech'
+baseURL = 'https://fencex.github.io'
+#baseURL = 'https://keli.tech'
 title = 'FenceX的技术博客'
 theme = 'book'
 
