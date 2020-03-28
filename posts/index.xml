@@ -16,15 +16,10 @@
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
-      <description>以 book theme 示例
-Hugo 添加自定义 css 和 javascript public 目录是最终目录，
-Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例
-/public /static ├── audio ├── css │ └── audio.css ├── js │ └── audio.js └── speech.mp3 http://localhost:1313/js/audio.js
-http://localhost:1313/css/audio.css
-http://localhost:1313/speech.mp3
-编辑 theme/book/layouts/_default/baseof.html
-&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; ... &amp;lt;link rel=stylesheet href=&amp;#34;/css/audio.css&amp;#34; &amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; ... &amp;lt;script src=&amp;#34;/js/audio.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 为每个特定 post 页面指定 js 和 css 文件 hugo 模版支持变量， 如下即可自定义参数。
---- title : Hugo 基本技巧 description : Hugo 基本技巧 tags: date: 2020-03-27 js1: &amp;#34;/se/js/audiojs/audio.</description>
+      <description>&lt;p&gt;&lt;em&gt;以 book theme 示例&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hugo-添加自定义-css-和-javascript&#34;&gt;Hugo 添加自定义 css 和 javascript&lt;/h2&gt;
+&lt;p&gt;public 目录是最终目录，&lt;/p&gt;
+&lt;p&gt;Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -33,13 +28,9 @@ http://localhost:1313/speech.mp3
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
-      <description>hugo如何播放mp3文件 纯文本博客有时枯燥无味，试试让网站闹出点声响。
-Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:
-&amp;lt;audio src=&amp;quot;/speech.mp3&amp;quot; preload=&amp;quot;none&amp;quot; controls=&amp;quot;controls&amp;quot;/&amp;gt;
-
- audio 自定义样式 http://kolber.github.io/audiojs/
-上篇文章中讲到如何在文章中自定义 js css 文件 《Hugo自定义js css 文件》
-下载文件根据上篇文章添加到博客模版中。</description>
+      <description>&lt;h2 id=&#34;hugo如何播放mp3文件&#34;&gt;hugo如何播放mp3文件&lt;/h2&gt;
+&lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br&gt;
+Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:&lt;/p&gt;</description>
     </item>
     
     <item>
