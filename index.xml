@@ -95,6 +95,15 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     </item>
     
     <item>
+      <title>Mysql 版本信息</title>
+      <link>https://keli.tech/posts/mysql/mysql-version/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/mysql-version/</guid>
+      <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Without ToC</title>
       <link>https://keli.tech/docs/example/table-of-contents/without-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
