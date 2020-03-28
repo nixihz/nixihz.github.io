@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql 博客 on FenceX的技术博客</title>
-    <link>https://keli.tech/posts/mysql/</link>
+    <link>https://fencex.github.io/posts/mysql/</link>
     <description>Recent content in Mysql 博客 on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://keli.tech/posts/mysql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fencex.github.io/posts/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mysql 面试题</title>
-      <link>https://keli.tech/posts/mysql/mysql-intro/</link>
+      <link>https://fencex.github.io/posts/mysql/mysql-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/mysql/mysql-intro/</guid>
+      <guid>https://fencex.github.io/posts/mysql/mysql-intro/</guid>
       <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mysql 版本信息</title>
-      <link>https://keli.tech/posts/mysql/mysql-version/</link>
+      <link>https://fencex.github.io/posts/mysql/mysql-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/mysql/mysql-version/</guid>
+      <guid>https://fencex.github.io/posts/mysql/mysql-version/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     

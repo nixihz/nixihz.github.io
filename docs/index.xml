@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on FenceX的技术博客</title>
-    <link>https://keli.tech/docs/</link>
+    <link>https://fencex.github.io/docs/</link>
     <description>Recent content in Docs on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://keli.tech/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fencex.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
