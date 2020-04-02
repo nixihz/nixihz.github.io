@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on fencex</title>
-    <link>https://fencex.github.io/tags/go/</link>
-    <description>Recent content in go on fencex</description>
+    <title>go on FenceX的技术博客</title>
+    <link>https://keli.tech/tags/go/</link>
+    <description>Recent content in go on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fencex.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://fencex.github.io/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://fencex.github.io/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
     
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://fencex.github.io/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
+      <link>https://keli.tech/posts/solution/go/go-imagemagick/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>https://keli.tech/posts/solution/go/go-imagemagick/</guid>
+      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
+&lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
+具体需求：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
+&lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
     </item>
     
   </channel>

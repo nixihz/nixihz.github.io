@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>develop on FenceX的技术博客</title>
-    <link>https://fencex.github.io/categories/develop/</link>
+    <link>https://keli.tech/categories/develop/</link>
     <description>Recent content in develop on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fencex.github.io/categories/develop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/categories/develop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Golang Module 备忘</title>
-      <link>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</link>
+      <link>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</guid>
-      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</guid>
+      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
 &lt;p&gt;终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
 文章包你&lt;br&gt;
 一招鲜，走天下&lt;/p&gt;</description>
@@ -24,47 +24,47 @@
     
     <item>
       <title>Mysql 面试题</title>
-      <link>https://fencex.github.io/posts/mysql/mysql-intro/</link>
+      <link>https://keli.tech/posts/mysql/mysql-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/mysql/mysql-intro/</guid>
+      <guid>https://keli.tech/posts/mysql/mysql-intro/</guid>
       <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 介绍</title>
-      <link>https://fencex.github.io/posts/redis/redis-intro/</link>
+      <link>https://keli.tech/posts/redis/redis-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-intro/</guid>
+      <guid>https://keli.tech/posts/redis/redis-intro/</guid>
       <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mysql 版本信息</title>
-      <link>https://fencex.github.io/posts/mysql/mysql-version/</link>
+      <link>https://keli.tech/posts/mysql/mysql-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/mysql/mysql-version/</guid>
+      <guid>https://keli.tech/posts/mysql/mysql-version/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 版本信息</title>
-      <link>https://fencex.github.io/posts/redis/redis-version/</link>
+      <link>https://keli.tech/posts/redis/redis-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-version/</guid>
+      <guid>https://keli.tech/posts/redis/redis-version/</guid>
       <description>&lt;p&gt;本文介绍 Redis发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git重刷提交的email和name信息</title>
-      <link>https://fencex.github.io/posts/tools/git/git-refresh-commit-email/</link>
+      <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/posts/tools/git/git-refresh-commit-email/</guid>
+      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>随笔 on FenceX的技术博客</title>
-    <link>https://fencex.github.io/posts/</link>
+    <link>https://keli.tech/posts/</link>
     <description>Recent content in 随笔 on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fencex.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo 基本技巧</title>
-      <link>https://fencex.github.io/posts/tools/hugo/hugo/</link>
+      <link>https://keli.tech/posts/tools/hugo/hugo/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/hugo/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
       <description>&lt;p&gt;&lt;em&gt;以 book theme 示例&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;hugo-添加自定义-css-和-javascript&#34;&gt;Hugo 添加自定义 css 和 javascript&lt;/h2&gt;
 &lt;p&gt;public 目录是最终目录，&lt;/p&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>Hugo 支持audio播放</title>
-      <link>https://fencex.github.io/posts/tools/hugo/hugo-audio/</link>
+      <link>https://keli.tech/posts/tools/hugo/hugo-audio/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/hugo-audio/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
       <description>&lt;h2 id=&#34;hugo如何播放mp3文件&#34;&gt;hugo如何播放mp3文件&lt;/h2&gt;
 &lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br&gt;
 Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:&lt;/p&gt;</description>
@@ -35,10 +35,10 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     
     <item>
       <title>Hugo 支持博客朗读</title>
-      <link>https://fencex.github.io/posts/tools/hugo/hugo-speech/</link>
+      <link>https://keli.tech/posts/tools/hugo/hugo-speech/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/hugo-speech/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/hugo-speech/</guid>
       <description>&lt;h2 id=&#34;博客朗读-audio-preloadnone&#34;&gt;博客朗读 &lt;audio preload=&#34;none&#34;/&gt;&lt;/h2&gt;
 &lt;p&gt;如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
 如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。&lt;/p&gt;
@@ -47,10 +47,10 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     
     <item>
       <title>关于我</title>
-      <link>https://fencex.github.io/posts/about-me/</link>
+      <link>https://keli.tech/posts/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/about-me/</guid>
+      <guid>https://keli.tech/posts/about-me/</guid>
       <description>Fence X 后端研发工程师       邮箱
 yagoodidea@gmail.com  网站
 fencex.github.io  个人技能  Web方向

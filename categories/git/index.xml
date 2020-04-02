@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on FenceX的技术博客</title>
-    <link>https://fencex.github.io/categories/git/</link>
+    <link>https://keli.tech/categories/git/</link>
     <description>Recent content in git on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fencex.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>git重刷提交的email和name信息</title>
-      <link>https://fencex.github.io/posts/tools/git/git-refresh-commit-email/</link>
+      <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/posts/tools/git/git-refresh-commit-email/</guid>
+      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>

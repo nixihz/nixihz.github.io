@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>X on FenceX的技术博客</title>
-    <link>https://fencex.github.io/</link>
+    <link>https://keli.tech/</link>
     <description>Recent content in X on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fencex.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keli.tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo 基本技巧</title>
-      <link>https://fencex.github.io/posts/tools/hugo/hugo/</link>
+      <link>https://keli.tech/posts/tools/hugo/hugo/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/hugo/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
       <description>&lt;p&gt;&lt;em&gt;以 book theme 示例&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;hugo-添加自定义-css-和-javascript&#34;&gt;Hugo 添加自定义 css 和 javascript&lt;/h2&gt;
 &lt;p&gt;public 目录是最终目录，&lt;/p&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>Hugo 支持audio播放</title>
-      <link>https://fencex.github.io/posts/tools/hugo/hugo-audio/</link>
+      <link>https://keli.tech/posts/tools/hugo/hugo-audio/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/hugo-audio/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
       <description>&lt;h2 id=&#34;hugo如何播放mp3文件&#34;&gt;hugo如何播放mp3文件&lt;/h2&gt;
 &lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br&gt;
 Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:&lt;/p&gt;</description>
@@ -35,10 +35,10 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     
     <item>
       <title>Hugo 支持博客朗读</title>
-      <link>https://fencex.github.io/posts/tools/hugo/hugo-speech/</link>
+      <link>https://keli.tech/posts/tools/hugo/hugo-speech/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/hugo-speech/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/hugo-speech/</guid>
       <description>&lt;h2 id=&#34;博客朗读-audio-preloadnone&#34;&gt;博客朗读 &lt;audio preload=&#34;none&#34;/&gt;&lt;/h2&gt;
 &lt;p&gt;如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
 如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。&lt;/p&gt;
@@ -47,20 +47,35 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     
     <item>
       <title>Redis 面试题</title>
-      <link>https://fencex.github.io/posts/redis/redis-interview/</link>
+      <link>https://keli.tech/posts/redis/redis-interview/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-interview/</guid>
+      <guid>https://keli.tech/posts/redis/redis-interview/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Linked List 链表（Golang）</title>
+      <link>https://keli.tech/posts/cheatsheet/data-structure/golang-module-usage/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/cheatsheet/data-structure/golang-module-usage/</guid>
+      <description>链表和数组差异 链表类似数组，非常大的不同是，可以方便的在列表中间插入和删除元素。
+相对于数组的优点：
+数组把所有元素都保留在同一块内存中，链表通过存储下一个元素的指针来，把分散在内存中的元素包含在链表内。
+相对于数组的缺点：
+如果想在链表中间选择一个元素就会比较困难， 因为不知道该元素的地址，只能从链表的开头开始查找。
+实现 链表应该具有这些方法
+ Append(t) 在链表末尾追加元素t Insert(i, t) 在链表指定位置i插入元素t RemoveAt(i) 删除链表指定位置i的元素 IndexOf(t) 返回元素t所在的位置 IsEmpty() 返回链表是否为空链表 Size() 返回链表长度 String() 返回元素按顺序拼接的字符串 Head() 返回第一个位置的元素  </description>
+    </item>
+    
+    <item>
       <title>Golang Module 备忘</title>
-      <link>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</link>
+      <link>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/cheatsheet/golang/golang-module-usage/</guid>
-      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</guid>
+      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
 &lt;p&gt;终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
 文章包你&lt;br&gt;
 一招鲜，走天下&lt;/p&gt;</description>
@@ -68,122 +83,138 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     
     <item>
       <title>Mysql 面试题</title>
-      <link>https://fencex.github.io/posts/mysql/mysql-intro/</link>
+      <link>https://keli.tech/posts/mysql/mysql-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/mysql/mysql-intro/</guid>
+      <guid>https://keli.tech/posts/mysql/mysql-intro/</guid>
       <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 介绍</title>
-      <link>https://fencex.github.io/posts/redis/redis-intro/</link>
+      <link>https://keli.tech/posts/redis/redis-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-intro/</guid>
+      <guid>https://keli.tech/posts/redis/redis-intro/</guid>
       <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
+      <link>https://keli.tech/posts/solution/golang/go-imagemagick/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/solution/golang/go-imagemagick/</guid>
+      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
+&lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
+具体需求：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
+&lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>With ToC</title>
-      <link>https://fencex.github.io/docs/example/table-of-contents/with-toc/</link>
+      <link>https://keli.tech/docs/example/table-of-contents/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/table-of-contents/with-toc/</guid>
+      <guid>https://keli.tech/docs/example/table-of-contents/with-toc/</guid>
       <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
  Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
     </item>
     
     <item>
       <title>Mysql 版本信息</title>
-      <link>https://fencex.github.io/posts/mysql/mysql-version/</link>
+      <link>https://keli.tech/posts/mysql/mysql-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/mysql/mysql-version/</guid>
+      <guid>https://keli.tech/posts/mysql/mysql-version/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Without ToC</title>
-      <link>https://fencex.github.io/docs/example/table-of-contents/without-toc/</link>
+      <link>https://keli.tech/docs/example/table-of-contents/without-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/table-of-contents/without-toc/</guid>
+      <guid>https://keli.tech/docs/example/table-of-contents/without-toc/</guid>
       <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
 Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
     </item>
     
     <item>
       <title>Redis 数据类型与适用场景</title>
-      <link>https://fencex.github.io/posts/redis/redis-data-types/</link>
+      <link>https://keli.tech/posts/redis/redis-data-types/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-data-types/</guid>
+      <guid>https://keli.tech/posts/redis/redis-data-types/</guid>
       <description>&lt;p&gt;redis 常被拿来与 memcached 来比较，但非常不通的地方就在于 Redis 有非常出色的数据结构，使用非常简便。
 本文介绍常用的数据类型和使用场景 Strings Lists Hashes Sets Sorted-Sets 等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 版本信息</title>
-      <link>https://fencex.github.io/posts/redis/redis-version/</link>
+      <link>https://keli.tech/posts/redis/redis-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-version/</guid>
+      <guid>https://keli.tech/posts/redis/redis-version/</guid>
       <description>&lt;p&gt;本文介绍 Redis发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 主从复制</title>
-      <link>https://fencex.github.io/posts/redis/redis-replication/</link>
+      <link>https://keli.tech/posts/redis/redis-replication/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-replication/</guid>
+      <guid>https://keli.tech/posts/redis/redis-replication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 事务</title>
-      <link>https://fencex.github.io/posts/redis/redis-transaction/</link>
+      <link>https://keli.tech/posts/redis/redis-transaction/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-transaction/</guid>
+      <guid>https://keli.tech/posts/redis/redis-transaction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis pipelined 管道</title>
-      <link>https://fencex.github.io/posts/redis/redis-pipelined/</link>
+      <link>https://keli.tech/posts/redis/redis-pipelined/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-pipelined/</guid>
+      <guid>https://keli.tech/posts/redis/redis-pipelined/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 持久化方式RDB和AOF比较</title>
-      <link>https://fencex.github.io/posts/redis/redis-rdb-aof/</link>
+      <link>https://keli.tech/posts/redis/redis-rdb-aof/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-rdb-aof/</guid>
+      <guid>https://keli.tech/posts/redis/redis-rdb-aof/</guid>
       <description>&lt;p&gt;Redis的所有数据都是保存在内存中，然后不定期的通过异步方式保存到磁盘上(这称为“半持久化模式”)；也可以把每一次数据变化都写入到一个append only file(aof)里面(这称为“全持久化模式”)。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis Module 模块</title>
-      <link>https://fencex.github.io/posts/redis/redis-module/</link>
+      <link>https://keli.tech/posts/redis/redis-module/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/redis/redis-module/</guid>
+      <guid>https://keli.tech/posts/redis/redis-module/</guid>
       <description>&lt;p&gt;todo&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git重刷提交的email和name信息</title>
-      <link>https://fencex.github.io/posts/tools/git/git-refresh-commit-email/</link>
+      <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://fencex.github.io/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
+      <guid>https://keli.tech/posts/tools/git/git-refresh-commit-email/</guid>
+      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
@@ -191,93 +222,93 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/example/collapsed/3rd-level/4th-level/</link>
+      <link>https://keli.tech/docs/example/collapsed/3rd-level/4th-level/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/collapsed/3rd-level/4th-level/</guid>
+      <guid>https://keli.tech/docs/example/collapsed/3rd-level/4th-level/</guid>
       <description>2344th Level of Menu Caesorum illa tu sentit micat vestes papyriferi Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
 Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto! Sedes ante dum superest extrema.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fencex.github.io/docs/example/hidden/</link>
+      <link>https://keli.tech/docs/example/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/docs/example/hidden/</guid>
+      <guid>https://keli.tech/docs/example/hidden/</guid>
       <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
  Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
     </item>
     
     <item>
       <title>Buttons 按钮</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/buttons/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/buttons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/buttons/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/buttons/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Columns 分列布局</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/columns/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/columns/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/columns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Expand 展开和隐藏</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/expand/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/expand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/expand/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/expand/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hints 提示</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/hints/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/hints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/hints/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/hints/</guid>
       <description></description>
     </item>
     
     <item>
       <title>KaTex 公式</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/katex/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/katex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/katex/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/katex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mermaid Chart 图标</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/mermaid/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/mermaid/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/mermaid/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tabs Tab页面</title>
-      <link>https://fencex.github.io/posts/tools/hugo/book/tabs/</link>
+      <link>https://keli.tech/posts/tools/hugo/book/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/tools/hugo/book/tabs/</guid>
+      <guid>https://keli.tech/posts/tools/hugo/book/tabs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>https://fencex.github.io/posts/about-me/</link>
+      <link>https://keli.tech/posts/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fencex.github.io/posts/about-me/</guid>
+      <guid>https://keli.tech/posts/about-me/</guid>
       <description>Fence X 后端研发工程师       邮箱
 yagoodidea@gmail.com  网站
 fencex.github.io  个人技能  Web方向
