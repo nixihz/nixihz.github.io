@@ -285,8 +285,6 @@ func (t *TileSvg) SaveSvg(filename string, stroke string) {
 
 ```
 
-# Windows Content
- 
 {{< /tab >}}
 
 {{< tab "shape/tile.go" >}}
