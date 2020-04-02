@@ -123,12 +123,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/redis/</loc>
+    <loc>https://keli.tech/categories/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/redis/</loc>
+    <loc>https://keli.tech/tags/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,12 +168,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/git/</loc>
+    <loc>https://keli.tech/tags/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/git/</loc>
+    <loc>https://keli.tech/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
