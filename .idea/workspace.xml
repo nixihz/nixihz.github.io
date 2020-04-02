@@ -1,8 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b532bb0-8701-42cc-8ba4-9d10e7eef1a9" name="Default Changelist" comment="">
+    <list default="true" id="2b532bb0-8701-42cc-8ba4-9d10e7eef1a9" name="Default Changelist" comment="o">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/menu/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/menu/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/audio/a424e467eaf00e5bca2c5fc93957f12c.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/audio/b631a2e224383933db43527bb5480699.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/audio/ddc8a8b7ec5df94e5c0aec13588193e7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/develop/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/develop/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/develop/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/develop/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/develop/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/develop/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/git/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/git/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/git/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/git/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/git/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/git/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/golang/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/golang/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/golang/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/golang/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/golang/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/golang/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/mysql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/mysql/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/mysql/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/mysql/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/mysql/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/redis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/redis/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/redis/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/redis/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/redis/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/redis/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/web/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/web/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/web/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/web/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/collapsed/3rd-level/4th-level/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/collapsed/3rd-level/4th-level/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/collapsed/3rd-level/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/collapsed/3rd-level/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/collapsed/3rd-level/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/collapsed/3rd-level/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/collapsed/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/collapsed/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/collapsed/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/collapsed/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/hidden/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/hidden/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/table-of-contents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/table-of-contents/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/table-of-contents/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/table-of-contents/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/table-of-contents/with-toc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/table-of-contents/with-toc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/example/table-of-contents/without-toc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/example/table-of-contents/without-toc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/about-me/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/about-me/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/cheatsheet/golang/golang-module-usage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/cheatsheet/golang/golang-module-usage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/cheatsheet/golang/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/cheatsheet/golang/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/cheatsheet/golang/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/cheatsheet/golang/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/cheatsheet/golang/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/cheatsheet/golang/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/mysql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/mysql/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/mysql/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/mysql/mysql-intro/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/mysql/mysql-intro/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/mysql/mysql-version/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/mysql/mysql-version/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/mysql/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/mysql/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-data-types/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-data-types/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-interview/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-interview/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-intro/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-intro/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-module/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-module/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-pipelined/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-pipelined/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-rdb-aof/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-rdb-aof/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-replication/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-replication/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-transaction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-transaction/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/redis/redis-version/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/redis/redis-version/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/git/git-refresh-commit-email/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/git/git-refresh-commit-email/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/git/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/git/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/git/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/git/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/git/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/git/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/buttons/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/buttons/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/columns/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/columns/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/expand/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/expand/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/hints/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/hints/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/katex/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/katex/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/mermaid/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/mermaid/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/book/tabs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/book/tabs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/hugo-audio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/hugo-audio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/hugo-speech/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/hugo-speech/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/posts/tools/hugo/hugo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/posts/tools/hugo/hugo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/git/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/git/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/git/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/git/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/git/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/git/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/go/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/go/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/go/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/go/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/go/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/go/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/golang/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/golang/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/golang/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/golang/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/golang/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/golang/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/mysql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/mysql/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/mysql/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/mysql/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/mysql/page/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/redis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/redis/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/redis/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/redis/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/redis/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/redis/page/1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book/layouts/posts/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/posts/single.html" afterDir="false" />
@@ -20,29 +122,7 @@
     <favorites_list name="fencex.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="488">
-                <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.toml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -56,10 +136,16 @@
       <find>logo</find>
       <find>favicon</find>
       <find>search</find>
+      <find>convert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HugoPluginSettings">
+    <option name="customHugoPath" value="/bin/hugo" />
+    <option name="defaultHugoNewOptions" value="" />
+    <option name="useCustomPath" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -67,7 +153,6 @@
         <option value="$PROJECT_DIR$/themes/book/layouts/posts/single.html" />
         <option value="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" />
         <option value="$PROJECT_DIR$/content/_index.md" />
-        <option value="$PROJECT_DIR$/content/menu/index.md" />
         <option value="$PROJECT_DIR$/content/posts/tools/hugo/book/_index.md" />
         <option value="$PROJECT_DIR$/content/posts/tools/hugo/book/columns.md" />
         <option value="$PROJECT_DIR$/content/posts/tools/hugo/book/tabs.md" />
@@ -82,13 +167,17 @@
         <option value="$PROJECT_DIR$/content/posts/mysql/mysql-version.md" />
         <option value="$PROJECT_DIR$/content/posts/mysql/mysql-intro.md" />
         <option value="$PROJECT_DIR$/config.toml" />
+        <option value="$PROJECT_DIR$/content/posts/solution/go/go-imagemagick.md" />
+        <option value="$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md" />
+        <option value="$PROJECT_DIR$/content/menu/index.md" />
+        <option value="$PROJECT_DIR$/content/posts/cheatsheet/data-structure/golang-module-usage.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="1003" />
+    <option name="width" value="1680" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -96,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,37 +195,69 @@
             <path>
               <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="cheatsheet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="cheatsheet" type="462c0819:PsiDirectoryNode" />
+              <item name="data-structure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="solution" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/posts/cheatsheet/data-structure" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/content/posts/tools/hugo/book" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/posts/cheatsheet/data-structure" />
+      <recent name="$PROJECT_DIR$/content/posts/solution/go" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/image" />
       <recent name="$PROJECT_DIR$/content/posts/mysql" />
-      <recent name="$PROJECT_DIR$/content/posts/tools/hugo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/image/go" />
+      <recent name="$PROJECT_DIR$/content/posts/tools/hugo/book" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -162,24 +282,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585360707376</updated>
-      <workItem from="1585360709572" duration="9608000" />
+      <workItem from="1585360709572" duration="9802000" />
+      <workItem from="1585668275322" duration="104000" />
+      <workItem from="1585668381758" duration="174000" />
+      <workItem from="1585668563874" duration="5077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9608000" />
+    <option name="totallyTimeSpent" value="15157000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="1003" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="973" extended-state="0" />
     <layout>
-      <window_info id="Favorites" sideWeight="0.50084037" side_tool="true" weight="0.24960506" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915966" visible="true" weight="0.28117552" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.2124321" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3445946" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5017182" side_tool="true" weight="0.28038126" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -187,6 +305,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.34345794" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -202,9 +324,7 @@
     <entry file="file://$PROJECT_DIR$/content/posts/about-me-datacenter.md5">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/audio.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/audio.js" />
     <entry file="file://$PROJECT_DIR$/static/js/includes/play.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -264,14 +384,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/posts/tools/hugo/book/git-refresh-commit-email.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/tools/hugo/book/git-refresh-commit-email.md" />
     <entry file="file://$PROJECT_DIR$/content/posts/tools/hugo/book/mermaid.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -402,16 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/posts/about-me.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/posts/mysql/mysql-intro.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -453,30 +556,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/menu/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/go/gm2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/go/gm1.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="488">
-            <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+          <first_editor relative-caret-position="202">
+            <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+    <entry file="file://$PROJECT_DIR$/content/posts/redis/redis-intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/about-me.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="114">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/cheatsheet/data-structure/golang-module-usage.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/menu/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/solution/golang/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

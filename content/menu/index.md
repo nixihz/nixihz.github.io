@@ -12,6 +12,7 @@ headless: true
 ----
 
 - **备忘**
+  - [数据结构]({{< relref "/posts/cheatsheet/data-structure" >}})
   - [Golang]({{< relref "/posts/cheatsheet/golang" >}})
 ----
 
@@ -19,6 +20,11 @@ headless: true
 
 - **工具**
   - [Git]({{< relref "/posts/tools/git" >}})
+
+----
+
+- **解决方案**
+  - [Golang]({{< relref "/posts/solution/golang" >}})
 
 ----
 
