@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b532bb0-8701-42cc-8ba4-9d10e7eef1a9" name="Default Changelist" comment="o">
-      <change beforePath="$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/mysql1/spark-advanced.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/menu/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/menu/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/mysql/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/mysql1/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/mysql/mysql-intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/mysql1/spark-intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/mysql/mysql-version.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book/layouts/posts/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/posts/single.html" afterDir="false" />
@@ -20,13 +25,25 @@
     <favorites_list name="fencex.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/posts/mysql/7-mysql-profiling.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="123">
-                <caret line="287" selection-start-line="287" selection-end-line="287" />
+              <first_editor relative-caret-position="400">
+                <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="624">
+                <caret line="271" column="9" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
               </first_editor>
               <second_editor />
             </state>
@@ -49,7 +66,16 @@
       <find>search</find>
       <find>convert</find>
       <find>Windows Content</find>
+      <find>通用模块</find>
+      <find>retail</find>
+      <find>旋转</find>
+      <find>ow proce</find>
+      <find>最大链接</find>
+      <find>ip</find>
     </findStrings>
+    <replaceStrings>
+      <replace>testtest</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,20 +102,29 @@
         <option value="$PROJECT_DIR$/content/posts/tools/hugo/hugo.md" />
         <option value="$PROJECT_DIR$/content/posts/tools/hugo/book/buttons.md" />
         <option value="$PROJECT_DIR$/themes/book/README.md" />
-        <option value="$PROJECT_DIR$/content/posts/mysql/mysql-version.md" />
-        <option value="$PROJECT_DIR$/content/posts/mysql/mysql-intro.md" />
         <option value="$PROJECT_DIR$/config.toml" />
         <option value="$PROJECT_DIR$/content/posts/solution/go/go-imagemagick.md" />
-        <option value="$PROJECT_DIR$/content/menu/index.md" />
         <option value="$PROJECT_DIR$/content/posts/cheatsheet/data-structure/golang-module-usage.md" />
         <option value="$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md" />
+        <option value="$PROJECT_DIR$/content/posts/cheatsheet/golang/golang-1.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/_index.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/spark-advanced.md" />
+        <option value="$PROJECT_DIR$/content/menu/index.md" />
+        <option value="$PROJECT_DIR$/content/posts/cheatsheet/scala/go-imagemagick.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/mysql-intro.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/mysql-mac-intro.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/mysql-version.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/3-mysql-sysbench.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/7-mysql-profiling.md" />
+        <option value="$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="966" />
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="973" />
+    <option name="width" value="954" />
+    <option name="height" value="1002" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -133,15 +168,28 @@
               <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="posts" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="posts" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
-              <item name="golang" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="notes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fencex.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fencex.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -154,20 +202,22 @@
     <property name="ChangesTree.GroupingKeys" value="" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/posts/cheatsheet/data-structure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/posts/mysql" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/content/posts/cheatsheet/data-structure" />
-      <recent name="$PROJECT_DIR$/content/posts/solution/go" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/image" />
       <recent name="$PROJECT_DIR$/content/posts/mysql" />
+      <recent name="$PROJECT_DIR$/content/posts/notes/Scala" />
+      <recent name="$PROJECT_DIR$/content/posts" />
+      <recent name="$PROJECT_DIR$/content/posts/cheatsheet/golang" />
+      <recent name="$PROJECT_DIR$/content/posts/notes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/posts/cheatsheet" />
+      <recent name="$PROJECT_DIR$/content/posts/notes" />
       <recent name="$PROJECT_DIR$/static/image/go" />
       <recent name="$PROJECT_DIR$/content/posts/tools/hugo/book" />
     </key>
@@ -197,18 +247,21 @@
       <workItem from="1585360709572" duration="9802000" />
       <workItem from="1585668275322" duration="104000" />
       <workItem from="1585668381758" duration="174000" />
-      <workItem from="1585668563874" duration="5415000" />
+      <workItem from="1585668563874" duration="6096000" />
+      <workItem from="1586094096747" duration="5299000" />
+      <workItem from="1587639552153" duration="395000" />
+      <workItem from="1590831768128" duration="34698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15495000" />
+    <option name="totallyTimeSpent" value="56568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="973" extended-state="0" />
+    <frame x="966" y="23" width="954" height="1002" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.2124321" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.24919441" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5017182" side_tool="true" weight="0.28038126" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -220,7 +273,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34345794" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3322034" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -231,22 +284,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/content/posts/about-me-develop.md2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/posts/about-me-datacenter.md5">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/audio.js" />
-    <entry file="file://$PROJECT_DIR$/static/js/includes/play.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/includes/pause.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/includes/loading.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/includes/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -428,28 +465,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/posts/mysql/mysql-intro.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/image/mysql-mindmap.jpeg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/posts/mysql/mysql-version.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/posts/redis/redis-transaction.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -512,16 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/menu/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/posts/solution/golang/_index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -532,21 +539,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="332">
-            <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <first_editor relative-caret-position="273">
+            <caret line="297" column="1" lean-forward="true" selection-start-line="297" selection-start-column="1" selection-end-line="297" selection-end-column="1" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/posts/solution/golang/go-imagemagick.md">
+    <entry file="file://$PROJECT_DIR$/content/posts/cheatsheet/golang/golang-1.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="123">
-            <caret line="287" selection-start-line="287" selection-end-line="287" />
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/cheatsheet/golang/golang-module-usage.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/menu/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="164">
+            <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/cheatsheet/golang/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/cheatsheet/scala/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/cheatsheet/scala/go-imagemagick.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="231">
+            <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql1/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql1/spark-intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql1/spark-advanced.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/10-mysql-version.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="255">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/1-mysql-intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" selection-start-line="19" selection-end-line="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/3-mysql-mac-intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/3-mysql-sysbench.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/7-mysql-profiling.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="400">
+            <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="624">
+            <caret line="271" column="9" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
           </first_editor>
           <second_editor />
         </state>
