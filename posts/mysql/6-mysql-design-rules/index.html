@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="六、MySQL 建表原则"><meta property="og:title" content="六、MySQL 建表原则" />
+<meta property="og:description" content="Mysql 建表原则" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/posts/mysql/6-mysql-design-rules/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>六、MySQL 建表原则 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
+
+
+<script defer src="/en.search.min.56d260235b0df1d2c64bd8459f07ba2ad112c5ac9dd1a2b8f409b26391b584e1.js" integrity="sha256-VtJgI1sN8dLGS9hFnwe6KtESxayd0aK49AmyY5G1hOE="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></h2>
+<hr>
+<ul>
+<li><strong>组件</strong>
+<ul>
+<li><a href="/posts/redis/">Redis</a></li>
+<li><a href="/posts/mysql/">Mysql</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>备忘</strong>
+<ul>
+<li><a href="/posts/cheatsheet/scala/">Scala</a></li>
+<li><a href="/posts/cheatsheet/data-structure/">数据结构</a></li>
+<li><a href="/posts/cheatsheet/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/posts/tools/git/">Git</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>解决方案</strong>
+<ul>
+<li><a href="/posts/solution/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>读书札记</strong>
+<ul>
+<li><a href="/posts/solution/golang/">大数据项目管理-从规划到实现</a></li>
+<li><a href="/posts/solution/golang/">薛兆丰经济学讲义</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
+<ul>
+<li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
+<li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><a href="/posts/"><strong>随笔</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
+</li>
+</ul>
+<hr>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>六、MySQL 建表原则</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一合适的数据类型">一、合适的数据类型</a>
+      <ul>
+        <li><a href="#原则">原则</a></li>
+        <li><a href="#类型细节">类型细节</a></li>
+        <li><a href="#范式和反范式">范式和反范式</a></li>
+        <li><a href="#缓存表和汇总表">缓存表和汇总表</a></li>
+        <li><a href="#加快alter-table-操作速度">加快ALTER TABLE 操作速度</a></li>
+        <li><a href="#创建高性能索引">创建高性能索引</a>
+          <ul>
+            <li><a href="#一底层的类型">一、底层的类型</a></li>
+            <li><a href="#二高性能索引策略">二、高性能索引策略</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/mysql/6-mysql-design-rules/">六、MySQL 建表原则</a>
+  </h1>
+  
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/mysql/">mysql</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/mysql/">mysql</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><p>MySQL 建表原则， 常见面试题</p>
+<h1 id="一合适的数据类型">一、合适的数据类型</h1>
+<h2 id="原则">原则</h2>
+<ol>
+<li>
+<p>更小的数据类型，不滥用类型<br>
+占用更少的磁盘、内存、CPU缓存，CPU周期也更少</p>
+</li>
+<li>
+<p>简单存储<br>
+DataTime 存储日期和时间，而不是&quot;字符串&rdquo;
+整型存储IP地址，而非字符串， INET_ATON / INET_NOTA</p>
+</li>
+<li>
+<p>尽量避免 NULL
+列如果可为 NULL，MySQL更难优化；<br>
+如果该列需要索引，则需要更多空间；</p>
+<p>如果需要加索引，那么必须设置为 NOT NULL。</p>
+</li>
+<li>
+<p>少列</p>
+</li>
+<li>
+<p>少关联， 12表以内</p>
+</li>
+<li>
+<p>更快地读，更慢地写，（读是大部分项目的大部分操作）</p>
+</li>
+</ol>
+<h2 id="类型细节">类型细节</h2>
+<p>整型</p>
+<ol>
+<li>TINYINT， SMALLINT， MEDIUMINT，INT，BIGINT</li>
+<li>INT(1)和INT(20) 存储相同，客户端显示字符个数</li>
+</ol>
+<p>实数</p>
+<ol>
+<li>FLOAT,DOUBLE,DECIMAL</li>
+<li>DECIMAL 存储精确小数， 而计算时则转化为DOUBLE</li>
+</ol>
+<p>字符串</p>
+<ol>
+<li>VARCHAR, CHAR</li>
+<li>不定长字符串比定长更省资源。</li>
+<li>CHAR 裁剪末尾空格；</li>
+<li>VARCHAR需要额外字节记录字符串长度；</li>
+<li>VARCHAR(5) 和 VARCHAR(20) 存储 &lsquo;hello&rsquo;, 存储开销一样，
+但是后者内存消耗更多。</li>
+</ol>
+<p>以下情况优先使用 VARCHAR</p>
+<ol>
+<li>字符串的最大长度比平均长度大很多；</li>
+<li>列更新少，因为经常更新容易碎片。</li>
+<li>使用UTF-8 这样复杂的字符集,  每个字符都使用了不同字节数进行存储。</li>
+</ol>
+<p>以下情况使用 CHAR</p>
+<ol>
+<li>CHAR 用来存储MD5这类定长的值。</li>
+<li>经常更新的数据，因为定长，所以不容易产生碎片。</li>
+<li>CHAR(1) 存储 Y / N</li>
+</ol>
+<p>BLOB 和 TEXT</p>
+<p>用来存储很大的数据，分别是二进制和字符串形式存储。 Memory 引擎不支持该类型。</p>
+<p>TINYBLOB,SMALLBLOB,BLOB,MEDIUMBLOB, LONGBLOB<br>
+BLOB = SMALLBLOB<br>
+TEXT，同理</p>
+<p>实际存储，采用&quot;外部&quot;存储，列中存储指针。</p>
+<p>实际排序只采用， max_sort_length, 如果针对小部分排序，一个是减小 max_sort_length;
+或者使用 ORDER by SUBSTRING(column, length).</p>
+<pre><code>EXPLAIN，执行计划的Extra，包含 Using temporary， 说明使用了隐式临时表。
+
+</code></pre><p>使用 枚举 ENUM 代替字符串类型, 节约空间，<br>
+用在 重复度很高的地方，并且不会变化的地方，<br>
+实际存储的是整型。</p>
+<p><code> 注意排序使用的整型，而不是实际的字符串。。。 所以需要按照顺序定义枚举</code></p>
+<p>关联表必须使用整数组件。</p>
+<p>时间</p>
+<p>DATETIME 范围大 1001-9999年<br>
+TIMESTAMP 范围小，存储一半，效率高， 1907 - 2038年</p>
+<p>时间到秒， 但是计算是毫秒， 可以改为 MariaDB，或者使用 BIGINT 存储s，使用 DOUBLE 存储毫秒。</p>
+<p>位</p>
+<p>BIT</p>
+<p>SET</p>
+<h2 id="范式和反范式">范式和反范式</h2>
+<ul>
+<li>1NF，属性不可再分， (现在出现了sql，map这样的)</li>
+<li>2NF，关联</li>
+<li>3NF，</li>
+</ul>
+<p>优点：</p>
+<ol>
+<li>范式更新比反范式块</li>
+<li>范式无重复数据</li>
+<li>范式化表更小，操作更快</li>
+<li>范式化，需要独立的表，不太需要使用 distinct 或者 group by；</li>
+<li>反范式，冗余某些数据</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>范式需要关联，可能导致索引策略无效。</li>
+</ol>
+<p>注意范式和反范式的混合使用。</p>
+<h2 id="缓存表和汇总表">缓存表和汇总表</h2>
+<ol>
+<li>缓存表，比如多张表关联查询的更少的字段。</li>
+<li>汇总表，记录累计结果的。</li>
+</ol>
+<p>定期维护数据，定期重建，解决碎片问题，处理有效的索引。</p>
+<p>可以使用&quot;影子表&rdquo;， 背后创建，结束了在使用重命名方式。</p>
+<h2 id="加快alter-table-操作速度">加快ALTER TABLE 操作速度</h2>
+<p>影子拷贝， 工具有 Percona Toolkit.</p>
+<p>比如使用 ALTER COLUMN 替代 MODIFY COLUMN 来修改默认值。</p>
+<p>这种方法是修改 .frm 。</p>
+<p>以下操作不需要重建表</p>
+<ol>
+<li>remove 一个列的 auto_increment 属性，</li>
+<li>增加，一处，或者更改ENUM和SET常量，</li>
+</ol>
+<p>通过修改 .frm 文件来实现目的。</p>
+<p>快速创建 MyISAM 索引。。</p>
+<ol>
+<li>禁用索引，载入数据，重新启用索引；<br>
+不支持唯一索引， 删除索引记得保留唯一索引。</li>
+</ol>
+<h2 id="创建高性能索引">创建高性能索引</h2>
+<p>先理解索引。</p>
+<h3 id="一底层的类型">一、底层的类型</h3>
+<h4 id="1-b-tree-索引">1. B-Tree 索引</h4>
+<p>如果没有特殊说明，那么多半说的就是B-Tree索引类型。</p>
+<p>key(姓, 名, 出生日期)</p>
+<p>key(last_name, first_name, dob)</p>
+<p>最左前缀查找，以下是有效查询：</p>
+<ul>
+<li>全值匹配<br>
+姓 + 名 + 出生日期，全值匹配，第一列，第二列，第三列</li>
+<li>匹配最左前缀<br>
+姓， 只查看索引第一项</li>
+<li>匹配列前缀<br>
+substring(姓, 0, 1) 用到了第一列索引</li>
+<li>匹配范围值<br>
+姓&gt;'allen&rsquo; and 姓&lt;'Barrymore&rsquo; 用到了第一列索引</li>
+<li>精确匹配某一列并范围匹配另外一列<br>
+姓=='allen&rsquo; and (名&gt;'jelly&rsquo; and 名&lt;'rock&rsquo;), 第一列全匹配，第二列范围匹配</li>
+<li>只访问索引的查询
+B-Tree 覆盖索引</li>
+</ul>
+<p>同时，也支持 ORDER BY 这种类型。</p>
+<p>B-Tree 索引限制：</p>
+<ul>
+<li>非最左列开始查找，则无法使用索引。比如无法查 姓&rsquo;%oodjob&rsquo;；</li>
+<li>不能跳过索引中的列，比如，姓+出生日期，则只能用第一列索引；</li>
+<li>查询了某一列的范围，则右边的列，都无法使用索引；</li>
+</ul>
+<h4 id="2-hash-索引">2. HASH 索引</h4>
+<p>hash 表实现， 精确匹配索引所有的列查询才有效。
+非常快； Memory 表中默认类型， 也支持B-Tree</p>
+<p>限制：</p>
+<ul>
+<li>哈希哈希只包含哈希值和行指针， 不能用来避免读取行。</li>
+<li>无法用来排序。</li>
+<li>不可使用部分索引，HASH(A,B)， 必须AB两列都要查询。</li>
+<li>只能用来等值查询 = , IN, &lt;=&gt;(与NULL值的比较) ,</li>
+<li>多哈希相同，则找出所有的，然后遍历；</li>
+<li>冲突多，维护的代价也很高，比如删除；</li>
+</ul>
+<p>适用于限定场合， 数据仓库中经典的 星型 schema，需要关联很多查找表。可以使用 哈希索引；</p>
+<p>自适应哈希索引：<br>
+InnoDB 注意到某些索引用的很频繁，则再次智商在创建一个哈希索引。是一个自动的，内部的行为， 无法控制，但是可开关。</p>
+<p><code>创建自定义哈希索引</code></p>
+<p>url作为长字符串，使用B-Tree，索引太麻烦，如果常用的全职匹配，则可以增加一列，比如 url_crc， 值是经过 crc32 哈希之后在入库，
+之后查询就是 where url_crc=CRC32(&lsquo;<a href="http://goodjob.com">http://goodjob.com</a>&rsquo;);</p>
+<p>非常高效。 可以使用触发器。</p>
+<h4 id="3-全文索引">3. 全文索引</h4>
+<p>// todo</p>
+<h3 id="二高性能索引策略">二、高性能索引策略</h3>
+<h4 id="独立的列">独立的列</h4>
+<p>索引列不能是表达式的一部分，也不能是函数的参数。</p>
+<h4 id="前缀索引和索引选择性">前缀索引和索引选择性</h4>
+<p>有时索引很长的字符串，一个策略是 哈希索引，另外一个策略是索引开始的部分字符。</p>
+<p>计算前缀可能性， 需要有一定量的数据， 然后通过一个公式，
+n=长度， f(n) 约等于 0.031 ，这个长度 n 的索引就够用了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">
+<span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">distinct</span> <span style="color:#66d9ef">left</span>(city,<span style="color:#ae81ff">3</span>))<span style="color:#f92672">/</span><span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> sel3,
+ <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">distinct</span> <span style="color:#66d9ef">left</span>(city,<span style="color:#ae81ff">4</span>))<span style="color:#f92672">/</span><span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> sel4,
+  <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">distinct</span> <span style="color:#66d9ef">left</span>(city,<span style="color:#ae81ff">5</span>))<span style="color:#f92672">/</span><span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> sel5,
+   <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">distinct</span> <span style="color:#66d9ef">left</span>(city,<span style="color:#ae81ff">6</span>))<span style="color:#f92672">/</span><span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> sel6,
+    <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">distinct</span> <span style="color:#66d9ef">left</span>(city,<span style="color:#ae81ff">7</span>))<span style="color:#f92672">/</span><span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> sel7
+    <span style="color:#66d9ef">from</span> test.test;
+
+</code></pre></div><p>优点：<br>
+更小，更快</p>
+<p>缺点：<br>
+无法使用前缀索引作 ORDER BY 和 GROUP BY， 也无法做覆盖扫描。 // todo</p>
+<p>后缀索引，也有用，比如某个公司的邮箱，
+mysql 不支持后缀索引，这时，可以先反转字符串。</p>
+<h4 id="多列索引">多列索引</h4></p>
+</article>
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一合适的数据类型">一、合适的数据类型</a>
+      <ul>
+        <li><a href="#原则">原则</a></li>
+        <li><a href="#类型细节">类型细节</a></li>
+        <li><a href="#范式和反范式">范式和反范式</a></li>
+        <li><a href="#缓存表和汇总表">缓存表和汇总表</a></li>
+        <li><a href="#加快alter-table-操作速度">加快ALTER TABLE 操作速度</a></li>
+        <li><a href="#创建高性能索引">创建高性能索引</a>
+          <ul>
+            <li><a href="#一底层的类型">一、底层的类型</a></li>
+            <li><a href="#二高性能索引策略">二、高性能索引策略</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

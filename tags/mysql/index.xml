@@ -12,19 +12,77 @@
     
     <item>
       <title>Mysql 面试题</title>
-      <link>https://keli.tech/posts/mysql/mysql-intro/</link>
+      <link>https://keli.tech/posts/mysql1/spark-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/mysql/mysql-intro/</guid>
+      <guid>https://keli.tech/posts/mysql1/spark-intro/</guid>
       <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Mysql 版本信息</title>
-      <link>https://keli.tech/posts/mysql/mysql-version/</link>
+      <title>零、Mysql 面试题</title>
+      <link>https://keli.tech/posts/mysql/1-mysql-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/mysql/mysql-version/</guid>
+      <guid>https://keli.tech/posts/mysql/1-mysql-intro/</guid>
+      <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一、Mysql Mac 安装和使用</title>
+      <link>https://keli.tech/posts/mysql/3-mysql-mac-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/3-mysql-mac-intro/</guid>
+      <description>&lt;h4 id=&#34;一安装&#34;&gt;一、安装&lt;/h4&gt;
+&lt;p&gt;1、执行安装命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>二、Mysql 基准测试 mysqlslap 和 sysbench</title>
+      <link>https://keli.tech/posts/mysql/3-mysql-sysbench/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/3-mysql-sysbench/</guid>
+      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br&gt;
+还有其他的补充。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http_load&lt;/li&gt;
+&lt;li&gt;sql-bench&lt;/li&gt;
+&lt;li&gt;dbt2 的 TPC-C&lt;/li&gt;
+&lt;li&gt;percona的 TPCC-mySQL测试工具&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>六、MySQL 建表原则</title>
+      <link>https://keli.tech/posts/mysql/6-mysql-design-rules/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/6-mysql-design-rules/</guid>
+      <description>&lt;p&gt;MySQL 建表原则， 常见面试题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>七、Mysql 性能问题定位</title>
+      <link>https://keli.tech/posts/mysql/7-mysql-profiling/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/7-mysql-profiling/</guid>
+      <description>&lt;p&gt;本文介绍 Mysql 性能问题定位。&lt;/p&gt;
+&lt;p&gt;慢查询日志 和 Percona Toolkit
+pt-query-digest&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>十、Mysql 版本信息</title>
+      <link>https://keli.tech/posts/mysql/10-mysql-version/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/10-mysql-version/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     

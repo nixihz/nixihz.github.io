@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mysql 面试题"><meta property="og:title" content="Mysql 面试题" />
+<meta property="og:description" content="Mysql 面试题" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/posts/mysql1/spark-intro/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>Mysql 面试题 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
+
+
+<script defer src="/en.search.min.56d260235b0df1d2c64bd8459f07ba2ad112c5ac9dd1a2b8f409b26391b584e1.js" integrity="sha256-VtJgI1sN8dLGS9hFnwe6KtESxayd0aK49AmyY5G1hOE="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></h2>
+<hr>
+<ul>
+<li><strong>组件</strong>
+<ul>
+<li><a href="/posts/redis/">Redis</a></li>
+<li><a href="/posts/mysql/">Mysql</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>备忘</strong>
+<ul>
+<li><a href="/posts/cheatsheet/scala/">Scala</a></li>
+<li><a href="/posts/cheatsheet/data-structure/">数据结构</a></li>
+<li><a href="/posts/cheatsheet/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/posts/tools/git/">Git</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>解决方案</strong>
+<ul>
+<li><a href="/posts/solution/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>读书札记</strong>
+<ul>
+<li><a href="/posts/solution/golang/">大数据项目管理-从规划到实现</a></li>
+<li><a href="/posts/solution/golang/">薛兆丰经济学讲义</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
+<ul>
+<li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
+<li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><a href="/posts/"><strong>随笔</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
+</li>
+</ul>
+<hr>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mysql 面试题</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#通用模块">通用模块</a></li>
+    <li><a href="#索引">索引</a></li>
+    <li><a href="#事务">事务</a></li>
+    <li><a href="#锁">锁</a></li>
+    <li><a href="#命令和内置函数">命令和内置函数</a></li>
+    <li><a href="#日志">日志</a></li>
+    <li><a href="#高性能">高性能</a></li>
+    <li><a href="#其他">其他</a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/mysql1/spark-intro/">Mysql 面试题</a>
+  </h1>
+  
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/develop/">develop</a>, 
+        <a href="/categories/mysql/">mysql</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/mysql/">mysql</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><p>Mysql 面试题</p>
+<p><img src="/image/mysql-mindmap.jpeg" alt="2"></p>
+<h1 id="通用模块">通用模块</h1>
+<h1 id="索引">索引</h1>
+<h1 id="事务">事务</h1>
+<h1 id="锁">锁</h1>
+<h1 id="命令和内置函数">命令和内置函数</h1>
+<h1 id="日志">日志</h1>
+<h1 id="高性能">高性能</h1>
+<h1 id="其他">其他</h1></p>
+</article>
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#通用模块">通用模块</a></li>
+    <li><a href="#索引">索引</a></li>
+    <li><a href="#事务">事务</a></li>
+    <li><a href="#锁">锁</a></li>
+    <li><a href="#命令和内置函数">命令和内置函数</a></li>
+    <li><a href="#日志">日志</a></li>
+    <li><a href="#高性能">高性能</a></li>
+    <li><a href="#其他">其他</a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

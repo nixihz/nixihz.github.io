@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/mysql-intro/</loc>
+    <loc>https://keli.tech/posts/mysql1/spark-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,7 +43,22 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/posts/mysql/1-mysql-intro/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/notes/golang/go-imagemagick/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/solution/golang/go-imagemagick/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -56,12 +71,22 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/mysql-version/</loc>
+    <loc>https://keli.tech/posts/mysql1/spark-advanced/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://keli.tech/docs/example/table-of-contents/without-toc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/mysql/3-mysql-mac-intro/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/mysql/3-mysql-sysbench/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -80,8 +105,18 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/posts/mysql/6-mysql-design-rules/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/redis/redis-transaction/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/mysql/7-mysql-profiling/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -96,6 +131,11 @@
   
   <url>
     <loc>https://keli.tech/posts/redis/redis-module/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/mysql/10-mysql-version/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,12 +163,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/redis/</loc>
+    <loc>https://keli.tech/tags/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/redis/</loc>
+    <loc>https://keli.tech/categories/redis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -148,12 +188,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/golang/</loc>
+    <loc>https://keli.tech/tags/golang/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/golang/</loc>
+    <loc>https://keli.tech/categories/golang/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,12 +208,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/git/</loc>
+    <loc>https://keli.tech/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/git/</loc>
+    <loc>https://keli.tech/tags/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,7 +228,17 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/categories/bigdata/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/cheatsheet/golang/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/cheatsheet/golang/golang-1/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -208,12 +258,42 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/posts/mysql1/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/tags/spark/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/categories/spark/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/tags/imagemagick/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://keli.tech/tags/scala/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/categories/solution/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/cheatsheet/scala/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/notes/golang/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   

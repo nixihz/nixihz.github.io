@@ -83,10 +83,10 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     
     <item>
       <title>Mysql 面试题</title>
-      <link>https://keli.tech/posts/mysql/mysql-intro/</link>
+      <link>https://keli.tech/posts/mysql1/spark-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/mysql/mysql-intro/</guid>
+      <guid>https://keli.tech/posts/mysql1/spark-intro/</guid>
       <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
     </item>
     
@@ -97,6 +97,31 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
       
       <guid>https://keli.tech/posts/redis/redis-intro/</guid>
       <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>零、Mysql 面试题</title>
+      <link>https://keli.tech/posts/mysql/1-mysql-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/1-mysql-intro/</guid>
+      <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
+      <link>https://keli.tech/posts/notes/golang/go-imagemagick/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/notes/golang/go-imagemagick/</guid>
+      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
+&lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
+具体需求：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
+&lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,6 +141,18 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     </item>
     
     <item>
+      <title>Scala 简介</title>
+      <link>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</guid>
+      <description>特点关键词：  jvm、 静态类型、 多范例  面向对象-trait(mixin组合) 函数式编程FP-适用大数据和并发  Immutable 值、 First Class 函数、 无副作用函数 高阶函数 函数集合     泛型
+通过类型推断，Scala代码通常与动态类型语言中的代码一样简洁。 可扩展架构  trait: mixin组合 抽象成员和泛型 嵌套类 明确的自我类型??    其他关键词 REPL
+“读取-求值-输出”循环(英语:Read-Eval-Print Loop)，sbt 终端启动 console。
+$ sbt sbt:fence&amp;gt; console scala&amp;gt; 语法 class Upper { def upper(strings: String*): Seq[String] = { strings.map((s:String) =&amp;gt; s.toUpperCase()) } } val up = new Upper println(up.upper(&amp;#34;Hello&amp;#34;, &amp;#34;World!&amp;#34;)) 方法定义 def upper(strings: String*): Seq[String] = .</description>
+    </item>
+    
+    <item>
       <title>With ToC</title>
       <link>https://keli.tech/docs/example/table-of-contents/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -126,12 +163,12 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     </item>
     
     <item>
-      <title>Mysql 版本信息</title>
-      <link>https://keli.tech/posts/mysql/mysql-version/</link>
+      <title>Spark 高级</title>
+      <link>https://keli.tech/posts/mysql1/spark-advanced/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/mysql/mysql-version/</guid>
-      <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
+      <guid>https://keli.tech/posts/mysql1/spark-advanced/</guid>
+      <description>&lt;p&gt;spark&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -142,6 +179,34 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
       <guid>https://keli.tech/docs/example/table-of-contents/without-toc/</guid>
       <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
 Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+    <item>
+      <title>一、Mysql Mac 安装和使用</title>
+      <link>https://keli.tech/posts/mysql/3-mysql-mac-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/3-mysql-mac-intro/</guid>
+      <description>&lt;h4 id=&#34;一安装&#34;&gt;一、安装&lt;/h4&gt;
+&lt;p&gt;1、执行安装命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>二、Mysql 基准测试 mysqlslap 和 sysbench</title>
+      <link>https://keli.tech/posts/mysql/3-mysql-sysbench/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/3-mysql-sysbench/</guid>
+      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br&gt;
+还有其他的补充。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http_load&lt;/li&gt;
+&lt;li&gt;sql-bench&lt;/li&gt;
+&lt;li&gt;dbt2 的 TPC-C&lt;/li&gt;
+&lt;li&gt;percona的 TPCC-mySQL测试工具&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -173,12 +238,33 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     </item>
     
     <item>
+      <title>六、MySQL 建表原则</title>
+      <link>https://keli.tech/posts/mysql/6-mysql-design-rules/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/6-mysql-design-rules/</guid>
+      <description>&lt;p&gt;MySQL 建表原则， 常见面试题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Redis 事务</title>
       <link>https://keli.tech/posts/redis/redis-transaction/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/redis/redis-transaction/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>七、Mysql 性能问题定位</title>
+      <link>https://keli.tech/posts/mysql/7-mysql-profiling/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/7-mysql-profiling/</guid>
+      <description>&lt;p&gt;本文介绍 Mysql 性能问题定位。&lt;/p&gt;
+&lt;p&gt;慢查询日志 和 Percona Toolkit
+pt-query-digest&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -209,6 +295,15 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     </item>
     
     <item>
+      <title>十、Mysql 版本信息</title>
+      <link>https://keli.tech/posts/mysql/10-mysql-version/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/mysql/10-mysql-version/</guid>
+      <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>git重刷提交的email和name信息</title>
       <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
@@ -218,6 +313,15 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go编程语言规范</title>
+      <link>https://keli.tech/posts/cheatsheet/golang/golang-1/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/cheatsheet/golang/golang-1/</guid>
+      <description></description>
     </item>
     
     <item>
