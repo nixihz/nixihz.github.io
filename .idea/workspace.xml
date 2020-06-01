@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b532bb0-8701-42cc-8ba4-9d10e7eef1a9" name="Default Changelist" comment="o">
-      <change afterPath="$PROJECT_DIR$/content/posts/mysql1/spark-advanced.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/menu/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/menu/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/mysql/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/mysql1/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/mysql/mysql-intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/mysql1/spark-intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/mysql/mysql-version.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/book/layouts/posts/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/posts/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/book/layouts/posts/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/book/layouts/posts/single.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,32 +22,7 @@
     <favorites_list name="fencex.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/posts/mysql/7-mysql-profiling.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="400">
-                <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="624">
-                <caret line="271" column="9" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -72,6 +44,12 @@
       <find>ow proce</find>
       <find>最大链接</find>
       <find>ip</find>
+      <find>...</find>
+      <find>&gt;</find>
+      <find>范围</find>
+      <find>排序</find>
+      <find>&lt;=&gt;</find>
+      <find>等于</find>
     </findStrings>
     <replaceStrings>
       <replace>testtest</replace>
@@ -88,7 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/themes/book/layouts/posts/single.html" />
         <option value="$PROJECT_DIR$/themes/book/layouts/_default/baseof.html" />
         <option value="$PROJECT_DIR$/content/_index.md" />
         <option value="$PROJECT_DIR$/content/posts/tools/hugo/book/_index.md" />
@@ -116,14 +93,19 @@
         <option value="$PROJECT_DIR$/content/posts/mysql/mysql-version.md" />
         <option value="$PROJECT_DIR$/content/posts/mysql/3-mysql-sysbench.md" />
         <option value="$PROJECT_DIR$/content/posts/mysql/7-mysql-profiling.md" />
+        <option value="$PROJECT_DIR$/themes/book/layouts/taxonomy/list.html" />
+        <option value="$PROJECT_DIR$/themes/book/layouts/posts/single.html" />
+        <option value="$PROJECT_DIR$/themes/book/layouts/partials/docs/post-meta.html" />
+        <option value="$PROJECT_DIR$/themes/book/layouts/partials/docs/post-list-meta.html" />
+        <option value="$PROJECT_DIR$/themes/book/layouts/posts/list.html" />
         <option value="$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="119" />
+    <option name="x" value="927" />
     <option name="y" value="23" />
-    <option name="width" value="1801" />
+    <option name="width" value="993" />
     <option name="height" value="1002" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -202,24 +184,24 @@
     <property name="ChangesTree.GroupingKeys" value="" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/posts/mysql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/book/layouts/partials/docs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/content/posts/mysql" />
-      <recent name="$PROJECT_DIR$/content/posts/notes/Scala" />
-      <recent name="$PROJECT_DIR$/content/posts" />
-      <recent name="$PROJECT_DIR$/content/posts/cheatsheet/golang" />
-      <recent name="$PROJECT_DIR$/content/posts/notes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/content/posts/cheatsheet" />
       <recent name="$PROJECT_DIR$/content/posts/notes" />
       <recent name="$PROJECT_DIR$/static/image/go" />
       <recent name="$PROJECT_DIR$/content/posts/tools/hugo/book" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/themes/book/layouts/partials/docs" />
+      <recent name="$PROJECT_DIR$/content/posts/mysql" />
+      <recent name="$PROJECT_DIR$/content/posts/notes/Scala" />
+      <recent name="$PROJECT_DIR$/content/posts" />
+      <recent name="$PROJECT_DIR$/content/posts/cheatsheet/golang" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,18 +232,18 @@
       <workItem from="1585668563874" duration="6096000" />
       <workItem from="1586094096747" duration="5299000" />
       <workItem from="1587639552153" duration="395000" />
-      <workItem from="1590831768128" duration="34698000" />
+      <workItem from="1590831768128" duration="34980000" />
+      <workItem from="1590978899441" duration="15751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56568000" />
+    <option name="totallyTimeSpent" value="72601000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="966" y="23" width="954" height="1002" extended-state="0" />
-    <editor active="true" />
+    <frame x="927" y="23" width="993" height="1002" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.24919441" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.30206186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5017182" side_tool="true" weight="0.28038126" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -284,31 +266,8 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/includes/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/includes/download2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/includes/download.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/audiojs/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/audiojs/player-graphics.gif">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/book/layouts/posts/single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/audiojs/audio.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -609,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/posts/mysql/_index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -700,8 +649,56 @@
     <entry file="file://$PROJECT_DIR$/content/posts/mysql/7-mysql-profiling.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="400">
-            <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+          <first_editor relative-caret-position="490">
+            <caret line="115" column="6" lean-forward="true" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/book/layouts/taxonomy/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/book/layouts/partials/docs/post-meta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/book/layouts/partials/docs/post-list-meta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/book/layouts/posts/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/book/layouts/posts/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>
@@ -709,9 +706,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content/posts/mysql/6-mysql-design-rules.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="624">
-            <caret line="271" column="9" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="432">
+            <caret line="405" column="14" lean-forward="true" selection-start-line="405" selection-start-column="14" selection-end-line="405" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
