@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
 
 
-<script defer src="/en.search.min.56d260235b0df1d2c64bd8459f07ba2ad112c5ac9dd1a2b8f409b26391b584e1.js" integrity="sha256-VtJgI1sN8dLGS9hFnwe6KtESxayd0aK49AmyY5G1hOE="></script>
+<script defer src="/en.search.min.85ba9a48bd61493010961b0229dd34e9536fe30a27b69094d2b08a6935e5fa2d.js" integrity="sha256-hbqaSL1hSTAQlhsCKd006VNv4wontpCU0rCKaTXl&#43;i0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -177,17 +177,39 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#原则">原则</a></li>
         <li><a href="#类型细节">类型细节</a></li>
-        <li><a href="#范式和反范式">范式和反范式</a></li>
-        <li><a href="#缓存表和汇总表">缓存表和汇总表</a></li>
+      </ul>
+    </li>
+    <li><a href="#范式和反范式">范式和反范式</a></li>
+    <li><a href="#缓存表和汇总表">缓存表和汇总表</a>
+      <ul>
         <li><a href="#加快alter-table-操作速度">加快ALTER TABLE 操作速度</a></li>
-        <li><a href="#创建高性能索引">创建高性能索引</a>
+      </ul>
+    </li>
+    <li><a href="#创建高性能索引">创建高性能索引</a>
+      <ul>
+        <li><a href="#一底层存储格式">一、底层存储格式</a>
           <ul>
-            <li><a href="#一底层的类型">一、底层的类型</a></li>
-            <li><a href="#二高性能索引策略">二、高性能索引策略</a></li>
+            <li><a href="#1-b-tree-索引">1. B-Tree 索引</a></li>
+            <li><a href="#2-hash-索引">2. HASH 索引</a></li>
+            <li><a href="#3-全文索引">3. 全文索引</a></li>
+          </ul>
+        </li>
+        <li><a href="#二高性能索引策略">二、高性能索引策略</a>
+          <ul>
+            <li><a href="#独立的列">独立的列</a></li>
+            <li><a href="#多列索引">多列索引</a></li>
+            <li><a href="#聚簇索引">聚簇索引</a></li>
+            <li><a href="#设计索引完成查找和排序">设计索引完成查找和排序</a></li>
+            <li><a href="#压缩前缀压缩索引">压缩（前缀压缩）索引</a></li>
+            <li><a href="#heading"></a></li>
+            <li><a href="#冗余和重复索引未使用到的索引">冗余和重复索引，未使用到的索引</a></li>
+            <li><a href="#索引和锁">索引和锁</a></li>
+            <li><a href="#索引实战">索引实战</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#explain-关注类型">EXPLAIN 关注类型</a></li>
   </ul>
 </nav>
 
@@ -316,7 +338,7 @@ TIMESTAMP 范围小，存储一半，效率高， 1907 - 2038年</p>
 <p>位</p>
 <p>BIT</p>
 <p>SET</p>
-<h2 id="范式和反范式">范式和反范式</h2>
+<h1 id="范式和反范式">范式和反范式</h1>
 <ul>
 <li>1NF，属性不可再分， (现在出现了sql，map这样的)</li>
 <li>2NF，关联</li>
@@ -335,7 +357,7 @@ TIMESTAMP 范围小，存储一半，效率高， 1907 - 2038年</p>
 <li>范式需要关联，可能导致索引策略无效。</li>
 </ol>
 <p>注意范式和反范式的混合使用。</p>
-<h2 id="缓存表和汇总表">缓存表和汇总表</h2>
+<h1 id="缓存表和汇总表">缓存表和汇总表</h1>
 <ol>
 <li>缓存表，比如多张表关联查询的更少的字段。</li>
 <li>汇总表，记录累计结果的。</li>
@@ -357,10 +379,10 @@ TIMESTAMP 范围小，存储一半，效率高， 1907 - 2038年</p>
 <li>禁用索引，载入数据，重新启用索引；<br>
 不支持唯一索引， 删除索引记得保留唯一索引。</li>
 </ol>
-<h2 id="创建高性能索引">创建高性能索引</h2>
+<h1 id="创建高性能索引">创建高性能索引</h1>
 <p>先理解索引。</p>
-<h3 id="一底层的类型">一、底层的类型</h3>
-<h4 id="1-b-tree-索引">1. B-Tree 索引</h4>
+<h2 id="一底层存储格式">一、底层存储格式</h2>
+<h3 id="1-b-tree-索引">1. B-Tree 索引</h3>
 <p>如果没有特殊说明，那么多半说的就是B-Tree索引类型。</p>
 <p>key(姓, 名, 出生日期)</p>
 <p>key(last_name, first_name, dob)</p>
@@ -386,7 +408,8 @@ B-Tree 覆盖索引</li>
 <li>不能跳过索引中的列，比如，姓+出生日期，则只能用第一列索引；</li>
 <li>查询了某一列的范围，则右边的列，都无法使用索引；</li>
 </ul>
-<h4 id="2-hash-索引">2. HASH 索引</h4>
+<p>索引只能做等于，不等于以及大于小于操作， 而字符串的最左前缀匹配的LIKE查询，其实是转化成了简单的比较操作。</p>
+<h3 id="2-hash-索引">2. HASH 索引</h3>
 <p>hash 表实现， 精确匹配索引所有的列查询才有效。
 非常快； Memory 表中默认类型， 也支持B-Tree</p>
 <p>限制：</p>
@@ -405,11 +428,11 @@ InnoDB 注意到某些索引用的很频繁，则再次智商在创建一个哈�
 <p>url作为长字符串，使用B-Tree，索引太麻烦，如果常用的全职匹配，则可以增加一列，比如 url_crc， 值是经过 crc32 哈希之后在入库，
 之后查询就是 where url_crc=CRC32(&lsquo;<a href="http://goodjob.com">http://goodjob.com</a>&rsquo;);</p>
 <p>非常高效。 可以使用触发器。</p>
-<h4 id="3-全文索引">3. 全文索引</h4>
+<h3 id="3-全文索引">3. 全文索引</h3>
 <p>// todo</p>
-<h3 id="二高性能索引策略">二、高性能索引策略</h3>
-<h4 id="独立的列">独立的列</h4>
-<p>索引列不能是表达式的一部分，也不能是函数的参数。</p>
+<h2 id="二高性能索引策略">二、高性能索引策略</h2>
+<h3 id="独立的列">独立的列</h3>
+<p>使用的索引列不能是表达式的一部分，也不能是函数的参数。</p>
 <h4 id="前缀索引和索引选择性">前缀索引和索引选择性</h4>
 <p>有时索引很长的字符串，一个策略是 哈希索引，另外一个策略是索引开始的部分字符。</p>
 <p>计算前缀可能性， 需要有一定量的数据， 然后通过一个公式，
@@ -428,8 +451,91 @@ n=长度， f(n) 约等于 0.031 ，这个长度 n 的索引就够用了。</p>
 无法使用前缀索引作 ORDER BY 和 GROUP BY， 也无法做覆盖扫描。 // todo</p>
 <p>后缀索引，也有用，比如某个公司的邮箱，
 mysql 不支持后缀索引，这时，可以先反转字符串。</p>
-<h4 id="多列索引">多列索引</h4></p>
+<h3 id="多列索引">多列索引</h3>
+<p>多个列上建立单独的单列索引大部分情况下并不能提高查询性能。</p>
+<p>对InnoDB来说，主键已经包含在二级索引中， 有了key(A), 那么 key(A,ID) 则不需要。</p>
+<p>索引上的OR， 可以改成 UNION ALL，</p>
+<p>mysql 内部会使用索引合并策略，这是一种优化结果，也说明索引建的很糟糕。
+但是优化器，不如使用 UNION ALL；</p>
+<h4 id="索引列顺序针对b-tree">索引列顺序（针对B-Tree）</h4>
+<p>ORDER BY，GROUP BY 和 DISTINCT 子句的查询需求。</p>
+<p>经验之谈：<br>
+通常不考虑排序和分组时，把选择性最高的列放到索引的最前列。</p>
+<p>全局基数和选择性。</p>
+<p>对某些特殊情况可能需要禁止查询。</p>
+<h3 id="聚簇索引">聚簇索引</h3>
+<p>数据行和索引存放在一起。只能有一个索引聚簇数据，</p>
+<p>索引中访问数据更快。</p>
+<p>缺点：</p>
+<ul>
+<li>提升I/O密集型应用性能。在内存中没有什么优势；</li>
+<li>插入速度依赖插入顺序，非按照主键顺序插入，则需要使用 OPTIMIZE TABLE 重新组织以下表。</li>
+</ul>
+<p>只查询列的数据，已经包含在索引中，称之为&quot;覆盖索引&rdquo;。
+只有B-Tree 索引做覆盖索引。</p>
+<p>如果Explain 的 Extra 看到 Using index，如果只访问 key 中的列，则可以用做覆盖索引。</p>
+<h3 id="设计索引完成查找和排序">设计索引完成查找和排序</h3>
+<p>排序操作 和 索引顺序扫描 可以得到有序结果。</p>
+<p>Explain 中 type == index， 说明通过索引扫描来排序。 （Extra using index ，说明用到了覆盖索引）。</p>
+<p>索引列的顺序和ORDER By子句的顺序完全一致，并且所有列的方向（倒序，正序）都一样时，Mysql才能使用索引对结果做排序。</p>
+<p>如果多表关联，则Order By 子句必须全部为第一张表时，才可以使用索引排序。</p>
+<p>多列索引A,B,C中，如果where 或者 join 指定A 为常量，则 ORDRE BY B,C 是可以使用索引排序的。</p>
+<p>A条件 有范围查找，则不能只用B排序。 // 待考证。todo</p>
+<h3 id="压缩前缀压缩索引">压缩（前缀压缩）索引</h3>
+<p>MyISAM 使用前缀压缩来减少索引大小，代价则是某些操作更慢，时间换空间。</p>
+<p>ORDER BY DESC 倒序扫描就不是很好。</p>
+<h3 id="heading"></h3>
+<p>todo 区分 I/O 密集和 CPU 密集。</p>
+<h3 id="冗余和重复索引未使用到的索引">冗余和重复索引，未使用到的索引</h3>
+<p>MySQL 需要单独维护重复索引，并在优化器上也要逐个考虑，会影响性能。</p>
+<p>MySQL 唯一键和主键限制都是通过索引实现的，不需要重复建立。</p>
+<p>而冗余索引则不同。</p>
+<p>key(A,B) 和 key(A) 就是冗余<br>
+key(A,B) 和 key(B, A) 就是不是冗余</p>
+<p>冗余可能发生在，对key(A) 进行扩展，但不是修改Key，而是新增 KEY(A,B).</p>
+<p>还有一种永远用不到的索引，完全是累赘，考虑删除。 有工具来定位。</p>
+<p>pt-index-usage.</p>
+<h3 id="索引和锁">索引和锁</h3>
+<p>索引可以让查询锁定更少的行。</p>
+<p>InnoDB 的行锁效率很高，但是锁定行会带来额外的开销。锁定超过需要行会增加锁争夺，减少并发性。</p>
+<p>MySQL 在服务端才能应用WHERE 子句。</p>
+<p>InnoDB， 在二级索引使用共享锁/读锁， 主键是写锁。</p>
+<p>只有InnoDB在存储引擎层能够过滤掉不需要的行时才有效，没有使用到索引，则照样需要锁表。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> aid <span style="color:#66d9ef">from</span> bb <span style="color:#66d9ef">where</span> aid <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span> <span style="color:#66d9ef">and</span> aid <span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">update</span>;
+</code></pre></div><p>这个sql会锁定 ，1 2 3 4行，为什么会锁定1行，因为索引只用在了 aid &lt; 5 子句， aid&lt;&gt;1 这个子句 &lt;&gt; 是不能使用索引的。</p>
+<p>为了验证行锁情况， 开启事务之前 关闭 AUTOCOMMIT。</p>
+<p>SET AUTOCOMMIT=0;
+BEGIN;</p>
+<h3 id="索引实战">索引实战</h3>
+<p>列：国家、地区、城市、性别、肤色、年龄。</p>
+<p>国家和性别，选择性通常不高，但是很多查询都会用到。所以依然使用 (性别，国家)来作为前缀。</p>
+<p>但是根据最左前缀，这貌似不理智。</p>
+<p>可以使用某些诀窍过滤， 条件中增加  SEX IN (&lsquo;m&rsquo;, &lsquo;f&rsquo;) 虽然没有过滤任何行，但是依然会让索引生效。
+但是 列有太多不同的值，就会让IN 表太长，就不合适了。</p>
+<p>我们常常把年龄放在索引的后面，因为年龄常常是范围查找，而在范围查找之后，不能再使用索引了，
+所以，范围查找放在后面，（当然也可以改写为 IN(18,19,20,21,22) 这样的枚举方式）</p>
+<p>但是千万不可滥用 IN， IN会转化成 24 组合。</p>
+<p>避免多个范围条件，EXPLAIN 中的 type == range</p>
+<p>limit 操作是在 server 处理。</p>
+<p>延迟关联，用上覆盖索引，使用了主键，然后根据主键来关联。</p>
+<p>碎片处理， Optimize table
+alter table 修改 存储引擎为当前引擎。</p>
+<h1 id="explain-关注类型">EXPLAIN 关注类型</h1>
+<pre><code>select_type:
+type:
+key:
+key_len:
+rows:
+Extra:
+
+
+</code></pre><p>Extra：</p>
+<ul>
+<li>Using where，说明返回了结果到 server 层后还做了过滤。</li>
+<li>Using index, 说明使用了覆盖索引。</li>
+</ul></p>
 </article>
+
 
 
 <script src=""></script>
@@ -487,17 +593,39 @@ mysql 不支持后缀索引，这时，可以先反转字符串。</p>
       <ul>
         <li><a href="#原则">原则</a></li>
         <li><a href="#类型细节">类型细节</a></li>
-        <li><a href="#范式和反范式">范式和反范式</a></li>
-        <li><a href="#缓存表和汇总表">缓存表和汇总表</a></li>
+      </ul>
+    </li>
+    <li><a href="#范式和反范式">范式和反范式</a></li>
+    <li><a href="#缓存表和汇总表">缓存表和汇总表</a>
+      <ul>
         <li><a href="#加快alter-table-操作速度">加快ALTER TABLE 操作速度</a></li>
-        <li><a href="#创建高性能索引">创建高性能索引</a>
+      </ul>
+    </li>
+    <li><a href="#创建高性能索引">创建高性能索引</a>
+      <ul>
+        <li><a href="#一底层存储格式">一、底层存储格式</a>
           <ul>
-            <li><a href="#一底层的类型">一、底层的类型</a></li>
-            <li><a href="#二高性能索引策略">二、高性能索引策略</a></li>
+            <li><a href="#1-b-tree-索引">1. B-Tree 索引</a></li>
+            <li><a href="#2-hash-索引">2. HASH 索引</a></li>
+            <li><a href="#3-全文索引">3. 全文索引</a></li>
+          </ul>
+        </li>
+        <li><a href="#二高性能索引策略">二、高性能索引策略</a>
+          <ul>
+            <li><a href="#独立的列">独立的列</a></li>
+            <li><a href="#多列索引">多列索引</a></li>
+            <li><a href="#聚簇索引">聚簇索引</a></li>
+            <li><a href="#设计索引完成查找和排序">设计索引完成查找和排序</a></li>
+            <li><a href="#压缩前缀压缩索引">压缩（前缀压缩）索引</a></li>
+            <li><a href="#heading"></a></li>
+            <li><a href="#冗余和重复索引未使用到的索引">冗余和重复索引，未使用到的索引</a></li>
+            <li><a href="#索引和锁">索引和锁</a></li>
+            <li><a href="#索引实战">索引实战</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#explain-关注类型">EXPLAIN 关注类型</a></li>
   </ul>
 </nav>
 
