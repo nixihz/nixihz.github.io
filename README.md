@@ -1,3 +1,9 @@
+## 初始化
+```
+git submodule update --init --depth 1
+
+```
+
 
 ## 测试
 
