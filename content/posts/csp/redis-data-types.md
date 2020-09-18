@@ -8,6 +8,8 @@ categories:
  - web
  - security
 weight: 4
+bookToc: false
+
 ---
 
 内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。
@@ -32,46 +34,54 @@ CSP的主要目标是减少和报告XSS攻击. XSS攻击利用浏览器对从服
 
 你可以使用  Content-Security-Policy HTTP头部 来指定策略，像这样:
 
-```
+```shell
 Content-Security-Policy: policy
 ```
+
 
 policy参数是一个包含了各种描述你的CSP策略指令的字符串。
 
 ### 3.1.1 常用示例
 
 #### 示例1
-所有内容均来自站点的同一个源（不包含子域名)
-```
+
+{{< expand "所有内容均来自站点的同一个源（不包含子域名）" "展开" >}}
+```shell
 Content-Security-Policy: default-src 'self'
 ```
+{{< /expand >}}
 
 #### 示例2
-允许内容来自信任的域名及其子域名
-```
+{{< expand "允许内容来自信任的域名及其子域名" "展开" >}}
+```shell
 Content-Security-Policy: default-src 'self' *.trusted.com
 ```
+{{< /expand >}}
 
 #### 示例3
-允许加载任何源的图片， 限制音频/视频来源，限制脚本来源
 
-```
+{{< expand "允许加载任何源的图片， 限制音频/视频来源，限制脚本来源" "展开" >}}
+```shell
 Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
 ```
 
-图片可以从任何地方加载(注意 "*" 通配符)。 
-多媒体文件仅允许从 media1.com 和 media2.com 加载(不允许从这些站点的子域名)。 
-可运行脚本仅允许来自于userscripts.example.com。
+
+- 图片可以从任何地方加载(注意 "*" 通配符)。  
+- 多媒体文件仅允许从 media1.com 和 media2.com 加载(不允许从这些站点的子域名)。  
+- 可运行脚本仅允许来自于userscripts.example.com。 
+
+{{< /expand >}}
+
 
 
 #### 示例4
-
-所有内容都要通过SSL方式获取，以避免攻击者窃听用户发出的请求。
-```
+{{< expand  "所有内容都要通过SSL方式获取，以避免攻击者窃听用户发出的请求。" "展开">}}
+```shell
 Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
 ```
 
 该服务器仅允许通过HTTPS方式并仅从onlinebanking.jumbobank.com域名来访问文档。
+{{< /expand>}}
 
 
 ## 3.2 策略触发上报
@@ -79,18 +89,24 @@ Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
 
 策略触发上报报文示例：
 
-```
+```json
 {
   "csp-report": {
-    "document-uri": "http://example.com/signup.html",
-    "referrer": "",
-    "blocked-uri": "http://example.com/css/style.css",
-    "violated-directive": "style-src cdn.example.com",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
+    "document-uri": "http://example.com/signup.html", //发生违规的文档的URI。
+    "referrer": "", //违规发生处的文档引用（地址）。
+    "blocked-uri": "http://example.com/css/style.css", //被CSP阻止的资源URI。如果被阻止的URI来自不同的源而非文档URI，那么被阻止的资源URI会被删减，仅保留协议，主机和端口号。
+    "violated-directive": "style-src cdn.example.com", //违反的策略名称。
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports", //在 Content-Security-Policy HTTP 头部中指明的原始策略。
+
+    "disposition": "",
+    "effective-directive": "",
+    "script-sample": "",
+    "status-code": "",
   }
 }
 ```
 
+四、实践
 
 
 ## 参考

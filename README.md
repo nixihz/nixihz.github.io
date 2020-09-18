@@ -27,7 +27,8 @@ hugo -D
 
 ## 重新生成所有语音文件
 ```
-export  GOOGLE_APPLICATION_CREDENTIALS="/Users/fence/Desktop/text-speech-7b1f89740e96.json"
+export  GOOGLE_APPLICATION_CREDENTIALS="text-speech-272314-3276ed3df6e6.json"
+
 export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;
 rm -rf public/audio/*.mp3
 ./voice
