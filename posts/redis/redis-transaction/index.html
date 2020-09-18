@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Redis 事务"><meta property="og:title" content="Redis 事务" />
-<meta property="og:description" content="Redis 事务" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://keli.tech/posts/redis/redis-transaction/" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Redis 事务"/><meta property="og:title" content="Redis 事务"/>
+<meta property="og:description" content="Redis 事务"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://keli.tech/posts/redis/redis-transaction/"/>
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<meta property="article:published_time" content="2020-03-02T00:00:00+00:00"/>
+<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00"/><meta property="og:site_name" content="Fnece X 的技术博客"/>
 <title>Redis 事务 | FenceX的技术博客</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/x-icon"/>
 
 
-<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="/>
 
 
-<script defer src="/en.search.min.85ba9a48bd61493010961b0229dd34e9536fe30a27b69094d2b08a6935e5fa2d.js" integrity="sha256-hbqaSL1hSTAQlhsCKd006VNv4wontpCU0rCKaTXl&#43;i0="></script>
+<script defer="" src="/en.search.min.c38e7555f2380a3f8a73cb1a868445a3088b015eb184bb04020c8f72c8dba764.js" integrity="sha256-w451VfI4Cj+Kc8sahoRFowiLAV6xhLsEAgyPcsjbp2Q="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -29,7 +26,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 
 <!--
 Made with Book Theme
@@ -37,23 +34,23 @@ https://github.com/alex-shpak/hugo-book
 -->
 
   
-  <link rel=stylesheet href="/js/audiojs/custom.css" >
+  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+  <input type="checkbox" class="hidden" id="menu-control"/>
   <main class="container flex">
     <aside class="book-menu">
       
   <nav>
 <h2 class="book-brand">
-  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  <a href="/"><img src="/image/logo.png" alt="Logo"/><span>FenceX的技术博客</span>
   </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -66,8 +63,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></h2>
-<hr>
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></audio></h2>
+<hr/>
 <ul>
 <li><strong>组件</strong>
 <ul>
@@ -76,7 +73,15 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr>
+<hr/>
+<ul>
+<li><strong>WEB安全</strong>
+<ul>
+<li><a href="/posts/csp/">CSP内容安全策略</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
 <ul>
 <li><strong>备忘</strong>
 <ul>
@@ -86,7 +91,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr>
+<hr/>
 <ul>
 <li><strong>工具</strong>
 <ul>
@@ -94,7 +99,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr>
+<hr/>
 <ul>
 <li><strong>解决方案</strong>
 <ul>
@@ -102,7 +107,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr>
+<hr/>
 <ul>
 <li><strong>读书札记</strong>
 <ul>
@@ -111,9 +116,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr>
+<hr/>
 <ul>
-<li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
+<li><strong>博客工具 – 介绍本博客涉及工具</strong>
 <ul>
 <li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
 <li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
@@ -122,7 +127,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr>
+<hr/>
 <ul>
 <li>
 <p><a href="/posts/"><strong>随笔</strong></a></p>
@@ -131,7 +136,7 @@ https://github.com/alex-shpak/hugo-book
 <p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
 </li>
 </ul>
-<hr>
+<hr/>
 
 
 
@@ -156,19 +161,19 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
   </label>
 
   <strong>Redis 事务</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
+    <input type="checkbox" class="hidden" id="toc-control"/>
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
@@ -191,7 +196,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel=stylesheet href="" >
+<link rel="stylesheet" href=""/>
 
 
 <article class="markdown">
@@ -225,7 +230,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h1 id="redis-事务">Redis 事务</h1>
+  <p></p><h1 id="redis-事务">Redis 事务</h1>
 <p>Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
 <ul>
 <li>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</li>
@@ -237,19 +242,19 @@ https://github.com/alex-shpak/hugo-book
 <li>命令入队。</li>
 <li>执行事务。</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="实例">实例</h2>
 <p>以下是一个事务的例子， 它先以 <strong>MULTI</strong> 开始一个事务， 然后将多个命令入队到事务中， 最后由 <strong>EXEC</strong> 命令触发事务， 一并执行事务中的所有命令：</p>
 <pre><code>redis 127.0.0.1:6379&gt; MULTI
 OK
  
-redis 127.0.0.1:6379&gt; SET book-name &quot;Mastering C++ in 21 days&quot;
+redis 127.0.0.1:6379&gt; SET book-name &#34;Mastering C++ in 21 days&#34;
 QUEUED
  
 redis 127.0.0.1:6379&gt; GET book-name
 QUEUED
  
-redis 127.0.0.1:6379&gt; SADD tag &quot;C++&quot; &quot;Programming&quot; &quot;Mastering Series&quot;
+redis 127.0.0.1:6379&gt; SADD tag &#34;C++&#34; &#34;Programming&#34; &#34;Mastering Series&#34;
 QUEUED
  
 redis 127.0.0.1:6379&gt; SMEMBERS tag
@@ -257,12 +262,12 @@ QUEUED
  
 redis 127.0.0.1:6379&gt; EXEC
 1) OK
-2) &quot;Mastering C++ in 21 days&quot;
+2) &#34;Mastering C++ in 21 days&#34;
 3) (integer) 3
-4) 1) &quot;Mastering Series&quot;
-   2) &quot;C++&quot;
-   3) &quot;Programming&quot;
-</code></pre><hr>
+4) 1) &#34;Mastering Series&#34;
+   2) &#34;C++&#34;
+   3) &#34;Programming&#34;
+</code></pre><hr/>
 <h2 id="redis-事务命令">Redis 事务命令</h2>
 <p>下表列出了 redis 事务的相关命令：</p>
 <table>
@@ -291,10 +296,10 @@ redis 127.0.0.1:6379&gt; EXEC
 </tr>
 <tr>
 <td align="left">5</td>
-<td align="left"><a href="https://redis.io/commands/watch">WATCH key [key &hellip;]</a> 监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断。</td>
+<td align="left"><a href="https://redis.io/commands/watch">WATCH key [key …]</a> 监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断。</td>
 </tr>
 </tbody>
-</table></p>
+</table><p></p>
 </article>
 
 
@@ -368,9 +373,6 @@ redis 127.0.0.1:6379&gt; EXEC
 
   <script src="/js/audiojs/audio.min.js"></script>
   <script src="/js/audiojs/custom.js"></script>
-</body>
-
-</html>
 
 
 
@@ -383,3 +385,7 @@ redis 127.0.0.1:6379&gt; EXEC
 
 
 
+
+
+
+</body></html>

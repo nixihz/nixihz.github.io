@@ -5,7 +5,7 @@
     <link>https://keli.tech/categories/web/</link>
     <description>Recent content in web on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +17,15 @@
       
       <guid>https://keli.tech/posts/redis/redis-interview/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>WEB 安全 - 内容安全策略介绍与使用</title>
+      <link>https://keli.tech/posts/csp/redis-data-types/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/csp/redis-data-types/</guid>
+      <description>&lt;p&gt;内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。&lt;/p&gt;</description>
     </item>
     
     <item>

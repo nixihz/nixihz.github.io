@@ -90,6 +90,11 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/posts/csp/redis-data-types/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/redis/redis-data-types/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url>
@@ -148,18 +153,43 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/categories/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/categories/security/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/tags/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/tags/web/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/categories/web/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/</loc>
-    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/csp/</loc>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://keli.tech/posts/</loc>
-    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/categories/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -178,16 +208,6 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/categories/web/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/tags/golang/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
@@ -198,17 +218,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/cheatsheet/data-structure/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/categories/develop/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -218,7 +228,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/tools/git/</loc>
+    <loc>https://keli.tech/categories/git/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -233,22 +243,17 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/cheatsheet/golang/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/posts/cheatsheet/golang/golang-1/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/mysql/</loc>
+    <loc>https://keli.tech/tags/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/tags/mysql/</loc>
+    <loc>https://keli.tech/categories/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -288,28 +293,11 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/cheatsheet/scala/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/notes/golang/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/solution/golang/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/docs/example/collapsed/3rd-level/4th-level/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://keli.tech/docs/example/collapsed/3rd-level/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -337,6 +325,18 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/posts/tools/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/cheatsheet/data-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/cheatsheet/golang/</loc>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/tools/hugo/book/hints/</loc>
   </url>
   
@@ -354,6 +354,18 @@
   
   <url>
     <loc>https://keli.tech/posts/about-me/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/cheatsheet/scala/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/notes/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/solution/golang/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="WEB 安全 - 内容安全策略介绍与使用"/><meta property="og:title" content="WEB 安全 - 内容安全策略介绍与使用"/>
+<meta property="og:description" content="WEB 安全 - 内容安全策略介绍与使用"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://keli.tech/posts/csp/redis-data-types/"/>
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-08-11T00:00:00+00:00"/>
+<meta property="article:modified_time" content="2020-08-11T00:00:00+00:00"/><meta property="og:site_name" content="Fnece X 的技术博客"/>
+<title>WEB 安全 - 内容安全策略介绍与使用 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon"/>
+
+
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="/>
+
+
+<script defer="" src="/en.search.min.c38e7555f2380a3f8a73cb1a868445a3088b015eb184bb04020c8f72c8dba764.js" integrity="sha256-w451VfI4Cj+Kc8sahoRFowiLAV6xhLsEAgyPcsjbp2Q="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control"/>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo"/><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></audio></h2>
+<hr/>
+<ul>
+<li><strong>组件</strong>
+<ul>
+<li><a href="/posts/redis/">Redis</a></li>
+<li><a href="/posts/mysql/">Mysql</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>WEB安全</strong>
+<ul>
+<li><a href="/posts/csp/">CSP内容安全策略</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>备忘</strong>
+<ul>
+<li><a href="/posts/cheatsheet/scala/">Scala</a></li>
+<li><a href="/posts/cheatsheet/data-structure/">数据结构</a></li>
+<li><a href="/posts/cheatsheet/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/posts/tools/git/">Git</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>解决方案</strong>
+<ul>
+<li><a href="/posts/solution/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>读书札记</strong>
+<ul>
+<li><a href="/posts/solution/golang/">大数据项目管理-从规划到实现</a></li>
+<li><a href="/posts/solution/golang/">薛兆丰经济学讲义</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>博客工具 – 介绍本博客涉及工具</strong>
+<ul>
+<li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
+<li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li>
+<p><a href="/posts/"><strong>随笔</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
+</li>
+</ul>
+<hr/>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
+  </label>
+
+  <strong>WEB 安全 - 内容安全策略介绍与使用</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+
+
+<link rel="stylesheet" href=""/>
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/csp/redis-data-types/">WEB 安全 - 内容安全策略介绍与使用</a>
+  </h1>
+  
+
+<div>
+
+  <h5>2020-08-11</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/web/">web</a>, 
+        <a href="/categories/security/">security</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/web/">web</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p></p><p>内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。</p>
+<h1 id="一简介">一、简介</h1>
+<p>CSP被设计成向后兼容；不支持的浏览器依然可以运行使用了它的服务器页面，反之亦然。不支持CSP的浏览器会忽略它，像平常一样运行，默认对网页内容使用标准的同源策略。如果网站不提供CSP头部，浏览器同样会使用标准的（同源策略）。</p>
+<p>开启CSP就如配置您的页面服务来返回Content-Security-Policy HTTP 头部一样简单.</p>
+<h1 id="二目标">二、目标</h1>
+<p>CSP的主要目标是减少和报告XSS攻击. XSS攻击利用浏览器对从服务器接受的内容的信任。恶意的脚本在受害的浏览器被执行, 因为浏览器相信内容源，甚至当内容源并不是从它应该来的地方过来的。</p>
+<p>早些年，javascript 刚出来的时候，是非常不安全的，经常爆出漏洞，为了安全，浏览器都有一项配置项，禁止脚本执行，但现在的进入web3.0，todo，禁止脚本执行的结果，可能是网站都不能正常运行。</p>
+<p>仅仅支持 HTTPS 传输数据，代理服务器上控制 HTTP 页面重定向到 HTTPS 页面</p>
+<h1 id="三用法">三、用法</h1>
+<h2 id="31-开启安全策略">3.1 开启安全策略</h2>
+<p>你可以使用  Content-Security-Policy HTTP头部 来指定策略，像这样:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: policy
+</code></pre></div><p>policy参数是一个包含了各种描述你的CSP策略指令的字符串。</p>
+<h3 id="311-常用示例">3.1.1 常用示例</h3>
+<h4 id="示例1">示例1</h4>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>所有内容均来自站点的同一个源（不包含子域名）</span>
+      <span>展开</span>
+    </div>
+    <input type="checkbox" class="hidden"/>
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#e6db74">&#39;self&#39;</span>
+</code></pre></div>
+    </div>
+  </label>
+</div>
+
+<h4 id="示例2">示例2</h4>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>允许内容来自信任的域名及其子域名</span>
+      <span>展开</span>
+    </div>
+    <input type="checkbox" class="hidden"/>
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#e6db74">&#39;self&#39;</span> *.trusted.com
+</code></pre></div>
+    </div>
+  </label>
+</div>
+
+<h4 id="示例3">示例3</h4>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>允许加载任何源的图片， 限制音频/视频来源，限制脚本来源</span>
+      <span>展开</span>
+    </div>
+    <input type="checkbox" class="hidden"/>
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#e6db74">&#39;self&#39;</span>; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
+</code></pre></div><ul>
+<li>图片可以从任何地方加载(注意 “*” 通配符)。</li>
+<li>多媒体文件仅允许从 media1.com 和 media2.com 加载(不允许从这些站点的子域名)。</li>
+<li>可运行脚本仅允许来自于userscripts.example.com。</li>
+</ul>
+
+    </div>
+  </label>
+</div>
+
+<h4 id="示例4">示例4</h4>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>所有内容都要通过SSL方式获取，以避免攻击者窃听用户发出的请求。</span>
+      <span>展开</span>
+    </div>
+    <input type="checkbox" class="hidden"/>
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
+</code></pre></div><p>该服务器仅允许通过HTTPS方式并仅从onlinebanking.jumbobank.com域名来访问文档。</p>
+
+    </div>
+  </label>
+</div>
+
+<h2 id="32-策略触发上报">3.2 策略触发上报</h2>
+<p>策略触发上报报文示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;csp-report&#34;</span>: {
+    <span style="color:#f92672">&#34;document-uri&#34;</span>: <span style="color:#e6db74">&#34;http://example.com/signup.html&#34;</span>, <span style="color:#960050;background-color:#1e0010">//发生违规的文档的URI。</span>
+    <span style="color:#f92672">&#34;referrer&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#960050;background-color:#1e0010">//违规发生处的文档引用（地址）。</span>
+    <span style="color:#f92672">&#34;blocked-uri&#34;</span>: <span style="color:#e6db74">&#34;http://example.com/css/style.css&#34;</span>, <span style="color:#960050;background-color:#1e0010">//被CSP阻止的资源URI。如果被阻止的URI来自不同的源而非文档URI，那么被阻止的资源URI会被删减，仅保留协议，主机和端口号。</span>
+    <span style="color:#f92672">&#34;violated-directive&#34;</span>: <span style="color:#e6db74">&#34;style-src cdn.example.com&#34;</span>, <span style="color:#960050;background-color:#1e0010">//违反的策略名称。</span>
+    <span style="color:#f92672">&#34;original-policy&#34;</span>: <span style="color:#e6db74">&#34;default-src &#39;none&#39;; style-src cdn.example.com; report-uri /_/csp-reports&#34;</span>, <span style="color:#960050;background-color:#1e0010">//在</span> <span style="color:#960050;background-color:#1e0010">Content-Security-Policy</span> <span style="color:#960050;background-color:#1e0010">HTTP</span> <span style="color:#960050;background-color:#1e0010">头部中指明的原始策略。</span>
+
+    <span style="color:#f92672">&#34;disposition&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#f92672">&#34;effective-directive&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#f92672">&#34;script-sample&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#f92672">&#34;status-code&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  }
+}
+</code></pre></div><p>四、实践</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/CSP/">官网 https://www.w3.org/TR/CSP</a></li>
+<li><a href="https://caniuse.com/#search=csp">浏览器支持情况 https://caniuse.com/#search=csp</a></li>
+</ul>
+<p>caniuse.com 是一个神奇的网站。：D</p><p></p>
+</article>
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
