@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
 
 
-<script defer src="/en.search.min.8fb46df71266a3f74b36c8baa3939c8544d666688eeeff5783671447032d8c14.js" integrity="sha256-j7Rt9xJmo/dLNsi6o5OchUTWZmiO7v9Xg2cURwMtjBQ="></script>
+<script defer src="/en.search.min.a65a6ec7d85b3cdc8ce81c01bfcdd051ae298f36107401e6797d878adeaba251.js" integrity="sha256-plpux9hbPNyM6BwBv83QUa4pjzYQdAHmeX2Hit6rolE="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -241,10 +241,12 @@ https://github.com/alex-shpak/hugo-book
 切换到blogedit分支，然后使用 submodule 创建一个子模块：</p>
 <h3 id="一初始化">一、初始化</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git submodule add git@github.com:fencex/fencex.github.io.git public/
-</code></pre></div><p><code>git submodule</code> 会创建 .gitmodules 文件，这个文件可以提交到 <code>blogedit</code> 分支；</p>
-<p><code>git submodule</code> 会把 public 放到暂存区，也就是多执行了一步 <code>git add public</code>， 但其实在 <code>blogedit</code> 分支，并不需要这个文件夹；</p>
-<h3 id="二保存草稿和发布">二、保存草稿和发布</h3>
-<p>1、保存草稿指的是保存 hugo 项目的 content，</p>
+</code></pre></div><p><code>git submodule</code> 会创建 .gitmodules 文件，这个文件可以提交到 <code>blogedit</code> 分支；<br>
+<code>git submodule</code> 会把 public 放到暂存区，也就是多执行了一步 <code>git add public</code>， 但其实在 <code>blogedit</code> 分支，并不需要这个文件夹；<br>
+所以需要从暂存区剔除:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git restore --staged public
+</code></pre></div><h3 id="二保存草稿和发布">二、保存草稿和发布</h3>
+<p>1、保存草稿指的是保存 hugo 项目的 content</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add .
 git commit -m <span style="color:#e6db74">&#39;update msg&#39;</span>
 git push origin blogedit
