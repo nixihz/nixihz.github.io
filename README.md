@@ -1,7 +1,9 @@
 ## 初始化
 ```
 git submodule update --init --depth 1
-
+cd public
+git remote add github git@github.com:fencex/fencex.github.io.git
+cd ..
 ```
 
 
