@@ -4,5 +4,5 @@
 	branch = master
 [submodule "public"]
 	path = public
-	url = git@gitee.com:fencex/hugo-book.git
+	url = git@gitee.com:fencex/blog.git
 	branch = master
