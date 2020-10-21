@@ -42,6 +42,7 @@ headless: true
 
 - **博客工具 -- 介绍本博客涉及工具**
   - [Hugo-book主题的使用技巧]({{< relref "/posts/tools/hugo/book" >}})
+  - [Hugo-项目和版本控制]({{< relref "/posts/tools/hugo/vc" >}})
   - [Hugo-基本技巧]({{< relref "/posts/tools/hugo/hugo" >}})
   - [Hugo-支持audio播放]({{< relref "/posts/tools/hugo/hugo-audio" >}})
   - [Hugo-支持博客朗读]({{< relref "/posts/tools/hugo/hugo-speech" >}})
