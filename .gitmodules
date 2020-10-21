@@ -1,6 +1,8 @@
 [submodule "themes/book"]
 	path = themes/book
 	url = git@gitee.com:fencex/hugo-book.git
+	branch = master
 [submodule "public"]
 	path = public
-	url = git@gitee.com:fencex/blog.git
+	url = git@gitee.com:fencex/hugo-book.git
+	branch = master
