@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://keli.tech/posts/tools/hugo/vc/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/tools/hugo/hugo/</loc>
     <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url>
@@ -153,6 +158,16 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/categories/</loc>
     <lastmod>2020-08-11T00:00:00+00:00</lastmod>
   </url>
@@ -178,17 +193,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/</loc>
-    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/posts/csp/</loc>
-    <lastmod>2020-08-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/</loc>
     <lastmod>2020-08-11T00:00:00+00:00</lastmod>
   </url>
   

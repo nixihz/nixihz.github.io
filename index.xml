@@ -5,10 +5,19 @@
     <link>https://keli.tech/</link>
     <description>Recent content in X on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 版本控制</title>
+      <link>https://keli.tech/posts/tools/hugo/vc/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/tools/hugo/vc/</guid>
+      <description>&lt;p&gt;github page 以 username.github.io 这个项目的master 作为静态资源发布，所以不能把hugo项目放在master，必须开启一个新的分支存储 hugo 项目。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo 基本技巧</title>

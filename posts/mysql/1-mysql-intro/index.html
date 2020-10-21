@@ -1,21 +1,24 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="零、Mysql 面试题"/><meta property="og:title" content="零、Mysql 面试题"/>
-<meta property="og:description" content="Mysql 面试题"/>
-<meta property="og:type" content="article"/>
-<meta property="og:url" content="https://keli.tech/posts/mysql/1-mysql-intro/"/>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="零、Mysql 面试题"><meta property="og:title" content="零、Mysql 面试题" />
+<meta property="og:description" content="Mysql 面试题" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/posts/mysql/1-mysql-intro/" />
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="article:published_time" content="2020-01-02T00:00:00+00:00"/>
-<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00"/><meta property="og:site_name" content="Fnece X 的技术博客"/>
+<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
 <title>零、Mysql 面试题 | FenceX的技术博客</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="/>
+<link rel="stylesheet" href="/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css" integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA&#43;zb6B2UFjbjUnM=">
 
 
-<script defer="" src="/en.search.min.c38e7555f2380a3f8a73cb1a868445a3088b015eb184bb04020c8f72c8dba764.js" integrity="sha256-w451VfI4Cj+Kc8sahoRFowiLAV6xhLsEAgyPcsjbp2Q="></script>
+<script defer src="/en.search.min.8fb46df71266a3f74b36c8baa3939c8544d666688eeeff5783671447032d8c14.js" integrity="sha256-j7Rt9xJmo/dLNsi6o5OchUTWZmiO7v9Xg2cURwMtjBQ="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -26,7 +29,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <!--
 Made with Book Theme
@@ -34,23 +37,23 @@ https://github.com/alex-shpak/hugo-book
 -->
 
   
-  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control"/>
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="container flex">
     <aside class="book-menu">
       
   <nav>
 <h2 class="book-brand">
-  <a href="/"><img src="/image/logo.png" alt="Logo"/><span>FenceX的技术博客</span>
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
   </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -63,8 +66,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></audio></h2>
-<hr/>
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></h2>
+<hr>
 <ul>
 <li><strong>组件</strong>
 <ul>
@@ -73,7 +76,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>WEB安全</strong>
 <ul>
@@ -81,7 +84,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>备忘</strong>
 <ul>
@@ -91,7 +94,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>工具</strong>
 <ul>
@@ -99,7 +102,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>解决方案</strong>
 <ul>
@@ -107,7 +110,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li><strong>读书札记</strong>
 <ul>
@@ -116,18 +119,19 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
-<li><strong>博客工具 – 介绍本博客涉及工具</strong>
+<li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
 <ul>
 <li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
+<li><a href="/posts/tools/hugo/vc/">Hugo-项目和版本控制</a></li>
 <li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
 <li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
 <li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
 </ul>
 </li>
 </ul>
-<hr/>
+<hr>
 <ul>
 <li>
 <p><a href="/posts/"><strong>随笔</strong></a></p>
@@ -136,7 +140,7 @@ https://github.com/alex-shpak/hugo-book
 <p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
 </li>
 </ul>
-<hr/>
+<hr>
 
 
 
@@ -161,19 +165,19 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>零、Mysql 面试题</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control"/>
+    <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
@@ -198,7 +202,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel="stylesheet" href=""/>
+<link rel=stylesheet href="" >
 
 
 <article class="markdown">
@@ -232,8 +236,8 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p></p><p>Mysql 面试题</p>
-<p><img src="/image/mysql-mindmap.jpeg" alt="2"/></p>
+  <p><p>Mysql 面试题</p>
+<p><img src="/image/mysql-mindmap.jpeg" alt="2"></p>
 <h1 id="通用模块">通用模块</h1>
 <h1 id="索引">索引</h1>
 <h1 id="事务">事务</h1>
@@ -241,7 +245,7 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="命令和内置函数">命令和内置函数</h1>
 <h1 id="日志">日志</h1>
 <h1 id="高性能">高性能</h1>
-<h1 id="其他">其他</h1><p></p>
+<h1 id="其他">其他</h1></p>
 </article>
 
 
@@ -317,6 +321,9 @@ https://github.com/alex-shpak/hugo-book
 
   <script src="/js/audiojs/audio.min.js"></script>
   <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
 
 
 
@@ -329,7 +336,3 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-
-
-</body></html>

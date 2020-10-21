@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Spark 高级"><meta property="og:title" content="Spark 高级" />
-<meta property="og:description" content="Spark 高级" />
+<meta name="description" content="Hugo 版本控制"><meta property="og:title" content="Hugo 版本控制" />
+<meta property="og:description" content="Hugo 版本控制" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://keli.tech/posts/mysql1/spark-advanced/" />
+<meta property="og:url" content="https://keli.tech/posts/tools/hugo/vc/" />
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
-<title>Spark 高级 | FenceX的技术博客</title>
+<meta property="article:published_time" content="2020-10-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-21T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>Hugo 版本控制 | FenceX的技术博客</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
@@ -124,7 +124,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
 <ul>
 <li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
-<li><a href="/posts/tools/hugo/vc/">Hugo-项目和版本控制</a></li>
+<li><a href="/posts/tools/hugo/vc/"class=active>Hugo-项目和版本控制</a></li>
 <li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
 <li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
 <li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
@@ -168,7 +168,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Spark 高级</strong>
+  <strong>Hugo 版本控制</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -180,7 +180,20 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#一初始化">一、初始化</a></li>
+            <li><a href="#二保存草稿和发布">二、保存草稿和发布</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
     </aside>
@@ -196,36 +209,54 @@ https://github.com/alex-shpak/hugo-book
 
 <article class="markdown">
   <h1>
-    <a href="/posts/mysql1/spark-advanced/">Spark 高级</a>
+    <a href="/posts/tools/hugo/vc/">Hugo 版本控制</a>
   </h1>
   
 
 <div>
 
-  <h5>2020-01-02</h5>
+  <h5>2020-10-21</h5>
 
 
 
   
-  <div>
-    
-        <a href="/categories/bigdata/">bigdata</a>, 
-        <a href="/categories/spark/">spark</a>
-  </div>
-  
 
-  
-  <div>
-    
-        <a href="/tags/spark/">spark</a>
-  </div>
   
 
 
 </div>
 
 
-  <p><p>spark</p></p>
+  <p><p>github page 以 username.github.io 这个项目的master 作为静态资源发布，所以不能把hugo项目放在master，必须开启一个新的分支存储 hugo 项目。</p>
+<p>我这里以 blogedit 分支举例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch -a
+
+* blogedit
+  master
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/blogedit
+  remotes/origin/master
+
+</code></pre></div><p><code>hugo -D</code> 命令会把编译后的静态文件放到 public， 只要确保public 文件夹是 username.githu.io 的master分支即可。<br>
+切换到blogedit分支，然后使用 submodule 创建一个子模块：</p>
+<h3 id="一初始化">一、初始化</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git submodule add git@github.com:fencex/fencex.github.io.git public/
+</code></pre></div><p><code>git submodule</code> 会创建 .gitmodules 文件，这个文件可以提交到 <code>blogedit</code> 分支；</p>
+<p><code>git submodule</code> 会把 public 放到暂存区，也就是多执行了一步 <code>git add public</code>， 但其实在 <code>blogedit</code> 分支，并不需要这个文件夹；</p>
+<h3 id="二保存草稿和发布">二、保存草稿和发布</h3>
+<p>1、保存草稿指的是保存 hugo 项目的 content，</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add .
+git commit -m <span style="color:#e6db74">&#39;update msg&#39;</span>
+git push origin blogedit
+
+</code></pre></div><p>2、发布，则需要到 public 里面操作</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -D
+cd public
+git add .
+git commit -m <span style="color:#e6db74">&#39;update msg&#39;</span>
+git push origin master
+
+</code></pre></div></p>
 </article>
 
 
@@ -279,7 +310,20 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#一初始化">一、初始化</a></li>
+            <li><a href="#二保存草稿和发布">二、保存草稿和发布</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
  
     </aside>
