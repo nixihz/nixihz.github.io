@@ -1,9 +1,16 @@
 ## 初始化
 ```
-git submodule update --init --depth 1
+## git submodule update --init --depth 1
+
+git submodule add -b master --force git@gitee.com:fencex/blog.git public/
 cd public
 git remote add github git@github.com:fencex/fencex.github.io.git
 cd ..
+
+git submodule add -b master --force git@gitee.com:fencex/hugo-book.git themes/book
+
+git restore --staged public themes/book
+
 ```
 
 
