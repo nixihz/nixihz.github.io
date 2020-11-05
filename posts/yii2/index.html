@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="yii2"><meta property="og:title" content="yii2" />
+<meta property="og:description" content="Fence X 的技术博客" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://keli.tech/posts/yii2/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="og:updated_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>yii2 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.4cd45257a1c46b5e355d8e57e7d2e12ed2c376d6c4f1e3e8cf45b681334d0bc2.css" integrity="sha256-TNRSV6HEa141XY5X59LhLtLDdtbE8ePoz0W2gTNNC8I=">
+
+
+<script defer src="/en.search.min.c5112976bc843d1604e95c936bd52063481fb0e93613ddb18585af99785249a4.js" integrity="sha256-xREpdryEPRYE6VyTa9UgY0gfsOk2E92xhYWvmXhSSaQ="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<link rel="alternate" type="application/rss+xml" href="https://keli.tech/posts/yii2/index.xml" title="FenceX的技术博客" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <h2 id="提示本博客支持朗读audio-srcspeechmp3-preloadnone-speechnone">提示:本博客支持朗读<audio src="/speech.mp3" preload="none" speech="none"></h2>
+<hr>
+<ul>
+<li><strong>组件</strong>
+<ul>
+<li><a href="/posts/redis/">Redis</a></li>
+<li><a href="/posts/mysql/">Mysql</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>框架使用</strong>
+<ul>
+<li><a href="/posts/yii2/"class=active>Yii framework2</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>WEB安全</strong>
+<ul>
+<li><a href="/posts/csp/">CSP内容安全策略</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/posts/tools/git/">Git</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>解决方案</strong>
+<ul>
+<li><a href="/posts/solution/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>备忘</strong>
+<ul>
+<li><a href="/posts/cheatsheet/scala/">Scala</a></li>
+<li><a href="/posts/cheatsheet/data-structure/">数据结构</a></li>
+<li><a href="/posts/cheatsheet/golang/">Golang</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>读书札记</strong>
+<ul>
+<li><a href="/posts/solution/golang/">大数据项目管理-从规划到实现</a></li>
+<li><a href="/posts/solution/golang/">薛兆丰经济学讲义</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>博客工具 &ndash; 介绍本博客涉及工具</strong>
+<ul>
+<li><a href="/posts/tools/hugo/book/">Hugo-book主题的使用技巧</a></li>
+<li><a href="/posts/tools/hugo/vc/">Hugo-项目和版本控制</a></li>
+<li><a href="/posts/tools/hugo/hugo/">Hugo-基本技巧</a></li>
+<li><a href="/posts/tools/hugo/hugo-audio/">Hugo-支持audio播放</a></li>
+<li><a href="/posts/tools/hugo/hugo-speech/">Hugo-支持博客朗读</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><a href="/posts/"><strong>随笔</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/about-me/"><strong>关于我</strong></a></p>
+</li>
+</ul>
+<hr>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>yii2</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/categories/security/">security</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/web/">web</a>
+          <span>8</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/redis/">redis</a>
+          <span>10</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/golang/">golang</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/develop/">develop</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/git/">git</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/bigdata/">bigdata</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/mysql/">mysql</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/spark/">spark</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/solution/">solution</a>
+          <span>2</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/tags/web/">web</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/redis/">redis</a>
+          <span>10</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/golang/">golang</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/git/">git</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/mysql/">mysql</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/spark/">spark</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/imagemagick/">imagemagick</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/scala/">scala</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+  
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/posts/yii2/yii2-vue-support-cross-domain/&#34;;"
+  >
+    <h2>
+      <a href="/posts/yii2/yii2-vue-support-cross-domain/">Yii 2 开发环境允许跨域，解决 Access-Control-Allow-Origin</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><p>Yii 2 解决 vue 调试问题，跨域和携带cookie。</p>
+        <a href="/posts/yii2/yii2-vue-support-cross-domain/">阅读全文>></a>
+      
+    </p>
+  </article>
+
+  
+
+<style>
+    .hover:hover {
+        -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0 0 6px #999;
+        box-shadow: 0 0 6px #999;
+        -webkit-transition: all .5s ease-out;
+        transition: all .3s ease-out;
+        cursor: pointer;
+    }
+</style>
+
+  
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/categories/security/">security</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/web/">web</a>
+          <span>8</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/redis/">redis</a>
+          <span>10</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/golang/">golang</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/develop/">develop</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/git/">git</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/bigdata/">bigdata</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/mysql/">mysql</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/spark/">spark</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/categories/solution/">solution</a>
+          <span>2</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/tags/web/">web</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/redis/">redis</a>
+          <span>10</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/golang/">golang</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/git/">git</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/mysql/">mysql</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/spark/">spark</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/imagemagick/">imagemagick</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/scala/">scala</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/posts/mysql/1-mysql-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
@@ -279,6 +284,11 @@
   
   <url>
     <loc>https://keli.tech/categories/spark/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/posts/yii2/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   

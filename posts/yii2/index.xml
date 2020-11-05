@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yii2 on FenceX的技术博客</title>
+    <link>https://keli.tech/posts/yii2/</link>
+    <description>Recent content in yii2 on FenceX的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://keli.tech/posts/yii2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yii 2 开发环境允许跨域，解决 Access-Control-Allow-Origin</title>
+      <link>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</guid>
+      <description>&lt;p&gt;Yii 2 解决 vue 调试问题，跨域和携带cookie。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

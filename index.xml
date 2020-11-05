@@ -109,6 +109,15 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
     </item>
     
     <item>
+      <title>Yii 2 开发环境允许跨域，解决 Access-Control-Allow-Origin</title>
+      <link>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</guid>
+      <description>&lt;p&gt;Yii 2 解决 vue 调试问题，跨域和携带cookie。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>零、Mysql 面试题</title>
       <link>https://keli.tech/posts/mysql/1-mysql-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
