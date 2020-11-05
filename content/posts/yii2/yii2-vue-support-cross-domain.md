@@ -61,7 +61,7 @@ let axiosInstance = axios.create({
 ```
 
 ```php
-
+<?php
 header("Access-Control-Allow-Origin: http://0.0.0.0:8080");
 header("Access-Control-Allow-Credentials: true");
 header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
