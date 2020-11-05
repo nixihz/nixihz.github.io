@@ -33,14 +33,17 @@ git branch -a
 ```sh
 git submodule add git@github.com:fencex/fencex.github.io.git public/
 ```
-`git submodule` 会创建 .gitmodules 文件，这个文件可以提交到 `blogedit` 分支；
+`git submodule` 会创建 .gitmodules 文件，这个文件可以提交到 `blogedit` 分支；  
+`git submodule` 会把 public 放到暂存区，也就是多执行了一步 `git add public`， 但其实在 `blogedit` 分支，并不需要这个文件夹；  
+所以需要从暂存区剔除:
 
-`git submodule` 会把 public 放到暂存区，也就是多执行了一步 `git add public`， 但其实在 `blogedit` 分支，并不需要这个文件夹；
-
+``` sh
+git restore --staged public
+```
 
 ### 二、保存草稿和发布
 
-1、保存草稿指的是保存 hugo 项目的 content，
+1、保存草稿指的是保存 hugo 项目的 content
 
 ``` sh
 git add .
@@ -52,6 +55,7 @@ git push origin blogedit
 
 2、发布，则需要到 public 里面操作
 ``` sh
+hugo -D
 cd public
 git add .
 git commit -m 'update msg'
