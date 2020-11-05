@@ -25,7 +25,7 @@ git branch -a
 
 ```
 
-`hugo -D` 命令会把编译后的静态文件放到 public， 只要确保public 文件夹是 username.githu.io 的master分支即可。  
+`hugo -D` 命令会把编译后的静态文件放到 public， 只要确保public 文件夹是 username.github.io 的master分支即可。  
 切换到blogedit分支，然后使用 submodule 创建一个子模块：
 
 ### 一、初始化
