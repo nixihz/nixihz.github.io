@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>app on FenceX的技术博客</title>
+    <link>https://keli.tech/tags/app/</link>
+    <description>Recent content in app on FenceX的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 29 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://keli.tech/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在任意网页添加弹框注释 Chrome 插件</title>
+      <link>https://keli.tech/ideas/web/note-anywhere-chrome/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/ideas/web/note-anywhere-chrome/</guid>
+      <description>&lt;p&gt;在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，&lt;br&gt;
+可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>拍照识别汽车玻璃制造年份小程序</title>
+      <link>https://keli.tech/ideas/apps/car-window/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/ideas/apps/car-window/</guid>
+      <description>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。</description>
+    </item>
+    
+  </channel>
+</rss>

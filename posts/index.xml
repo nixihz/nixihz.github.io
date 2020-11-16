@@ -1,58 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>随笔 on FenceX的技术博客</title>
+    <title>博客 on FenceX的技术博客</title>
     <link>https://keli.tech/posts/</link>
-    <description>Recent content in 随笔 on FenceX的技术博客</description>
+    <description>Recent content in 博客 on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hugo 版本控制</title>
-      <link>https://keli.tech/posts/tools/hugo/vc/</link>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/vc/</guid>
-      <description>&lt;p&gt;github page 以 username.github.io 这个项目的master 作为静态资源发布，所以不能把hugo项目放在master，必须开启一个新的分支存储 hugo 项目。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo 基本技巧</title>
-      <link>https://keli.tech/posts/tools/hugo/hugo/</link>
-      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
-      <description>&lt;p&gt;&lt;em&gt;以 book theme 示例&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hugo-添加自定义-css-和-javascript&#34;&gt;Hugo 添加自定义 css 和 javascript&lt;/h2&gt;
-&lt;p&gt;public 目录是最终目录，&lt;/p&gt;
-&lt;p&gt;Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo 支持audio播放</title>
-      <link>https://keli.tech/posts/tools/hugo/hugo-audio/</link>
-      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
-      <description>&lt;h2 id=&#34;hugo如何播放mp3文件&#34;&gt;hugo如何播放mp3文件&lt;/h2&gt;
-&lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br&gt;
-Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo 支持博客朗读</title>
-      <link>https://keli.tech/posts/tools/hugo/hugo-speech/</link>
-      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/hugo-speech/</guid>
-      <description>&lt;h2 id=&#34;博客朗读-audio-preloadnone&#34;&gt;博客朗读 &lt;audio preload=&#34;none&#34;/&gt;&lt;/h2&gt;
-&lt;p&gt;如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
-如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。&lt;/p&gt;
-&lt;p&gt;说干就干。&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>关于我</title>

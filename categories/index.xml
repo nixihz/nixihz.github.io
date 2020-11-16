@@ -5,10 +5,28 @@
     <link>https://keli.tech/categories/</link>
     <description>Recent content in Categories on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>develop</title>
+      <link>https://keli.tech/categories/develop/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/categories/develop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://keli.tech/categories/php/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/categories/php/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>security</title>
@@ -43,15 +61,6 @@
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>develop</title>
-      <link>https://keli.tech/categories/develop/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/categories/develop/</guid>
       <description></description>
     </item>
     

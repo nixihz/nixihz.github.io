@@ -5,7 +5,7 @@
     <link>https://keli.tech/</link>
     <description>Recent content in X on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/index.xml" rel="self" type="application/rss+xml" />
     
@@ -171,32 +171,12 @@ $ sbt sbt:fence&amp;gt; console scala&amp;gt; 语法 class Upper { def upper(str
     </item>
     
     <item>
-      <title>With ToC</title>
-      <link>https://keli.tech/docs/example/table-of-contents/with-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/docs/example/table-of-contents/with-toc/</guid>
-      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
- Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
-    </item>
-    
-    <item>
       <title>Spark 高级</title>
       <link>https://keli.tech/posts/mysql1/spark-advanced/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/mysql1/spark-advanced/</guid>
       <description>&lt;p&gt;spark&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Without ToC</title>
-      <link>https://keli.tech/docs/example/table-of-contents/without-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/docs/example/table-of-contents/without-toc/</guid>
-      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
     </item>
     
     <item>
@@ -331,6 +311,34 @@ pt-query-digest&lt;/p&gt;
     </item>
     
     <item>
+      <title>阿里云 Composer 全量镜像</title>
+      <link>https://keli.tech/posts/lang/golang/composer-config-alibaba/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/lang/golang/composer-config-alibaba/</guid>
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>阿里云 Composer 全量镜像php</title>
+      <link>https://keli.tech/posts/lang/php/composer-config-alibaba/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/lang/php/composer-config-alibaba/</guid>
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
       <title>git重刷提交的email和name信息</title>
       <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
@@ -352,27 +360,26 @@ pt-query-digest&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/example/collapsed/3rd-level/4th-level/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>在任意网页添加弹框注释 Chrome 插件</title>
+      <link>https://keli.tech/ideas/web/note-anywhere-chrome/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/example/collapsed/3rd-level/4th-level/</guid>
-      <description>2344th Level of Menu Caesorum illa tu sentit micat vestes papyriferi Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
-Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto! Sedes ante dum superest extrema.</description>
+      <guid>https://keli.tech/ideas/web/note-anywhere-chrome/</guid>
+      <description>&lt;p&gt;在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，&lt;br&gt;
+可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://keli.tech/docs/example/hidden/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>拍照识别汽车玻璃制造年份小程序</title>
+      <link>https://keli.tech/ideas/apps/car-window/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/docs/example/hidden/</guid>
-      <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
- Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
+      <guid>https://keli.tech/ideas/apps/car-window/</guid>
+      <description>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。</description>
     </item>
     
     <item>
-      <title>Buttons 按钮</title>
+      <title>Hugo Buttons 按钮</title>
       <link>https://keli.tech/posts/tools/hugo/book/buttons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -381,7 +388,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title>Columns 分列布局</title>
+      <title>Hugo Columns 分列布局</title>
       <link>https://keli.tech/posts/tools/hugo/book/columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -390,7 +397,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title>Expand 展开和隐藏</title>
+      <title>Hugo Expand 展开和隐藏</title>
       <link>https://keli.tech/posts/tools/hugo/book/expand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -399,7 +406,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title>Hints 提示</title>
+      <title>Hugo Hints 提示</title>
       <link>https://keli.tech/posts/tools/hugo/book/hints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -408,7 +415,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title>KaTex 公式</title>
+      <title>Hugo KaTex 公式</title>
       <link>https://keli.tech/posts/tools/hugo/book/katex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -417,7 +424,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title>Mermaid Chart 图标</title>
+      <title>Hugo Mermaid Chart 图标</title>
       <link>https://keli.tech/posts/tools/hugo/book/mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -426,7 +433,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
     </item>
     
     <item>
-      <title>Tabs Tab页面</title>
+      <title>Hugo Tabs Tab页面</title>
       <link>https://keli.tech/posts/tools/hugo/book/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

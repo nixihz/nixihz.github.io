@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="拍照识别汽车玻璃制造年份小程序"><meta property="og:title" content="拍照识别汽车玻璃制造年份小程序" />
+<meta property="og:description" content="idea" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/ideas/apps/car-window/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2019-08-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-22T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>拍照识别汽车玻璃制造年份小程序 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+
+
+<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+  <ul>
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/posts/" >
+      博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/tools/" >
+      工具
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/csp/" >
+      内容安全策略
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/redis/" >
+      Redis 博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/mysql/" >
+      Mysql 博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/mysql1/" >
+      Spark
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/yii2/" >
+      yii2
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/posts/about-me/" >
+      关于我
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/ideas/" >
+      想法💡
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>拍照识别汽车玻璃制造年份小程序</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#难度">难度：</a></li>
+        <li><a href="#点评">点评：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/ideas/apps/car-window/">拍照识别汽车玻璃制造年份小程序</a>
+  </h1>
+  
+
+<div>
+
+  <h5>2019-08-22</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/app/">app</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><img src="../car-window.jpeg" style="height:350px;"/>
+<h2 id="难度">难度：</h2>
+<ul>
+<li>不同品牌不同展示形式；</li>
+<li>玻璃拍照反光，效果不佳；</li>
+</ul>
+<h2 id="点评">点评：</h2>
+<p>纯粹一次性工具，用户粘性差。</p>
+</p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#难度">难度：</a></li>
+        <li><a href="#点评">点评：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

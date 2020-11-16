@@ -5,7 +5,7 @@
     <link>https://keli.tech/categories/develop/</link>
     <description>Recent content in develop on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/categories/develop/index.xml" rel="self" type="application/rss+xml" />
     
@@ -114,6 +114,34 @@ pt-query-digest&lt;/p&gt;
       
       <guid>https://keli.tech/posts/mysql/10-mysql-version/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>阿里云 Composer 全量镜像</title>
+      <link>https://keli.tech/posts/lang/golang/composer-config-alibaba/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/lang/golang/composer-config-alibaba/</guid>
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>阿里云 Composer 全量镜像php</title>
+      <link>https://keli.tech/posts/lang/php/composer-config-alibaba/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/lang/php/composer-config-alibaba/</guid>
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>

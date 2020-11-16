@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php on FenceX的技术博客</title>
+    <link>https://keli.tech/tags/php/</link>
+    <description>Recent content in php on FenceX的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://keli.tech/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>阿里云 Composer 全量镜像</title>
+      <link>https://keli.tech/posts/lang/golang/composer-config-alibaba/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/lang/golang/composer-config-alibaba/</guid>
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>阿里云 Composer 全量镜像php</title>
+      <link>https://keli.tech/posts/lang/php/composer-config-alibaba/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/posts/lang/php/composer-config-alibaba/</guid>
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,10 +5,19 @@
     <link>https://keli.tech/tags/</link>
     <description>Recent content in Tags on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>php</title>
+      <link>https://keli.tech/tags/php/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/tags/php/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>web</title>
@@ -61,6 +70,15 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/tags/spark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>app</title>
+      <link>https://keli.tech/tags/app/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/tags/app/</guid>
       <description></description>
     </item>
     
