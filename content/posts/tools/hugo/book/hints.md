@@ -1,5 +1,5 @@
 ---
-title : Hints 提示
+title : Hugo Hints 提示
 ---
 
 <!--more-->

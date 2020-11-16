@@ -1,5 +1,5 @@
 ---
-title : KaTex 公式
+title : Hugo KaTex 公式
 ---
 <!--more-->
 

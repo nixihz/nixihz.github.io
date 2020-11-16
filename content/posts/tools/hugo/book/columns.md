@@ -1,6 +1,6 @@
 
 ---
-title : Columns 分列布局
+title : Hugo Columns 分列布局
 ---
 
 
