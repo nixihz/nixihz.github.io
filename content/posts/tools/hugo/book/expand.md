@@ -1,5 +1,5 @@
 ---
-title : Expand 展开和隐藏
+title : Hugo Expand 展开和隐藏
 
 ---
 

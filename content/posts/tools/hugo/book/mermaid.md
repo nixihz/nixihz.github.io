@@ -1,5 +1,5 @@
 ---
-title : Mermaid Chart 图标
+title : Hugo Mermaid Chart 图标
 ---
 
 <!--more-->

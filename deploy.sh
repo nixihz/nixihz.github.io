@@ -4,7 +4,7 @@ git add .
 git commit -m 'update'
 git push origin blogedit
 git status
-hugo -D
+hugo -D --quiet
 
 
 

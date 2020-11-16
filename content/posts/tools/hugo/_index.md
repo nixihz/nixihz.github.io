@@ -1,8 +1,6 @@
 ---
-title: "内容安全策略"
+title: "HUGO 博客工具"
 bookToc: false
 bookCollapseSection: true
-
 ---
-
-asdf
+afaff

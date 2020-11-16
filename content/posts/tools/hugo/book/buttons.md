@@ -1,5 +1,5 @@
 ---
-title : Buttons 按钮
+title : Hugo Buttons 按钮
 ---
 
 <!--more-->
