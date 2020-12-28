@@ -1,7 +1,8 @@
 ---
-title: "Redis 博客"
+title: Redis
+weight: 10
 bookToc: false
 bookCollapseSection: true
 ---
-
-asfasdfasdf
+asdf
+sdf
