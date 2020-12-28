@@ -1,6 +1,8 @@
 ---
-title: "Mysql 博客"
+title: Mysql
+weight: 10
 bookToc: false
 bookCollapseSection: true
 ---
 asdf
+sdf
