@@ -13,7 +13,7 @@ menu : "main"
 
 - **trim**[^trim]
 
-```php
+```php linenos
 <?php
 echo trim("<p></p><p>pikachu hello world</p>", "<p></p>");
 
