@@ -15,10 +15,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -105,32 +105,6 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/posts/lang/" >
-      编程语言
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/posts/tools/" >
       工具
   </a>
@@ -159,58 +133,6 @@ https://github.com/alex-shpak/hugo-book
 
   <a href="/posts/csp/" >
       内容安全策略
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/redis/" >
-      Redis 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/mysql/" >
-      Mysql 博客
   </a>
 
 
@@ -305,6 +227,118 @@ https://github.com/alex-shpak/hugo-book
     
       
 
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
   <a href="/ideas/" >
       想法💡
   </a>
@@ -322,6 +356,30 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
 
 
 
@@ -376,13 +434,12 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#功能">功能</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#功能">功能</a></li>
+</ul></li>
+</ul>
 </nav>
 
 
@@ -401,7 +458,8 @@ https://github.com/alex-shpak/hugo-book
   <h1>
     <a href="/ideas/web/note-anywhere-chrome/">在任意网页添加弹框注释 Chrome 插件</a>
   </h1>
-  
+  <hr/>
+
 
 <div>
 
@@ -422,25 +480,31 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><p>在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，<br>
+  <p><p>在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，<br />
 可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；</p>
-<img src="../note-anywhere.jpeg" style="height:350px;"/>
+
+<p></p>
+
 <p>当进入某个页面，根据 url 获取当前 url 是否有备注，存在则获取并在对应位置显示;</p>
-<p>数据可同步到远程服务器；<br>
+
+<p>数据可同步到远程服务器；<br />
 可以设置登录；</p>
+
 <h2 id="功能">功能</h2>
-<ul>
-<li><input disabled="" type="checkbox"> 长按添加</li>
-<li><input disabled="" type="checkbox"> 添加长按效果，可优化loading图</li>
-<li><input disabled="" type="checkbox"> 可拖拽</li>
-<li><input disabled="" type="checkbox"> 可缩放</li>
-<li><input disabled="" type="checkbox"> 可固定</li>
-<li><input disabled="" type="checkbox"> 可调配色</li>
-<li><input disabled="" type="checkbox"> 可搜索</li>
-<li><input disabled="" type="checkbox"> 可删除</li>
-<li><input disabled="" type="checkbox"> 存云端</li>
-<li><input disabled="" type="checkbox"> 从云端加载</li>
-<li><input disabled="" type="checkbox"> 可复制，不处理</li>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> 长按添加</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 添加长按效果，可优化loading图</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可拖拽</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可缩放</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可固定</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可调配色</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可搜索</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可删除</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 存云端</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 从云端加载</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可复制，不处理
+<br /></label></li>
 </ul></p>
 </article>
 
@@ -450,6 +514,14 @@ https://github.com/alex-shpak/hugo-book
 
 <h3>See Also</h3>
 <ul>
+	
+	<li><a href="/database/redis/note-anywhere-chrome/">在任意网页添加弹框注释 Chrome 插件</a></li>
+	
+	<li><a href="/concurrency/web/note-anywhere-chrome/">在任意网页添加弹框注释 Chrome 插件</a></li>
+	
+	<li><a href="/concurrency/apps/car-window/">拍照识别汽车玻璃制造年份小程序</a></li>
+	
+	<li><a href="/database/mysql/car-window/">拍照识别汽车玻璃制造年份小程序</a></li>
 	
 	<li><a href="/ideas/apps/car-window/">拍照识别汽车玻璃制造年份小程序</a></li>
 	
@@ -508,13 +580,12 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#功能">功能</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#功能">功能</a></li>
+</ul></li>
+</ul>
 </nav>
 
  

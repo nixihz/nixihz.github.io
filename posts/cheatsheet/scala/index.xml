@@ -15,10 +15,12 @@
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</guid>
-      <description>特点关键词：  jvm、 静态类型、 多范例  面向对象-trait(mixin组合) 函数式编程FP-适用大数据和并发  Immutable 值、 First Class 函数、 无副作用函数 高阶函数 函数集合     泛型
-通过类型推断，Scala代码通常与动态类型语言中的代码一样简洁。 可扩展架构  trait: mixin组合 抽象成员和泛型 嵌套类 明确的自我类型??    其他关键词 REPL
+      <description>特点关键词：  jvm、 静态类型、 多范例  面向对象-trait(mixin组合) 函数式编程FP-适用大数据和并发
+ Immutable 值、 First Class 函数、 无副作用函数 高阶函数 函数集合   泛型
+通过类型推断，Scala代码通常与动态类型语言中的代码一样简洁。 可扩展架构
+ trait: mixin组合 抽象成员和泛型 嵌套类 明确的自我类型??    其他关键词 REPL
 “读取-求值-输出”循环(英语:Read-Eval-Print Loop)，sbt 终端启动 console。
-$ sbt sbt:fence&amp;gt; console scala&amp;gt; 语法 class Upper { def upper(strings: String*): Seq[String] = { strings.map((s:String) =&amp;gt; s.toUpperCase()) } } val up = new Upper println(up.upper(&amp;#34;Hello&amp;#34;, &amp;#34;World!&amp;#34;)) 方法定义 def upper(strings: String*): Seq[String] = .</description>
+1 2 3  $ sbt sbt:fence&amp;gt; console scala&amp;gt;   语法 1 2 3 4 5 6 7 8  class Upper { def upper(strings: String*): Seq[String] = { strings.map((s:String) =&amp;gt; s.</description>
     </item>
     
   </channel>

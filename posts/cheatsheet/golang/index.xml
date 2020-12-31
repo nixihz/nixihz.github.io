@@ -15,9 +15,10 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</guid>
-      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preload-none&#34;&gt;Golang Module 备忘 &lt;/h2&gt;
+
 &lt;p&gt;终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
-文章包你&lt;br&gt;
+文章包你&lt;br /&gt;
 一招鲜，走天下&lt;/p&gt;</description>
     </item>
     

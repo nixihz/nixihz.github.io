@@ -12,19 +12,19 @@
     
     <item>
       <title>Redis 面试题</title>
-      <link>https://keli.tech/posts/redis/redis-interview/</link>
+      <link>https://keli.tech/database/redis/redis-interview/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-interview/</guid>
+      <guid>https://keli.tech/database/redis/redis-interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 介绍</title>
-      <link>https://keli.tech/posts/redis/redis-intro/</link>
+      <link>https://keli.tech/database/redis/redis-intro/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-intro/</guid>
+      <guid>https://keli.tech/database/redis/redis-intro/</guid>
       <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
     </item>
     
@@ -39,65 +39,65 @@
     
     <item>
       <title>Redis 数据类型与适用场景</title>
-      <link>https://keli.tech/posts/redis/redis-data-types/</link>
+      <link>https://keli.tech/database/redis/redis-data-types/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-data-types/</guid>
+      <guid>https://keli.tech/database/redis/redis-data-types/</guid>
       <description>&lt;p&gt;redis 常被拿来与 memcached 来比较，但非常不通的地方就在于 Redis 有非常出色的数据结构，使用非常简便。
 本文介绍常用的数据类型和使用场景 Strings Lists Hashes Sets Sorted-Sets 等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 版本信息</title>
-      <link>https://keli.tech/posts/redis/redis-version/</link>
+      <link>https://keli.tech/database/redis/redis-version/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-version/</guid>
+      <guid>https://keli.tech/database/redis/redis-version/</guid>
       <description>&lt;p&gt;本文介绍 Redis发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis 主从复制</title>
-      <link>https://keli.tech/posts/redis/redis-replication/</link>
+      <link>https://keli.tech/database/redis/redis-replication/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-replication/</guid>
+      <guid>https://keli.tech/database/redis/redis-replication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 事务</title>
-      <link>https://keli.tech/posts/redis/redis-transaction/</link>
+      <link>https://keli.tech/database/redis/redis-transaction/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-transaction/</guid>
+      <guid>https://keli.tech/database/redis/redis-transaction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis pipelined 管道</title>
-      <link>https://keli.tech/posts/redis/redis-pipelined/</link>
+      <link>https://keli.tech/database/redis/redis-pipelined/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-pipelined/</guid>
+      <guid>https://keli.tech/database/redis/redis-pipelined/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis 持久化方式RDB和AOF比较</title>
-      <link>https://keli.tech/posts/redis/redis-rdb-aof/</link>
+      <link>https://keli.tech/database/redis/redis-rdb-aof/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-rdb-aof/</guid>
+      <guid>https://keli.tech/database/redis/redis-rdb-aof/</guid>
       <description>&lt;p&gt;Redis的所有数据都是保存在内存中，然后不定期的通过异步方式保存到磁盘上(这称为“半持久化模式”)；也可以把每一次数据变化都写入到一个append only file(aof)里面(这称为“全持久化模式”)。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis Module 模块</title>
-      <link>https://keli.tech/posts/redis/redis-module/</link>
+      <link>https://keli.tech/database/redis/redis-module/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/redis/redis-module/</guid>
+      <guid>https://keli.tech/database/redis/redis-module/</guid>
       <description>&lt;p&gt;todo&lt;/p&gt;</description>
     </item>
     

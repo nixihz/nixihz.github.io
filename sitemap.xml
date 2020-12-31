@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-interview/</loc>
+    <loc>https://keli.tech/database/redis/redis-interview/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-intro/</loc>
+    <loc>https://keli.tech/database/redis/redis-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,7 +53,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/1-mysql-intro/</loc>
+    <loc>https://keli.tech/database/mysql/1-mysql-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,12 +78,12 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/3-mysql-mac-intro/</loc>
+    <loc>https://keli.tech/database/mysql/3-mysql-mac-intro/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/3-mysql-sysbench/</loc>
+    <loc>https://keli.tech/database/mysql/3-mysql-sysbench/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,58 +93,68 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-data-types/</loc>
+    <loc>https://keli.tech/database/redis/redis-data-types/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-version/</loc>
+    <loc>https://keli.tech/database/redis/redis-version/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-replication/</loc>
+    <loc>https://keli.tech/database/redis/redis-replication/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/6-mysql-design-rules/</loc>
+    <loc>https://keli.tech/database/mysql/6-mysql-design-rules/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-transaction/</loc>
+    <loc>https://keli.tech/database/redis/redis-transaction/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/7-mysql-profiling/</loc>
+    <loc>https://keli.tech/database/mysql/7-mysql-profiling/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-pipelined/</loc>
+    <loc>https://keli.tech/database/redis/redis-pipelined/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-rdb-aof/</loc>
+    <loc>https://keli.tech/database/redis/redis-rdb-aof/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/redis-module/</loc>
+    <loc>https://keli.tech/database/redis/redis-module/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/lang/php/</loc>
+    <loc>https://keli.tech/lang/php/</loc>
     <lastmod>2020-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://keli.tech/posts/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/database/redis/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/database/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -153,8 +163,23 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/10-mysql-version/</loc>
+    <loc>https://keli.tech/database/mysql/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/database/mysql/10-mysql-version/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/concurrency/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/lang/golang/</loc>
+    <lastmod>2020-12-22T12:12:02+00:00</lastmod>
   </url>
   
   <url>
@@ -163,13 +188,28 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/lang/golang/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
+    <loc>https://keli.tech/categories/</loc>
+    <lastmod>2020-12-22T12:12:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://keli.tech/categories/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
+    <loc>https://keli.tech/categories/golang/</loc>
+    <lastmod>2020-12-22T12:12:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/</loc>
+    <lastmod>2020-12-22T12:12:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/lang/golang/50-shades-of-go/</loc>
+    <lastmod>2020-12-22T12:12:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/lang/</loc>
+    <lastmod>2020-12-22T12:12:02+00:00</lastmod>
   </url>
   
   <url>
@@ -193,22 +233,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/lang/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/lang/golang/composer-config-alibaba/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/posts/lang/php/composer-config-alibaba/</loc>
+    <loc>https://keli.tech/lang/php/composer-config-alibaba/</loc>
     <lastmod>2020-11-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -220,6 +245,11 @@
   <url>
     <loc>https://keli.tech/posts/tools/</loc>
     <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/lang/php/function-unexpected/</loc>
+    <lastmod>2020-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -253,17 +283,7 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/redis/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/tags/golang/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keli.tech/categories/golang/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -303,11 +323,6 @@
   </url>
   
   <url>
-    <loc>https://keli.tech/posts/mysql/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://keli.tech/posts/mysql1/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url>
@@ -333,8 +348,28 @@
   </url>
   
   <url>
+    <loc>https://keli.tech/concurrency/web/note-anywhere-chrome/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/database/redis/note-anywhere-chrome/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://keli.tech/ideas/web/note-anywhere-chrome/</loc>
     <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/concurrency/apps/car-window/</loc>
+    <lastmod>2019-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keli.tech/database/mysql/car-window/</loc>
+    <lastmod>2019-08-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>

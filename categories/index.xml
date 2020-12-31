@@ -5,10 +5,19 @@
     <link>https://keli.tech/categories/</link>
     <description>Recent content in Categories on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Dec 2020 12:12:02 +0000</lastBuildDate>
     
 	<atom:link href="https://keli.tech/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>golang</title>
+      <link>https://keli.tech/categories/golang/</link>
+      <pubDate>Tue, 22 Dec 2020 12:12:02 +0000</pubDate>
+      
+      <guid>https://keli.tech/categories/golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>develop</title>
@@ -52,15 +61,6 @@
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/categories/redis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://keli.tech/categories/golang/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/categories/golang/</guid>
       <description></description>
     </item>
     

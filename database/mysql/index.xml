@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on FenceX的技术博客</title>
+    <link>https://keli.tech/database/mysql/</link>
+    <description>Recent content in Mysql on FenceX的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://keli.tech/database/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>零、Mysql 面试题</title>
+      <link>https://keli.tech/database/mysql/1-mysql-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/1-mysql-intro/</guid>
+      <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一、Mysql Mac 安装和使用</title>
+      <link>https://keli.tech/database/mysql/3-mysql-mac-intro/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/3-mysql-mac-intro/</guid>
+      <description>&lt;h4 id=&#34;一-安装&#34;&gt;一、安装&lt;/h4&gt;
+
+&lt;p&gt;1、执行安装命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>二、Mysql 基准测试 mysqlslap 和 sysbench</title>
+      <link>https://keli.tech/database/mysql/3-mysql-sysbench/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/3-mysql-sysbench/</guid>
+      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br /&gt;
+还有其他的补充。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;http_load&lt;/li&gt;
+&lt;li&gt;sql-bench&lt;/li&gt;
+&lt;li&gt;dbt2 的 TPC-C&lt;/li&gt;
+&lt;li&gt;percona的 TPCC-mySQL测试工具&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>六、MySQL 建表原则</title>
+      <link>https://keli.tech/database/mysql/6-mysql-design-rules/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/6-mysql-design-rules/</guid>
+      <description>&lt;p&gt;MySQL 建表原则， 常见面试题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>七、Mysql 性能问题定位</title>
+      <link>https://keli.tech/database/mysql/7-mysql-profiling/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/7-mysql-profiling/</guid>
+      <description>&lt;p&gt;本文介绍 Mysql 性能问题定位。&lt;/p&gt;
+
+&lt;p&gt;慢查询日志 和 Percona Toolkit
+pt-query-digest&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34; rel=&#34;noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>十、Mysql 版本信息</title>
+      <link>https://keli.tech/database/mysql/10-mysql-version/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/10-mysql-version/</guid>
+      <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>拍照识别汽车玻璃制造年份小程序</title>
+      <link>https://keli.tech/database/mysql/car-window/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/database/mysql/car-window/</guid>
+      <description>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。</description>
+    </item>
+    
+  </channel>
+</rss>

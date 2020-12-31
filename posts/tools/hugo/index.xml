@@ -26,8 +26,11 @@
       
       <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
       <description>&lt;p&gt;&lt;em&gt;以 book theme 示例&lt;/em&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;hugo-添加自定义-css-和-javascript&#34;&gt;Hugo 添加自定义 css 和 javascript&lt;/h2&gt;
+
 &lt;p&gt;public 目录是最终目录，&lt;/p&gt;
+
 &lt;p&gt;Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例&lt;/p&gt;</description>
     </item>
     
@@ -38,7 +41,8 @@
       
       <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
       <description>&lt;h2 id=&#34;hugo如何播放mp3文件&#34;&gt;hugo如何播放mp3文件&lt;/h2&gt;
-&lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br&gt;
+
+&lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br /&gt;
 Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:&lt;/p&gt;</description>
     </item>
     
@@ -48,9 +52,11 @@ Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点�
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/tools/hugo/hugo-speech/</guid>
-      <description>&lt;h2 id=&#34;博客朗读-audio-preloadnone&#34;&gt;博客朗读 &lt;audio preload=&#34;none&#34;/&gt;&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;博客朗读-audio-preload-none&#34;&gt;博客朗读 &lt;/h2&gt;
+
 &lt;p&gt;如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
 如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。&lt;/p&gt;
+
 &lt;p&gt;说干就干。&lt;/p&gt;</description>
     </item>
     

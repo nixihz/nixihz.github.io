@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="七、Mysql 性能问题定位"><meta property="og:title" content="七、Mysql 性能问题定位" />
+<meta property="og:description" content="Mysql 性能问题定位" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/database/mysql/7-mysql-profiling/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>七、Mysql 性能问题定位 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
+
+
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+  <ul>
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/posts/" >
+      博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/tools/" >
+      工具
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/csp/" >
+      内容安全策略
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/mysql1/" >
+      Spark
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/yii2/" >
+      yii2
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/posts/about-me/" >
+      关于我
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/database/mysql/1-mysql-intro/" >
+      零、Mysql 面试题
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/3-mysql-mac-intro/" >
+      一、Mysql Mac 安装和使用
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/3-mysql-sysbench/" >
+      二、Mysql 基准测试 mysqlslap 和 sysbench
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/6-mysql-design-rules/" >
+      六、MySQL 建表原则
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/7-mysql-profiling/"  class="active">
+      七、Mysql 性能问题定位
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/10-mysql-version/" >
+      十、Mysql 版本信息
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/ideas/" >
+      想法💡
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>七、Mysql 性能问题定位</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#定义">定义</a></li>
+<li><a href="#剖析步骤">剖析步骤</a>
+<ul>
+<li><a href="#找到慢-sql">找到慢 SQL</a></li>
+<li><a href="#剖析单个-sql">剖析单个 SQL</a></li>
+<li><a href="#单个sql还是服务器问题">单个sql还是服务器问题</a></li>
+<li><a href="#show-global-status">show global status</a></li>
+<li><a href="#show-processlist">show processlist</a></li>
+</ul></li>
+<li><a href="#偶发问题">偶发问题</a>
+<ul>
+<li><a href="#问题采集">问题采集</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/database/mysql/7-mysql-profiling/">七、Mysql 性能问题定位</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/develop/">develop</a>, 
+        <a href="/categories/mysql/">mysql</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/mysql/">mysql</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><p>本文介绍 Mysql 性能问题定位。</p>
+
+<p>慢查询日志 和 Percona Toolkit
+pt-query-digest</p>
+
+<p><a href="https://www.percona.com/doc/percona-toolkit/2.2/installation.html" rel="noreferrer" target="_blank">https://www.percona.com/doc/percona-toolkit/2.2/installation.html</a></p>
+
+<h1 id="定义">定义</h1>
+
+<p>性能： 完成某件任务所需要的时间度量。</p>
+
+<p>根据 amdahl 阿姆达尔定律，要想获得性能有效提升，必须优先优化最耗时的部分。</p>
+
+<p>所以做性能优化最重要的是测量响应时间花在哪里，以及为什么花在哪里。</p>
+
+<p>where and why</p>
+
+<p>任务耗时可以分两部分：<code>执行时间</code>和<code>等待时间</code><br />
+1. 执行时间： 最好的方法是测量定位不同的子任务花费的时间。对子任务进行优化效率/去掉/降低频率操作；
+2. 等待时间：复杂一点，可能是系统其他任务间接影响， 磁盘/CPU资源。</p>
+
+<p>千万不要试图通过某些方法修改参数，什么的试错的方式来看有没有可能解决问题。可能会变得更糟糕，比如没有足够理由地升级版本。</p>
+
+<h1 id="剖析步骤">剖析步骤</h1>
+
+<h2 id="找到慢-sql">找到慢 SQL</h2>
+
+<ol>
+<li><p>慢查询</p>
+
+<ol>
+<li>一定要开，注意旋转，I/O无影响，CPU密集型受到影响更大</li>
+
+<li><p>分析工具： pt-query-digest</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">书本 p <span style="color:#ae81ff">92</span> 页， awk 语句</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol></li>
+
+<li><p>show full processlist; 粗粒度</p></li>
+
+<li><p>Percona Toolkit</p></li>
+</ol>
+
+<h2 id="剖析单个-sql">剖析单个 SQL</h2>
+
+<p>1、 show profiles</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#111">mysql</span><span style="color:#f92672">&gt;</span> <span style="color:#00a8c8">set</span> <span style="color:#111">profiling</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+<span style="color:#111">mysql</span><span style="color:#f92672">&gt;</span> <span style="color:#00a8c8">show</span> <span style="color:#111">profiles</span><span style="color:#111">;</span>
+
+<span style="color:#111">mysql</span><span style="color:#f92672">&gt;</span> <span style="color:#00a8c8">show</span> <span style="color:#111">profile</span> <span style="color:#00a8c8">for</span> <span style="color:#111">query</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+
+
+<span style="color:#960050;background-color:#1e0010">不能</span> <span style="color:#960050;background-color:#1e0010">排序。</span>
+
+<span style="color:#960050;background-color:#1e0010">用</span><span style="color:#00a8c8">sql</span> <span style="color:#960050;background-color:#1e0010">转化，</span> <span style="color:#960050;background-color:#1e0010">见</span> <span style="color:#ae81ff">83</span> <span style="color:#960050;background-color:#1e0010">页</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>2、 show status</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">show</span> <span style="color:#111">status</span> <span style="color:#00a8c8">where</span> <span style="color:#111">Variable_name</span> <span style="color:#00a8c8">like</span> <span style="color:#d88200">&#39;Handler%&#39;</span> <span style="color:#00a8c8">or</span> <span style="color:#111">Variable_name</span> <span style="color:#00a8c8">like</span> <span style="color:#d88200">&#39;Created%&#39;</span><span style="color:#111">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>3、EXPLAIN 查询执行计划， 检查索引使用情况，
+4、尝试修改WHERE排查命中缓存情况，</p>
+
+<h2 id="单个sql还是服务器问题">单个sql还是服务器问题</h2>
+
+<p>慢查询是否表现一致，是，服务器问题，否，单sql问题。</p>
+
+<h2 id="show-global-status">show global status</h2>
+
+<p>todo P97</p>
+
+<h2 id="show-processlist">show processlist</h2>
+
+<h1 id="偶发问题">偶发问题</h1>
+
+<p>Threads_running 的趋势可以看出问题所在；<br />
+show processlist 中线程的异常状态尖峰也是不错的指标；</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#111">$mysql</span> -e <span style="color:#d88200">&#39;show processlist \G&#39;</span> <span style="color:#111">|</span> grep -c <span style="color:#d88200">&#34;State: freeing items&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>show innodb status 特定输出：<br />
+服务器的平均负载尖峰。</p>
+
+<p>Percona Toolkit 的 pt-stalk</p>
+
+<p>oprofile  linux 内置的性能工具。
+strace 剖析服务器的系统调用， （生产环境有一定风险）。</p>
+
+<p>tcpdump 来监听慢查询，（如果不能打开慢查询日志）。</p>
+
+<h2 id="问题采集">问题采集</h2>
+
+<ol>
+<li>查询：
+
+<ol>
+<li>索引扫描</li>
+<li>范围扫描</li>
+<li>全表扫描</li>
+<li>表关联查询</li>
+</ol></li>
+<li>每秒排序次数和行数</li>
+<li>临时表
+
+<ol>
+<li>临时表数量</li>
+<li>内存临时表还是磁盘临时表(超过 tmp_table_size max_heap_table_size)</li>
+</ol></li>
+<li>锁 lock table</li>
+<li>innodb的查询缓存问题</li>
+<li>show innodb status</li>
+<li>每秒捕获一次 iostat， 持续30s</li>
+<li>vmstat 检查
+
+<br />
+<br /></li>
+</ol></p>
+</article>
+
+
+
+
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/posts/mysql1/spark-intro/">Mysql 面试题</a></li>
+	
+	<li><a href="/database/mysql/3-mysql-mac-intro/">一、Mysql Mac 安装和使用</a></li>
+	
+	<li><a href="/database/mysql/3-mysql-sysbench/">二、Mysql 基准测试 mysqlslap 和 sysbench</a></li>
+	
+	<li><a href="/database/mysql/6-mysql-design-rules/">六、MySQL 建表原则</a></li>
+	
+	<li><a href="/database/mysql/10-mysql-version/">十、Mysql 版本信息</a></li>
+	
+</ul>
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#定义">定义</a></li>
+<li><a href="#剖析步骤">剖析步骤</a>
+<ul>
+<li><a href="#找到慢-sql">找到慢 SQL</a></li>
+<li><a href="#剖析单个-sql">剖析单个 SQL</a></li>
+<li><a href="#单个sql还是服务器问题">单个sql还是服务器问题</a></li>
+<li><a href="#show-global-status">show global status</a></li>
+<li><a href="#show-processlist">show processlist</a></li>
+</ul></li>
+<li><a href="#偶发问题">偶发问题</a>
+<ul>
+<li><a href="#问题采集">问题采集</a></li>
+</ul></li>
+</ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

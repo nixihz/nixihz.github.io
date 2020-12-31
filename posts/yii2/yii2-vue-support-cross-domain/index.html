@@ -15,10 +15,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -105,32 +105,6 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/posts/lang/" >
-      编程语言
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/posts/tools/" >
       工具
   </a>
@@ -159,58 +133,6 @@ https://github.com/alex-shpak/hugo-book
 
   <a href="/posts/csp/" >
       内容安全策略
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/redis/" >
-      Redis 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/mysql/" >
-      Mysql 博客
   </a>
 
 
@@ -321,6 +243,118 @@ https://github.com/alex-shpak/hugo-book
     
       
 
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
   <a href="/ideas/" >
       想法💡
   </a>
@@ -338,6 +372,30 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
 
 
 
@@ -392,15 +450,13 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#问题一-跨域">问题一 跨域</a></li>
-        <li><a href="#问题二-跨域携带cookie">问题二 跨域携带cookie</a></li>
-        <li><a href="#heading"></a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#问题一-跨域">问题一 跨域</a></li>
+<li><a href="#问题二-跨域携带cookie">问题二 跨域携带cookie</a></li>
+</ul></li>
+</ul>
 </nav>
 
 
@@ -419,7 +475,8 @@ https://github.com/alex-shpak/hugo-book
   <h1>
     <a href="/posts/yii2/yii2-vue-support-cross-domain/">Yii 2 开发环境允许跨域，解决 Access-Control-Allow-Origin</a>
   </h1>
-  
+  <hr/>
+
 
 <div>
 
@@ -447,70 +504,147 @@ https://github.com/alex-shpak/hugo-book
 
 
   <p><p>Yii 2 解决 vue 调试问题，跨域和携带cookie。</p>
+
 <h2 id="问题一-跨域">问题一 跨域</h2>
+
 <p>调试时前端域名自然是 0.0.0.0:8080， 服务端域名可能是 *.be.com, uri 跨域了！</p>
+
 <p>第一种方案是：让服务端允许跨域，响应中添加几个header值即可</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e">// php 示例
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Allow-Origin: http://0.0.0.0:8080&#34;</span>);
+</span><span style="color:#75715e"></span><span style="color:#75af00">header</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Access-Control-Allow-Origin: http://0.0.0.0:8080&#34;</span><span style="color:#111">);</span>
 <span style="color:#75715e">// 或者
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Allow-Origin: *&#34;</span>);
-
-</code></pre></div><p>第二种方案是：前端 vue 设置 proxyTable</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// config/index.js
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8080</span>,       <span style="color:#75715e">// 项目开发时本地端口
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;0.0.0.0&#39;</span>,  <span style="color:#75715e">// 项目开发时本地地址
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">proxyTable</span><span style="color:#f92672">:</span> {
-        <span style="color:#e6db74">&#39;/backendapi&#39;</span><span style="color:#f92672">:</span> {         <span style="color:#75715e">// 模版框架
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;http://be.com&#39;</span>,
-            <span style="color:#a6e22e">changeOrigin</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-            <span style="color:#a6e22e">pathRewrite</span><span style="color:#f92672">:</span> {
-                <span style="color:#e6db74">&#39;^/backendapi&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;api&#39;</span>
-            }
-        },
-    }
-}
-</code></pre></div><p>第二种方案非常棒，果断采纳！<br>
+</span><span style="color:#75715e"></span><span style="color:#75af00">header</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Access-Control-Allow-Origin: *&#34;</span><span style="color:#111">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>第二种方案是：前端 vue 设置 proxyTable</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// config/index.js
+</span><span style="color:#75715e"></span><span style="color:#75af00">module</span><span style="color:#111">.</span><span style="color:#75af00">exports</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8080</span><span style="color:#111">,</span>       <span style="color:#75715e">// 项目开发时本地端口
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">host</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;0.0.0.0&#39;</span><span style="color:#111">,</span>  <span style="color:#75715e">// 项目开发时本地地址
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">proxyTable</span><span style="color:#f92672">:</span> <span style="color:#111">{</span>
+        <span style="color:#d88200">&#39;/backendapi&#39;</span><span style="color:#f92672">:</span> <span style="color:#111">{</span>         <span style="color:#75715e">// 模版框架
+</span><span style="color:#75715e"></span>            <span style="color:#75af00">target</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;http://be.com&#39;</span><span style="color:#111">,</span>
+            <span style="color:#75af00">changeOrigin</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+            <span style="color:#75af00">pathRewrite</span><span style="color:#f92672">:</span> <span style="color:#111">{</span>
+                <span style="color:#d88200">&#39;^/backendapi&#39;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;api&#39;</span>
+            <span style="color:#111">}</span>
+        <span style="color:#111">},</span>
+    <span style="color:#111">}</span>
+<span style="color:#111">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>第二种方案非常棒，果断采纳！<br />
 事情往往没有想象的简单，服务端老代码，使用了 cookie-session 作为登录标识，并且使用的是单点登录，一旦服务端接口判定没有登录，是通过302 跳转到另一个域名进行sso❓❓❓，服务端必须改动点什么了。</p>
+
 <h2 id="问题二-跨域携带cookie">问题二 跨域携带cookie</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 允许跨域携带 cookie
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">axiosInstance</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">create</span>({
-    <span style="color:#a6e22e">withCredentials</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-})
-
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Allow-Origin: http://0.0.0.0:8080&#34;</span>);
-<span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Access-Control-Allow-Credentials: true&#34;</span>);
-<span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;P3P: CP=&#34;CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR&#34;&#39;</span>);
-
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 允许跨域携带 cookie
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">axiosInstance</span> <span style="color:#f92672">=</span> <span style="color:#75af00">axios</span><span style="color:#111">.</span><span style="color:#75af00">create</span><span style="color:#111">({</span>
+    <span style="color:#75af00">withCredentials</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+<span style="color:#111">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75af00">header</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Access-Control-Allow-Origin: http://0.0.0.0:8080&#34;</span><span style="color:#111">);</span>
+<span style="color:#75af00">header</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Access-Control-Allow-Credentials: true&#34;</span><span style="color:#111">);</span>
+<span style="color:#75af00">header</span><span style="color:#111">(</span><span style="color:#d88200">&#39;P3P: CP=&#34;CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR&#34;&#39;</span><span style="color:#111">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 
 <span style="color:#75715e">// config/main-dev.php
-</span><span style="color:#75715e"></span>$config <span style="color:#f92672">=</span> [
+</span><span style="color:#75715e"></span><span style="color:#111">$config</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#39;components&#39;</span> <span style="color:#f92672">=&gt;</span> [
+</span><span style="color:#75715e"></span>    <span style="color:#d88200">&#39;components&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">[</span>
         <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>        <span style="color:#e6db74">&#39;session&#39;</span> <span style="color:#f92672">=&gt;</span> [
-            <span style="color:#e6db74">&#39;name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;qimao-backend&#39;</span>,
-            <span style="color:#e6db74">&#39;cookieParams&#39;</span> <span style="color:#f92672">=&gt;</span> [
-                <span style="color:#e6db74">&#39;httpOnly&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>, <span style="color:#75715e">//必须设置 httpOnly 为false，js 才能跨域携带cookie
-</span><span style="color:#75715e"></span>                <span style="color:#e6db74">&#39;sameSite&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;none&#39;</span>, <span style="color:#75715e">// sameSite 必须 none，js才能跨域携带cookie
-</span><span style="color:#75715e"></span>                <span style="color:#e6db74">&#39;secure&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// sameSite为none，则必须设置 secure 为true，也就是需使用 https 
-</span><span style="color:#75715e"></span>            ],
-        ],
+</span><span style="color:#75715e"></span>        <span style="color:#d88200">&#39;session&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">[</span>
+            <span style="color:#d88200">&#39;name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;qimao-backend&#39;</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#39;cookieParams&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">[</span>
+                <span style="color:#d88200">&#39;httpOnly&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#00a8c8">false</span><span style="color:#111">,</span> <span style="color:#75715e">//必须设置 httpOnly 为false，js 才能跨域携带cookie
+</span><span style="color:#75715e"></span>                <span style="color:#d88200">&#39;sameSite&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;none&#39;</span><span style="color:#111">,</span> <span style="color:#75715e">// sameSite 必须 none，js才能跨域携带cookie
+</span><span style="color:#75715e"></span>                <span style="color:#d88200">&#39;secure&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span> <span style="color:#75715e">// sameSite为none，则必须设置 secure 为true，也就是需使用 https 
+</span><span style="color:#75715e"></span>            <span style="color:#111">],</span>
+        <span style="color:#111">],</span>
         <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>    ],
+</span><span style="color:#75715e"></span>    <span style="color:#111">],</span>
     <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>];
+</span><span style="color:#75715e"></span><span style="color:#111">];</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>有3个注意点:<br />
+1. 必须设置 httpOnly 为false，js 才能跨域携带cookie
+1. sameSite 必须 none，js才能跨域携带cookie
+1. sameSite为none，则必须设置 secure 为true，也就是需使用</p>
 
-</code></pre></div><p>有3个注意点:</p>
-<ol>
-<li>必须设置 httpOnly 为false，js 才能跨域携带cookie</li>
-<li>sameSite 必须 none，js才能跨域携带cookie</li>
-<li>sameSite为none，则必须设置 secure 为true，也就是需使用</li>
-</ol>
-<h2 id="heading"></h2>
 <p>前端拿到代码直接执行 <code>cnpm run dev</code> 就可以开心开发了</p></p>
 </article>
 
@@ -521,11 +655,11 @@ https://github.com/alex-shpak/hugo-book
 <h3>See Also</h3>
 <ul>
 	
-	<li><a href="/posts/redis/redis-module/">Redis Module 模块</a></li>
+	<li><a href="/database/redis/redis-module/">Redis Module 模块</a></li>
 	
-	<li><a href="/posts/redis/redis-intro/">Redis 介绍</a></li>
+	<li><a href="/database/redis/redis-intro/">Redis 介绍</a></li>
 	
-	<li><a href="/posts/redis/redis-version/">Redis 版本信息</a></li>
+	<li><a href="/database/redis/redis-version/">Redis 版本信息</a></li>
 	
 </ul>
 
@@ -582,15 +716,13 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#问题一-跨域">问题一 跨域</a></li>
-        <li><a href="#问题二-跨域携带cookie">问题二 跨域携带cookie</a></li>
-        <li><a href="#heading"></a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#问题一-跨域">问题一 跨域</a></li>
+<li><a href="#问题二-跨域携带cookie">问题二 跨域携带cookie</a></li>
+</ul></li>
+</ul>
 </nav>
 
  

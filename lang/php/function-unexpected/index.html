@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PHP的函数中意想不到的坑"><meta property="og:title" content="PHP的函数中意想不到的坑" />
+<meta property="og:description" content="PHP的函数中意想不到的坑" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/lang/php/function-unexpected/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-10-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-03T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>PHP的函数中意想不到的坑 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
+
+
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+  <ul>
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/posts/" >
+      博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/tools/" >
+      工具
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/csp/" >
+      内容安全策略
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/mysql1/" >
+      Spark
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/yii2/" >
+      yii2
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/posts/about-me/" >
+      关于我
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/ideas/" >
+      想法💡
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/lang/php/" >
+      PHP
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/lang/php/composer-config-alibaba/" >
+      阿里云 Composer 全量镜像php
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/lang/php/function-unexpected/"  class="active">
+      PHP的函数中意想不到的坑
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/lang/golang/" >
+      Golang
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/lang/golang/50-shades-of-go/" >
+      新手Gopher常犯的50个错误
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PHP的函数中意想不到的坑</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#strtotime-strtotime">strtotime<sup class="footnote-ref" id="fnref:strtotime"><a href="#fn:strtotime">1</a></sup></a></li>
+<li><a href="#trim-trim">trim<sup class="footnote-ref" id="fnref:trim"><a href="#fn:trim">2</a></sup></a></li>
+<li><a href="#explode-explode">explode<sup class="footnote-ref" id="fnref:explode"><a href="#fn:explode">3</a></sup></a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/lang/php/function-unexpected/">PHP的函数中意想不到的坑</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2020-10-03</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/develop/">develop</a>, 
+        <a href="/categories/php/">php</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/php/">php</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h2 id="strtotime-strtotime">strtotime<sup class="footnote-ref" id="fnref:strtotime"><a href="#fn:strtotime">1</a></sup></h2>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;?php
+echo date(&#34;Y-m-d&#34;, strtotime(&#34;-1 month&#34;));</code></pre></td></tr></table>
+</div>
+</div>
+<p>假设今天是2019-07-31,
+输出：
+2019-07-01</p>
+
+<ol>
+<li>先做-1 month, 那么当前是07-31, 减去一以后就是06-31.</li>
+<li>再做日期规范化, 因为6月没有31号, 所以就好像2点60等于3点一样, 6月31就等于了7月1</li>
+</ol>
+
+<h2 id="trim-trim">trim<sup class="footnote-ref" id="fnref:trim"><a href="#fn:trim">2</a></sup></h2>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;?php
+echo trim(&#34;&lt;p&gt;&lt;/p&gt;&lt;p&gt;pikachu hello world&lt;/p&gt;&#34;, &#34;&lt;p&gt;&lt;/p&gt;&#34;);</code></pre></td></tr></table>
+</div>
+</div>
+<p>输出：
+ikachu hello world</p>
+
+<p>trim 第二个可选字符串参数 $character_mask 的含义是把第二参数字符串中的所有字符，从输入中剔除；</p>
+
+<h2 id="explode-explode">explode<sup class="footnote-ref" id="fnref:explode"><a href="#fn:explode">3</a></sup></h2>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;?php
+var_export(explode(&#34;,&#34;, &#34;&#34;));</code></pre></td></tr></table>
+</div>
+</div>
+<p>输出:</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">array (
+  0 =&gt; &#39;&#39;,
+)</code></pre></td></tr></table>
+</div>
+</div>
+<p>一般期望是个空数组，但返回是包含1个元素的数组，（细细回想，这个返回值是有其道理）</p>
+
+<p>持续更新</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:strtotime"><strong>strtotime</strong>  <a href="https://www.laruence.com/2018/07/31/3207.html" rel="noreferrer" target="_blank">令人困惑的strtotime - 鸟哥</a>
+ <a class="footnote-return" href="#fnref:strtotime"><sup>[return]</sup></a></li>
+<li id="fn:trim"><strong>trim</strong>  <a href="https://www.php.net/manual/zh/function.trim.php" rel="noreferrer" target="_blank">trim at php.net</a>
+ <a class="footnote-return" href="#fnref:trim"><sup>[return]</sup></a></li>
+<li id="fn:explode"><strong>trim</strong>  <a href="https://www.php.net/manual/zh/function.explode.php" rel="noreferrer" target="_blank">explode at php.net</a>
+ <a class="footnote-return" href="#fnref:explode"><sup>[return]</sup></a></li>
+</ol>
+</div></p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#strtotime-strtotime">strtotime<sup class="footnote-ref" id="fnref:strtotime"><a href="#fn:strtotime">1</a></sup></a></li>
+<li><a href="#trim-trim">trim<sup class="footnote-ref" id="fnref:trim"><a href="#fn:trim">2</a></sup></a></li>
+<li><a href="#explode-explode">explode<sup class="footnote-ref" id="fnref:explode"><a href="#fn:explode">3</a></sup></a></li>
+</ul></li>
+</ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

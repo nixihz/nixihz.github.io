@@ -15,10 +15,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -97,32 +97,6 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/lang/" >
-      编程语言
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
     
       
         
@@ -367,58 +341,6 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/posts/redis/" >
-      Redis 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/mysql/" >
-      Mysql 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/posts/mysql1/" >
       Spark
   </a>
@@ -489,6 +411,118 @@ https://github.com/alex-shpak/hugo-book
     
       
 
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
   <a href="/ideas/" >
       想法💡
   </a>
@@ -506,6 +540,30 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
 
 
 
@@ -560,14 +618,13 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#hugo-添加自定义-css-和-javascript">Hugo 添加自定义 css 和 javascript</a></li>
-        <li><a href="#为每个特定-post-页面指定-js-和-css-文件">为每个特定 post 页面指定 js 和 css 文件</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-添加自定义-css-和-javascript">Hugo 添加自定义 css 和 javascript</a></li>
+<li><a href="#为每个特定-post-页面指定-js-和-css-文件">为每个特定 post 页面指定 js 和 css 文件</a></li>
+</ul></li>
+</ul>
 </nav>
 
 
@@ -586,7 +643,8 @@ https://github.com/alex-shpak/hugo-book
   <h1>
     <a href="/posts/tools/hugo/hugo/">Hugo 基本技巧</a>
   </h1>
-  
+  <hr/>
+
 
 <div>
 
@@ -603,35 +661,84 @@ https://github.com/alex-shpak/hugo-book
 
 
   <p><p><em>以 book theme 示例</em></p>
+
 <h2 id="hugo-添加自定义-css-和-javascript">Hugo 添加自定义 css 和 javascript</h2>
+
 <p>public 目录是最终目录，</p>
+
 <p>Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例</p>
-<pre><code class="language-ssh" data-lang="ssh">/public
+
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/public
 /static
 ├── audio
 ├── css
 │   └── audio.css
 ├── js
 │   └── audio.js
-└── speech.mp3
-</code></pre><p><a href="http://localhost:1313/js/audio.js">http://localhost:1313/js/audio.js</a><br>
-<a href="http://localhost:1313/css/audio.css">http://localhost:1313/css/audio.css</a><br>
-<a href="http://localhost:1313/speech.mp3">http://localhost:1313/speech.mp3</a></p>
+└── speech.mp3</code></pre></td></tr></table>
+</div>
+</div>
+<p><a href="http://localhost:1313/js/audio.js" rel="noreferrer" target="_blank">http://localhost:1313/js/audio.js</a><br />
+<a href="http://localhost:1313/css/audio.css" rel="noreferrer" target="_blank">http://localhost:1313/css/audio.css</a><br />
+<a href="http://localhost:1313/speech.mp3" rel="noreferrer" target="_blank">http://localhost:1313/speech.mp3</a></p>
+
 <p>编辑 <code>theme/book/layouts/_default/baseof.html</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span>&gt;
-    &lt;<span style="color:#f92672">head</span>&gt;
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
        ...
-        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">stylesheet</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/audio.css&#34;</span> &gt;
-    &lt;/<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">body</span>&gt;
+        <span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">stylesheet</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;/css/audio.css&#34;</span> <span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
         ...
-        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/audio.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-    &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="为每个特定-post-页面指定-js-和-css-文件">为每个特定 post 页面指定 js 和 css 文件</h2>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;/js/audio.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="为每个特定-post-页面指定-js-和-css-文件">为每个特定 post 页面指定 js 和 css 文件</h2>
+
 <p>hugo 模版支持变量， 如下即可自定义参数。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
----
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
 title : Hugo 基本技巧
 description : Hugo 基本技巧
 tags:
@@ -640,21 +747,40 @@ date: 2020-03-27
 js1: &#34;/se/js/audiojs/audio.min.js&#34;
 js2: &#34;/se/js/audiojs/custom.js&#34;
 css1: &#34;/se/js/audiojs/custom.css&#34;
----
-</code></pre></div><p>模版中获取变量方式 如下: <code>.Params.css1</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if &#34;.Params.css1&#34; }}
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">stylesheet</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.css1 }}&#34;</span> &gt;
+---</code></pre></td></tr></table>
+</div>
+</div>
+<p>模版中获取变量方式 如下: <code>.Params.css1</code></p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if &#34;.Params.css1&#34; }}
+<span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">stylesheet</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ .Params.css1 }}&#34;</span> <span style="color:#111">&gt;</span>
 {{ end }}
 
 ...
 
 {{ if &#34;.Params.js1&#34; }}
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.js1 }}&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ .Params.js1 }}&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
 {{ end }}
 {{ if &#34;.Params.js2&#34; }}
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.js2 }}&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-{{ end }}
-</code></pre></div></p>
+<span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ .Params.js2 }}&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+{{ end }}</code></pre></td></tr></table>
+</div>
+</div></p>
 </article>
 
 
@@ -714,14 +840,13 @@ css1: &#34;/se/js/audiojs/custom.css&#34;
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#hugo-添加自定义-css-和-javascript">Hugo 添加自定义 css 和 javascript</a></li>
-        <li><a href="#为每个特定-post-页面指定-js-和-css-文件">为每个特定 post 页面指定 js 和 css 文件</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-添加自定义-css-和-javascript">Hugo 添加自定义 css 和 javascript</a></li>
+<li><a href="#为每个特定-post-页面指定-js-和-css-文件">为每个特定 post 页面指定 js 和 css 文件</a></li>
+</ul></li>
+</ul>
 </nav>
 
  

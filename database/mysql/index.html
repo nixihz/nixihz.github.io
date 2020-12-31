@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mysql"><meta property="og:title" content="Mysql" />
+<meta property="og:description" content="Fence X 的技术博客" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://keli.tech/database/mysql/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="og:updated_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>Mysql | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
+
+
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<link rel="alternate" type="application/rss+xml" href="https://keli.tech/database/mysql/index.xml" title="FenceX的技术博客" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+  <ul>
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/posts/" >
+      博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/tools/" >
+      工具
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/csp/" >
+      内容安全策略
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/mysql1/" >
+      Spark
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/yii2/" >
+      yii2
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/posts/about-me/" >
+      关于我
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/"  class="active">
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/database/mysql/1-mysql-intro/" >
+      零、Mysql 面试题
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/3-mysql-mac-intro/" >
+      一、Mysql Mac 安装和使用
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/3-mysql-sysbench/" >
+      二、Mysql 基准测试 mysqlslap 和 sysbench
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/6-mysql-design-rules/" >
+      六、MySQL 建表原则
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/7-mysql-profiling/" >
+      七、Mysql 性能问题定位
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/mysql/10-mysql-version/" >
+      十、Mysql 版本信息
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/ideas/" >
+      想法💡
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mysql</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+  
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/1-mysql-intro/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/1-mysql-intro/">零、Mysql 面试题</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><p>Mysql 面试题</p>
+        <a href="/database/mysql/1-mysql-intro/">阅读全文>></a>
+      
+    </p>
+  </article>
+
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/3-mysql-mac-intro/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/3-mysql-mac-intro/">一、Mysql Mac 安装和使用</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><h4 id="一-安装">一、安装</h4>
+
+<p>1、执行安装命令</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install mysql</code></pre></td></tr></table>
+</div>
+</div>
+<p>2、安装完后启动mysql</p>
+        <a href="/database/mysql/3-mysql-mac-intro/">阅读全文>></a>
+      
+    </p>
+  </article>
+
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/3-mysql-sysbench/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/3-mysql-sysbench/">二、Mysql 基准测试 mysqlslap 和 sysbench</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><p>mysqlslap 和 sysbench，必须要掌握；<br />
+还有其他的补充。</p>
+
+<ul>
+<li>http_load</li>
+<li>sql-bench</li>
+<li>dbt2 的 TPC-C</li>
+<li>percona的 TPCC-mySQL测试工具</li>
+</ul>
+        <a href="/database/mysql/3-mysql-sysbench/">阅读全文>></a>
+      
+    </p>
+  </article>
+
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/6-mysql-design-rules/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/6-mysql-design-rules/">六、MySQL 建表原则</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><p>MySQL 建表原则， 常见面试题</p>
+        <a href="/database/mysql/6-mysql-design-rules/">阅读全文>></a>
+      
+    </p>
+  </article>
+
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/7-mysql-profiling/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/7-mysql-profiling/">七、Mysql 性能问题定位</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><p>本文介绍 Mysql 性能问题定位。</p>
+
+<p>慢查询日志 和 Percona Toolkit
+pt-query-digest</p>
+
+<p><a href="https://www.percona.com/doc/percona-toolkit/2.2/installation.html" rel="noreferrer" target="_blank">https://www.percona.com/doc/percona-toolkit/2.2/installation.html</a></p>
+        <a href="/database/mysql/7-mysql-profiling/">阅读全文>></a>
+      
+    </p>
+  </article>
+
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/10-mysql-version/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/10-mysql-version/">十、Mysql 版本信息</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2020-01-02</h5>
+
+
+</div>
+
+
+    <p><p>本文介绍 Mysql 发布周期, 版本兼容和版本特性说明</p>
+    </p>
+  </article>
+
+  
+
+  <article class="markdown book-post hover"
+           style="background-color: whitesmoke; border-radius: 5px;padding:10px;"
+           onclick="window.location = &#34;/database/mysql/car-window/&#34;;"
+  >
+    <h2>
+      <a href="/database/mysql/car-window/">拍照识别汽车玻璃制造年份小程序</a>
+    </h2>
+    
+
+<div>
+
+  <h5>2019-08-22</h5>
+
+
+</div>
+
+
+    <p>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。
+    </p>
+  </article>
+
+  
+
+<style>
+    .hover:hover {
+        -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0 0 6px #999;
+        box-shadow: 0 0 6px #999;
+        -webkit-transition: all .5s ease-out;
+        transition: all .3s ease-out;
+        cursor: pointer;
+    }
+</style>
+
+  
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

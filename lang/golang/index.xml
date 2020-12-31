@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on FenceX的技术博客</title>
+    <link>https://keli.tech/lang/golang/</link>
+    <description>Recent content in Golang on FenceX的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Dec 2020 12:12:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://keli.tech/lang/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>新手Gopher常犯的50个错误</title>
+      <link>https://keli.tech/lang/golang/50-shades-of-go/</link>
+      <pubDate>Tue, 22 Dec 2020 12:12:02 +0000</pubDate>
+      
+      <guid>https://keli.tech/lang/golang/50-shades-of-go/</guid>
+      <description>1.开头大括号不能放在单独的行上  level: beginner  其实，和C一样，Go的正式的语法使用分号来终止语句。和C不同的是，这些分号由词法分析器在扫描源代码过程中使用简单的规则自动插入分号，因此输入源代码多数时候就不需要分号了。 无论任何时候，你都不应该将一个控制结构（(if、for、switch或select）的左大括号放在下一行。如果这样做，将会在大括号的前方插入一个分号，否则编译报错。1
+错误示范  1 2 3 4 5 6  package main import &amp;#34;fmt&amp;#34; func main() { //error, 开头大括号不能独立一行  fmt.Println(&amp;#34;hello there!&amp;#34;) }   Compile Error:
+ /tmp/sandbox826898458/main.go:6: syntax error: unexpected semicolon or newline before {
+  正确示范  1 2 3 4 5  package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;works!&amp;#34;) }     2.未使用的变量  level: beginner  如果您有未使用的变量，您的代码将无法编译。但是也有例外: 1.</description>
+    </item>
+    
+  </channel>
+</rss>

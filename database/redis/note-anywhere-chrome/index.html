@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="在任意网页添加弹框注释 Chrome 插件"><meta property="og:title" content="在任意网页添加弹框注释 Chrome 插件" />
+<meta property="og:description" content="idea" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://keli.tech/database/redis/note-anywhere-chrome/" />
+<meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
+<meta property="article:published_time" content="2019-09-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-29T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>在任意网页添加弹框注释 Chrome 插件 | FenceX的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
+
+
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+  <ul>
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/posts/" >
+      博客
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/tools/" >
+      工具
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/csp/" >
+      内容安全策略
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/mysql1/" >
+      Spark
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/posts/yii2/" >
+      yii2
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/posts/about-me/" >
+      关于我
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-interview/" >
+      Redis 面试题
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-intro/" >
+      Redis 介绍
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-data-types/" >
+      Redis 数据类型与适用场景
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-version/" >
+      Redis 版本信息
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-replication/" >
+      Redis 主从复制
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-transaction/" >
+      Redis 事务
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-pipelined/" >
+      Redis pipelined 管道
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-rdb-aof/" >
+      Redis 持久化方式RDB和AOF比较
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/database/redis/redis-module/" >
+      Redis Module 模块
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/ideas/" >
+      想法💡
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>在任意网页添加弹框注释 Chrome 插件</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#功能">功能</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/database/redis/note-anywhere-chrome/">在任意网页添加弹框注释 Chrome 插件</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2019-09-29</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/app/">app</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><p>在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，<br />
+可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；</p>
+
+<p></p>
+
+<p>当进入某个页面，根据 url 获取当前 url 是否有备注，存在则获取并在对应位置显示;</p>
+
+<p>数据可同步到远程服务器；<br />
+可以设置登录；</p>
+
+<h2 id="功能">功能</h2>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> 长按添加</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 添加长按效果，可优化loading图</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可拖拽</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可缩放</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可固定</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可调配色</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可搜索</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可删除</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 存云端</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 从云端加载</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 可复制，不处理
+<br /></label></li>
+</ul></p>
+</article>
+
+
+
+
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/concurrency/web/note-anywhere-chrome/">在任意网页添加弹框注释 Chrome 插件</a></li>
+	
+	<li><a href="/ideas/web/note-anywhere-chrome/">在任意网页添加弹框注释 Chrome 插件</a></li>
+	
+	<li><a href="/ideas/apps/car-window/">拍照识别汽车玻璃制造年份小程序</a></li>
+	
+	<li><a href="/concurrency/apps/car-window/">拍照识别汽车玻璃制造年份小程序</a></li>
+	
+	<li><a href="/database/mysql/car-window/">拍照识别汽车玻璃制造年份小程序</a></li>
+	
+</ul>
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#功能">功能</a></li>
+</ul></li>
+</ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

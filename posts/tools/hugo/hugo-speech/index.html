@@ -15,10 +15,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -97,32 +97,6 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/lang/" >
-      编程语言
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
     
       
         
@@ -367,58 +341,6 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/posts/redis/" >
-      Redis 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/mysql/" >
-      Mysql 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/posts/mysql1/" >
       Spark
   </a>
@@ -489,6 +411,118 @@ https://github.com/alex-shpak/hugo-book
     
       
 
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
   <a href="/ideas/" >
       想法💡
   </a>
@@ -506,6 +540,30 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
 
 
 
@@ -560,18 +618,25 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#博客朗读-audio-preloadnone">博客朗读 <audio preload="none"/></a></li>
-        <li><a href="#思路-audio-preloadnone">思路 <audio preload="none"/></a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#博客朗读-audio-preload-none">博客朗读 </a></li>
+<li><a href="#思路-audio-preload-none">思路 </a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#示例代码">示例代码</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 
 
@@ -590,7 +655,8 @@ https://github.com/alex-shpak/hugo-book
   <h1>
     <a href="/posts/tools/hugo/hugo-speech/">Hugo 支持博客朗读</a>
   </h1>
-  
+  <hr/>
+
 
 <div>
 
@@ -606,28 +672,39 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="博客朗读-audio-preloadnone">博客朗读 <audio preload="none"/></h2>
+  <p><h2 id="博客朗读-audio-preload-none">博客朗读 </h2>
+
 <p>如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
 如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。</p>
+
 <p>说干就干。</p>
-<h2 id="思路-audio-preloadnone">思路 <audio preload="none"/></h2>
+
+<h2 id="思路-audio-preload-none">思路 </h2>
+
 <p>得益于上一篇文章：<a href="/posts/tools/hugo/hugo-audio">《hugo如何播放mp3文件》</a>，我们知道了该如何在文章中插入 mp3 播放组件，
-那么我们要做的就剩下两步：</p>
-<ol>
-<li>分析博客内容</li>
-<li>文字转语音</li>
-</ol>
+那么我们要做的就剩下两步：
+1. 分析博客内容
+2. 文字转语音</p>
+
 <p><strong>第一步：分析博客内容</strong></p>
+
 <p>直接分析 Markdown 文件，暂时找不到好的解析器，决定在 Hugo 编译了 Html 文件之后，再分析 Html 文件来提取文字。</p>
-<p>一篇博客可能包含代码，所以我计划只在关键位置增加朗读功能。<br>
+
+<p>一篇博客可能包含代码，所以我计划只在关键位置增加朗读功能。<br />
 首先编辑文章时，在需要朗读的位置插入audio组件，这样我们就知道朗读内容的开始。不断检测下一个节点，把文字追加到待转语音文字变量里，直到再次遇到 audio组件节点或者是 H1和H2这类关键节点。</p>
+
 <p><strong>第二步：文字转语音</strong></p>
+
 <p>文字转语音有很多解决方案，我选择了 Google 方案，嗯，没有原因。
-直接上代码，基本官网示例就能用了。<a href="https://cloud.google.com/text-to-speech/docs/create-audio">创建语音音频文件示例</a></p>
+直接上代码，基本官网示例就能用了。<a href="https://cloud.google.com/text-to-speech/docs/create-audio" rel="noreferrer" target="_blank">创建语音音频文件示例</a></p>
+
 <p>文件保存到 public文件夹中，同时把 mp3 路径回写到 html 文件中。</p>
+
 <p>由于 Hugo 是 Go 语言开发的，所以这个小插件也用 Go 语言开发。我们把程序编译成可执行文件并拷贝到 Hugo 博客源目录，
 每次执行 Hugo 编译后再次执行该文件，达成目标。</p>
+
 <h6 id="示例代码">示例代码</h6>
+
 
 
 
@@ -640,71 +717,138 @@ https://github.com/alex-shpak/hugo-book
   </label>
   <div class="book-tabs-content markdown-inner">
     <p>go解析html文件可以使用 <code>github.com/PuerkitoBio/goquery</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">...</span>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">...</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">deal</span>(<span style="color:#a6e22e">filePath</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">assetsPath</span> <span style="color:#66d9ef">string</span>) {
-	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">OpenFile</span>(<span style="color:#a6e22e">filePath</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_RDONLY</span>, <span style="color:#ae81ff">0777</span>)
-	<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">NewDocumentFromReader</span>(<span style="color:#a6e22e">f</span>)
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
+<span style="color:#00a8c8">func</span> <span style="color:#75af00">deal</span><span style="color:#111">(</span><span style="color:#75af00">filePath</span> <span style="color:#00a8c8">string</span><span style="color:#111">,</span> <span style="color:#75af00">assetsPath</span> <span style="color:#00a8c8">string</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+	<span style="color:#75af00">f</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">OpenFile</span><span style="color:#111">(</span><span style="color:#75af00">filePath</span><span style="color:#111">,</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">O_RDONLY</span><span style="color:#111">,</span> <span style="color:#ae81ff">0777</span><span style="color:#111">)</span>
+	<span style="color:#75af00">doc</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">goquery</span><span style="color:#111">.</span><span style="color:#75af00">NewDocumentFromReader</span><span style="color:#111">(</span><span style="color:#75af00">f</span><span style="color:#111">)</span>
+	<span style="color:#00a8c8">defer</span> <span style="color:#75af00">f</span><span style="color:#111">.</span><span style="color:#75af00">Close</span><span style="color:#111">()</span>
 
     <span style="color:#75715e">// 查找 audio 找到语音朗读起点
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;audio&#34;</span>).<span style="color:#a6e22e">Map</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">selection</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Selection</span>) <span style="color:#66d9ef">string</span> {
-		<span style="color:#a6e22e">parentType</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">Parent</span>().<span style="color:#a6e22e">Nodes</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">DataAtom</span>
+</span><span style="color:#75715e"></span>	<span style="color:#75af00">doc</span><span style="color:#111">.</span><span style="color:#75af00">Find</span><span style="color:#111">(</span><span style="color:#d88200">&#34;audio&#34;</span><span style="color:#111">).</span><span style="color:#75af00">Map</span><span style="color:#111">(</span><span style="color:#00a8c8">func</span><span style="color:#111">(</span><span style="color:#75af00">i</span> <span style="color:#00a8c8">int</span><span style="color:#111">,</span> <span style="color:#75af00">selection</span> <span style="color:#f92672">*</span><span style="color:#75af00">goquery</span><span style="color:#111">.</span><span style="color:#75af00">Selection</span><span style="color:#111">)</span> <span style="color:#00a8c8">string</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">parentType</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">selection</span><span style="color:#111">.</span><span style="color:#75af00">Parent</span><span style="color:#111">().</span><span style="color:#75af00">Nodes</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">].</span><span style="color:#75af00">DataAtom</span>
 
-		<span style="color:#a6e22e">isEnd</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">false</span>
-		<span style="color:#a6e22e">textSpeech</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;&#34;</span>
-		<span style="color:#a6e22e">nextItem</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">Parent</span>().<span style="color:#a6e22e">Next</span>()
-		<span style="color:#66d9ef">for</span> !<span style="color:#a6e22e">isEnd</span> {
-			<span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">nextItem</span>.<span style="color:#a6e22e">Nodes</span>[<span style="color:#ae81ff">0</span>]
+		<span style="color:#75af00">isEnd</span> <span style="color:#f92672">:=</span> <span style="color:#00a8c8">false</span>
+		<span style="color:#75af00">textSpeech</span> <span style="color:#f92672">:=</span> <span style="color:#d88200">&#34;&#34;</span>
+		<span style="color:#75af00">nextItem</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">selection</span><span style="color:#111">.</span><span style="color:#75af00">Parent</span><span style="color:#111">().</span><span style="color:#75af00">Next</span><span style="color:#111">()</span>
+		<span style="color:#00a8c8">for</span> <span style="color:#111">!</span><span style="color:#75af00">isEnd</span> <span style="color:#111">{</span>
+			<span style="color:#75af00">item</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">nextItem</span><span style="color:#111">.</span><span style="color:#75af00">Nodes</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span>
 			<span style="color:#75715e">// 遇到同级则停止
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">DataAtom</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">parentType</span> {
-				<span style="color:#a6e22e">isEnd</span> = <span style="color:#66d9ef">true</span>
-				<span style="color:#66d9ef">continue</span>
-			}
-			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">head1</span> = [] <span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">Atom</span>{
-				<span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">H1</span>,
-				<span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">H2</span>,
-				<span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">H3</span>,
-				<span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">H4</span>,
-				<span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">H5</span>,
-				<span style="color:#a6e22e">atom</span>.<span style="color:#a6e22e">H6</span>,
-			}
+</span><span style="color:#75715e"></span>			<span style="color:#00a8c8">if</span> <span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">DataAtom</span> <span style="color:#f92672">==</span> <span style="color:#75af00">parentType</span> <span style="color:#111">{</span>
+				<span style="color:#75af00">isEnd</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
+				<span style="color:#00a8c8">continue</span>
+			<span style="color:#111">}</span>
+			<span style="color:#00a8c8">var</span> <span style="color:#75af00">head1</span> <span style="color:#111">=</span> <span style="color:#111">[]</span> <span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">Atom</span><span style="color:#111">{</span>
+				<span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">H1</span><span style="color:#111">,</span>
+				<span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">H2</span><span style="color:#111">,</span>
+				<span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">H3</span><span style="color:#111">,</span>
+				<span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">H4</span><span style="color:#111">,</span>
+				<span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">H5</span><span style="color:#111">,</span>
+				<span style="color:#75af00">atom</span><span style="color:#111">.</span><span style="color:#75af00">H6</span><span style="color:#111">,</span>
+			<span style="color:#111">}</span>
 			<span style="color:#75715e">// 遇到h1～h6则停止
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">contains</span>(<span style="color:#a6e22e">head1</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">DataAtom</span>) {
-				<span style="color:#a6e22e">isEnd</span> = <span style="color:#66d9ef">true</span>
-				<span style="color:#66d9ef">continue</span>
-			}
+</span><span style="color:#75715e"></span>			<span style="color:#00a8c8">if</span> <span style="color:#75af00">contains</span><span style="color:#111">(</span><span style="color:#75af00">head1</span><span style="color:#111">,</span> <span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">DataAtom</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+				<span style="color:#75af00">isEnd</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
+				<span style="color:#00a8c8">continue</span>
+			<span style="color:#111">}</span>
 			<span style="color:#75715e">// 遇到audio则停止
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">nextItem</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;audio&#34;</span>).<span style="color:#a6e22e">Length</span>() &gt; <span style="color:#ae81ff">0</span> {
-				<span style="color:#a6e22e">isEnd</span> = <span style="color:#66d9ef">true</span>
-				<span style="color:#66d9ef">continue</span>
-			}
+</span><span style="color:#75715e"></span>			<span style="color:#00a8c8">if</span> <span style="color:#75af00">nextItem</span><span style="color:#111">.</span><span style="color:#75af00">Find</span><span style="color:#111">(</span><span style="color:#d88200">&#34;audio&#34;</span><span style="color:#111">).</span><span style="color:#75af00">Length</span><span style="color:#111">()</span> <span style="color:#111">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#111">{</span>
+				<span style="color:#75af00">isEnd</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
+				<span style="color:#00a8c8">continue</span>
+			<span style="color:#111">}</span>
 
-			<span style="color:#a6e22e">textSpeech</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;。&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">nextItem</span>.<span style="color:#a6e22e">Text</span>()
-			<span style="color:#a6e22e">nextItem</span> = <span style="color:#a6e22e">nextItem</span>.<span style="color:#a6e22e">Next</span>()
-		}
+			<span style="color:#75af00">textSpeech</span> <span style="color:#f92672">+=</span> <span style="color:#d88200">&#34;。&#34;</span> <span style="color:#f92672">+</span> <span style="color:#75af00">nextItem</span><span style="color:#111">.</span><span style="color:#75af00">Text</span><span style="color:#111">()</span>
+			<span style="color:#75af00">nextItem</span> <span style="color:#111">=</span> <span style="color:#75af00">nextItem</span><span style="color:#111">.</span><span style="color:#75af00">Next</span><span style="color:#111">()</span>
+		<span style="color:#111">}</span>
 
 		<span style="color:#75715e">// 文字转语音
-</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">speech</span>.<span style="color:#a6e22e">TextToSpeech</span>(<span style="color:#a6e22e">textSpeech</span>, <span style="color:#a6e22e">assetsPath</span>, <span style="color:#66d9ef">true</span>)
+</span><span style="color:#75715e"></span>		<span style="color:#75af00">speech</span><span style="color:#111">.</span><span style="color:#75af00">TextToSpeech</span><span style="color:#111">(</span><span style="color:#75af00">textSpeech</span><span style="color:#111">,</span> <span style="color:#75af00">assetsPath</span><span style="color:#111">,</span> <span style="color:#00a8c8">true</span><span style="color:#111">)</span>
 
-		<span style="color:#a6e22e">fileName</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">md5</span>.<span style="color:#a6e22e">Sum</span>([]byte(<span style="color:#a6e22e">textSpeech</span>))
-		<span style="color:#a6e22e">filename</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">hex</span>.<span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">fileName</span>[:]) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.mp3&#34;</span>
+		<span style="color:#75af00">fileName</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">md5</span><span style="color:#111">.</span><span style="color:#75af00">Sum</span><span style="color:#111">([]</span><span style="color:#111">byte</span><span style="color:#111">(</span><span style="color:#75af00">textSpeech</span><span style="color:#111">))</span>
+		<span style="color:#75af00">filename</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">hex</span><span style="color:#111">.</span><span style="color:#75af00">EncodeToString</span><span style="color:#111">(</span><span style="color:#75af00">fileName</span><span style="color:#111">[:])</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;.mp3&#34;</span>
 
 		<span style="color:#75715e">// 更新audio节点的src
-</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">SetAttr</span>(<span style="color:#e6db74">&#34;src&#34;</span>, <span style="color:#e6db74">&#34;/audio/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">filename</span>)
-		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
-	})
+</span><span style="color:#75715e"></span>		<span style="color:#75af00">selection</span><span style="color:#111">.</span><span style="color:#75af00">SetAttr</span><span style="color:#111">(</span><span style="color:#d88200">&#34;src&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;/audio/&#34;</span><span style="color:#f92672">+</span><span style="color:#75af00">filename</span><span style="color:#111">)</span>
+		<span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;&#34;</span>
+	<span style="color:#111">})</span>
 	<span style="color:#75715e">// 更新audio节点的src之后，再重新回写到 html 文件
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">OpenFile</span>(<span style="color:#a6e22e">filePath</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_RDWR</span>|<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_TRUNC</span>|<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_CREATE</span>, <span style="color:#ae81ff">0777</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;read fail&#34;</span>, <span style="color:#a6e22e">err</span>)
-	}
-	<span style="color:#a6e22e">htmlContent</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">Html</span>()
-	<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Write</span>([]byte(<span style="color:#a6e22e">htmlContent</span>))
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
-}
-
-</code></pre></div>
+</span><span style="color:#75715e"></span>	<span style="color:#75af00">f</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#111">=</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">OpenFile</span><span style="color:#111">(</span><span style="color:#75af00">filePath</span><span style="color:#111">,</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">O_RDWR</span><span style="color:#111">|</span><span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">O_TRUNC</span><span style="color:#111">|</span><span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">O_CREATE</span><span style="color:#111">,</span> <span style="color:#ae81ff">0777</span><span style="color:#111">)</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#d88200">&#34;read fail&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">err</span><span style="color:#111">)</span>
+	<span style="color:#111">}</span>
+	<span style="color:#75af00">htmlContent</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">doc</span><span style="color:#111">.</span><span style="color:#75af00">Html</span><span style="color:#111">()</span>
+	<span style="color:#75af00">_</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#111">=</span> <span style="color:#75af00">f</span><span style="color:#111">.</span><span style="color:#75af00">Write</span><span style="color:#111">([]</span><span style="color:#111">byte</span><span style="color:#111">(</span><span style="color:#75af00">htmlContent</span><span style="color:#111">))</span>
+	<span style="color:#00a8c8">defer</span> <span style="color:#75af00">f</span><span style="color:#111">.</span><span style="color:#75af00">Close</span><span style="color:#111">()</span>
+<span style="color:#111">}</span></code></pre></td></tr></table>
+</div>
+</div>
   </div>
 
   <input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
@@ -712,67 +856,130 @@ https://github.com/alex-shpak/hugo-book
     2.文字转语音
   </label>
   <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">speech</span>
+    <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#75af00">speech</span>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;context&#34;</span>
-	<span style="color:#e6db74">&#34;crypto/md5&#34;</span>
-	<span style="color:#e6db74">&#34;encoding/hex&#34;</span>
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
-	<span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-	<span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#111">(</span>
+	<span style="color:#d88200">&#34;context&#34;</span>
+	<span style="color:#d88200">&#34;crypto/md5&#34;</span>
+	<span style="color:#d88200">&#34;encoding/hex&#34;</span>
+	<span style="color:#d88200">&#34;fmt&#34;</span>
+	<span style="color:#d88200">&#34;io/ioutil&#34;</span>
+	<span style="color:#d88200">&#34;log&#34;</span>
 
-	<span style="color:#a6e22e">texttospeech</span> <span style="color:#e6db74">&#34;cloud.google.com/go/texttospeech/apiv1&#34;</span>
-	<span style="color:#a6e22e">texttospeechpb</span> <span style="color:#e6db74">&#34;google.golang.org/genproto/googleapis/cloud/texttospeech/v1&#34;</span>
-)
+	<span style="color:#75af00">texttospeech</span> <span style="color:#d88200">&#34;cloud.google.com/go/texttospeech/apiv1&#34;</span>
+	<span style="color:#75af00">texttospeechpb</span> <span style="color:#d88200">&#34;google.golang.org/genproto/googleapis/cloud/texttospeech/v1&#34;</span>
+<span style="color:#111">)</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TextToSpeech</span>(<span style="color:#a6e22e">text</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">assetsPath</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">isFemale</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">string</span> {
-	<span style="color:#a6e22e">ctx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>()
+<span style="color:#00a8c8">func</span> <span style="color:#75af00">TextToSpeech</span><span style="color:#111">(</span><span style="color:#75af00">text</span> <span style="color:#00a8c8">string</span><span style="color:#111">,</span> <span style="color:#75af00">assetsPath</span> <span style="color:#00a8c8">string</span><span style="color:#111">,</span> <span style="color:#75af00">isFemale</span> <span style="color:#00a8c8">bool</span><span style="color:#111">)</span> <span style="color:#00a8c8">string</span> <span style="color:#111">{</span>
+	<span style="color:#75af00">ctx</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">context</span><span style="color:#111">.</span><span style="color:#75af00">Background</span><span style="color:#111">()</span>
 
-	<span style="color:#a6e22e">client</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">texttospeech</span>.<span style="color:#a6e22e">NewClient</span>(<span style="color:#a6e22e">ctx</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
-	}
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ssmlGender</span> = <span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">SsmlVoiceGender_MALE</span>
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">isFemale</span> {
-		<span style="color:#a6e22e">ssmlGender</span> = <span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">SsmlVoiceGender_FEMALE</span>
-	}
-	<span style="color:#a6e22e">req</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">SynthesizeSpeechRequest</span>{
-		<span style="color:#a6e22e">Input</span>: <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">SynthesisInput</span>{
-			<span style="color:#a6e22e">InputSource</span>: <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">SynthesisInput_Text</span>{<span style="color:#a6e22e">Text</span>: <span style="color:#a6e22e">text</span>},
-		},
+	<span style="color:#75af00">client</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">texttospeech</span><span style="color:#111">.</span><span style="color:#75af00">NewClient</span><span style="color:#111">(</span><span style="color:#75af00">ctx</span><span style="color:#111">)</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">log</span><span style="color:#111">.</span><span style="color:#75af00">Fatal</span><span style="color:#111">(</span><span style="color:#75af00">err</span><span style="color:#111">)</span>
+	<span style="color:#111">}</span>
+	<span style="color:#00a8c8">var</span> <span style="color:#75af00">ssmlGender</span> <span style="color:#111">=</span> <span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">SsmlVoiceGender_MALE</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">isFemale</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">ssmlGender</span> <span style="color:#111">=</span> <span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">SsmlVoiceGender_FEMALE</span>
+	<span style="color:#111">}</span>
+	<span style="color:#75af00">req</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">SynthesizeSpeechRequest</span><span style="color:#111">{</span>
+		<span style="color:#75af00">Input</span><span style="color:#111">:</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">SynthesisInput</span><span style="color:#111">{</span>
+			<span style="color:#75af00">InputSource</span><span style="color:#111">:</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">SynthesisInput_Text</span><span style="color:#111">{</span><span style="color:#75af00">Text</span><span style="color:#111">:</span> <span style="color:#75af00">text</span><span style="color:#111">},</span>
+		<span style="color:#111">},</span>
 
-		<span style="color:#a6e22e">Voice</span>: <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">VoiceSelectionParams</span>{
-			<span style="color:#a6e22e">LanguageCode</span>: <span style="color:#e6db74">&#34;zh-CN&#34;</span>,
-			<span style="color:#a6e22e">SsmlGender</span>:   <span style="color:#a6e22e">ssmlGender</span>,
-		},
+		<span style="color:#75af00">Voice</span><span style="color:#111">:</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">VoiceSelectionParams</span><span style="color:#111">{</span>
+			<span style="color:#75af00">LanguageCode</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;zh-CN&#34;</span><span style="color:#111">,</span>
+			<span style="color:#75af00">SsmlGender</span><span style="color:#111">:</span>   <span style="color:#75af00">ssmlGender</span><span style="color:#111">,</span>
+		<span style="color:#111">},</span>
 		<span style="color:#75715e">// Select the type of audio utils you want returned.
-</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">AudioConfig</span>: <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">AudioConfig</span>{
-			<span style="color:#a6e22e">AudioEncoding</span>: <span style="color:#a6e22e">texttospeechpb</span>.<span style="color:#a6e22e">AudioEncoding_MP3</span>,
-			<span style="color:#a6e22e">SpeakingRate</span>:  <span style="color:#ae81ff">1.1</span>,
-			<span style="color:#a6e22e">Pitch</span>:         <span style="color:#ae81ff">1</span>,
-		},
-	}
+</span><span style="color:#75715e"></span>		<span style="color:#75af00">AudioConfig</span><span style="color:#111">:</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">AudioConfig</span><span style="color:#111">{</span>
+			<span style="color:#75af00">AudioEncoding</span><span style="color:#111">:</span> <span style="color:#75af00">texttospeechpb</span><span style="color:#111">.</span><span style="color:#75af00">AudioEncoding_MP3</span><span style="color:#111">,</span>
+			<span style="color:#75af00">SpeakingRate</span><span style="color:#111">:</span>  <span style="color:#ae81ff">1.1</span><span style="color:#111">,</span>
+			<span style="color:#75af00">Pitch</span><span style="color:#111">:</span>         <span style="color:#ae81ff">1</span><span style="color:#111">,</span>
+		<span style="color:#111">},</span>
+	<span style="color:#111">}</span>
 
-	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">SynthesizeSpeech</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">req</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
-	}
+	<span style="color:#75af00">resp</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">client</span><span style="color:#111">.</span><span style="color:#75af00">SynthesizeSpeech</span><span style="color:#111">(</span><span style="color:#75af00">ctx</span><span style="color:#111">,</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">req</span><span style="color:#111">)</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">log</span><span style="color:#111">.</span><span style="color:#75af00">Fatal</span><span style="color:#111">(</span><span style="color:#75af00">err</span><span style="color:#111">)</span>
+	<span style="color:#111">}</span>
 
 	<span style="color:#75715e">// The resp&#39;s AudioContent is binary.
 </span><span style="color:#75715e"></span>
-	<span style="color:#a6e22e">fileName</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">md5</span>.<span style="color:#a6e22e">Sum</span>([]byte(<span style="color:#a6e22e">text</span>))
-	<span style="color:#a6e22e">filename</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">hex</span>.<span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">fileName</span>[:]) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.mp3&#34;</span>
-	<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#a6e22e">assetsPath</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">AudioContent</span>, <span style="color:#ae81ff">0644</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
-	}
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v\n&#34;</span>, <span style="color:#a6e22e">filename</span>)
+	<span style="color:#75af00">fileName</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">md5</span><span style="color:#111">.</span><span style="color:#75af00">Sum</span><span style="color:#111">([]</span><span style="color:#111">byte</span><span style="color:#111">(</span><span style="color:#75af00">text</span><span style="color:#111">))</span>
+	<span style="color:#75af00">filename</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">hex</span><span style="color:#111">.</span><span style="color:#75af00">EncodeToString</span><span style="color:#111">(</span><span style="color:#75af00">fileName</span><span style="color:#111">[:])</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;.mp3&#34;</span>
+	<span style="color:#75af00">err</span> <span style="color:#111">=</span> <span style="color:#75af00">ioutil</span><span style="color:#111">.</span><span style="color:#75af00">WriteFile</span><span style="color:#111">(</span><span style="color:#75af00">assetsPath</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34;/&#34;</span><span style="color:#f92672">+</span><span style="color:#75af00">filename</span><span style="color:#111">,</span> <span style="color:#75af00">resp</span><span style="color:#111">.</span><span style="color:#75af00">AudioContent</span><span style="color:#111">,</span> <span style="color:#ae81ff">0644</span><span style="color:#111">)</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">log</span><span style="color:#111">.</span><span style="color:#75af00">Fatal</span><span style="color:#111">(</span><span style="color:#75af00">err</span><span style="color:#111">)</span>
+	<span style="color:#111">}</span>
+	<span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Printf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;%v\n&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">filename</span><span style="color:#111">)</span>
 
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">filename</span>
-}
-
-</code></pre></div>
+	<span style="color:#00a8c8">return</span> <span style="color:#75af00">filename</span>
+<span style="color:#111">}</span></code></pre></td></tr></table>
+</div>
+</div>
   </div>
 
 </div></p>
@@ -835,18 +1042,25 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#博客朗读-audio-preloadnone">博客朗读 <audio preload="none"/></a></li>
-        <li><a href="#思路-audio-preloadnone">思路 <audio preload="none"/></a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#博客朗读-audio-preload-none">博客朗读 </a></li>
+<li><a href="#思路-audio-preload-none">思路 </a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#示例代码">示例代码</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 
  

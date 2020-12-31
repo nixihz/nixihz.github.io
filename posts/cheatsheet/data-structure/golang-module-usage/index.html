@@ -15,10 +15,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -105,32 +105,6 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/posts/lang/" >
-      编程语言
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/posts/tools/" >
       工具
   </a>
@@ -159,58 +133,6 @@ https://github.com/alex-shpak/hugo-book
 
   <a href="/posts/csp/" >
       内容安全策略
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/redis/" >
-      Redis 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/mysql/" >
-      Mysql 博客
   </a>
 
 
@@ -305,6 +227,118 @@ https://github.com/alex-shpak/hugo-book
     
       
 
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
   <a href="/ideas/" >
       想法💡
   </a>
@@ -322,6 +356,30 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
 
 
 
@@ -376,10 +434,10 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-  <ul>
-    <li><a href="#链表和数组差异">链表和数组差异</a></li>
-    <li><a href="#实现">实现</a></li>
-  </ul>
+<ul>
+<li><a href="#链表和数组差异">链表和数组差异</a></li>
+<li><a href="#实现">实现</a></li>
+</ul>
 </nav>
 
 
@@ -398,7 +456,8 @@ https://github.com/alex-shpak/hugo-book
   <h1>
     <a href="/posts/cheatsheet/data-structure/golang-module-usage/">Linked List 链表（Golang）</a>
   </h1>
-  
+  <hr/>
+
 
 <div>
 
@@ -424,14 +483,22 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h1 id="链表和数组差异">链表和数组差异</h1>
+  <p>
+
+<h1 id="链表和数组差异">链表和数组差异</h1>
+
 <p>链表类似数组，非常大的不同是，可以方便的在列表中间插入和删除元素。</p>
-<p>相对于数组的优点：<br>
+
+<p>相对于数组的优点：<br />
 数组把所有元素都保留在同一块内存中，链表通过存储下一个元素的指针来，把分散在内存中的元素包含在链表内。</p>
-<p>相对于数组的缺点：<br>
+
+<p>相对于数组的缺点：<br />
 如果想在链表中间选择一个元素就会比较困难， 因为不知道该元素的地址，只能从链表的开头开始查找。</p>
+
 <h1 id="实现">实现</h1>
+
 <p>链表应该具有这些方法</p>
+
 <ul>
 <li>Append(t) 在链表末尾追加元素t</li>
 <li>Insert(i, t) 在链表指定位置i插入元素t</li>
@@ -515,10 +582,10 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-  <ul>
-    <li><a href="#链表和数组差异">链表和数组差异</a></li>
-    <li><a href="#实现">实现</a></li>
-  </ul>
+<ul>
+<li><a href="#链表和数组差异">链表和数组差异</a></li>
+<li><a href="#实现">实现</a></li>
+</ul>
 </nav>
 
  

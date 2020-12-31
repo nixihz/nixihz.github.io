@@ -15,10 +15,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -105,32 +105,6 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/posts/lang/" >
-      编程语言
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/posts/tools/" >
       工具
   </a>
@@ -174,58 +148,6 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/redis/" >
-      Redis 博客
-  </a>
-
-
-    
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/posts/mysql/" >
-      Mysql 博客
-  </a>
-
-
-    
-
-    
-
-
-
 
 
 
@@ -311,6 +233,118 @@ https://github.com/alex-shpak/hugo-book
     
       
 
+  <a href="/database/" >
+      数据库
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/redis/" >
+      Redis
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/database/mysql/" >
+      Mysql
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/concurrency/" >
+      高并发
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
   <a href="/ideas/" >
       想法💡
   </a>
@@ -328,6 +362,30 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+  
+    
+
+  <li >
+    
+      
+
+  <a href="/lang/" >
+      编程语言
+  </a>
+
+
+    
+
+    
+
+
+
 
 
 
@@ -391,7 +449,8 @@ https://github.com/alex-shpak/hugo-book
   <h1>
     <a href="/posts/csp/redis-data-types/">WEB 安全 - 内容安全策略介绍与使用</a>
   </h1>
-  
+  <hr/>
+
 
 <div>
 
@@ -419,20 +478,40 @@ https://github.com/alex-shpak/hugo-book
 
 
   <p><p>内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。</p>
-<h1 id="一简介">一、简介</h1>
+
+<h1 id="一-简介">一、简介</h1>
+
 <p>CSP被设计成向后兼容；不支持的浏览器依然可以运行使用了它的服务器页面，反之亦然。不支持CSP的浏览器会忽略它，像平常一样运行，默认对网页内容使用标准的同源策略。如果网站不提供CSP头部，浏览器同样会使用标准的（同源策略）。</p>
+
 <p>开启CSP就如配置您的页面服务来返回Content-Security-Policy HTTP 头部一样简单.</p>
-<h1 id="二目标">二、目标</h1>
+
+<h1 id="二-目标">二、目标</h1>
+
 <p>CSP的主要目标是减少和报告XSS攻击. XSS攻击利用浏览器对从服务器接受的内容的信任。恶意的脚本在受害的浏览器被执行, 因为浏览器相信内容源，甚至当内容源并不是从它应该来的地方过来的。</p>
+
 <p>早些年，javascript 刚出来的时候，是非常不安全的，经常爆出漏洞，为了安全，浏览器都有一项配置项，禁止脚本执行，但现在的进入web3.0，todo，禁止脚本执行的结果，可能是网站都不能正常运行。</p>
+
 <p>仅仅支持 HTTPS 传输数据，代理服务器上控制 HTTP 页面重定向到 HTTPS 页面</p>
-<h1 id="三用法">三、用法</h1>
-<h2 id="31-开启安全策略">3.1 开启安全策略</h2>
+
+<h1 id="三-用法">三、用法</h1>
+
+<h2 id="3-1-开启安全策略">3.1 开启安全策略</h2>
+
 <p>你可以使用  Content-Security-Policy HTTP头部 来指定策略，像这样:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: policy
-</code></pre></div><p>policy参数是一个包含了各种描述你的CSP策略指令的字符串。</p>
-<h3 id="311-常用示例">3.1.1 常用示例</h3>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: policy</code></pre></td></tr></table>
+</div>
+</div>
+<p>policy参数是一个包含了各种描述你的CSP策略指令的字符串。</p>
+
+<h3 id="3-1-1-常用示例">3.1.1 常用示例</h3>
+
 <h4 id="示例1">示例1</h4>
+
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -441,13 +520,21 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#e6db74">&#39;self&#39;</span>
-</code></pre></div>
+      <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#d88200">&#39;self&#39;</span></code></pre></td></tr></table>
+</div>
+</div>
     </div>
   </label>
 </div>
 
+
 <h4 id="示例2">示例2</h4>
+
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -456,13 +543,21 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#e6db74">&#39;self&#39;</span> *.trusted.com
-</code></pre></div>
+      <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#d88200">&#39;self&#39;</span> *.trusted.com</code></pre></td></tr></table>
+</div>
+</div>
     </div>
   </label>
 </div>
 
+
 <h4 id="示例3">示例3</h4>
+
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -471,10 +566,17 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#e6db74">&#39;self&#39;</span>; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
-</code></pre></div><ul>
-<li>图片可以从任何地方加载(注意 &ldquo;*&rdquo; 通配符)。</li>
-<li>多媒体文件仅允许从 media1.com 和 media2.com 加载(不允许从这些站点的子域名)。</li>
+      <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#d88200">&#39;self&#39;</span><span style="color:#111">;</span> img-src *<span style="color:#111">;</span> media-src media1.com media2.com<span style="color:#111">;</span> script-src userscripts.example.com</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>图片可以从任何地方加载(注意 &laquo;*&raquo; 通配符)。<br /></li>
+<li>多媒体文件仅允许从 media1.com 和 media2.com 加载(不允许从这些站点的子域名)。<br /></li>
 <li>可运行脚本仅允许来自于userscripts.example.com。</li>
 </ul>
 
@@ -482,7 +584,9 @@ https://github.com/alex-shpak/hugo-book
   </label>
 </div>
 
+
 <h4 id="示例4">示例4</h4>
+
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -491,35 +595,67 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
-</code></pre></div><p>该服务器仅允许通过HTTPS方式并仅从onlinebanking.jumbobank.com域名来访问文档。</p>
+      <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com</code></pre></td></tr></table>
+</div>
+</div>
+<p>该服务器仅允许通过HTTPS方式并仅从onlinebanking.jumbobank.com域名来访问文档。</p>
 
     </div>
   </label>
 </div>
 
-<h2 id="32-策略触发上报">3.2 策略触发上报</h2>
-<p>策略触发上报报文示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;csp-report&#34;</span>: {
-    <span style="color:#f92672">&#34;document-uri&#34;</span>: <span style="color:#e6db74">&#34;http://example.com/signup.html&#34;</span>, <span style="color:#960050;background-color:#1e0010">//发生违规的文档的URI。</span>
-    <span style="color:#f92672">&#34;referrer&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#960050;background-color:#1e0010">//违规发生处的文档引用（地址）。</span>
-    <span style="color:#f92672">&#34;blocked-uri&#34;</span>: <span style="color:#e6db74">&#34;http://example.com/css/style.css&#34;</span>, <span style="color:#960050;background-color:#1e0010">//被CSP阻止的资源URI。如果被阻止的URI来自不同的源而非文档URI，那么被阻止的资源URI会被删减，仅保留协议，主机和端口号。</span>
-    <span style="color:#f92672">&#34;violated-directive&#34;</span>: <span style="color:#e6db74">&#34;style-src cdn.example.com&#34;</span>, <span style="color:#960050;background-color:#1e0010">//违反的策略名称。</span>
-    <span style="color:#f92672">&#34;original-policy&#34;</span>: <span style="color:#e6db74">&#34;default-src &#39;none&#39;; style-src cdn.example.com; report-uri /_/csp-reports&#34;</span>, <span style="color:#960050;background-color:#1e0010">//在</span> <span style="color:#960050;background-color:#1e0010">Content-Security-Policy</span> <span style="color:#960050;background-color:#1e0010">HTTP</span> <span style="color:#960050;background-color:#1e0010">头部中指明的原始策略。</span>
 
-    <span style="color:#f92672">&#34;disposition&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-    <span style="color:#f92672">&#34;effective-directive&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-    <span style="color:#f92672">&#34;script-sample&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-    <span style="color:#f92672">&#34;status-code&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-  }
-}
-</code></pre></div><p>四、实践</p>
+<h2 id="3-2-策略触发上报">3.2 策略触发上报</h2>
+
+<p>策略触发上报报文示例：</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#111">{</span>
+  <span style="color:#f92672">&#34;csp-report&#34;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
+    <span style="color:#f92672">&#34;document-uri&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;http://example.com/signup.html&#34;</span><span style="color:#111">,</span> <span style="color:#960050;background-color:#1e0010">//发生违规的文档的URI。</span>
+    <span style="color:#f92672">&#34;referrer&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">,</span> <span style="color:#960050;background-color:#1e0010">//违规发生处的文档引用（地址）。</span>
+    <span style="color:#f92672">&#34;blocked-uri&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;http://example.com/css/style.css&#34;</span><span style="color:#111">,</span> <span style="color:#960050;background-color:#1e0010">//被CSP阻止的资源URI。如果被阻止的URI来自不同的源而非文档URI，那么被阻止的资源URI会被删减，仅保留协议，主机和端口号。</span>
+    <span style="color:#f92672">&#34;violated-directive&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;style-src cdn.example.com&#34;</span><span style="color:#111">,</span> <span style="color:#960050;background-color:#1e0010">//违反的策略名称。</span>
+    <span style="color:#f92672">&#34;original-policy&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;default-src &#39;none&#39;; style-src cdn.example.com; report-uri /_/csp-reports&#34;</span><span style="color:#111">,</span> <span style="color:#960050;background-color:#1e0010">//在</span> <span style="color:#960050;background-color:#1e0010">Content-Security-Policy</span> <span style="color:#960050;background-color:#1e0010">HTTP</span> <span style="color:#960050;background-color:#1e0010">头部中指明的原始策略。</span>
+
+    <span style="color:#f92672">&#34;disposition&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">,</span>
+    <span style="color:#f92672">&#34;effective-directive&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">,</span>
+    <span style="color:#f92672">&#34;script-sample&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">,</span>
+    <span style="color:#f92672">&#34;status-code&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">,</span>
+  <span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>四、实践</p>
+
 <h2 id="参考">参考</h2>
+
 <ul>
-<li><a href="https://www.w3.org/TR/CSP/">官网 https://www.w3.org/TR/CSP</a></li>
-<li><a href="https://caniuse.com/#search=csp">浏览器支持情况 https://caniuse.com/#search=csp</a></li>
+<li><a href="https://www.w3.org/TR/CSP/" rel="noreferrer" target="_blank">官网 https://www.w3.org/TR/CSP</a></li>
+<li><a href="https://caniuse.com/#search=csp" rel="noreferrer" target="_blank">浏览器支持情况 https://caniuse.com/#search=csp</a></li>
 </ul>
+
 <p>caniuse.com 是一个神奇的网站。：D</p></p>
 </article>
 
