@@ -15,8 +15,36 @@ disablePathToLower = true
 
 # Needed for mermaid/katex shortcodes
 [markup]
-[markup.goldmark.renderer]
-  unsafe = true
+  defaultMarkdownHandler = "blackFriday"
+  [markup.goldmark.renderer]
+    unsafe = true
+    [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokailight"
+    tabWidth = 4
+  [markup.blackFriday]
+    angledQuotes = true 
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
+    fractions = true
+    hrefTargetBlank = true
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = true
+    plainIDAnchors = true
+    skipHTML = true
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
 
 [markup.tableOfContents]
   startLevel = 1
