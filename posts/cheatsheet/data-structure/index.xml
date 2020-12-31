@@ -15,7 +15,7 @@
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/cheatsheet/data-structure/golang-module-usage/</guid>
-      <description> 链表和数组差异 链表类似数组，非常大的不同是，可以方便的在列表中间插入和删除元素。
+      <description>链表和数组差异 链表类似数组，非常大的不同是，可以方便的在列表中间插入和删除元素。
 相对于数组的优点：
 数组把所有元素都保留在同一块内存中，链表通过存储下一个元素的指针来，把分散在内存中的元素包含在链表内。
 相对于数组的缺点：

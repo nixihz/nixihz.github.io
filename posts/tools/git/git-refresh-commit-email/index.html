@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -502,19 +502,21 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#场景-audio-src-preload-none">场景 </a></li>
-<li><a href="#步骤">步骤</a>
-<ul>
-<li><a href="#1-克隆bare项目-纯仓库">1. 克隆bare项目 纯仓库</a></li>
-<li><a href="#2-修改信息">2. 修改信息</a></li>
-<li><a href="#3-修正的任务推送到远程">3. 修正的任务推送到远程</a></li>
-<li><a href="#4-清理多余文件">4. 清理多余文件</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#场景-audio-src-preloadnone-">场景 <audio src="/" preload="none" /></a></li>
+        <li><a href="#步骤">步骤</a>
+          <ul>
+            <li><a href="#1-克隆bare项目-纯仓库">1. 克隆bare项目 纯仓库</a></li>
+            <li><a href="#2-修改信息">2. 修改信息</a></li>
+            <li><a href="#3-修正的任务推送到远程">3. 修正的任务推送到远程</a></li>
+            <li><a href="#4-清理多余文件">4. 清理多余文件</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -561,28 +563,25 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="场景-audio-src-preload-none">场景 </h2>
-
+  <p><h2 id="场景-audio-src-preloadnone-">场景 <audio src="/" preload="none" /></h2>
 <p>公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；</p>
-
 <p>但，难免忘记配置，需要重新刷；</p>
-
 <p>推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email</p>
-
 <h2 id="步骤">步骤</h2>
-
 <h3 id="1-克隆bare项目-纯仓库">1. 克隆bare项目 纯仓库</h3>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone --bare https://github.com/user/repo.git
-<span style="color:#111">cd</span> repo.git</code></pre></td></tr></table>
+<span style="color:#111">cd</span> repo.git
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="2-修改信息">2. 修改信息</h3>
+</div><h3 id="2-修改信息">2. 修改信息</h3>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -605,10 +604,13 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/sh
-</span><span style="color:#75715e"></span>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">
+<span style="color:#75715e">#!/bin/sh</span>
+
 git filter-branch --env-filter <span style="color:#d88200">&#39;
 </span><span style="color:#d88200">
 </span><span style="color:#d88200">OLD_EMAIL=&#34;old@email.com&#34;
@@ -626,27 +628,31 @@ git filter-branch --env-filter <span style="color:#d88200">&#39;
 </span><span style="color:#d88200">    export GIT_AUTHOR_NAME=&#34;$CORRECT_NAME&#34;
 </span><span style="color:#d88200">    export GIT_AUTHOR_EMAIL=&#34;$CORRECT_EMAIL&#34;
 </span><span style="color:#d88200">fi
-</span><span style="color:#d88200">&#39;</span> --tag-name-filter cat -- --branches --tags</code></pre></td></tr></table>
+</span><span style="color:#d88200">&#39;</span> --tag-name-filter cat -- --branches --tags
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="3-修正的任务推送到远程">3. 修正的任务推送到远程</h3>
+</div><h3 id="3-修正的任务推送到远程">3. 修正的任务推送到远程</h3>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git push --force --tags origin <span style="color:#d88200">&#39;refs/heads/*&#39;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git push --force --tags origin <span style="color:#d88200">&#39;refs/heads/*&#39;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="4-清理多余文件">4. 清理多余文件</h3>
+</div><h3 id="4-清理多余文件">4. 清理多余文件</h3>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#111">cd</span> ..
-rm -rf repo.git</code></pre></td></tr></table>
+rm -rf repo.git
+
+</code></pre></td></tr></table>
 </div>
 </div></p>
 </article>
@@ -708,19 +714,21 @@ rm -rf repo.git</code></pre></td></tr></table>
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#场景-audio-src-preload-none">场景 </a></li>
-<li><a href="#步骤">步骤</a>
-<ul>
-<li><a href="#1-克隆bare项目-纯仓库">1. 克隆bare项目 纯仓库</a></li>
-<li><a href="#2-修改信息">2. 修改信息</a></li>
-<li><a href="#3-修正的任务推送到远程">3. 修正的任务推送到远程</a></li>
-<li><a href="#4-清理多余文件">4. 清理多余文件</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#场景-audio-src-preloadnone-">场景 <audio src="/" preload="none" /></a></li>
+        <li><a href="#步骤">步骤</a>
+          <ul>
+            <li><a href="#1-克隆bare项目-纯仓库">1. 克隆bare项目 纯仓库</a></li>
+            <li><a href="#2-修改信息">2. 修改信息</a></li>
+            <li><a href="#3-修正的任务推送到远程">3. 修正的任务推送到远程</a></li>
+            <li><a href="#4-清理多余文件">4. 清理多余文件</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

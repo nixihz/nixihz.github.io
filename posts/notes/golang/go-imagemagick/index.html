@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -434,31 +434,26 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#需求-audio-preload-none-audio">需求 </a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#涉及package">涉及package</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#先上最终最终效果">先上最终最终效果</a></li>
-</ul></li>
-<li><a href="#步骤">步骤</a>
-<ul>
-<li><a href="#一-go-绘制基本图形">一、go 绘制基本图形</a></li>
-<li><a href="#二-imagemagick-convert把-svg-转化为-png-加阴影">二、imagemagick convert把 svg 转化为 png, 加阴影</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#imagemagick-convert-命令">ImageMagick convert 命令</a>
-<ul>
-<li><a href="#附go代码">附go代码：</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#需求-audio-preloadnoneaudio">需求 <audio preload="none"></audio></a>
+          <ul>
+            <li></li>
+            <li><a href="#先上最终最终效果">先上最终最终效果</a></li>
+          </ul>
+        </li>
+        <li><a href="#步骤">步骤</a>
+          <ul>
+            <li><a href="#一go-绘制基本图形">一、go 绘制基本图形</a></li>
+            <li><a href="#二imagemagick-convert把-svg-转化为-png-加阴影">二、imagemagick convert把 svg 转化为 png, 加阴影</a></li>
+            <li><a href="#三处理阴影svg">三、处理阴影svg</a></li>
+          </ul>
+        </li>
+        <li><a href="#附go代码">附go代码：</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -505,40 +500,26 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="需求-audio-preload-none-audio">需求 </h2>
-
+  <p><h2 id="需求-audio-preloadnoneaudio">需求 <audio preload="none"></audio></h2>
 <p>开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
 具体需求：</p>
-
 <ol>
 <li>4条边,凹凸平3个形状，随机组合，</li>
 <li>随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩</li>
 </ol>
-
 <p>go自带<code>image/draw</code> package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。</p>
-
 <h5 id="涉及package">涉及package</h5>
-
-<p><code>github.com/ajstarks/svgo</code>  #基本图形svg绘制<br />
+<p><code>github.com/ajstarks/svgo</code>  #基本图形svg绘制<br>
 <code>github.com/gographics/imagick</code> #特效处理（需安装imagemagick)</p>
-
 <h3 id="先上最终最终效果">先上最终最终效果</h3>
-
-<p><img src="/image/go/gm1.png" alt="origin.png" /></p>
-
-<p><img src="/image/go/gm2.png" alt="tile-final.png" /></p>
-
+<p><img src="/image/go/gm1.png" alt="origin.png"></p>
+<p><img src="/image/go/gm2.png" alt="tile-final.png"></p>
 <h2 id="步骤">步骤</h2>
-
-<h3 id="一-go-绘制基本图形">一、go 绘制基本图形</h3>
-
+<h3 id="一go-绘制基本图形">一、go 绘制基本图形</h3>
 <p>使用 svgo 来绘制 path，生成 svg，代码贴在最后</p>
-
-<h3 id="二-imagemagick-convert把-svg-转化为-png-加阴影">二、imagemagick convert把 svg 转化为 png, 加阴影</h3>
-
+<h3 id="二imagemagick-convert把-svg-转化为-png-加阴影">二、imagemagick convert把 svg 转化为 png, 加阴影</h3>
 <p>注：只展示 imagemagick convert，没有融合到 go 程序里</p>
-
-<p><img src="/image/go/gm3.png" alt="tile.png" /></p>
+<p><img src="/image/go/gm3.png" alt="tile.png"></p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -566,61 +547,45 @@ convert <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>    -background none -gravity NorthEast -geometry +0+0 -composite <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>  <span style="color:#8045ff">\)</span> <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>  -compose over tile-line.svg -gravity center -geometry +0+0 -composite <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>tile.png</code></pre></td></tr></table>
+</span><span style="color:#8045ff"></span>tile.png
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>代码注释：</p>
-
+</div><p>代码注释：</p>
 <ol>
-<li><p>MSVG 支持svg 作为输入源，需要 imagemagick 支持 rsvg， 比如mac：</p>
+<li>MSVG 支持svg 作为输入源，需要 imagemagick 支持 rsvg， 比如mac：
+<code>brew install imagemagick --with-librsvg </code></li>
+<li><code>-background black -shadow 50x2+0+10</code> 前两个数字自己调着看，影响shadow的大小和透明度，后两个是x，y轴偏移，可+可-</li>
+<li><code>-background none</code> 背景透明</li>
+<li>compose 两个图层组合方式， over 表示 后者在前者之上，还有其他选项，详见官网手册</li>
+<li><code>-gravity North -background none -extent 200x200</code> -extent 扩展图片尺寸，-gravity North 表示扩展的时候，原图处于什么位置，North 表示北，还有NorthEast 等，详见官网手册</li>
+</ol>
+<h3 id="三处理阴影svg">三、处理阴影svg</h3>
+<p><img src="/image/go/gm4.png" alt="tile-shadow.png"></p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">2. ```-background black -shadow 50x2+0+10``` 前两个数字自己调着看，影响shadow的大小和透明度，后两个是x，y轴偏移，可+可-
-3. ```-background none``` 背景透明
-4. compose 两个图层组合方式， over 表示 后者在前者之上，还有其他选项，详见官网手册
-5. ```-gravity North -background none -extent 200x200``` -extent 扩展图片尺寸，-gravity North 表示扩展的时候，原图处于什么位置，North 表示北，还有NorthEast 等，详见官网手册
-
-
-### 三、处理阴影svg
-![tile-shadow.png](/image/go/gm4.png)</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># ImageMagick convert 命令</span>
+convert -density <span style="color:#ae81ff">2400</span> -background transparent  MSVG:tile-shadow.svg <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>-fill <span style="color:#d88200">&#34;rgba(0,0,0,0.3)&#34;</span> -opaque black -resize 200x200 tile-shadow.png
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>shell</p></li>
-</ol>
-
-<h1 id="imagemagick-convert-命令">ImageMagick convert 命令</h1>
-
-<p>convert -density 2400 -background transparent  MSVG:tile-shadow.svg <br />
--fill &laquo;rgba(0,0,0,0.3)&raquo; -opaque black -resize 200x200 tile-shadow.png
-```
-代码注释：</p>
-
+</div><p>代码注释：</p>
 <ol>
 <li>-opaque 删除图片中颜色，这里删除黑色，填充rgba(0,0,0,0.3), 否则不能转化透明度，这里用了一个trick</li>
 <li>-density 2400 这里通过修改了分辨率来提高 svg 转化到 png 的细致程度，再强制 -resize 200x200</li>
 </ol>
-
 <p>完成这个小需求绕挺多弯路现总结如下：</p>
-
 <ol>
 <li>go 可以完成一些简单图形的绘制，比如shape/tile 中At方法其实是对每个点进行上色，这是 draw 包的实现</li>
 <li>go 支持图层叠加，支持图层融合</li>
 <li>绘制几何图形使用 svg path，很方便，go可以使用 svgo 包，但是不支持转化成png图片，也不能作为draw包的输入源</li>
 <li>图片处理 使用 imagemagick, 我这里没有使用扩展把逻辑写到代码里，因为我可以把这些 tile png先生成，go直接叠加图层，降低运算，比如这次需求，4条边，3种形状(凹凸平),2个类型(外边阴影，阴影填充) ，3x3x3x3x2 = 162</li>
 </ol>
-
 <h2 id="附go代码">附go代码：</h2>
-
 
 
 
@@ -854,7 +819,8 @@ convert <span style="color:#8045ff">\
 	<span style="color:#75af00">retRectangle</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">image</span><span style="color:#111">.</span><span style="color:#75af00">Rect</span><span style="color:#111">(</span><span style="color:#75af00">posX</span><span style="color:#111">,</span> <span style="color:#75af00">posY</span><span style="color:#111">,</span> <span style="color:#75af00">posX</span><span style="color:#f92672">+</span><span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#75af00">subWidth</span><span style="color:#111">),</span> <span style="color:#75af00">posY</span><span style="color:#f92672">+</span><span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#75af00">subHeight</span><span style="color:#111">),</span> <span style="color:#111">)</span>
 
 	<span style="color:#00a8c8">return</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">retRectangle</span>
-<span style="color:#111">}</span></code></pre></td></tr></table>
+<span style="color:#111">}</span>
+</code></pre></td></tr></table>
 </div>
 </div>
   </div>
@@ -936,6 +902,7 @@ convert <span style="color:#8045ff">\
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#75af00">shape</span>
@@ -1006,7 +973,9 @@ convert <span style="color:#8045ff">\
 	<span style="color:#75af00">canvas</span><span style="color:#111">.</span><span style="color:#75af00">Path</span><span style="color:#111">(</span><span style="color:#75af00">path</span><span style="color:#111">,</span> <span style="color:#75af00">stroke</span><span style="color:#111">)</span>
 
 	<span style="color:#75af00">canvas</span><span style="color:#111">.</span><span style="color:#75af00">End</span><span style="color:#111">()</span>
-<span style="color:#111">}</span></code></pre></td></tr></table>
+<span style="color:#111">}</span>
+
+</code></pre></td></tr></table>
 </div>
 </div>
   </div>
@@ -1114,6 +1083,7 @@ convert <span style="color:#8045ff">\
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">93
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">94
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">96
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#75af00">shape</span>
@@ -1210,7 +1180,9 @@ convert <span style="color:#8045ff">\
 	<span style="color:#111">}</span>
 
 	<span style="color:#00a8c8">return</span> <span style="color:#75af00">colorAt</span>
-<span style="color:#111">}</span></code></pre></td></tr></table>
+<span style="color:#111">}</span>
+
+</code></pre></td></tr></table>
 </div>
 </div>
   </div>
@@ -1282,31 +1254,26 @@ convert <span style="color:#8045ff">\
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#需求-audio-preload-none-audio">需求 </a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#涉及package">涉及package</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#先上最终最终效果">先上最终最终效果</a></li>
-</ul></li>
-<li><a href="#步骤">步骤</a>
-<ul>
-<li><a href="#一-go-绘制基本图形">一、go 绘制基本图形</a></li>
-<li><a href="#二-imagemagick-convert把-svg-转化为-png-加阴影">二、imagemagick convert把 svg 转化为 png, 加阴影</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#imagemagick-convert-命令">ImageMagick convert 命令</a>
-<ul>
-<li><a href="#附go代码">附go代码：</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#需求-audio-preloadnoneaudio">需求 <audio preload="none"></audio></a>
+          <ul>
+            <li></li>
+            <li><a href="#先上最终最终效果">先上最终最终效果</a></li>
+          </ul>
+        </li>
+        <li><a href="#步骤">步骤</a>
+          <ul>
+            <li><a href="#一go-绘制基本图形">一、go 绘制基本图形</a></li>
+            <li><a href="#二imagemagick-convert把-svg-转化为-png-加阴影">二、imagemagick convert把 svg 转化为 png, 加阴影</a></li>
+            <li><a href="#三处理阴影svg">三、处理阴影svg</a></li>
+          </ul>
+        </li>
+        <li><a href="#附go代码">附go代码：</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

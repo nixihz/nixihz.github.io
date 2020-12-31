@@ -19,7 +19,7 @@
       <description>1.开头大括号不能放在单独的行上  level: beginner  其实，和C一样，Go的正式的语法使用分号来终止语句。和C不同的是，这些分号由词法分析器在扫描源代码过程中使用简单的规则自动插入分号，因此输入源代码多数时候就不需要分号了。 无论任何时候，你都不应该将一个控制结构（(if、for、switch或select）的左大括号放在下一行。如果这样做，将会在大括号的前方插入一个分号，否则编译报错。1
 错误示范  1 2 3 4 5 6  package main import &amp;#34;fmt&amp;#34; func main() { //error, 开头大括号不能独立一行  fmt.Println(&amp;#34;hello there!&amp;#34;) }   Compile Error:
  /tmp/sandbox826898458/main.go:6: syntax error: unexpected semicolon or newline before {
-  正确示范  1 2 3 4 5  package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;works!&amp;#34;) }     2.未使用的变量  level: beginner  如果您有未使用的变量，您的代码将无法编译。但是也有例外: 1.</description>
+  正确示范  1 2 3 4 5  package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;works!&amp;#34;) }      2.未使用的变量  level: beginner  如果您有未使用的变量，您的代码将无法编译。但是也有例外: 1.</description>
     </item>
     
   </channel>

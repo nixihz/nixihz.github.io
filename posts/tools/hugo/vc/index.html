@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -618,16 +618,18 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#一-初始化">一、初始化</a></li>
-<li><a href="#二-保存草稿和发布">二、保存草稿和发布</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#一初始化">一、初始化</a></li>
+            <li><a href="#二保存草稿和发布">二、保存草稿和发布</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -664,7 +666,6 @@ https://github.com/alex-shpak/hugo-book
 
 
   <p><p>github page 以 username.github.io 这个项目的master 作为静态资源发布，所以不能把hugo项目放在master，必须开启一个新的分支存储 hugo 项目。</p>
-
 <p>我这里以 blogedit 分支举例：</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -675,6 +676,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git branch -a
@@ -683,48 +685,49 @@ https://github.com/alex-shpak/hugo-book
   master
   remotes/origin/HEAD -&gt; origin/master
   remotes/origin/blogedit
-  remotes/origin/master</code></pre></td></tr></table>
-</div>
-</div>
-<p><code>hugo -D</code> 命令会把编译后的静态文件放到 public， 只要确保public 文件夹是 username.github.io 的master分支即可。<br />
-切换到blogedit分支，然后使用 submodule 创建一个子模块：</p>
+  remotes/origin/master
 
-<h3 id="一-初始化">一、初始化</h3>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>hugo -D</code> 命令会把编译后的静态文件放到 public， 只要确保public 文件夹是 username.github.io 的master分支即可。<br>
+切换到blogedit分支，然后使用 submodule 创建一个子模块：</p>
+<h3 id="一初始化">一、初始化</h3>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git submodule add git@github.com:fencex/fencex.github.io.git public/</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git submodule add git@github.com:fencex/fencex.github.io.git public/
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><code>git submodule</code> 会创建 .gitmodules 文件，这个文件可以提交到 <code>blogedit</code> 分支；<br />
-<code>git submodule</code> 会把 public 放到暂存区，也就是多执行了一步 <code>git add public</code>， 但其实在 <code>blogedit</code> 分支，并不需要这个文件夹；<br />
+</div><p><code>git submodule</code> 会创建 .gitmodules 文件，这个文件可以提交到 <code>blogedit</code> 分支；<br>
+<code>git submodule</code> 会把 public 放到暂存区，也就是多执行了一步 <code>git add public</code>， 但其实在 <code>blogedit</code> 分支，并不需要这个文件夹；<br>
 所以需要从暂存区剔除:</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git restore --staged public</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git restore --staged public
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="二-保存草稿和发布">二、保存草稿和发布</h3>
-
+</div><h3 id="二保存草稿和发布">二、保存草稿和发布</h3>
 <p>1、保存草稿指的是保存 hugo 项目的 content</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add .
 git commit -m <span style="color:#d88200">&#39;update msg&#39;</span>
-git push origin blogedit</code></pre></td></tr></table>
+git push origin blogedit
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>2、发布，则需要到 public 里面操作</p>
+</div><p>2、发布，则需要到 public 里面操作</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -732,13 +735,16 @@ git push origin blogedit</code></pre></td></tr></table>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo -D
 <span style="color:#111">cd</span> public
 git add .
 git commit -m <span style="color:#d88200">&#39;update msg&#39;</span>
-git push origin master</code></pre></td></tr></table>
+git push origin master
+
+</code></pre></td></tr></table>
 </div>
 </div></p>
 </article>
@@ -800,16 +806,18 @@ git push origin master</code></pre></td></tr></table>
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#一-初始化">一、初始化</a></li>
-<li><a href="#二-保存草稿和发布">二、保存草稿和发布</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#一初始化">一、初始化</a></li>
+            <li><a href="#二保存草稿和发布">二、保存草稿和发布</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -618,25 +618,18 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#博客朗读-audio-preload-none">博客朗读 </a></li>
-<li><a href="#思路-audio-preload-none">思路 </a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#示例代码">示例代码</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#博客朗读-audio-preloadnone">博客朗读 <audio preload="none"/></a></li>
+        <li><a href="#思路-audio-preloadnone">思路 <audio preload="none"/></a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -672,39 +665,28 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="博客朗读-audio-preload-none">博客朗读 </h2>
-
+  <p><h2 id="博客朗读-audio-preloadnone">博客朗读 <audio preload="none"/></h2>
 <p>如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
 如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。</p>
-
 <p>说干就干。</p>
-
-<h2 id="思路-audio-preload-none">思路 </h2>
-
+<h2 id="思路-audio-preloadnone">思路 <audio preload="none"/></h2>
 <p>得益于上一篇文章：<a href="/posts/tools/hugo/hugo-audio">《hugo如何播放mp3文件》</a>，我们知道了该如何在文章中插入 mp3 播放组件，
-那么我们要做的就剩下两步：
-1. 分析博客内容
-2. 文字转语音</p>
-
+那么我们要做的就剩下两步：</p>
+<ol>
+<li>分析博客内容</li>
+<li>文字转语音</li>
+</ol>
 <p><strong>第一步：分析博客内容</strong></p>
-
 <p>直接分析 Markdown 文件，暂时找不到好的解析器，决定在 Hugo 编译了 Html 文件之后，再分析 Html 文件来提取文字。</p>
-
-<p>一篇博客可能包含代码，所以我计划只在关键位置增加朗读功能。<br />
+<p>一篇博客可能包含代码，所以我计划只在关键位置增加朗读功能。<br>
 首先编辑文章时，在需要朗读的位置插入audio组件，这样我们就知道朗读内容的开始。不断检测下一个节点，把文字追加到待转语音文字变量里，直到再次遇到 audio组件节点或者是 H1和H2这类关键节点。</p>
-
 <p><strong>第二步：文字转语音</strong></p>
-
 <p>文字转语音有很多解决方案，我选择了 Google 方案，嗯，没有原因。
-直接上代码，基本官网示例就能用了。<a href="https://cloud.google.com/text-to-speech/docs/create-audio" rel="noreferrer" target="_blank">创建语音音频文件示例</a></p>
-
+直接上代码，基本官网示例就能用了。<a href="https://cloud.google.com/text-to-speech/docs/create-audio">创建语音音频文件示例</a></p>
 <p>文件保存到 public文件夹中，同时把 mp3 路径回写到 html 文件中。</p>
-
 <p>由于 Hugo 是 Go 语言开发的，所以这个小插件也用 Go 语言开发。我们把程序编译成可执行文件并拷贝到 Hugo 博客源目录，
 每次执行 Hugo 编译后再次执行该文件，达成目标。</p>
-
 <h6 id="示例代码">示例代码</h6>
-
 
 
 
@@ -782,6 +764,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">...</span>
@@ -846,7 +829,9 @@ https://github.com/alex-shpak/hugo-book
 	<span style="color:#75af00">htmlContent</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">doc</span><span style="color:#111">.</span><span style="color:#75af00">Html</span><span style="color:#111">()</span>
 	<span style="color:#75af00">_</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#111">=</span> <span style="color:#75af00">f</span><span style="color:#111">.</span><span style="color:#75af00">Write</span><span style="color:#111">([]</span><span style="color:#111">byte</span><span style="color:#111">(</span><span style="color:#75af00">htmlContent</span><span style="color:#111">))</span>
 	<span style="color:#00a8c8">defer</span> <span style="color:#75af00">f</span><span style="color:#111">.</span><span style="color:#75af00">Close</span><span style="color:#111">()</span>
-<span style="color:#111">}</span></code></pre></td></tr></table>
+<span style="color:#111">}</span>
+
+</code></pre></td></tr></table>
 </div>
 </div>
   </div>
@@ -917,6 +902,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#75af00">speech</span>
@@ -977,7 +963,9 @@ https://github.com/alex-shpak/hugo-book
 	<span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Printf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;%v\n&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">filename</span><span style="color:#111">)</span>
 
 	<span style="color:#00a8c8">return</span> <span style="color:#75af00">filename</span>
-<span style="color:#111">}</span></code></pre></td></tr></table>
+<span style="color:#111">}</span>
+
+</code></pre></td></tr></table>
 </div>
 </div>
   </div>
@@ -1042,25 +1030,18 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#博客朗读-audio-preload-none">博客朗读 </a></li>
-<li><a href="#思路-audio-preload-none">思路 </a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#示例代码">示例代码</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#博客朗读-audio-preloadnone">博客朗读 <audio preload="none"/></a></li>
+        <li><a href="#思路-audio-preloadnone">思路 <audio preload="none"/></a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

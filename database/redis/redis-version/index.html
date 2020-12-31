@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -530,20 +530,21 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li><a href="#redis发布周期">Redis发布周期</a></li>
-<li><a href="#版本兼容">版本兼容</a></li>
-<li><a href="#版本说明">版本说明</a>
-<ul>
-<li><a href="#redis-6-0">Redis 6.0</a></li>
-<li><a href="#redis-5-0">Redis 5.0</a></li>
-<li><a href="#redis-4-0">Redis 4.0</a></li>
-<li><a href="#redis-3-2">Redis 3.2</a></li>
-<li><a href="#redis-3-0">Redis 3.0</a></li>
-<li><a href="#redis-2-8">Redis 2.8</a></li>
-<li><a href="#redis-2-6">Redis 2.6</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#redis发布周期">Redis发布周期</a></li>
+    <li><a href="#版本兼容">版本兼容</a></li>
+    <li><a href="#版本说明">版本说明</a>
+      <ul>
+        <li><a href="#redis-60">Redis 6.0</a></li>
+        <li><a href="#redis-50">Redis 5.0</a></li>
+        <li><a href="#redis-40">Redis 4.0</a></li>
+        <li><a href="#redis-32">Redis 3.2</a></li>
+        <li><a href="#redis-30">Redis 3.0</a></li>
+        <li><a href="#redis-28">Redis 2.8</a></li>
+        <li><a href="#redis-26">Redis 2.6</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -591,11 +592,8 @@ https://github.com/alex-shpak/hugo-book
 
 
   <p><p>本文介绍 Redis发布周期, 版本兼容和版本特性说明</p>
-
 <h1 id="redis发布周期">Redis发布周期</h1>
-
 <p>Redis 作为系统软件，被各个系统广泛使用，升级会有一定成本，因此发布周期都比较长。</p>
-
 <ul>
 <li>unstable</li>
 <li>development</li>
@@ -603,56 +601,46 @@ https://github.com/alex-shpak/hugo-book
 <li>release candidate</li>
 <li>stable</li>
 </ul>
-
 <h1 id="版本兼容">版本兼容</h1>
-
 <p>Redis 尽量向后兼容，比如 2.8 通常向 2.6.x 兼容， 跨版本 2.4 则可能有问题。</p>
-
 <p>在主从配置中，虽然建议是 主从都是用相同的redis 版本，
-但是实际使用中， 低版本的的主 2.6 通常可以接上 高版本的从 2.8;<br />
+但是实际使用中， 低版本的的主 2.6 通常可以接上 高版本的从 2.8;<br>
 而高版本的主2.8 接上 低版本的从 2.6 可能有问题。</p>
-
 <h1 id="版本说明">版本说明</h1>
-
-<h2 id="redis-6-0">Redis 6.0</h2>
-
+<h2 id="redis-60">Redis 6.0</h2>
 <p>Redis 6在许多关键领域改进了Redis，并且是最大的领域之一，在此仅列出此版本的最大功能：</p>
-
 <ul>
-<li>模块系统现在允许开发者使用新API，比如:<br />
+<li>模块系统现在允许开发者使用新API，比如:<br>
 将任意模块私有数据存储在RDB文件中，处理不同服务器事件，捕获和重写命令执行，阻止客户端key等</li>
 <li>Redis重写了过期key的周期，可更快地收回过期key</li>
-<li>Redis全面支持SSL<br />
+<li>Redis全面支持SSL<br>
 Redis现在在所有通道上都支持SSL</li>
-<li>支持ACL<br />
+<li>支持ACL<br>
 可以指定某些用户只能运行某些命令或者访问某些数据结构</li>
-<li>Redis提供了名为<code>RESP3</code>的新协议，该协议可返回更多语义答复<br />
+<li>Redis提供了名为<code>RESP3</code>的新协议，该协议可返回更多语义答复<br>
 客户端可以得到更明确的返回类型，客户端需要更新以支持此协议</li>
-<li>服务器端支持键值的客户端缓存。<br />
-这个该功能仍处于试验阶段，接下来的版本会有新的迭代，更多信息 <a href="https://redis.io/topics/client-side-caching" rel="noreferrer" target="_blank">https://redis.io/topics/client-side-caching</a></li>
-<li>Redis现在可以选择使用多线程来处理I/O，（最大128个线程）<br />
+<li>服务器端支持键值的客户端缓存。<br>
+这个该功能仍处于试验阶段，接下来的版本会有新的迭代，更多信息 https://redis.io/topics/client-side-caching</li>
+<li>Redis现在可以选择使用多线程来处理I/O，（最大128个线程）<br>
 在单个实例中，每秒能共提供2倍的操作，但 <code>pipeline</code> 无法使用此功能</li>
-<li>无硬盘复制现在支持从库，<br />
+<li>无硬盘复制现在支持从库，<br>
 Redis版本2.8.18是支持无盘复制的第一个版本，支持主库直接同步，
 现在则支持子进程直接在从库将RDB通过线路发送到从属设备，而不使用磁盘作为中间存储</li>
 <li>Redis-benchmark 现在开始支持 Redis Cluster 模式</li>
 <li>SRANDMEMBER 和其他相似的命令，有更好的随机性</li>
 <li>改进了 Redis-cli 客户端</li>
 <li>重写了 Systemd support</li>
-<li>发布了 Redis Cluster 的代理服务<br />
-<a href="https://github.com/artix75/redis-cluster-proxy" rel="noreferrer" target="_blank">https://github.com/artix75/redis-cluster-proxy</a></li>
-<li>发布了 新的Redis module ： Disque，内存中的分布式作业队列<br />
-<a href="https://github.com/antirez/disque-module" rel="noreferrer" target="_blank">https://github.com/antirez/disque-module</a></li>
+<li>发布了 Redis Cluster 的代理服务<br>
+<a href="https://github.com/artix75/redis-cluster-proxy">https://github.com/artix75/redis-cluster-proxy</a></li>
+<li>发布了 新的Redis module ： Disque，内存中的分布式作业队列<br>
+<a href="https://github.com/antirez/disque-module">https://github.com/antirez/disque-module</a></li>
 </ul>
-
-<h2 id="redis-5-0">Redis 5.0</h2>
-
-<p>Redis 5是专注于一些重要功能的发行版。 而Redis 4非常专注于操作，<br />
+<h2 id="redis-50">Redis 5.0</h2>
+<p>Redis 5是专注于一些重要功能的发行版。 而Redis 4非常专注于操作，<br>
 Redis 5的更改大部分是面向用户的，在现有数据基础上实施新的数据类型和操作类型。
 以下是此版本的主要功能：</p>
-
 <ul>
-<li>支持 Stream 类型. <a href="https://redis.io/topics/streams-intro" rel="noreferrer" target="_blank">https://redis.io/topics/streams-intro</a></li>
+<li>支持 Stream 类型. <a href="https://redis.io/topics/streams-intro">https://redis.io/topics/streams-intro</a></li>
 <li>增加 Redis Module API：计时器，集群和字典 API</li>
 <li>RDB 存储 LFU and LRU 信息</li>
 <li>将集群管理器从Ruby（redis-trib.rb）由C改写，<code>redis-cli --cluster help</code> 查询更多帮助信息</li>
@@ -665,68 +653,100 @@ Redis 5的更改大部分是面向用户的，在现有数据基础上实施新�
 <li>修复若干bug，随机功能的性能提升</li>
 <li>内存管理 Jemalloc 升级版本到 5.1</li>
 <li><code>CLIENT UNBLOCK and CLIENT ID</code></li>
-<li>添加 LOLWUT 功能（计算机美学，实际开发可能用不上） <a href="http://antirez.com/news/123" rel="noreferrer" target="_blank">http://antirez.com/news/123</a></li>
+<li>添加 LOLWUT 功能（计算机美学，实际开发可能用不上） <a href="http://antirez.com/news/123">http://antirez.com/news/123</a></li>
 <li>如果不是为了向后API兼容，Redis将不再使用“slave”一词</li>
 <li>网络层中的Differnet优化</li>
-<li>Lua的改进：<br />
-
+<li>Lua的改进：
 <ul>
 <li>更好地将Lua脚本传输到 Slave(从库) / AOF(AOF追加操作落地)</li>
 <li>Lua脚本现在可以超时，并且处于<code>BUSY</code>状态的从库也支持</li>
-</ul></li>
-<li>动态HZ，以平衡空闲CPU使用率和响应速度，<br />
+</ul>
+</li>
+<li>动态HZ，以平衡空闲CPU使用率和响应速度，<br>
 hz理解为后台任务占用cpu资源</li>
 <li>Redis核心在许多方面得到了重构和改进</li>
 </ul>
-
-<h2 id="redis-4-0">Redis 4.0</h2>
-
-<h2 id="redis-3-2">Redis 3.2</h2>
-
-<h2 id="redis-3-0">Redis 3.0</h2>
-
-<h2 id="redis-2-8">Redis 2.8</h2>
-
+<h2 id="redis-40">Redis 4.0</h2>
+<h2 id="redis-32">Redis 3.2</h2>
+<h2 id="redis-30">Redis 3.0</h2>
+<h2 id="redis-28">Redis 2.8</h2>
 <ul>
-<li>现在，从站可以与主站部分重新同步，因此大多数情况下，当短短时间断开主从链接时，不需要与主端RDB创建完全重新同步</li>
-<li>支持 IPv6 （实验性功能）</li>
-<li>从站现在可以显式ping主机，主机可以独立检测超时的从站</li>
-<li>可以设置如果没有连接足够多具有给定最大延迟的从站，则主站可以停止接受写操作</li>
-<li>键空间通过发布/订阅更改通</li>
-<li>CONFIG SET maxclients 现在可使用命令设置最大连接数</li>
-<li>可以绑定多个ip地址</li>
-<li>设置 进程</li>
-<li>设置进程名称，以便您可以在“ ps”命令输出中识别实例的侦听端口，或者该实例是正在保存的子实例</li>
-<li>崩溃时自动检查内存</li>
-<li>CONFIG REWRITE可以将使用CONFIG SET操作的配置更改具体化到redis.conf文件中</li>
-<li>NetBSD 更友好的代码库</li>
-<li>PUBSUB命令用于发布/订阅自省功能， 列出相关信息，</li>
-<li>现在可以照原样复制 EVALSHA，而无需为复制链接扩展到完整的EVAL LUA脚本(??)</li>
-<li>更好的Lua脚本错误报告</li>
-
-<li><p>SDIFF性能提升</p></li>
-
-<li><p>实验特性： 无盘复制 <a href="http://redis.io/topics/replication" rel="noreferrer" target="_blank">http://redis.io/topics/replication</a></p></li>
-
-<li><p>增加 SCAN, SSCAN, HSCAN, ZSCAN 命令</p></li>
-
-<li><p>AOF 如果硬盘不够，则不会 异常退出，并且在硬盘足够的情况下，能够继续正常工作</p></li>
-
-<li><p>增加 BITPOS: find first bit set or clear in a bitmap.</p></li>
-
-<li><p>Redis-cli更新为使用SCAN而不是通过以下方式RANDOMKEY 进行随机采样</p></li>
-
-<li><p>提升6倍 info 的速度</p></li>
-
-<li><p>Jemalloc updated to 3.6.0</p></li>
-
-<li><p>截断的 AOF 也可以重新加载</p></li>
+<li>
+<p>现在，从站可以与主站部分重新同步，因此大多数情况下，当短短时间断开主从链接时，不需要与主端RDB创建完全重新同步</p>
+</li>
+<li>
+<p>支持 IPv6 （实验性功能）</p>
+</li>
+<li>
+<p>从站现在可以显式ping主机，主机可以独立检测超时的从站</p>
+</li>
+<li>
+<p>可以设置如果没有连接足够多具有给定最大延迟的从站，则主站可以停止接受写操作</p>
+</li>
+<li>
+<p>键空间通过发布/订阅更改通</p>
+</li>
+<li>
+<p>CONFIG SET maxclients 现在可使用命令设置最大连接数</p>
+</li>
+<li>
+<p>可以绑定多个ip地址</p>
+</li>
+<li>
+<p>设置 进程</p>
+</li>
+<li>
+<p>设置进程名称，以便您可以在“ ps”命令输出中识别实例的侦听端口，或者该实例是正在保存的子实例</p>
+</li>
+<li>
+<p>崩溃时自动检查内存</p>
+</li>
+<li>
+<p>CONFIG REWRITE可以将使用CONFIG SET操作的配置更改具体化到redis.conf文件中</p>
+</li>
+<li>
+<p>NetBSD 更友好的代码库</p>
+</li>
+<li>
+<p>PUBSUB命令用于发布/订阅自省功能， 列出相关信息，</p>
+</li>
+<li>
+<p>现在可以照原样复制 EVALSHA，而无需为复制链接扩展到完整的EVAL LUA脚本(??)</p>
+</li>
+<li>
+<p>更好的Lua脚本错误报告</p>
+</li>
+<li>
+<p>SDIFF性能提升</p>
+</li>
+<li>
+<p>实验特性： 无盘复制 <a href="http://redis.io/topics/replication">http://redis.io/topics/replication</a></p>
+</li>
+<li>
+<p>增加 SCAN, SSCAN, HSCAN, ZSCAN 命令</p>
+</li>
+<li>
+<p>AOF 如果硬盘不够，则不会 异常退出，并且在硬盘足够的情况下，能够继续正常工作</p>
+</li>
+<li>
+<p>增加 BITPOS: find first bit set or clear in a bitmap.</p>
+</li>
+<li>
+<p>Redis-cli更新为使用SCAN而不是通过以下方式RANDOMKEY 进行随机采样</p>
+</li>
+<li>
+<p>提升6倍 info 的速度</p>
+</li>
+<li>
+<p>Jemalloc updated to 3.6.0</p>
+</li>
+<li>
+<p>截断的 AOF 也可以重新加载</p>
+</li>
 </ul>
-
-<h2 id="redis-2-6">Redis 2.6</h2>
-
+<h2 id="redis-26">Redis 2.6</h2>
 <ul>
-<li>服务器端支持Lua脚本，请参阅<a href="http://redis.io/commands/eval" rel="noreferrer" target="_blank">http://redis.io/commands/eval</a></li>
+<li>服务器端支持Lua脚本，请参阅http://redis.io/commands/eval</li>
 <li>虚拟内存已删除（在2.4中已弃用）</li>
 <li>删除了最大客户端数的硬编码限制，</li>
 <li>AOF低级语义通常更为理智，尤其是在使用 Slaves</li>
@@ -828,20 +848,21 @@ hz理解为后台任务占用cpu资源</li>
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li><a href="#redis发布周期">Redis发布周期</a></li>
-<li><a href="#版本兼容">版本兼容</a></li>
-<li><a href="#版本说明">版本说明</a>
-<ul>
-<li><a href="#redis-6-0">Redis 6.0</a></li>
-<li><a href="#redis-5-0">Redis 5.0</a></li>
-<li><a href="#redis-4-0">Redis 4.0</a></li>
-<li><a href="#redis-3-2">Redis 3.2</a></li>
-<li><a href="#redis-3-0">Redis 3.0</a></li>
-<li><a href="#redis-2-8">Redis 2.8</a></li>
-<li><a href="#redis-2-6">Redis 2.6</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#redis发布周期">Redis发布周期</a></li>
+    <li><a href="#版本兼容">版本兼容</a></li>
+    <li><a href="#版本说明">版本说明</a>
+      <ul>
+        <li><a href="#redis-60">Redis 6.0</a></li>
+        <li><a href="#redis-50">Redis 5.0</a></li>
+        <li><a href="#redis-40">Redis 4.0</a></li>
+        <li><a href="#redis-32">Redis 3.2</a></li>
+        <li><a href="#redis-30">Redis 3.0</a></li>
+        <li><a href="#redis-28">Redis 2.8</a></li>
+        <li><a href="#redis-26">Redis 2.6</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

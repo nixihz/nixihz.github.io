@@ -16,16 +16,13 @@
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/notes/golang/go-imagemagick/</guid>
-      <description>&lt;h2 id=&#34;需求-audio-preload-none-audio&#34;&gt;需求 &lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
 &lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
 具体需求：&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
 &lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
     </item>
     
@@ -35,16 +32,13 @@
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/solution/golang/go-imagemagick/</guid>
-      <description>&lt;h2 id=&#34;需求-audio-preload-none-audio&#34;&gt;需求 &lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
 &lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
 具体需求：&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
 &lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
     </item>
     

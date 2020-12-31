@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -500,21 +500,17 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#一-安装">一、安装</a></li>
-<li><a href="#二-创建新的数据库-用户并授权">二、创建新的数据库、用户并授权</a></li>
-<li><a href="#三-建表">三、建表</a></li>
-<li><a href="#四-检查mysql服务状态">四、检查mysql服务状态</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -561,37 +557,35 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h4 id="一-安装">一、安装</h4>
-
+  <p><h4 id="一安装">一、安装</h4>
 <p>1、执行安装命令</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install mysql</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install mysql
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>2、安装完后启动mysql</p>
-
+</div><p>2、安装完后启动mysql</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql.server start</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql.server start
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>3、执行安全设置</p>
+</div><p>3、执行安全设置</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mysql_secure_installation</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mysql_secure_installation
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>显示如下</p>
+</div><p>显示如下</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -605,23 +599,21 @@ https://github.com/alex-shpak/hugo-book
 
 LOW    Length &gt;<span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
 MEDIUM Length &gt;<span style="color:#f92672">=</span> 8, numeric, mixed <span style="color:#00a8c8">case</span>, and special characters
-STRONG Length &gt;<span style="color:#f92672">=</span> 8, numeric, mixed <span style="color:#00a8c8">case</span>, special characters and dictionary                  file</code></pre></td></tr></table>
+STRONG Length &gt;<span style="color:#f92672">=</span> 8, numeric, mixed <span style="color:#00a8c8">case</span>, special characters and dictionary                  file
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>按照提示选择密码等级，并设置root密码</p>
-
-<h4 id="二-创建新的数据库-用户并授权">二、创建新的数据库、用户并授权</h4>
-
+</div><p>按照提示选择密码等级，并设置root密码</p>
+<h4 id="二创建新的数据库用户并授权">二、创建新的数据库、用户并授权</h4>
 <p>1、登录mysql</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql -u root -p</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql -u root -p
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>按提示输入root密码</p>
+</div><p>按提示输入root密码</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -629,62 +621,63 @@ STRONG Length &gt;<span style="color:#f92672">=</span> 8, numeric, mixed <span s
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@poksi-test-2019:~# mysql -u root -p
-Enter password: </code></pre></td></tr></table>
+Enter password: 
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>2、创建数据库</p>
+</div><p>2、创建数据库</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">create</span> <span style="color:#00a8c8">database</span> <span style="color:#111">testdb</span> <span style="color:#111">character</span> <span style="color:#00a8c8">set</span> <span style="color:#111">utf8mb4</span><span style="color:#111">;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">create</span> <span style="color:#00a8c8">database</span> <span style="color:#111">testdb</span> <span style="color:#111">character</span> <span style="color:#00a8c8">set</span> <span style="color:#111">utf8mb4</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>3、创建用户</p>
+</div><p>3、创建用户</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">create</span> <span style="color:#00a8c8">user</span> <span style="color:#d88200">&#39;testtest_u&#39;</span><span style="color:#f92672">@</span><span style="color:#d88200">&#39;%&#39;</span> <span style="color:#111">identified</span> <span style="color:#00a8c8">by</span> <span style="color:#d88200">&#39;testtest_PWD_123&#39;</span><span style="color:#111">;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">create</span> <span style="color:#00a8c8">user</span> <span style="color:#d88200">&#39;testtest_u&#39;</span><span style="color:#f92672">@</span><span style="color:#d88200">&#39;%&#39;</span> <span style="color:#111">identified</span> <span style="color:#00a8c8">by</span> <span style="color:#d88200">&#39;testtest_PWD_123&#39;</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>4、授权用户</p>
+</div><p>4、授权用户</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">grant</span> <span style="color:#00a8c8">all</span> <span style="color:#00a8c8">privileges</span> <span style="color:#00a8c8">on</span> <span style="color:#111">testdb</span><span style="color:#111">.</span><span style="color:#f92672">*</span> <span style="color:#00a8c8">to</span> <span style="color:#d88200">&#39;testtest_u&#39;</span><span style="color:#f92672">@</span><span style="color:#d88200">&#39;%&#39;</span><span style="color:#111">;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">grant</span> <span style="color:#00a8c8">all</span> <span style="color:#00a8c8">privileges</span> <span style="color:#00a8c8">on</span> <span style="color:#111">testdb</span><span style="color:#111">.</span><span style="color:#f92672">*</span> <span style="color:#00a8c8">to</span> <span style="color:#d88200">&#39;testtest_u&#39;</span><span style="color:#f92672">@</span><span style="color:#d88200">&#39;%&#39;</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#111">flush</span> <span style="color:#00a8c8">privileges</span><span style="color:#111">;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#111">flush</span> <span style="color:#00a8c8">privileges</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>5、查看当前的数据库</p>
+</div><p>5、查看当前的数据库</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">show</span> <span style="color:#111">databases</span><span style="color:#111">;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">show</span> <span style="color:#111">databases</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>6、显示当前数据库的表单</p>
+</div><p>6、显示当前数据库的表单</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">show</span> <span style="color:#111">tables</span><span style="color:#111">;</span></code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#00a8c8">show</span> <span style="color:#111">tables</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="三-建表">三、建表</h4>
+</div><h4 id="三建表">三、建表</h4>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -706,21 +699,20 @@ Enter password: </code></pre></td></tr></table>
   <span style="color:#111">deleted</span> <span style="color:#111">INT</span> <span style="color:#00a8c8">NOT</span> <span style="color:#00a8c8">NULL</span> <span style="color:#00a8c8">DEFAULT</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span>  <span style="color:#75715e">-- 逻辑删除标志默认值
 </span><span style="color:#75715e"></span>  <span style="color:#111">create_time</span>   <span style="color:#00a8c8">timestamp</span> <span style="color:#00a8c8">NULL</span> <span style="color:#00a8c8">default</span> <span style="color:#00a8c8">CURRENT_TIMESTAMP</span><span style="color:#111">,</span> <span style="color:#75715e">-- 创建时间默认值
 </span><span style="color:#75715e"></span>  <span style="color:#111">update_time</span>   <span style="color:#00a8c8">timestamp</span> <span style="color:#00a8c8">NULL</span> <span style="color:#00a8c8">default</span> <span style="color:#00a8c8">CURRENT_TIMESTAMP</span> <span style="color:#75715e">-- 修改时间默认值
-</span><span style="color:#75715e"></span><span style="color:#111">)</span> <span style="color:#111">ENGINE</span><span style="color:#f92672">=</span><span style="color:#111">INNODB</span> <span style="color:#111">AUTO_INCREMENT</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span> <span style="color:#00a8c8">DEFAULT</span> <span style="color:#111">CHARSET</span><span style="color:#f92672">=</span><span style="color:#111">utf8mb4</span><span style="color:#111">;</span></code></pre></td></tr></table>
+</span><span style="color:#75715e"></span><span style="color:#111">)</span> <span style="color:#111">ENGINE</span><span style="color:#f92672">=</span><span style="color:#111">INNODB</span> <span style="color:#111">AUTO_INCREMENT</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span> <span style="color:#00a8c8">DEFAULT</span> <span style="color:#111">CHARSET</span><span style="color:#f92672">=</span><span style="color:#111">utf8mb4</span><span style="color:#111">;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="四-检查mysql服务状态">四、检查mysql服务状态</h4>
-
+</div><h4 id="四检查mysql服务状态">四、检查mysql服务状态</h4>
 <p>先退出mysql命令行，输入命令</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl status mysql.service</code></pre></td></tr></table>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl status mysql.service
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>显示如下结果说明mysql服务是正常的</p>
+</div><p>显示如下结果说明mysql服务是正常的</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -744,7 +736,8 @@ Main PID: <span style="color:#ae81ff">16686</span> <span style="color:#f92672">(
           └─16686 /usr/sbin/mysqld --daemonize --pid-file<span style="color:#f92672">=</span>/run/mysqld/mysqld.pid
 
 May <span style="color:#ae81ff">22</span> 10:53:12 poksi-test-2019 systemd<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Starting MySQL Community Server...
-May <span style="color:#ae81ff">22</span> 10:53:13 poksi-test-2019 systemd<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Started MySQL Community Server.</code></pre></td></tr></table>
+May <span style="color:#ae81ff">22</span> 10:53:13 poksi-test-2019 systemd<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Started MySQL Community Server.
+</code></pre></td></tr></table>
 </div>
 </div></p>
 </article>
@@ -821,21 +814,17 @@ May <span style="color:#ae81ff">22</span> 10:53:13 poksi-test-2019 systemd<span 
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#一-安装">一、安装</a></li>
-<li><a href="#二-创建新的数据库-用户并授权">二、创建新的数据库、用户并授权</a></li>
-<li><a href="#三-建表">三、建表</a></li>
-<li><a href="#四-检查mysql服务状态">四、检查mysql服务状态</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

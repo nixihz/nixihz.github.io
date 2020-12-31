@@ -16,10 +16,9 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</guid>
-      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preload-none&#34;&gt;Golang Module 备忘 &lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
 &lt;p&gt;终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
-文章包你&lt;br /&gt;
+文章包你&lt;br&gt;
 一招鲜，走天下&lt;/p&gt;</description>
     </item>
     
@@ -65,18 +64,17 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/database/mysql/3-mysql-mac-intro/</guid>
-      <description>&lt;h4 id=&#34;一-安装&#34;&gt;一、安装&lt;/h4&gt;
-
+      <description>&lt;h4 id=&#34;一安装&#34;&gt;一、安装&lt;/h4&gt;
 &lt;p&gt;1、执行安装命令&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
+&lt;/div&gt;&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,9 +83,8 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/database/mysql/3-mysql-sysbench/</guid>
-      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br /&gt;
+      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br&gt;
 还有其他的补充。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;http_load&lt;/li&gt;
 &lt;li&gt;sql-bench&lt;/li&gt;
@@ -112,11 +109,9 @@
       
       <guid>https://keli.tech/database/mysql/7-mysql-profiling/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 性能问题定位。&lt;/p&gt;
-
 &lt;p&gt;慢查询日志 和 Percona Toolkit
 pt-query-digest&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34; rel=&#34;noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -134,19 +129,19 @@ pt-query-digest&lt;/p&gt;
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/lang/php/composer-config-alibaba/</guid>
-      <description>&lt;h3 id=&#34;全局配置-推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
-
+      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;所有项目都会使用该镜像地址：&lt;/p&gt;
+&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -155,40 +150,37 @@ pt-query-digest&lt;/p&gt;
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/lang/php/function-unexpected/</guid>
-      <description>&lt;h2 id=&#34;strtotime-strtotime&#34;&gt;strtotime&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:strtotime&#34;&gt;&lt;a href=&#34;#fn:strtotime&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;strtotimestrtotime&#34;&gt;strtotime&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&amp;lt;?php
-echo date(&amp;#34;Y-m-d&amp;#34;, strtotime(&amp;#34;-1 month&amp;#34;));&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;date&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Y-m-d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;strtotime&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;-1 month&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;假设今天是2019-07-31,
+&lt;/div&gt;&lt;p&gt;假设今天是2019-07-31,
 输出：
 2019-07-01&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;先做-1 month, 那么当前是07-31, 减去一以后就是06-31.&lt;/li&gt;
 &lt;li&gt;再做日期规范化, 因为6月没有31号, 所以就好像2点60等于3点一样, 6月31就等于了7月1&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h2 id=&#34;trim-trim&#34;&gt;trim&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:trim&#34;&gt;&lt;a href=&#34;#fn:trim&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;trimtrim&#34;&gt;trim&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&amp;lt;?php
-echo trim(&amp;#34;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;pikachu hello world&amp;lt;/p&amp;gt;&amp;#34;, &amp;#34;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;#34;);&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;trim&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;pikachu hello world&amp;lt;/p&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;输出：
+&lt;/div&gt;&lt;p&gt;输出：
 ikachu hello world&lt;/p&gt;
-
 &lt;p&gt;trim 第二个可选字符串参数 $character_mask 的含义是把第二参数字符串中的所有字符，从输入中剔除；&lt;/p&gt;</description>
     </item>
     
@@ -198,12 +190,9 @@ ikachu hello world&lt;/p&gt;
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/posts/tools/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景-audio-src-preload-none&#34;&gt;场景 &lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
 &lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
-
 &lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
-
 &lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
     </item>
     

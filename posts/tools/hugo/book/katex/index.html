@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -617,13 +617,14 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#example">Example</a></li>
-<li><a href="#display-mode-example">Display Mode Example</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+        <li><a href="#display-mode-example">Display Mode Example</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -646,10 +647,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <p><p>KaTeX简码可让您在markdown文档中呈现数学排版。见 <a href="https://katex.org/" rel="noreferrer" target="_blank">KaTeX</a></p>
-
+  <p><p>KaTeX简码可让您在markdown文档中呈现数学排版。见 <a href="https://katex.org/">KaTeX</a></p>
 <h2 id="example">Example</h2>
-
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
@@ -668,32 +667,31 @@ x = <span style="color:#00a8c8">\begin</span><span style="color:#111">{</span>ca
    a <span style="color:#111">&amp;</span><span style="color:#00a8c8">\text</span><span style="color:#111">{</span>if <span style="color:#111">}</span> b <span style="color:#00a8c8">\\</span>
    c <span style="color:#111">&amp;</span><span style="color:#00a8c8">\text</span><span style="color:#111">{</span>if <span style="color:#111">}</span> d
 <span style="color:#00a8c8">\end</span><span style="color:#111">{</span>cases<span style="color:#111">}</span>
-<span style="color:#111">{{</span>&lt; /katex &gt;<span style="color:#111">}}</span></code></pre></td></tr></table>
+<span style="color:#111">{{</span>&lt; /katex &gt;<span style="color:#111">}}</span>
+</code></pre></td></tr></table>
 </div>
 </div>
   </div>
   
   <div class="flex-even markdown-inner">
-    <p>
-
-</p>
-
-<p>
-  (
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<span class="katex">
+  \(
 x = \begin{cases}
-   a &amp;\text{if } b <br />
-   c &amp;\text{if } d
+   a &\text{if } b \\
+   c &\text{if } d
 \end{cases}
-)
-</p>
+\)
+</span>
 
   </div>
   
 </div>
 
-
 <h2 id="display-mode-example">Display Mode Example</h2>
-
 <p>Here is some inline example: 
 
 <span class="katex">
@@ -771,13 +769,14 @@ Text continues here.</p></p>
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#example">Example</a></li>
-<li><a href="#display-mode-example">Display Mode Example</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+        <li><a href="#display-mode-example">Display Mode Example</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  

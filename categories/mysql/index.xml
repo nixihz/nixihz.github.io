@@ -34,18 +34,17 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/database/mysql/3-mysql-mac-intro/</guid>
-      <description>&lt;h4 id=&#34;一-安装&#34;&gt;一、安装&lt;/h4&gt;
-
+      <description>&lt;h4 id=&#34;一安装&#34;&gt;一、安装&lt;/h4&gt;
 &lt;p&gt;1、执行安装命令&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
+&lt;/div&gt;&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,9 +53,8 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/database/mysql/3-mysql-sysbench/</guid>
-      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br /&gt;
+      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br&gt;
 还有其他的补充。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;http_load&lt;/li&gt;
 &lt;li&gt;sql-bench&lt;/li&gt;
@@ -81,11 +79,9 @@
       
       <guid>https://keli.tech/database/mysql/7-mysql-profiling/</guid>
       <description>&lt;p&gt;本文介绍 Mysql 性能问题定位。&lt;/p&gt;
-
 &lt;p&gt;慢查询日志 和 Percona Toolkit
 pt-query-digest&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34; rel=&#34;noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

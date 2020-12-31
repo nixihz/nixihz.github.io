@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.e1f007deecfcca32c7dbea43241a13b4e0cd50b18f64b4b15863a2dbf6ff29cd.css" integrity="sha256-4fAH3uz8yjLH2&#43;pDJBoTtODNULGPZLSxWGOi2/b/Kc0=">
 
 
-<script defer src="/en.search.min.04ac7a8edd5916d97c00acd4c1c666d5d45ddf2dc2d5da3a813dfe6a5614c80f.js" integrity="sha256-BKx6jt1ZFtl8AKzUwcZm1dRd3y3C1do6gT3&#43;alYUyA8="></script>
+<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -530,13 +530,14 @@ https://github.com/alex-shpak/hugo-book
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
-<ul>
-<li><a href="#redis-事务">Redis 事务</a>
-<ul>
-<li><a href="#实例">实例</a></li>
-<li><a href="#redis-事务命令">Redis 事务命令</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#redis-事务">Redis 事务</a>
+      <ul>
+        <li><a href="#实例">实例</a></li>
+        <li><a href="#redis-事务命令">Redis 事务命令</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 
@@ -584,26 +585,19 @@ https://github.com/alex-shpak/hugo-book
 
 
   <p><h1 id="redis-事务">Redis 事务</h1>
-
 <p>Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
-
 <ul>
 <li>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</li>
 <li>事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。</li>
 </ul>
-
 <p>一个事务从开始到执行会经历以下三个阶段：</p>
-
 <ul>
 <li>开始事务。</li>
 <li>命令入队。</li>
 <li>执行事务。</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="实例">实例</h2>
-
 <p>以下是一个事务的例子， 它先以 <strong>MULTI</strong> 开始一个事务， 然后将多个命令入队到事务中， 最后由 <strong>EXEC</strong> 命令触发事务， 一并执行事务中的所有命令：</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -652,15 +646,12 @@ redis 127.0.0.1:6379&gt; EXEC
 3) (integer) 3
 4) 1) &#34;Mastering Series&#34;
    2) &#34;C++&#34;
-   3) &#34;Programming&#34;</code></pre></td></tr></table>
+   3) &#34;Programming&#34;
+</code></pre></td></tr></table>
 </div>
-</div>
-<hr />
-
+</div><hr>
 <h2 id="redis-事务命令">Redis 事务命令</h2>
-
 <p>下表列出了 redis 事务的相关命令：</p>
-
 <table>
 <thead>
 <tr>
@@ -668,31 +659,26 @@ redis 127.0.0.1:6379&gt; EXEC
 <th align="left">命令及描述</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td align="left">1</td>
-<td align="left"><a href="https://redis.io/commands/discard" rel="noreferrer" target="_blank">DISCARD</a> 取消事务，放弃执行事务块内的所有命令。</td>
+<td align="left"><a href="https://redis.io/commands/discard">DISCARD</a> 取消事务，放弃执行事务块内的所有命令。</td>
 </tr>
-
 <tr>
 <td align="left">2</td>
-<td align="left"><a href="https://redis.io/commands/exec" rel="noreferrer" target="_blank">EXEC</a> 执行所有事务块内的命令。</td>
+<td align="left"><a href="https://redis.io/commands/exec">EXEC</a> 执行所有事务块内的命令。</td>
 </tr>
-
 <tr>
 <td align="left">3</td>
-<td align="left"><a href="https://redis.io/commands/multi" rel="noreferrer" target="_blank">MULTI</a> 标记一个事务块的开始。</td>
+<td align="left"><a href="https://redis.io/commands/multi">MULTI</a> 标记一个事务块的开始。</td>
 </tr>
-
 <tr>
 <td align="left">4</td>
-<td align="left"><a href="https://redis.io/commands/unwatch" rel="noreferrer" target="_blank">UNWATCH</a> 取消 WATCH 命令对所有 key 的监视。</td>
+<td align="left"><a href="https://redis.io/commands/unwatch">UNWATCH</a> 取消 WATCH 命令对所有 key 的监视。</td>
 </tr>
-
 <tr>
 <td align="left">5</td>
-<td align="left"><a href="https://redis.io/commands/watch" rel="noreferrer" target="_blank">WATCH key [key &hellip;]</a> 监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断。</td>
+<td align="left"><a href="https://redis.io/commands/watch">WATCH key [key &hellip;]</a> 监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断。</td>
 </tr>
 </tbody>
 </table></p>
@@ -770,13 +756,14 @@ redis 127.0.0.1:6379&gt; EXEC
     <aside class="book-toc">
       
   <nav id="TableOfContents">
-<ul>
-<li><a href="#redis-事务">Redis 事务</a>
-<ul>
-<li><a href="#实例">实例</a></li>
-<li><a href="#redis-事务命令">Redis 事务命令</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#redis-事务">Redis 事务</a>
+      <ul>
+        <li><a href="#实例">实例</a></li>
+        <li><a href="#redis-事务命令">Redis 事务命令</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
  
