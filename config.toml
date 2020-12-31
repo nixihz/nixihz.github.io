@@ -15,7 +15,6 @@ disablePathToLower = true
 
 # Needed for mermaid/katex shortcodes
 [markup]
-  defaultMarkdownHandler = "blackFriday"
   [markup.goldmark.renderer]
     unsafe = true
     [markup.highlight]
