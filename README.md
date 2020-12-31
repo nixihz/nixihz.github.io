@@ -52,7 +52,7 @@ cd public
 
 git add .
 git commit -m 'update post'
-git push origin master
+git push github master
 git status
 cd ..
 ```
@@ -64,7 +64,7 @@ cd public
 
 git add .
 git commit -m 'update post'
-git push gitee master
+git push origin master
 git status
 cd ..
 ```
