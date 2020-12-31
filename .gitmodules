@@ -2,7 +2,3 @@
 	path = themes/book
 	url = git@gitee.com:fence/hugo-book.git
 	branch = master
-[submodule "public"]
-	path = public
-	url = git@gitee.com:fence/blog.git
-	branch = master
