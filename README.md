@@ -2,7 +2,7 @@
 ```
 ## git submodule update --init --depth 1
 
-git submodule add -b master --force git@gitee.com:fencex/blog.git public/
+git submodule add -b master --force git@gitee.com:fence/blog.git public/
 cd public
 git remote add github git@github.com:fencex/fencex.github.io.git
 cd ..
@@ -29,6 +29,7 @@ git add .
 git commit -m 'update'
 git push origin blogedit
 git status
+rm -rf public/en.*
 hugo -D
 ./voice --mode=name
 
@@ -51,7 +52,7 @@ cd public
 
 git add .
 git commit -m 'update post'
-git push github master
+git push origin master
 git status
 cd ..
 ```
@@ -63,7 +64,7 @@ cd public
 
 git add .
 git commit -m 'update post'
-git push origin master
+git push gitee master
 git status
 cd ..
 ```
