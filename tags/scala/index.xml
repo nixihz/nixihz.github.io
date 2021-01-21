@@ -5,11 +5,7 @@
     <link>https://keli.tech/tags/scala/</link>
     <description>Recent content in scala on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://keli.tech/tags/scala/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/tags/scala/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scala 简介</title>
       <link>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</link>

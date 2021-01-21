@@ -5,11 +5,7 @@
     <link>https://keli.tech/categories/golang/</link>
     <description>Recent content in golang on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Dec 2020 12:12:02 +0000</lastBuildDate>
-    
-	<atom:link href="https://keli.tech/categories/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 22 Dec 2020 12:12:02 +0000</lastBuildDate><atom:link href="https://keli.tech/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linked List 链表（Golang）</title>
       <link>https://keli.tech/posts/cheatsheet/data-structure/golang-module-usage/</link>

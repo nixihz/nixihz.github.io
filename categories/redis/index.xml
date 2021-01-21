@@ -5,11 +5,7 @@
     <link>https://keli.tech/categories/redis/</link>
     <description>Recent content in redis on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://keli.tech/categories/redis/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/categories/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis 面试题</title>
       <link>https://keli.tech/database/redis/redis-interview/</link>

@@ -5,11 +5,7 @@
     <link>https://keli.tech/tags/imagemagick/</link>
     <description>Recent content in imagemagick on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://keli.tech/tags/imagemagick/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/tags/imagemagick/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
       <link>https://keli.tech/posts/notes/golang/go-imagemagick/</link>

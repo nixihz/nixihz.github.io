@@ -5,11 +5,7 @@
     <link>https://keli.tech/ideas/</link>
     <description>Recent content in 想法💡 on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Sep 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://keli.tech/ideas/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 29 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/ideas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在任意网页添加弹框注释 Chrome 插件</title>
       <link>https://keli.tech/ideas/web/note-anywhere-chrome/</link>

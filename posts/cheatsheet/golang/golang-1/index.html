@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.3a20e2abc07af71d43862fa164ed6b47633893071485e58289a48edfa406829b.css" integrity="sha256-OiDiq8B69x1Dhi&#43;hZO1rR2M4kwcUheWCiaSO36QGgps=">
 
 
-<script defer src="/en.search.min.98072e0d1c5236989f51cef40fdf8edc463d71f261a80805cb22fcbe118b1d1f.js" integrity="sha256-mAcuDRxSNpifUc70D9&#43;O3EY9cfJhqAgFyyL8vhGLHR8="></script>
+<script defer src="/en.search.min.af268ca73bcb4ad1bb79fe0fde4fc1720afd5bf864c4e5cf1ccd4dc7da9eb00d.js" integrity="sha256-ryaMpzvLStG7ef4P3k/Bcgr9W/hkxOXPHM1Nx9qesA0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1082,7 +1082,7 @@ escaped_char     = `\` ( &#34;a&#34; | &#34;b&#34; | &#34;f&#34; | &#34;n&#34; |
 </div>
 </div><h3 id="string-literals">String literals</h3>
 <p>A string literal represents a <a href="https://golang.org/ref/spec#Constants">string constant</a> obtained from concatenating a sequence of characters. There are two forms: raw string literals and interpreted string literals.</p>
-<p>Raw string literals are character sequences between back quotes, as in <code>foo</code>. Within the quotes, any character may appear except back quote. The value of a raw string literal is the string composed of the uninterpreted (implicitly UTF-8-encoded) characters between the quotes; in particular, backslashes have no special meaning and the string may contain newlines. Carriage return characters ('\r&rsquo;) inside raw string literals are discarded from the raw string value.</p>
+<p>Raw string literals are character sequences between back quotes, as in <code>foo</code>. Within the quotes, any character may appear except back quote. The value of a raw string literal is the string composed of the uninterpreted (implicitly UTF-8-encoded) characters between the quotes; in particular, backslashes have no special meaning and the string may contain newlines. Carriage return characters ('\r') inside raw string literals are discarded from the raw string value.</p>
 <p>Interpreted string literals are character sequences between double quotes, as in <code>&quot;bar&quot;</code>. Within the quotes, any character may appear except newline and unescaped double quote. The text between the quotes forms the value of the literal, with backslash escapes interpreted as they are in <a href="https://golang.org/ref/spec#Rune_literals">rune literals</a> (except that <code>\'</code> is illegal and <code>\&quot;</code> is legal), with the same restrictions. The three-digit octal (<code>\</code><em>nnn</em>) and two-digit hexadecimal (<code>\x</code><em>nn</em>) escapes represent individual <em>bytes</em> of the resulting string; all other escapes represent the (possibly multi-byte) UTF-8 encoding of individual <em>characters</em>. Thus inside a string literal <code>\377</code> and <code>\xFF</code> represent a single byte of value <code>0xFF</code>=255, while <code>ÿ</code>, <code>\u00FF</code>, <code>\U000000FF</code> and <code>\xc3\xbf</code> represent the two bytes <code>0xc3</code> <code>0xbf</code> of the UTF-8 encoding of character U+00FF.</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1190,7 +1190,7 @@ TypeLit   = ArrayType | StructType | PointerType | FunctionType | InterfaceType 
 </code></pre></td></tr></table>
 </div>
 </div><p>The language <a href="https://golang.org/ref/spec#Predeclared_identifiers">predeclares</a> certain type names. Others are introduced with <a href="https://golang.org/ref/spec#Type_declarations">type declarations</a>. <em>Composite types</em>—array, struct, pointer, function, interface, slice, map, and channel types—may be constructed using type literals.</p>
-<p>Each type <code>T</code> has an <em>underlying type</em>: If <code>T</code> is one of the predeclared boolean, numeric, or string types, or a type literal, the corresponding underlying type is <code>T</code> itself. Otherwise, <code>T</code>'s underlying type is the underlying type of the type to which <code>T</code> refers in its <a href="https://golang.org/ref/spec#Type_declarations">type declaration</a>.</p>
+<p>Each type <code>T</code> has an <em>underlying type</em>: If <code>T</code> is one of the predeclared boolean, numeric, or string types, or a type literal, the corresponding underlying type is <code>T</code> itself. Otherwise, <code>T</code>&rsquo;s underlying type is the underlying type of the type to which <code>T</code> refers in its <a href="https://golang.org/ref/spec#Type_declarations">type declaration</a>.</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -1286,7 +1286,7 @@ uintptr  an unsigned integer large enough to store the uninterpreted bits of a p
 </div><p>To avoid portability issues all numeric types are <a href="https://golang.org/ref/spec#Type_definitions">defined types</a> and thus distinct except <code>byte</code>, which is an <a href="https://golang.org/ref/spec#Alias_declarations">alias</a> for <code>uint8</code>, and <code>rune</code>, which is an alias for <code>int32</code>. Explicit conversions are required when different numeric types are mixed in an expression or assignment. For instance, <code>int32</code> and <code>int</code> are not the same type even though they may have the same size on a particular architecture.</p>
 <h3 id="string-types">String types</h3>
 <p>A <em>string type</em> represents the set of string values. A string value is a (possibly empty) sequence of bytes. The number of bytes is called the length of the string and is never negative. Strings are immutable: once created, it is impossible to change the contents of a string. The predeclared string type is <code>string</code>; it is a <a href="https://golang.org/ref/spec#Type_definitions">defined type</a>.</p>
-<p>The length of a string <code>s</code> can be discovered using the built-in function <a href="https://golang.org/ref/spec#Length_and_capacity"><code>len</code></a>. The length is a compile-time constant if the string is a constant. A string&rsquo;s bytes can be accessed by integer <a href="https://golang.org/ref/spec#Index_expressions">indices</a> 0 through <code>len(s)-1</code>. It is illegal to take the address of such an element; if <code>s[i]</code> is the <code>i</code>'th byte of a string, <code>&amp;s[i]</code> is invalid.</p>
+<p>The length of a string <code>s</code> can be discovered using the built-in function <a href="https://golang.org/ref/spec#Length_and_capacity"><code>len</code></a>. The length is a compile-time constant if the string is a constant. A string&rsquo;s bytes can be accessed by integer <a href="https://golang.org/ref/spec#Index_expressions">indices</a> 0 through <code>len(s)-1</code>. It is illegal to take the address of such an element; if <code>s[i]</code> is the <code>i</code>&lsquo;th byte of a string, <code>&amp;s[i]</code> is invalid.</p>
 <h3 id="array-types">Array types</h3>
 <p>An array is a numbered sequence of elements of a single type, called the element type. The number of elements is called the length of the array and is never negative.</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -1889,12 +1889,12 @@ func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 </div>
 </div><p><code>B0</code> and <code>B1</code> are different because they are new types created by distinct <a href="https://golang.org/ref/spec#Type_definitions">type definitions</a>; <code>func(int, float64) *B0</code> and <code>func(x int, y float64) *[]string</code> are different because <code>B0</code> is different from <code>[]string</code>.</p>
 <h3 id="assignability">Assignability</h3>
-<p>A value <code>x</code> is <em>assignable</em> to a <a href="https://golang.org/ref/spec#Variables">variable</a> of type <code>T</code> (&ldquo;<code>x</code> is assignable to <code>T</code>&rdquo;) if one of the following conditions applies:</p>
+<p>A value <code>x</code> is <em>assignable</em> to a <a href="https://golang.org/ref/spec#Variables">variable</a> of type <code>T</code> (&quot;<code>x</code> is assignable to <code>T</code>&quot;) if one of the following conditions applies:</p>
 <ul>
-<li><code>x</code>'s type is identical to <code>T</code>.</li>
-<li><code>x</code>'s type <code>V</code> and <code>T</code> have identical <a href="https://golang.org/ref/spec#Types">underlying types</a> and at least one of <code>V</code> or <code>T</code> is not a <a href="https://golang.org/ref/spec#Type_definitions">defined</a> type.</li>
+<li><code>x</code>&rsquo;s type is identical to <code>T</code>.</li>
+<li><code>x</code>&rsquo;s type <code>V</code> and <code>T</code> have identical <a href="https://golang.org/ref/spec#Types">underlying types</a> and at least one of <code>V</code> or <code>T</code> is not a <a href="https://golang.org/ref/spec#Type_definitions">defined</a> type.</li>
 <li><code>T</code> is an interface type and <code>x</code> <a href="https://golang.org/ref/spec#Interface_types">implements</a> <code>T</code>.</li>
-<li><code>x</code> is a bidirectional channel value, <code>T</code> is a channel type, <code>x</code>'s type <code>V</code> and <code>T</code> have identical element types, and at least one of <code>V</code> or <code>T</code> is not a defined type.</li>
+<li><code>x</code> is a bidirectional channel value, <code>T</code> is a channel type, <code>x</code>&rsquo;s type <code>V</code> and <code>T</code> have identical element types, and at least one of <code>V</code> or <code>T</code> is not a defined type.</li>
 <li><code>x</code> is the predeclared identifier <code>nil</code> and <code>T</code> is a pointer, function, slice, map, channel, or interface type.</li>
 <li><code>x</code> is an untyped <a href="https://golang.org/ref/spec#Constants">constant</a> <a href="https://golang.org/ref/spec#Representability">representable</a> by a value of type <code>T</code>.</li>
 </ul>
@@ -1902,8 +1902,8 @@ func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 <p>A <a href="https://golang.org/ref/spec#Constants">constant</a> <code>x</code> is <em>representable</em> by a value of type <code>T</code> if one of the following conditions applies:</p>
 <ul>
 <li><code>x</code> is in the set of values <a href="https://golang.org/ref/spec#Types">determined</a> by <code>T</code>.</li>
-<li><code>T</code> is a floating-point type and <code>x</code> can be rounded to <code>T</code>'s precision without overflow. Rounding uses IEEE 754 round-to-even rules but with an IEEE negative zero further simplified to an unsigned zero. Note that constant values never result in an IEEE negative zero, NaN, or infinity.</li>
-<li><code>T</code> is a complex type, and <code>x</code>'s <a href="https://golang.org/ref/spec#Complex_numbers">components</a> <code>real(x)</code> and <code>imag(x)</code> are representable by values of <code>T</code>'s component type (<code>float32</code> or <code>float64</code>).</li>
+<li><code>T</code> is a floating-point type and <code>x</code> can be rounded to <code>T</code>&rsquo;s precision without overflow. Rounding uses IEEE 754 round-to-even rules but with an IEEE negative zero further simplified to an unsigned zero. Note that constant values never result in an IEEE negative zero, NaN, or infinity.</li>
+<li><code>T</code> is a complex type, and <code>x</code>&rsquo;s <a href="https://golang.org/ref/spec#Complex_numbers">components</a> <code>real(x)</code> and <code>imag(x)</code> are representable by values of <code>T</code>&rsquo;s component type (<code>float32</code> or <code>float64</code>).</li>
 </ul>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -3233,7 +3233,7 @@ f := i.M; f(7)  // like i.M(7)
 </ul>
 <p>For <code>a</code> of <a href="https://golang.org/ref/spec#Map_types">map type</a> <code>M</code>:</p>
 <ul>
-<li><code>x</code>'s type must be <a href="https://golang.org/ref/spec#Assignability">assignable</a> to the key type of <code>M</code></li>
+<li><code>x</code>&rsquo;s type must be <a href="https://golang.org/ref/spec#Assignability">assignable</a> to the key type of <code>M</code></li>
 <li>if the map contains an entry with key <code>x</code>, <code>a[x]</code> is the map element with key <code>x</code> and the type of <code>a[x]</code> is the element type of <code>M</code></li>
 <li>if the map is <code>nil</code> or does not contain such an entry, <code>a[x]</code> is the <a href="https://golang.org/ref/spec#The_zero_value">zero value</a> for the element type of <code>M</code></li>
 </ul>
@@ -3463,7 +3463,7 @@ if Join(Split(value, len(value)/2)) != value {
 }
 </code></pre></td></tr></table>
 </div>
-</div><p>A method call <code>x.m()</code> is valid if the <a href="https://golang.org/ref/spec#Method_sets">method set</a> of (the type of) <code>x</code> contains <code>m</code> and the argument list can be assigned to the parameter list of <code>m</code>. If <code>x</code> is <a href="https://golang.org/ref/spec#Address_operators">addressable</a> and <code>&amp;x</code>'s method set contains <code>m</code>, <code>x.m()</code> is shorthand for <code>(&amp;x).m()</code>:</p>
+</div><p>A method call <code>x.m()</code> is valid if the <a href="https://golang.org/ref/spec#Method_sets">method set</a> of (the type of) <code>x</code> contains <code>m</code> and the argument list can be assigned to the parameter list of <code>m</code>. If <code>x</code> is <a href="https://golang.org/ref/spec#Address_operators">addressable</a> and <code>&amp;x</code>&rsquo;s method set contains <code>m</code>, <code>x.m()</code> is shorthand for <code>(&amp;x).m()</code>:</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -3795,7 +3795,7 @@ s += &#34; and good bye&#34;
 <li>Pointer values are comparable. Two pointer values are equal if they point to the same variable or if both have value <code>nil</code>. Pointers to distinct <a href="https://golang.org/ref/spec#Size_and_alignment_guarantees">zero-size</a> variables may or may not be equal.</li>
 <li>Channel values are comparable. Two channel values are equal if they were created by the same call to <a href="https://golang.org/ref/spec#Making_slices_maps_and_channels"><code>make</code></a> or if both have value <code>nil</code>.</li>
 <li>Interface values are comparable. Two interface values are equal if they have <a href="https://golang.org/ref/spec#Type_identity">identical</a> dynamic types and equal dynamic values or if both have value <code>nil</code>.</li>
-<li>A value <code>x</code> of non-interface type <code>X</code> and a value <code>t</code> of interface type <code>T</code> are comparable when values of type <code>X</code> are comparable and <code>X</code> implements <code>T</code>. They are equal if <code>t</code>'s dynamic type is identical to <code>X</code> and <code>t</code>'s dynamic value is equal to <code>x</code>.</li>
+<li>A value <code>x</code> of non-interface type <code>X</code> and a value <code>t</code> of interface type <code>T</code> are comparable when values of type <code>X</code> are comparable and <code>X</code> implements <code>T</code>. They are equal if <code>t</code>&rsquo;s dynamic type is identical to <code>X</code> and <code>t</code>&rsquo;s dynamic value is equal to <code>x</code>.</li>
 <li>Struct values are comparable if all their fields are comparable. Two struct values are equal if their corresponding non-<a href="https://golang.org/ref/spec#Blank_identifier">blank</a> fields are equal.</li>
 <li>Array values are comparable if values of the array element type are comparable. Two array values are equal if their corresponding elements are equal.</li>
 </ul>
@@ -3971,10 +3971,10 @@ string(65.0)             // illegal: 65.0 is not an integer constant
 </div><p>A non-constant value <code>x</code> can be converted to type <code>T</code> in any of these cases:</p>
 <ul>
 <li><code>x</code> is <a href="https://golang.org/ref/spec#Assignability">assignable</a> to <code>T</code>.</li>
-<li>ignoring struct tags (see below), <code>x</code>'s type and <code>T</code> have <a href="https://golang.org/ref/spec#Type_identity">identical</a> <a href="https://golang.org/ref/spec#Types">underlying types</a>.</li>
-<li>ignoring struct tags (see below), <code>x</code>'s type and <code>T</code> are pointer types that are not <a href="https://golang.org/ref/spec#Type_definitions">defined types</a>, and their pointer base types have identical underlying types.</li>
-<li><code>x</code>'s type and <code>T</code> are both integer or floating point types.</li>
-<li><code>x</code>'s type and <code>T</code> are both complex types.</li>
+<li>ignoring struct tags (see below), <code>x</code>&rsquo;s type and <code>T</code> have <a href="https://golang.org/ref/spec#Type_identity">identical</a> <a href="https://golang.org/ref/spec#Types">underlying types</a>.</li>
+<li>ignoring struct tags (see below), <code>x</code>&rsquo;s type and <code>T</code> are pointer types that are not <a href="https://golang.org/ref/spec#Type_definitions">defined types</a>, and their pointer base types have identical underlying types.</li>
+<li><code>x</code>&rsquo;s type and <code>T</code> are both integer or floating point types.</li>
+<li><code>x</code>&rsquo;s type and <code>T</code> are both complex types.</li>
 <li><code>x</code> is an integer or a slice of bytes or runes and <code>T</code> is a string type.</li>
 <li><code>x</code> is a string and <code>T</code> is a slice of bytes or runes.</li>
 </ul>
@@ -4026,7 +4026,7 @@ var person = (*Person)(data)  // ignoring tags, the underlying types are identic
 <ol>
 <li>When converting between integer types, if the value is a signed integer, it is sign extended to implicit infinite precision; otherwise it is zero extended. It is then truncated to fit in the result type&rsquo;s size. For example, if <code>v := uint16(0x10F0)</code>, then <code>uint32(int8(v)) == 0xFFFFFFF0</code>. The conversion always yields a valid value; there is no indication of overflow.</li>
 <li>When converting a floating-point number to an integer, the fraction is discarded (truncation towards zero).</li>
-<li>When converting an integer or floating-point number to a floating-point type, or a complex number to another complex type, the result value is rounded to the precision specified by the destination type. For instance, the value of a variable <code>x</code> of type <code>float32</code> may be stored using additional precision beyond that of an IEEE-754 32-bit number, but float32(x) represents the result of rounding <code>x</code>'s value to 32-bit precision. Similarly, <code>x + 0.1</code> may use more than 32 bits of precision, but <code>float32(x + 0.1)</code> does not.</li>
+<li>When converting an integer or floating-point number to a floating-point type, or a complex number to another complex type, the result value is rounded to the precision specified by the destination type. For instance, the value of a variable <code>x</code> of type <code>float32</code> may be stored using additional precision beyond that of an IEEE-754 32-bit number, but float32(x) represents the result of rounding <code>x</code>&rsquo;s value to 32-bit precision. Similarly, <code>x + 0.1</code> may use more than 32 bits of precision, but <code>float32(x + 0.1)</code> does not.</li>
 </ol>
 <p>In all non-constant conversions involving floating-point or complex values, if the result type cannot represent the value the conversion succeeds but the result value is implementation-dependent.</p>
 <h4 id="conversions-to-and-from-a-string-type">Conversions to and from a string type</h4>
@@ -5716,10 +5716,10 @@ panic(&#34;unreachable&#34;)
 panic(Error(&#34;cannot parse&#34;))
 </code></pre></td></tr></table>
 </div>
-</div><p>The <code>recover</code> function allows a program to manage behavior of a panicking goroutine. Suppose a function <code>G</code> defers a function <code>D</code> that calls <code>recover</code> and a panic occurs in a function on the same goroutine in which <code>G</code> is executing. When the running of deferred functions reaches <code>D</code>, the return value of <code>D</code>'s call to <code>recover</code> will be the value passed to the call of <code>panic</code>. If <code>D</code> returns normally, without starting a new <code>panic</code>, the panicking sequence stops. In that case, the state of functions called between <code>G</code> and the call to <code>panic</code> is discarded, and normal execution resumes. Any functions deferred by <code>G</code> before <code>D</code> are then run and <code>G</code>'s execution terminates by returning to its caller.</p>
+</div><p>The <code>recover</code> function allows a program to manage behavior of a panicking goroutine. Suppose a function <code>G</code> defers a function <code>D</code> that calls <code>recover</code> and a panic occurs in a function on the same goroutine in which <code>G</code> is executing. When the running of deferred functions reaches <code>D</code>, the return value of <code>D</code>&rsquo;s call to <code>recover</code> will be the value passed to the call of <code>panic</code>. If <code>D</code> returns normally, without starting a new <code>panic</code>, the panicking sequence stops. In that case, the state of functions called between <code>G</code> and the call to <code>panic</code> is discarded, and normal execution resumes. Any functions deferred by <code>G</code> before <code>D</code> are then run and <code>G</code>&rsquo;s execution terminates by returning to its caller.</p>
 <p>The return value of <code>recover</code> is <code>nil</code> if any of the following conditions holds:</p>
 <ul>
-<li><code>panic</code>'s argument was <code>nil</code>;</li>
+<li><code>panic</code>&rsquo;s argument was <code>nil</code>;</li>
 <li>the goroutine is not panicking;</li>
 <li><code>recover</code> was not called directly by a deferred function.</li>
 </ul>
@@ -5990,11 +5990,11 @@ var a, b = f() // a and b are initialized together, before x is initialized
 </div>
 </div><p>For the purpose of package initialization, <a href="https://golang.org/ref/spec#Blank_identifier">blank</a> variables are treated like any other variables in declarations.</p>
 <p>The declaration order of variables declared in multiple files is determined by the order in which the files are presented to the compiler: Variables declared in the first file are declared before any of the variables declared in the second file, and so on.</p>
-<p>Dependency analysis does not rely on the actual values of the variables, only on lexical <em>references</em> to them in the source, analyzed transitively. For instance, if a variable <code>x</code>'s initialization expression refers to a function whose body refers to variable <code>y</code> then <code>x</code> depends on <code>y</code>. Specifically:</p>
+<p>Dependency analysis does not rely on the actual values of the variables, only on lexical <em>references</em> to them in the source, analyzed transitively. For instance, if a variable <code>x</code>&rsquo;s initialization expression refers to a function whose body refers to variable <code>y</code> then <code>x</code> depends on <code>y</code>. Specifically:</p>
 <ul>
 <li>A reference to a variable or function is an identifier denoting that variable or function.</li>
 <li>A reference to a method <code>m</code> is a <a href="https://golang.org/ref/spec#Method_values">method value</a> or <a href="https://golang.org/ref/spec#Method_expressions">method expression</a> of the form <code>t.m</code>, where the (static) type of <code>t</code> is not an interface type, and the method <code>m</code> is in the <a href="https://golang.org/ref/spec#Method_sets">method set</a> of <code>t</code>. It is immaterial whether the resulting function value <code>t.m</code> is invoked.</li>
-<li>A variable, function, or method <code>x</code> depends on a variable <code>y</code> if <code>x</code>'s initialization expression or body (for functions and methods) contains a reference to <code>y</code> or to a function or method that depends on <code>y</code>.</li>
+<li>A variable, function, or method <code>x</code> depends on a variable <code>y</code> if <code>x</code>&rsquo;s initialization expression or body (for functions and methods) contains a reference to <code>y</code> or to a function or method that depends on <code>y</code>.</li>
 </ul>
 <p>For example, given the declarations</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -6243,9 +6243,9 @@ complex128                           16
 	
 	<li><a href="/posts/cheatsheet/golang/golang-module-usage/">Golang Module 备忘</a></li>
 	
-	<li><a href="/posts/notes/golang/go-imagemagick/">Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</a></li>
-	
 	<li><a href="/posts/solution/golang/go-imagemagick/">Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</a></li>
+	
+	<li><a href="/posts/notes/golang/go-imagemagick/">Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</a></li>
 	
 </ul>
 
@@ -6269,29 +6269,6 @@ complex128                           16
 
  
         
-  
-  <div class="book-comments">
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
   
  
       </footer>
