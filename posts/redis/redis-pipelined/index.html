@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Redis pipelined 管道"><meta property="og:title" content="Redis pipelined 管道" />
-<meta property="og:description" content="Redis pipelined 管道" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://keli.tech/posts/redis/redis-pipelined/" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Redis pipelined 管道"/><meta property="og:title" content="Redis pipelined 管道"/>
+<meta property="og:description" content="Redis pipelined 管道"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://keli.tech/posts/redis/redis-pipelined/"/>
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<meta property="article:published_time" content="2020-03-02T00:00:00+00:00"/>
+<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00"/><meta property="og:site_name" content="Fnece X 的技术博客"/>
 <title>Redis pipelined 管道 | FenceX的技术博客</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/x-icon"/>
 
 
-<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8=">
+<link rel="stylesheet" href="/book.min.1f6e8d2f9c6d88c5c9608954385a8412b7a3bceb5437cd99691c52f546d5eadf.css" integrity="sha256-H26NL5xtiMXJYIlUOFqEErejvOtUN82ZaRxS9UbV6t8="/>
 
 
-<script defer src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
+<script defer="" src="/en.search.min.8b356c37a9130dc117ba8ca0df7d3a1d835b88ee48c81a29731845ffcf7fd8e4.js" integrity="sha256-izVsN6kTDcEXuoyg3306HYNbiO5IyBopcxhF/89/2OQ="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -29,7 +26,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 
 <!--
 Made with Book Theme
@@ -37,23 +34,23 @@ https://github.com/alex-shpak/hugo-book
 -->
 
   
-  <link rel=stylesheet href="/js/audiojs/custom.css" >
+  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+  <input type="checkbox" class="hidden" id="menu-control"/>
   <main class="container flex">
     <aside class="book-menu">
       
   <nav>
 <h2 class="book-brand">
-  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  <a href="/"><img src="/image/logo.png" alt="Logo"/><span>FenceX的技术博客</span>
   </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -79,11 +76,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/" >
+  <a href="/posts/">
       博客
   </a>
 
@@ -101,11 +98,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/lang/" >
+  <a href="/posts/lang/">
       编程语言
   </a>
 
@@ -127,11 +124,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/tools/" >
+  <a href="/posts/tools/">
       工具
   </a>
 
@@ -153,11 +150,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/csp/" >
+  <a href="/posts/csp/">
       内容安全策略
   </a>
 
@@ -179,11 +176,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/redis/" >
+  <a href="/posts/redis/">
       Redis 博客
   </a>
 
@@ -201,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-interview/" >
+  <a href="/posts/redis/redis-interview/">
       Redis 面试题
   </a>
 
@@ -211,7 +208,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-intro/" >
+  <a href="/posts/redis/redis-intro/">
       Redis 介绍
   </a>
 
@@ -221,7 +218,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-data-types/" >
+  <a href="/posts/redis/redis-data-types/">
       Redis 数据类型与适用场景
   </a>
 
@@ -231,7 +228,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-version/" >
+  <a href="/posts/redis/redis-version/">
       Redis 版本信息
   </a>
 
@@ -241,7 +238,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-replication/" >
+  <a href="/posts/redis/redis-replication/">
       Redis 主从复制
   </a>
 
@@ -251,7 +248,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-transaction/" >
+  <a href="/posts/redis/redis-transaction/">
       Redis 事务
   </a>
 
@@ -261,7 +258,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-pipelined/"  class="active">
+  <a href="/posts/redis/redis-pipelined/" class="active">
       Redis pipelined 管道
   </a>
 
@@ -271,7 +268,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-rdb-aof/" >
+  <a href="/posts/redis/redis-rdb-aof/">
       Redis 持久化方式RDB和AOF比较
   </a>
 
@@ -281,7 +278,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/redis/redis-module/" >
+  <a href="/posts/redis/redis-module/">
       Redis Module 模块
   </a>
 
@@ -301,11 +298,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/mysql/" >
+  <a href="/posts/mysql/">
       Mysql 博客
   </a>
 
@@ -327,11 +324,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/mysql1/" >
+  <a href="/posts/mysql1/">
       Spark
   </a>
 
@@ -353,11 +350,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/yii2/" >
+  <a href="/posts/yii2/">
       yii2
   </a>
 
@@ -379,7 +376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/about-me/" >
+  <a href="/posts/about-me/">
       关于我
   </a>
 
@@ -397,11 +394,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/ideas/" >
+  <a href="/ideas/">
       想法💡
   </a>
 
@@ -456,19 +453,19 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
   </label>
 
   <strong>Redis pipelined 管道</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
+    <input type="checkbox" class="hidden" id="toc-control"/>
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
@@ -499,7 +496,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel=stylesheet href="" >
+<link rel="stylesheet" href=""/>
 
 
 <article class="markdown">
@@ -533,18 +530,18 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h1 id="redis-pipelined-管道">Redis pipelined 管道</h1>
+  <p></p><h1 id="redis-pipelined-管道">Redis pipelined 管道</h1>
 <p>Redis是一种基于客户端-服务端模型以及请求/响应协议的TCP服务。这意味着通常情况下一个请求会遵循以下步骤：</p>
 <ul>
 <li>客户端向服务端发送一个查询请求，并监听Socket返回，通常是以阻塞模式，等待服务端响应。</li>
 <li>服务端处理命令，并将结果返回给客户端。</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="redis-管道技术">Redis 管道技术</h2>
 <p>Redis 管道技术可以在服务端未响应时，客户端可以继续向服务端发送请求，并最终一次性读取所有服务端的响应。</p>
 <h3 id="实例">实例</h3>
 <p>查看 redis 管道，只需要启动 redis 实例并输入以下命令：</p>
-<pre><code>$(echo -en &quot;PING\r\n SET w3ckey redis\r\nGET w3ckey\r\nINCR visitor\r\nINCR visitor\r\nINCR visitor\r\n&quot;; sleep 10) | nc localhost 6379
+<pre><code>$(echo -en &#34;PING\r\n SET w3ckey redis\r\nGET w3ckey\r\nINCR visitor\r\nINCR visitor\r\nINCR visitor\r\n&#34;; sleep 10) | nc localhost 6379
  
 +PONG
 +OK
@@ -554,17 +551,17 @@ redis
 :3
 </code></pre><p>以上实例中我们通过使用 <strong>PING</strong> 命令查看redis服务是否可用， 之后我们们设置了 w3ckey 的值为 redis，然后我们获取 w3ckey 的值并使得 visitor 自增 3 次。</p>
 <p>在返回的结果中我们可以看到这些命令一次性向 redis 服务提交，并最终一次性读取所有服务端的响应</p>
-<hr>
+<hr/>
 <h2 id="管道技术的优势">管道技术的优势</h2>
 <p>管道技术最显著的优势是提高了 redis 服务的性能。</p>
 <h3 id="一些测试数据">一些测试数据</h3>
 <p>在下面的测试中，我们将使用Redis的Ruby客户端，支持管道技术特性，测试管道技术对速度的提升效果。</p>
-<pre><code>require 'rubygems' 
-require 'redis'
+<pre><code>require &#39;rubygems&#39; 
+require &#39;redis&#39;
 def bench(descr) 
 start = Time.now 
 yield 
-puts &quot;#{descr} #{Time.now-start} seconds&quot; 
+puts &#34;#{descr} #{Time.now-start} seconds&#34; 
 end
 def without_pipelining 
 r = Redis.new 
@@ -580,16 +577,16 @@ r.pipelined {
         } 
 } 
 end
-bench(&quot;without pipelining&quot;) { 
+bench(&#34;without pipelining&#34;) { 
         without_pipelining 
 } 
-bench(&quot;with pipelining&quot;) { 
+bench(&#34;with pipelining&#34;) { 
         with_pipelining 
 }
 </code></pre><p>从处于局域网中的Mac OS X系统上执行上面这个简单脚本的数据表明，开启了管道操作后，往返时延已经被改善得相当低了。</p>
 <pre><code>without pipelining 1.185238 seconds 
 with pipelining 0.250783 seconds
-</code></pre><p>如你所见，开启管道后，我们的速度效率提升了5倍。</p></p>
+</code></pre><p>如你所见，开启管道后，我们的速度效率提升了5倍。</p><p></p>
 </article>
 
 
@@ -691,9 +688,6 @@ with pipelining 0.250783 seconds
 
   <script src="/js/audiojs/audio.min.js"></script>
   <script src="/js/audiojs/custom.js"></script>
-</body>
-
-</html>
 
 
 
@@ -706,3 +700,7 @@ with pipelining 0.250783 seconds
 
 
 
+
+
+
+</body></html>
