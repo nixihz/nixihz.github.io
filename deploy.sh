@@ -13,6 +13,7 @@ cd public
 
 git add .
 git commit -m 'update post'
+git pull github master
 git push github master
 git status
 cd ..
@@ -22,6 +23,7 @@ cd public
 
 git add .
 git commit -m 'update post'
+git pull origin master
 git push origin master
 git status
 cd ..
