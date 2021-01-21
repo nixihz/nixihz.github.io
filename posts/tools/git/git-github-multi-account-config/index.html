@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hugo Hints 提示"><meta property="og:title" content="Hugo Hints 提示" />
-<meta property="og:description" content="" />
+<meta name="description" content="git 指定 ssh key 配置多账号"><meta property="og:title" content="git 指定 ssh key 配置多账号" />
+<meta property="og:description" content="git 指定 ssh key 配置，github 配置多账号" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://keli.tech/posts/tools/hugo/book/hints/" />
+<meta property="og:url" content="https://keli.tech/posts/tools/git/git-github-multi-account-config/" />
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="og:site_name" content="Fnece X 的技术博客" />
-<title>Hugo Hints 提示 | FenceX的技术博客</title>
+<meta property="article:published_time" content="2021-01-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<title>git 指定 ssh key 配置多账号 | FenceX的技术博客</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
@@ -138,7 +139,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/tools/git/git-github-multi-account-config/" >
+  <a href="/posts/tools/git/git-github-multi-account-config/"  class="active">
       git 指定 ssh key 配置多账号
   </a>
 
@@ -183,122 +184,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/vc/" >
-      Hugo 版本控制
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/hugo/" >
-      Hugo 基本技巧
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/hugo-audio/" >
-      Hugo 支持audio播放
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/hugo-speech/" >
-      Hugo 支持博客朗读
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/buttons/" >
-      Hugo Buttons 按钮
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/columns/" >
-      Hugo Columns 分列布局
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/expand/" >
-      Hugo Expand 展开和隐藏
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/hints/"  class="active">
-      Hugo Hints 提示
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/katex/" >
-      Hugo KaTex 公式
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/mermaid/" >
-      Hugo Mermaid Chart 图标
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/posts/tools/hugo/book/tabs/" >
-      Hugo Tabs Tab页面
-  </a>
-
-</li>
-      
-    
-  </ul>
-  
 
 
 
@@ -614,7 +499,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Hugo Hints 提示</strong>
+  <strong>git 指定 ssh key 配置多账号</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -630,7 +515,8 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
-        <li><a href="#example">Example</a></li>
+        <li><a href="#场景-audio-src-preloadnone-">场景 <audio src="/" preload="none" /></a></li>
+        <li><a href="#方案">方案</a></li>
       </ul>
     </li>
   </ul>
@@ -650,52 +536,83 @@ https://github.com/alex-shpak/hugo-book
 
 <article class="markdown">
   <h1>
-    <a href="/posts/tools/hugo/book/hints/">Hugo Hints 提示</a>
+    <a href="/posts/tools/git/git-github-multi-account-config/">git 指定 ssh key 配置多账号</a>
   </h1>
   <hr/>
 
 
+<div>
 
-  <p><p>Hint 提示可用作提示/警告/通知块。 有3种颜色可供选择：<code>info</code>, <code>warning</code> 和 <code>danger</code>。</p>
+  <h5>2021-01-02</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/develop/">develop</a>, 
+        <a href="/categories/git/">git</a>
+  </div>
+  
+
+  
+  <div>
+    
+        <a href="/tags/git/">git</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h2 id="场景-audio-src-preloadnone-">场景 <audio src="/" preload="none" /></h2>
+<p>github 拥有多账号, 需要使用不同的 ssh-key</p>
+<h2 id="方案">方案</h2>
+<p>修改ssh配置文件 <code>~/.ssh/config</code></p>
+<p>以 codeup.aliyun.com 为例子</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#75af00">hint</span> <span style="color:#f92672">[</span><span style="color:#75af00">info</span><span style="color:#f92672">|</span><span style="color:#75af00">warning</span><span style="color:#f92672">|</span><span style="color:#75af00">danger</span><span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#75af00">hint</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75af00">Host</span> <span style="color:#75af00">codeup</span><span style="color:#111">.</span><span style="color:#75af00">aliyun</span><span style="color:#111">.</span><span style="color:#75af00">com</span>
+    <span style="color:#75af00">HostName</span> <span style="color:#75af00">codeup</span><span style="color:#111">.</span><span style="color:#75af00">aliyun</span><span style="color:#111">.</span><span style="color:#75af00">com</span>
+    <span style="color:#75af00">User</span> <span style="color:#75af00">git</span>
+    <span style="color:#75af00">IdentityFile</span> <span style="color:#f92672">/</span><span style="color:#75af00">Users</span><span style="color:#f92672">/</span><span style="color:#75af00">admin</span><span style="color:#f92672">/</span><span style="color:#111">.</span><span style="color:#75af00">ssh</span><span style="color:#f92672">/</span><span style="color:#75af00">id_rsa</span>
+    <span style="color:#75af00">IdentitiesOnly</span> <span style="color:#75af00">yes</span>
+
+<span style="color:#75af00">Host</span> <span style="color:#75af00">codeup</span><span style="color:#111">.</span><span style="color:#75af00">aliyun</span><span style="color:#111">.</span><span style="color:#75af00">com</span><span style="color:#f92672">-</span><span style="color:#75af00">fence</span>
+    <span style="color:#75af00">HostName</span> <span style="color:#75af00">codeup</span><span style="color:#111">.</span><span style="color:#75af00">aliyun</span><span style="color:#111">.</span><span style="color:#75af00">com</span>
+    <span style="color:#75af00">User</span> <span style="color:#75af00">git</span>
+    <span style="color:#75af00">IdentityFile</span> <span style="color:#f92672">/</span><span style="color:#75af00">Users</span><span style="color:#f92672">/</span><span style="color:#75af00">admin</span><span style="color:#f92672">/</span><span style="color:#111">.</span><span style="color:#75af00">ssh</span><span style="color:#f92672">/</span><span style="color:#75af00">id_rsa_fence</span>
+    <span style="color:#75af00">IdentitiesOnly</span> <span style="color:#75af00">yes</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="example">Example</h2>
-<blockquote class="book-hint info">
-  <strong>Markdown content</strong><br>
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-</blockquote>
-
-<blockquote class="book-hint warning">
-  <strong>Markdown content</strong><br>
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-</blockquote>
-
-<blockquote class="book-hint danger">
-  <strong>Markdown content</strong><br>
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-</blockquote></p>
+</div><p>配置中 Host 是别名, 替换掉原来git地址的Host<br>
+比如 <code>git clone@codeup.aliyun.com:****/user/proj.git</code> 替换为 <code>git clone@codeup.aliyun.com-fence:****/user/proj.git</code></p></p>
 </article>
 
 
 
 
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/posts/tools/git/git-refresh-commit-email/">git修改提交邮箱和用户名信息</a></li>
+	
+</ul>
 
 
 
@@ -730,7 +647,8 @@ stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
   <ul>
     <li>
       <ul>
-        <li><a href="#example">Example</a></li>
+        <li><a href="#场景-audio-src-preloadnone-">场景 <audio src="/" preload="none" /></a></li>
+        <li><a href="#方案">方案</a></li>
       </ul>
     </li>
   </ul>

@@ -5,22 +5,31 @@
     <link>https://keli.tech/categories/</link>
     <description>Recent content in Categories on FenceX的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Dec 2020 12:12:02 +0000</lastBuildDate><atom:link href="https://keli.tech/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>develop</title>
+      <link>https://keli.tech/categories/develop/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/categories/develop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://keli.tech/categories/git/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://keli.tech/categories/git/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>golang</title>
       <link>https://keli.tech/categories/golang/</link>
       <pubDate>Tue, 22 Dec 2020 12:12:02 +0000</pubDate>
       
       <guid>https://keli.tech/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>develop</title>
-      <link>https://keli.tech/categories/develop/</link>
-      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/categories/develop/</guid>
       <description></description>
     </item>
     
@@ -57,15 +66,6 @@
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://keli.tech/categories/redis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://keli.tech/categories/git/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/categories/git/</guid>
       <description></description>
     </item>
     
