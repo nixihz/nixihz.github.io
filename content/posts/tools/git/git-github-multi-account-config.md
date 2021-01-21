@@ -10,13 +10,12 @@ categories :
 menu : "main"
 ---
 
-## 场景 <audio src="/" preload="none" />
+## 场景
 
 github 拥有多账号, 需要使用不同的 ssh-key
 
 
 <!--more--> 
-
 
 ## 方案
 修改ssh配置文件 `~/.ssh/config`
