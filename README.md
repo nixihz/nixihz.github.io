@@ -7,7 +7,7 @@ cd public
 git remote add github git@github.com:fencex/fencex.github.io.git
 cd ..
 
-git submodule add -b master --force git@gitee.com:fencex/hugo-book.git themes/book
+git submodule add -b master --force git@gitee.com:fence/hugo-book.git themes/book
 
 git restore --staged public themes/book
 
