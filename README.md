@@ -1,3 +1,6 @@
+## hugo version
+v0.74.2
+
 ## 初始化
 ```
 ## git submodule update --init --depth 1

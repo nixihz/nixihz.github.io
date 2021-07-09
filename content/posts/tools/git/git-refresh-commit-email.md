@@ -1,5 +1,5 @@
 ---
-title : "git重刷提交的email和name信息"
+title : "git修改提交邮箱和用户名信息"
 description : "git 重刷提交的email和name信息"
 tags :
   - "git"

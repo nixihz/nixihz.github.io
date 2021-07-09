@@ -2,6 +2,7 @@
 git checkout blogedit
 git add .
 git commit -m 'update'
+git pull origin blogedit
 git push origin blogedit
 git status
 rm -rf public/en.*
