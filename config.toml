@@ -2,7 +2,7 @@
 
 #baseURL = 'https://fencex.github.io'
 baseURL = 'https://keli.tech'
-title = 'FenceX的技术博客'
+title = 'fence x的技术博客'
 theme = 'book'
 
 googleAnalytics = "UA-44019270-5"
