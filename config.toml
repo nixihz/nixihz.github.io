@@ -91,7 +91,7 @@ disablePathToLower = true
 
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used
-  # BookMenuBundle = '/menu'
+  BookMenuBundle = '/menu'
   # BookTheme = 'light'
 
   # (Optional, default docs) Specify section of content to render as menu

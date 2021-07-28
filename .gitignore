@@ -4,3 +4,4 @@
 .vscode
 /themes/blog
 configs/prod.yaml
+content/posts

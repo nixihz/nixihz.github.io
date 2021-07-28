@@ -23,6 +23,12 @@ git restore --staged public themes/book
 hugo server --minify --theme book
 
 ```
+## sync from notion
+
+```
+export HANDY_WORK_DIR=$PWD
+./handy blogation
+```
 
 
 ## 文件生成
