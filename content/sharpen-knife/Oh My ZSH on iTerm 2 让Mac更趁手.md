@@ -46,4 +46,9 @@ windows xshell 连接远程服务器后与windows电脑互传文件很方便，�
 
 ## 快捷键
 
-RendeRenderCollectionViewrCode NYI
+    
+    cmd + t	        新建tab
+    cmd + d	        垂直分屏
+    cmd + shift + d	水平分屏
+    cmd + 1~9	      切换tab
+    cmd + o	        打开profile
