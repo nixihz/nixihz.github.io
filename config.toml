@@ -1,8 +1,8 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
 #baseURL = 'https://fencex.github.io'
-baseURL = 'https://keli.tech'
-title = 'fence x的技术博客'
+baseURL = 'https://nixihz.com'
+title = 'nixihz 的技术博客'
 theme = 'book'
 
 googleAnalytics = "UA-44019270-5"
@@ -123,8 +123,8 @@ disablePathToLower = true
   # Can be overwritten by same param in page frontmatter
   BookComments = false
 
-  description = "Fence X 的技术博客"
+  description = "nixihz 的技术博客"
   images = ["image/roodblauw.png"]
-  title = "Fnece X 的技术博客"
+  title = "nixihz 的技术博客"
 
 staticDir = ["static", "static1"]

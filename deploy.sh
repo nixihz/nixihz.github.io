@@ -1,6 +1,6 @@
 
 git checkout blogedit
-git add .
+git add content static
 git commit -m 'update'
 git pull origin blogedit
 git push origin blogedit
