@@ -1,7 +1,7 @@
 ---
 title: tools
 bookToc: false
-bookCollapseSection: true
+bookCollapseSection: false
 
 ---
 md

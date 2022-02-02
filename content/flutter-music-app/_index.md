@@ -1,7 +1,7 @@
 ---
 title: flutter-music-app
 bookToc: false
-bookCollapseSection: true
+bookCollapseSection: false
 
 ---
 md

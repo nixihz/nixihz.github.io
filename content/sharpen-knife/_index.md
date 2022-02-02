@@ -1,7 +1,7 @@
 ---
 title: sharpen-knife
 bookToc: false
-bookCollapseSection: true
+bookCollapseSection: false
 
 ---
 md
