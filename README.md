@@ -14,6 +14,8 @@ git submodule add -b master --force git@gitee.com:fence/hugo-book.git themes/boo
 
 git restore --staged public themes/book
 
+git submodule update --init --recursive
+
 ```
 
 
