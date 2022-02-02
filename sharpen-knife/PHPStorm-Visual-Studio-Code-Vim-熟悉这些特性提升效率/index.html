@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率"><meta property="og:title" content="PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率" />
+<meta property="og:description" content="PhpStorm 语法错误等提示和检测，调用跳转，代码生成，调试功能，代码全局观，文件管理，版本控制工具，数据库查看，命令行工具，丰富的扩展库。
+文件检测 目录树选中文件，右击，点击 Inspect code … 执行代码检查
+跳转 cmd &#43; 鼠标左键
+cmd &#43; [ 依次返回历史跳转点
+cmd &#43; ] 重新回到最新跳转点
+文件管理 Favorites 文件，根据某个功能特定文件，
+Bookmarks
+代码生成 cmd &#43; n 生成代码，弹框中选择生成 Copyright, Getter Setter，注释等
+代码补全 输入 fore 按下回车生成 foreach 代码块 （Goland 也有类似的快捷短语）
+插件 PHP Advanced AutoComplete Thomas Schulz ，可以自动补全，舒心
+定位到当前正在编辑的文件 数据库插件 使用体验与 jetbrains 旗下 Datagrip 非常一致；
+可以在项目中增加 sql 文件夹，存放相关sql；
+cmd &#43; enter 执行光标所在行的sql语句，可以在弹框选择子查询；
+cmd &#43; option &#43; l(小写L) 格式化代码，
+cmd &#43; ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风格。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/sharpen-knife/PHPStorm-Visual-Studio-Code-Vim-%E7%86%9F%E6%82%89%E8%BF%99%E4%BA%9B%E7%89%B9%E6%80%A7%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2021-07-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-28T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+
+
+<script defer src="/en.search.min.d2945422d83a4e512f28842aa85941f3285d6260a35053dd3a9171abbc09bb29.js" integrity="sha256-0pRUItg6TlEvKIQqqFlB8yhdYmCjUFPdOpFxq7wJuyk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="/posts/">post</a></li>
+<li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
+<li><a href="/tools/">工具</a></li>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#phpstorm">PhpStorm</a>
+          <ul>
+            <li><a href="#文件检测">文件检测</a></li>
+            <li><a href="#跳转">跳转</a></li>
+            <li><a href="#文件管理">文件管理</a></li>
+            <li><a href="#代码生成">代码生成</a></li>
+            <li><a href="#代码补全">代码补全</a></li>
+            <li><a href="#定位到当前正在编辑的文件">定位到当前正在编辑的文件</a></li>
+            <li><a href="#数据库插件">数据库插件</a></li>
+            <li><a href="#vim插件">vim插件</a></li>
+            <li><a href="#一些快捷键">一些快捷键</a></li>
+          </ul>
+        </li>
+        <li><a href="#visual-studio-code">Visual Studio Code</a>
+          <ul>
+            <li><a href="#vim插件-1">vim插件</a></li>
+          </ul>
+        </li>
+        <li><a href="#vim">Vim</a>
+          <ul>
+            <li><a href="#vim-基础">vim 基础</a></li>
+            <li><a href="#编辑操作">编辑操作</a></li>
+            <li><a href="#visual-模式">Visual 模式</a></li>
+            <li><a href="#命令">命令</a></li>
+            <li><a href="#其他">其他</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/sharpen-knife/PHPStorm-Visual-Studio-Code-Vim-%E7%86%9F%E6%82%89%E8%BF%99%E4%BA%9B%E7%89%B9%E6%80%A7%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/">PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2021-07-28</h5>
+
+
+
+  
+
+  
+
+
+</div>
+
+
+  <p><h2 id="phpstorm">PhpStorm</h2>
+<p>语法错误等提示和检测，调用跳转，代码生成，调试功能，代码全局观，文件管理，版本控制工具，数据库查看，命令行工具，丰富的扩展库。</p>
+<h3 id="文件检测">文件检测</h3>
+<p>目录树选中文件，右击，点击 Inspect code … 执行代码检查</p>
+<h3 id="跳转">跳转</h3>
+<p>cmd + 鼠标左键</p>
+<p>cmd + [  依次返回历史跳转点</p>
+<p>cmd + ]  重新回到最新跳转点</p>
+<h3 id="文件管理">文件管理</h3>
+<p>Favorites 文件，根据某个功能特定文件，</p>
+<p>Bookmarks</p>
+<h3 id="代码生成">代码生成</h3>
+<p>cmd + n 生成代码，弹框中选择生成 Copyright, Getter Setter，注释等</p>
+<h3 id="代码补全">代码补全</h3>
+<p>输入 fore 按下回车生成 foreach 代码块 （Goland 也有类似的快捷短语）</p>
+<p><img src="/images/image-20210130-153427-b0bbeba2-773a-4113-882f-64d652a9e211.png" alt=""></p>
+<p>插件 <a href="https://plugins.jetbrains.com/plugin/7276-php-advanced-autocomplete">PHP Advanced AutoComplete Thomas Schulz</a> ，可以自动补全，舒心</p>
+<p><img src="/images/image-20210130-153233-e0beb7ac-0503-4a89-b804-7c0107b22f36.png" alt=""></p>
+<h3 id="定位到当前正在编辑的文件">定位到当前正在编辑的文件</h3>
+<p><img src="/images/image-20210130-151448-745ec57e-3214-4a69-81ba-3b7e1567af79.png" alt=""></p>
+<h3 id="数据库插件">数据库插件</h3>
+<p>使用体验与 jetbrains 旗下 Datagrip 非常一致；</p>
+<p>可以在项目中增加 sql 文件夹，存放相关sql；</p>
+<p>cmd + enter 执行光标所在行的sql语句，可以在弹框选择子查询；</p>
+<p>cmd + option + l(小写L) 格式化代码，</p>
+<p>cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风格。</p>
+<p>比如关键词全部大写，SELECT 子句逗号前置，SELECT 元素独占一行。</p>
+<h3 id="vim插件">vim插件</h3>
+<p>享受各个 IDE 一致性的体验。</p>
+<h3 id="一些快捷键">一些快捷键</h3>
+<p>RendeRenderCollectionViewrCode NYI</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<h3 id="vim插件-1">vim插件</h3>
+<p>享受各个 IDE 一致性的体验。</p>
+<h2 id="vim">Vim</h2>
+<p>插件</p>
+<p><a href="https://github.com/scrooloose/nerdtree.git">https://github.com/scrooloose/nerdtree.git</a></p>
+<p><a href="https://github.com/vim-airline/vim-airline">https://github.com/vim-airline/vim-airline</a></p>
+<p><a href="https://github.com/vim-airline/vim-airline-themes">https://github.com/vim-airline/vim-airline-themes</a></p>
+<p>配置</p>
+<p>做好配置，可以放到 git 托管。</p>
+<p><a href="https://github.com/fencex/myvim.git">https://github.com/fencex/myvim.git</a></p>
+<h3 id="vim-基础">vim 基础</h3>
+<p>RendeRenderCollectionViewrCode NYI</p>
+<h3 id="编辑操作">编辑操作</h3>
+<p>RendeRenderCollectionViewrCode NYI</p>
+<h3 id="visual-模式">Visual 模式</h3>
+<p>RendeRenderCollectionViewrCode NYI</p>
+<p>一般跟其他命令结合使用，比如 shift + v 选择多行， 再按 d， 删除所选行</p>
+<h3 id="命令">命令</h3>
+<p>RendeRenderCollectionViewrCode NYI</p>
+<h3 id="其他">其他</h3>
+<ul>
+<li>shift + j 当前行移动到上一行行尾, 可以做到单列转单行</li>
+<li>shift + u 转换成大写</li>
+<li>~ 大小写互换</li>
+</ul>
+</p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#phpstorm">PhpStorm</a>
+          <ul>
+            <li><a href="#文件检测">文件检测</a></li>
+            <li><a href="#跳转">跳转</a></li>
+            <li><a href="#文件管理">文件管理</a></li>
+            <li><a href="#代码生成">代码生成</a></li>
+            <li><a href="#代码补全">代码补全</a></li>
+            <li><a href="#定位到当前正在编辑的文件">定位到当前正在编辑的文件</a></li>
+            <li><a href="#数据库插件">数据库插件</a></li>
+            <li><a href="#vim插件">vim插件</a></li>
+            <li><a href="#一些快捷键">一些快捷键</a></li>
+          </ul>
+        </li>
+        <li><a href="#visual-studio-code">Visual Studio Code</a>
+          <ul>
+            <li><a href="#vim插件-1">vim插件</a></li>
+          </ul>
+        </li>
+        <li><a href="#vim">Vim</a>
+          <ul>
+            <li><a href="#vim-基础">vim 基础</a></li>
+            <li><a href="#编辑操作">编辑操作</a></li>
+            <li><a href="#visual-模式">Visual 模式</a></li>
+            <li><a href="#命令">命令</a></li>
+            <li><a href="#其他">其他</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sharpen-knife on nixihz 的技术博客</title>
+    <link>https://nixihz.com/sharpen-knife/</link>
+    <description>Recent content in sharpen-knife on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/sharpen-knife/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP storm 注释符号在行首</title>
+      <link>https://nixihz.com/sharpen-knife/PHP-storm-%E6%B3%A8%E9%87%8A%E7%AC%A6%E5%8F%B7%E5%9C%A8%E8%A1%8C%E9%A6%96%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/PHP-storm-%E6%B3%A8%E9%87%8A%E7%AC%A6%E5%8F%B7%E5%9C%A8%E8%A1%8C%E9%A6%96%E8%A7%A3%E5%86%B3/</guid>
+      <description>问题 PHP storm 默认设置 注释快捷键 设置的行注释 设置在行首，如下：❌
+ // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  使用 格式化 功能以后，格式又发生错乱，❌
+ // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  注释时直接 注释在代码前，而非行首，如下：✅
+ // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); //ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread)  解决  设置， 取消勾选 Line Comment at first column  Settings - Editor - Code Style - PHP - Code Generation</description>
+    </item>
+    
+    <item>
+      <title>Oh My ZSH on iTerm 2 让Mac更趁手</title>
+      <link>https://nixihz.com/sharpen-knife/Oh-My-ZSH-on-iTerm-2-%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/Oh-My-ZSH-on-iTerm-2-%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</guid>
+      <description>Oh My ZSH 配置 https://ohmyz.sh/
+插件 autojump
+zsh-autosuggestions
+zsh-syntax-highlighting
+一些 iTerm2 tips iTerm2 使用 sz rz windows xshell 连接远程服务器后与windows电脑互传文件很方便，到了 mac terminal 就不行了，这里推荐一个github项目，原本是某个国外大佬的，结果这个家伙支持藏独，在文件里藏着某些敏感信息，后来前同事把代码拉下来去掉敏感信息后放到自己的项目中。
+https://github.com/aikuyun/iterm2-zmodem
+服务端安装 lrzsz: yum install lrzsz
+注意：可以利用 mac自带控制台应用 来排查
+命令行中使用代理 通过设置环境变量 http_proxy
+export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;  配置 badge 徽章 区分环境
+快捷键 cmd + t	新建tab cmd + d	垂直分屏 cmd + shift + d	水平分屏 cmd + 1~9	切换tab cmd + o	打开profile </description>
+    </item>
+    
+    <item>
+      <title>PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率</title>
+      <link>https://nixihz.com/sharpen-knife/PHPStorm-Visual-Studio-Code-Vim-%E7%86%9F%E6%82%89%E8%BF%99%E4%BA%9B%E7%89%B9%E6%80%A7%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/PHPStorm-Visual-Studio-Code-Vim-%E7%86%9F%E6%82%89%E8%BF%99%E4%BA%9B%E7%89%B9%E6%80%A7%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/</guid>
+      <description>PhpStorm 语法错误等提示和检测，调用跳转，代码生成，调试功能，代码全局观，文件管理，版本控制工具，数据库查看，命令行工具，丰富的扩展库。
+文件检测 目录树选中文件，右击，点击 Inspect code … 执行代码检查
+跳转 cmd + 鼠标左键
+cmd + [ 依次返回历史跳转点
+cmd + ] 重新回到最新跳转点
+文件管理 Favorites 文件，根据某个功能特定文件，
+Bookmarks
+代码生成 cmd + n 生成代码，弹框中选择生成 Copyright, Getter Setter，注释等
+代码补全 输入 fore 按下回车生成 foreach 代码块 （Goland 也有类似的快捷短语）
+插件 PHP Advanced AutoComplete Thomas Schulz ，可以自动补全，舒心
+定位到当前正在编辑的文件 数据库插件 使用体验与 jetbrains 旗下 Datagrip 非常一致；
+可以在项目中增加 sql 文件夹，存放相关sql；
+cmd + enter 执行光标所在行的sql语句，可以在弹框选择子查询；
+cmd + option + l(小写L) 格式化代码，
+cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风格。</description>
+    </item>
+    
+    <item>
+      <title>MacOS必备软件</title>
+      <link>https://nixihz.com/sharpen-knife/MacOS%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/MacOS%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</guid>
+      <description>Magnet 一款辅助视窗排版的软件，花6块钱实现与windows自带的排版相同的体验吧。</description>
+    </item>
+    
+    <item>
+      <title>MacOS系统配置和设置，让Mac更趁手</title>
+      <link>https://nixihz.com/sharpen-knife/MacOS%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E5%92%8C%E8%AE%BE%E7%BD%AE%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</link>
+      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/MacOS%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E5%92%8C%E8%AE%BE%E7%BD%AE%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</guid>
+      <description>触摸板 🔵 滚动方向：自然，设计思路：内容虽手指移动， 推荐勾选 ✅
+🔘滚动方向：自然，设计思路：我要看下面的内容，手指就往下滑
+🔵 轻点来点按， 勾选上，可以触摸来点击，否则需要用力按下，非常废手指，因此强烈推荐勾选上✅。
+三指拖动 还有一个操作非常费手指，选中部分文本, mac 提供一个解决方案：三指拖动，其实就是使用三指滑动来实现单击并拖拽。
+ 移动窗口 选中文本  三指滑动开始选中，可以多次滑动来调整结束位置，(注意中间的停顿不能太久)。
+触发角功能 我个人比较喜欢这个功能，屏幕有四个活跃触发角，可以设定不同的功能，比如调度中心，应用程序窗口，说的花里胡哨的，窗口缩略图，当前焦点应用的窗口缩略图。
+我比较喜欢的设置如图。
+左下角设置成启动屏幕保护程序 ，老板走过来了，立马用鼠标或者触摸板把光标移动到左下角。程序员的电脑重要数据还是比较多的，为安全考虑，建议大家设置，或者你也可以直接盖上盖子。
+当然这一步仅是启动了屏保，大家设置了以后可能敲击键盘，或者移动鼠标，就退出屏保动画，进入系统了。
+进一步操作，让电脑进入屏保立马锁定电脑。如下图：
+大家可以体验一下，设定启动屏保的触发角，鼠标指针停留一段时间才会触发，而其他则立即触发，这些都是细节，真牛*。
+其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键 /table
+RendeRenderCollectionViewrCode NYI
+一些光标定位快捷键 RendeRenderCollectionViewrCode NYI</description>
+    </item>
+    
+  </channel>
+</rss>

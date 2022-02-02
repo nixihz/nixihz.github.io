@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on FenceX的技术博客</title>
-    <link>https://keli.tech/tags/go/</link>
-    <description>Recent content in go on FenceX的技术博客</description>
+    <title>go on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/go/</link>
+    <description>Recent content in go on nixihz 的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://keli.tech/tags/go/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>函数式编程入门</title>
+      <link>https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</guid>
+      <description>函数式编程特性：  immutable data 不可变数据 first class functions 尾递归优化  函数式编程技术：  map &amp;amp; reduce pipeline recursing 递归 currying 柯里化 higher order function 高阶函数  函数式编程的好处：  parallelization 并行 lazy evaluation 惰性求值 determinism 确定性  </description>
+    </item>
     
     <item>
-      <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
-      <link>https://keli.tech/posts/solution/go/go-imagemagick/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      <title>template</title>
+      <link>https://nixihz.com/blog/new-url/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/solution/go/go-imagemagick/</guid>
-      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
-&lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
-具体需求：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
-&lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
+      <guid>https://nixihz.com/blog/new-url/</guid>
+      <description></description>
     </item>
     
   </channel>

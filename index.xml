@@ -1,553 +1,239 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>X on FenceX的技术博客</title>
-    <link>https://keli.tech/</link>
-    <description>Recent content in X on FenceX的技术博客</description>
+    <title>关于我 on nixihz 的技术博客</title>
+    <link>https://nixihz.com/</link>
+    <description>Recent content in 关于我 on nixihz 的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 版本控制</title>
-      <link>https://keli.tech/posts/tools/hugo/vc/</link>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      <title>函数式编程入门</title>
+      <link>https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/tools/hugo/vc/</guid>
-      <description>&lt;p&gt;github page 以 username.github.io 这个项目的master 作为静态资源发布，所以不能把hugo项目放在master，必须开启一个新的分支存储 hugo 项目。&lt;/p&gt;</description>
+      <guid>https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</guid>
+      <description>函数式编程特性：  immutable data 不可变数据 first class functions 尾递归优化  函数式编程技术：  map &amp;amp; reduce pipeline recursing 递归 currying 柯里化 higher order function 高阶函数  函数式编程的好处：  parallelization 并行 lazy evaluation 惰性求值 determinism 确定性  </description>
     </item>
     
     <item>
-      <title>Hugo 基本技巧</title>
-      <link>https://keli.tech/posts/tools/hugo/hugo/</link>
-      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      <title>OpenSSL 工具生成密钥</title>
+      <link>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/tools/hugo/hugo/</guid>
-      <description>&lt;p&gt;&lt;em&gt;以 book theme 示例&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hugo-添加自定义-css-和-javascript&#34;&gt;Hugo 添加自定义 css 和 javascript&lt;/h2&gt;
-&lt;p&gt;public 目录是最终目录，&lt;/p&gt;
-&lt;p&gt;Hugo 会把根目录 /static 文件拷贝到 public 下。首先把 js css 拷贝到static 文件夹。示例&lt;/p&gt;</description>
+      <guid>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</guid>
+      <description>第一步 生成RSA密钥
+$openssl
+OpenSSL&amp;gt; genrsa -out app_private_key.pem 2048 OpenSSL&amp;gt; pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem OpenSSL&amp;gt; rsa -in app_private_key.pem -pubout -out app_public_key.pem OpenSSL&amp;gt; exit  经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到
+ app_private_key.pem（开发者RSA私钥，非 Java 语言适用）、 app_private_key_pkcs8.pem（pkcs8格式开发者RSA私钥，Java语言适用）、 app_public_key.pem（开发者RSA公钥）3个文件。  开发者将私钥保留，将公钥提交给支付宝配置到开发平台，用于验证签名。以下为私钥文件和公钥文件示例。
+ 注：对于使用Java的开发者，需将生成的pkcs8格式的私钥去除头尾、换行和空格，作为私钥填入代码中，对于.NET和PHP的开发者来说，无需进行pkcs8命令行操作。
+ </description>
     </item>
     
     <item>
-      <title>Hugo 支持audio播放</title>
-      <link>https://keli.tech/posts/tools/hugo/hugo-audio/</link>
-      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      <title>你必须知道的软件开发规范</title>
+      <link>https://nixihz.com/posts/development-standard/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/tools/hugo/hugo-audio/</guid>
-      <description>&lt;h2 id=&#34;hugo如何播放mp3文件&#34;&gt;hugo如何播放mp3文件&lt;/h2&gt;
-&lt;p&gt;纯文本博客有时枯燥无味，试试让网站闹出点声响。&lt;br&gt;
-Hugo 支持 html5 element 节点，所以直接在文章中插入 audio 节点即可:&lt;/p&gt;</description>
+      <guid>https://nixihz.com/posts/development-standard/</guid>
+      <description>软件版本控制规范 目前 git 较为主流，仅介绍git相关流程规范。git flow 和 github flow
+git-flow git-flow 是一个 git 扩展集，按 Vincent Driessen 的分支模型提供高层次的库操作。
+一图胜千言
+GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定期进行部署的团队和项目。https://guides.github.com/introduction/flow/ 解释了 GitHub 流程的工作原理和原因。
+流程就是
+ 创建分支 提交代码 创建合代码请求 PullRequest 讨论和代码审查 合并代码  参考资料
+ git-flow:  http://danielkummer.github.io/git-flow-cheatsheet/index.html https://nvie.com/posts/a-successful-git-branching-model/ https://github.com/nvie/gitflow https://github.com/petervanderdoes/gitflow-avh 对 nvie 的git-flow做了补充，是目前的主流版本   GitHub flow:  https://guides.github.com/introduction/flow/    软件版本号规范 软件的更新迭代是常态，软件依赖更是需要严格控制版本号，为什么要约定以及如何约定版本号规范，这里有答案《语义化版本 2.0.0》 https://semver.org/，如果你使用 git 做版本控制，那么版本号通常是 tag 名，同时，release通常从 tag 中选取，并丰富修改内容。
+语义化版本控制的规范是由 Gravatars 创办者兼 GitHub 共同创办者 Tom Preston-Werner 所建立。</description>
     </item>
     
     <item>
-      <title>Hugo 支持博客朗读</title>
-      <link>https://keli.tech/posts/tools/hugo/hugo-speech/</link>
-      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      <title>PHP注释最佳实践</title>
+      <link>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/tools/hugo/hugo-speech/</guid>
-      <description>&lt;h2 id=&#34;博客朗读-audio-preloadnone&#34;&gt;博客朗读 &lt;audio preload=&#34;none&#34;/&gt;&lt;/h2&gt;
-&lt;p&gt;如果博客篇幅较长，有时候文字难免密密麻麻，看着头晕，那为何不增加一个语音朗读博客的功能呢？
-如果文章里有些病句或者语句不通顺，也可通过重新听语音来判断，并予以纠正。&lt;/p&gt;
-&lt;p&gt;说干就干。&lt;/p&gt;</description>
+      <guid>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>const 常量 常量方便了全局值替换，也有了可读性的名字，但是背后的说明不一定能完整体现到常量名中，所以最好写上注释，如下：
+const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子 const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质  如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看
+/** @var int 合同类型-电子 */ const CONTRACT_TYPE_ELECTRONIC = 0; /** @var int 合同类型-纸质 */ const CONTRACT_TYPE_PAPER = 1  </description>
     </item>
     
     <item>
-      <title>Redis 面试题</title>
-      <link>https://keli.tech/database/redis/redis-interview/</link>
-      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      <title>浏览器静态资源缓存</title>
+      <link>https://nixihz.com/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/database/redis/redis-interview/</guid>
+      <guid>https://nixihz.com/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98/</guid>
+      <description>no-cache
+前后端分离坑，
+nginx 配置
+index index.php index.html index.htm; location / { add_header Cache-Control no-cache; index index.html index.htm; try_files $uri $uri/ /index.html; } </description>
+    </item>
+    
+    <item>
+      <title>PHP自动解析json生成php类文件，自动映射json到php对象</title>
+      <link>https://nixihz.com/posts/PHP%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90json%E7%94%9F%E6%88%90php%E7%B1%BB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%98%A0%E5%B0%84json%E5%88%B0php%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90json%E7%94%9F%E6%88%90php%E7%B1%BB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%98%A0%E5%B0%84json%E5%88%B0php%E5%AF%B9%E8%B1%A1/</guid>
+      <description>业务中经常需要对接第三方服务，常用的对接方式就是使用 http json 接口，有些 json 格式较为复杂，使用php数组进行数据交互非常麻烦，非常容易出错。
+ $responseStr = &#39;{&amp;quot;foo&amp;quot;:&amp;quot;bar&amp;quot;, &amp;quot;hello&amp;quot;:&amp;quot;world&amp;quot;}&#39;; $responseArr = json_decode($responseStr, true); if($responseArr[&amp;quot;fooo&amp;quot;] == &amp;quot;foobar&amp;quot;) { // do sth. }  现在 IDE 比如 PHPStorm 也不能对数组 进行代码提示，上面的代码是不会有错误提示的；如果把 json 返回值直接映射到预先定义好的对象，岂不是很舒心？
+一、映射 json 到 php 对象 我们可以使用 composer 包: nixihz/php-object ，支持复杂 json 到 复杂对象之间的映射。
+ composer require nixihz/php-object class FooBarClass extends PhpObject { /** @var string */ public $foo; /** @var integer */ public $bar; } class DemoClass extends PhpObject { /** @var FooBarClass */ public $foobar; /** @var FooBarClass[] */ public $foobars; } $json = &#39;{&amp;quot;foobar&amp;quot;:{&amp;quot;foo&amp;quot;:&amp;quot;hello world&amp;quot;,&amp;quot;bar&amp;quot;:64100},&amp;quot;foobars&amp;quot;:[{&amp;quot;foo&amp;quot;:&amp;quot;hello&amp;quot;,&amp;quot;bar&amp;quot;:641},{&amp;quot;foo&amp;quot;:&amp;quot;world&amp;quot;,&amp;quot;bar&amp;quot;:664411}]}&#39;; $demo = (new DemoClass())-&amp;gt;fromJson($json); if($demo-&amp;gt;foobar-&amp;gt;foo == &amp;quot;hello world&amp;quot;) { echo count($demo-&amp;gt;foobars); } var_export($demo);  输出</description>
+    </item>
+    
+    <item>
+      <title>PHP storm 注释符号在行首</title>
+      <link>https://nixihz.com/sharpen-knife/PHP-storm-%E6%B3%A8%E9%87%8A%E7%AC%A6%E5%8F%B7%E5%9C%A8%E8%A1%8C%E9%A6%96%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/PHP-storm-%E6%B3%A8%E9%87%8A%E7%AC%A6%E5%8F%B7%E5%9C%A8%E8%A1%8C%E9%A6%96%E8%A7%A3%E5%86%B3/</guid>
+      <description>问题 PHP storm 默认设置 注释快捷键 设置的行注释 设置在行首，如下：❌
+ // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  使用 格式化 功能以后，格式又发生错乱，❌
+ // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  注释时直接 注释在代码前，而非行首，如下：✅
+ // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); //ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread)  解决  设置， 取消勾选 Line Comment at first column  Settings - Editor - Code Style - PHP - Code Generation</description>
+    </item>
+    
+    <item>
+      <title>Oh My ZSH on iTerm 2 让Mac更趁手</title>
+      <link>https://nixihz.com/sharpen-knife/Oh-My-ZSH-on-iTerm-2-%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/Oh-My-ZSH-on-iTerm-2-%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</guid>
+      <description>Oh My ZSH 配置 https://ohmyz.sh/
+插件 autojump
+zsh-autosuggestions
+zsh-syntax-highlighting
+一些 iTerm2 tips iTerm2 使用 sz rz windows xshell 连接远程服务器后与windows电脑互传文件很方便，到了 mac terminal 就不行了，这里推荐一个github项目，原本是某个国外大佬的，结果这个家伙支持藏独，在文件里藏着某些敏感信息，后来前同事把代码拉下来去掉敏感信息后放到自己的项目中。
+https://github.com/aikuyun/iterm2-zmodem
+服务端安装 lrzsz: yum install lrzsz
+注意：可以利用 mac自带控制台应用 来排查
+命令行中使用代理 通过设置环境变量 http_proxy
+export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;  配置 badge 徽章 区分环境
+快捷键 cmd + t	新建tab cmd + d	垂直分屏 cmd + shift + d	水平分屏 cmd + 1~9	切换tab cmd + o	打开profile </description>
+    </item>
+    
+    <item>
+      <title>PHPStorm | Visual Studio Code |Vim 熟悉这些特性，提升效率</title>
+      <link>https://nixihz.com/sharpen-knife/PHPStorm-Visual-Studio-Code-Vim-%E7%86%9F%E6%82%89%E8%BF%99%E4%BA%9B%E7%89%B9%E6%80%A7%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/PHPStorm-Visual-Studio-Code-Vim-%E7%86%9F%E6%82%89%E8%BF%99%E4%BA%9B%E7%89%B9%E6%80%A7%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/</guid>
+      <description>PhpStorm 语法错误等提示和检测，调用跳转，代码生成，调试功能，代码全局观，文件管理，版本控制工具，数据库查看，命令行工具，丰富的扩展库。
+文件检测 目录树选中文件，右击，点击 Inspect code … 执行代码检查
+跳转 cmd + 鼠标左键
+cmd + [ 依次返回历史跳转点
+cmd + ] 重新回到最新跳转点
+文件管理 Favorites 文件，根据某个功能特定文件，
+Bookmarks
+代码生成 cmd + n 生成代码，弹框中选择生成 Copyright, Getter Setter，注释等
+代码补全 输入 fore 按下回车生成 foreach 代码块 （Goland 也有类似的快捷短语）
+插件 PHP Advanced AutoComplete Thomas Schulz ，可以自动补全，舒心
+定位到当前正在编辑的文件 数据库插件 使用体验与 jetbrains 旗下 Datagrip 非常一致；
+可以在项目中增加 sql 文件夹，存放相关sql；
+cmd + enter 执行光标所在行的sql语句，可以在弹框选择子查询；
+cmd + option + l(小写L) 格式化代码，
+cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风格。</description>
+    </item>
+    
+    <item>
+      <title>MacOS必备软件</title>
+      <link>https://nixihz.com/sharpen-knife/MacOS%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/MacOS%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</guid>
+      <description>Magnet 一款辅助视窗排版的软件，花6块钱实现与windows自带的排版相同的体验吧。</description>
+    </item>
+    
+    <item>
+      <title>MacOS系统配置和设置，让Mac更趁手</title>
+      <link>https://nixihz.com/sharpen-knife/MacOS%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E5%92%8C%E8%AE%BE%E7%BD%AE%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</link>
+      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/MacOS%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E5%92%8C%E8%AE%BE%E7%BD%AE%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/</guid>
+      <description>触摸板 🔵 滚动方向：自然，设计思路：内容虽手指移动， 推荐勾选 ✅
+🔘滚动方向：自然，设计思路：我要看下面的内容，手指就往下滑
+🔵 轻点来点按， 勾选上，可以触摸来点击，否则需要用力按下，非常废手指，因此强烈推荐勾选上✅。
+三指拖动 还有一个操作非常费手指，选中部分文本, mac 提供一个解决方案：三指拖动，其实就是使用三指滑动来实现单击并拖拽。
+ 移动窗口 选中文本  三指滑动开始选中，可以多次滑动来调整结束位置，(注意中间的停顿不能太久)。
+触发角功能 我个人比较喜欢这个功能，屏幕有四个活跃触发角，可以设定不同的功能，比如调度中心，应用程序窗口，说的花里胡哨的，窗口缩略图，当前焦点应用的窗口缩略图。
+我比较喜欢的设置如图。
+左下角设置成启动屏幕保护程序 ，老板走过来了，立马用鼠标或者触摸板把光标移动到左下角。程序员的电脑重要数据还是比较多的，为安全考虑，建议大家设置，或者你也可以直接盖上盖子。
+当然这一步仅是启动了屏保，大家设置了以后可能敲击键盘，或者移动鼠标，就退出屏保动画，进入系统了。
+进一步操作，让电脑进入屏保立马锁定电脑。如下图：
+大家可以体验一下，设定启动屏保的触发角，鼠标指针停留一段时间才会触发，而其他则立即触发，这些都是细节，真牛*。
+其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键 /table
+RendeRenderCollectionViewrCode NYI
+一些光标定位快捷键 RendeRenderCollectionViewrCode NYI</description>
+    </item>
+    
+    <item>
+      <title>开篇词</title>
+      <link>https://nixihz.com/flutter-music-app/%E5%BC%80%E7%AF%87%E8%AF%8D/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/flutter-music-app/%E5%BC%80%E7%AF%87%E8%AF%8D/</guid>
+      <description>过年没啥事，写一个 flutter 音乐播放器吧</description>
+    </item>
+    
+    <item>
+      <title>前端项目 npm 包管理莫名升级问题排查</title>
+      <link>https://nixihz.com/posts/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-npm-%E5%8C%85%E7%AE%A1%E7%90%86%E8%8E%AB%E5%90%8D%E5%8D%87%E7%BA%A7%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-npm-%E5%8C%85%E7%AE%A1%E7%90%86%E8%8E%AB%E5%90%8D%E5%8D%87%E7%BA%A7%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid>
+      <description>package.json 和 package-lock.json 是控制node_module包版本的两个文件，其中 package.json 由开发者维护，package-lock.json 自动生成。
+一般package.json 指定版本都会使用 ^ 或者 ~ ，举例：
+&amp;quot;dependencies&amp;quot;: { &amp;quot;vue&amp;quot;: &amp;quot;^2.6.11&amp;quot;, &amp;quot;vue-pdf&amp;quot;: &amp;quot;~4.0.8&amp;quot; }  ^2.6.11 表示该模块的小版本向下兼容，
+~4.0.8 表示该模块的中间
+执行 npm install 到底发生了什么；
+~1.2.3 代表 1.2.3 &amp;lt;= 版本号 &amp;lt; 1.3.0
+^1.2.3 代表 1.2.3 &amp;lt;= 版本号 &amp;lt; 2.0.0
+1，^ 符号，它与semantic versioning （语义版本控制）有关系，它表示尽量使用最新版本，但保证不产生兼容问题，换句话说也就是除了大版本号以外，小版本号和补丁版本号都可以变。 但0 开头的版本号是比较特殊的，而因为 ^ 严格遵守 semantic versioning 规则，所以会出现以下情况（早先的 composer 版本并没有这样的处理，后来修正了）：^0.3.0 等于 &amp;gt;=0.3.0; &amp;lt;0.4.0，并不是&amp;lt;1.0.0 ，因为，semantic versioning 的规定是，大版本号以 0 开头表示这是一个非稳定版本（unstable），如果处于非稳定状态，小版本号是允许不向下兼容的！
+2，~符号，表示版本号只能改变最末尾那段（如果是 ~x.y 末尾就是 y，如果是 ~x.y.z 末尾就是 z），比如这种情况:</description>
+    </item>
+    
+    <item>
+      <title>SPA前端项目灰度发布策略</title>
+      <link>https://nixihz.com/posts/SPA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/SPA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83%E7%AD%96%E7%95%A5/</guid>
+      <description>前提 B/S 项目的灰度发布本应完全由服务端控制，但是SPA的出现打破了这个局面，B/S变得越来越像C/S，故发布策略也需要做相应调整。
+灰度发布（又名金丝雀发布），在此基础上，我们可以做内测，也可以做 A/B 测试，战略意义还是很大的。
+简单思路todo： 常规项目 npm 打包，同一版本的代码，每次打包静态文件名必须一致，
+webpack中hash、chunkhash、contenthash 区别
+使用 contenthash 作文件名， 或者使用自定义版本号来维护。
+打包完成，手动提交版本号到服务端，由服务端纳入灰度发布的控制
+项目入口文件 不再直接使用 dist/index.html
+而是由服务端来控制
+用户登录后，服务端可以任意控制用户应该访问哪个版本的前端；
+前端项目的每次请求都必须带上版本号：由服务端处理做后续处理，
+比如：
+有版本太旧，可提示用户刷新，刷新以后依然如此，可以提示向后台反馈；
+好处：
+ 提前获得目标用户的使用反馈； 根据反馈结果，做到查漏补缺； 发现重大问题，可回滚“旧版本”； 补充完善产品不足； 快速验证产品的 idea。  </description>
+    </item>
+    
+    <item>
+      <title>PHP 对接 wsdl soap 接口</title>
+      <link>https://nixihz.com/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/</guid>
+      <description>概念
+SOAP
+WSDL
+WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成代码，可以直接调用；对接就变得非常简单，拢共就2步骤：
+ 自动生成接口代码 封装 service 提供给业务调用  1. 自动生成接口代码 PHP 要处理 SOAP，可以使用这个库，https://github.com/phpro/soap-client
+$ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &amp;gt; common/config/soap-client.php Wsdl location (URL or path to file): &amp;gt; common/config/standard-prod.wsdl Generic name used to name this client (Results in &amp;lt;name&amp;gt;Client &amp;lt;name&amp;gt;Classmap etc.): &amp;gt; GoogleMap Directory where the client should be generated in: &amp;gt; common/libs/googlemap Namespace for your client: &amp;gt; common\libs\googlemap [OK] Config has been written to common/config/soap-client.</description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://nixihz.com/blog/new-url/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/blog/new-url/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Linked List 链表（Golang）</title>
-      <link>https://keli.tech/posts/cheatsheet/data-structure/golang-module-usage/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/cheatsheet/data-structure/golang-module-usage/</guid>
-      <description>链表和数组差异 链表类似数组，非常大的不同是，可以方便的在列表中间插入和删除元素。
-相对于数组的优点：
-数组把所有元素都保留在同一块内存中，链表通过存储下一个元素的指针来，把分散在内存中的元素包含在链表内。
-相对于数组的缺点：
-如果想在链表中间选择一个元素就会比较困难， 因为不知道该元素的地址，只能从链表的开头开始查找。
-实现 链表应该具有这些方法
- Append(t) 在链表末尾追加元素t Insert(i, t) 在链表指定位置i插入元素t RemoveAt(i) 删除链表指定位置i的元素 IndexOf(t) 返回元素t所在的位置 IsEmpty() 返回链表是否为空链表 Size() 返回链表长度 String() 返回元素按顺序拼接的字符串 Head() 返回第一个位置的元素  </description>
-    </item>
-    
-    <item>
-      <title>Golang Module 备忘</title>
-      <link>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/cheatsheet/golang/golang-module-usage/</guid>
-      <description>&lt;h2 id=&#34;golang-module-备忘-audio-src-preloadnone&#34;&gt;Golang Module 备忘 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34;/&gt;&lt;/h2&gt;
-&lt;p&gt;终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
-文章包你&lt;br&gt;
-一招鲜，走天下&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Mysql 面试题</title>
-      <link>https://keli.tech/posts/mysql1/spark-intro/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/mysql1/spark-intro/</guid>
-      <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis 介绍</title>
-      <link>https://keli.tech/database/redis/redis-intro/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-intro/</guid>
-      <description>&lt;p&gt;本文从初步了解、面向开发、面向运维这三个方面对Redis进行简单介绍&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Yii 2 开发环境允许跨域，解决 Access-Control-Allow-Origin</title>
-      <link>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/yii2/yii2-vue-support-cross-domain/</guid>
-      <description>&lt;p&gt;Yii 2 解决 vue 调试问题，跨域和携带cookie。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>零、Mysql 面试题</title>
-      <link>https://keli.tech/database/mysql/1-mysql-intro/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/1-mysql-intro/</guid>
-      <description>&lt;p&gt;Mysql 面试题&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
-      <link>https://keli.tech/posts/notes/golang/go-imagemagick/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/notes/golang/go-imagemagick/</guid>
-      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
-&lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
-具体需求：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
-&lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</title>
-      <link>https://keli.tech/posts/solution/golang/go-imagemagick/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/solution/golang/go-imagemagick/</guid>
-      <description>&lt;h2 id=&#34;需求-audio-preloadnoneaudio&#34;&gt;需求 &lt;audio preload=&#34;none&#34;&gt;&lt;/audio&gt;&lt;/h2&gt;
-&lt;p&gt;开发过程会有使用go绘制较为复杂图形的需求，比如这次，需要做一个类似拖拽图案验证码。
-具体需求：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;4条边,凹凸平3个形状，随机组合，&lt;/li&gt;
-&lt;li&gt;随机位置上截图如上形状的图片，并且在原图有如上形状的阴影遮罩&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;go自带&lt;code&gt;image/draw&lt;/code&gt; package 不能绘制复杂的图形（或者说太复杂），经过尝试，可以使用go来绘制svg，再使用imagemagick来进行特效处理，最后再次使用go把图层融合在一起。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Scala 简介</title>
-      <link>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/cheatsheet/scala/go-imagemagick/</guid>
-      <description>特点关键词：  jvm、 静态类型、 多范例  面向对象-trait(mixin组合) 函数式编程FP-适用大数据和并发  Immutable 值、 First Class 函数、 无副作用函数 高阶函数 函数集合     泛型
-通过类型推断，Scala代码通常与动态类型语言中的代码一样简洁。 可扩展架构  trait: mixin组合 抽象成员和泛型 嵌套类 明确的自我类型??    其他关键词 REPL
-“读取-求值-输出”循环(英语:Read-Eval-Print Loop)，sbt 终端启动 console。
-1 2 3 4  $ sbt sbt:fence&amp;gt; console scala&amp;gt;   语法 1 2 3 4 5 6 7 8 9 10  class Upper { def upper(strings: String*): Seq[String] = { strings.</description>
-    </item>
-    
-    <item>
-      <title>Spark 高级</title>
-      <link>https://keli.tech/posts/mysql1/spark-advanced/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/mysql1/spark-advanced/</guid>
-      <description>&lt;p&gt;spark&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>一、Mysql Mac 安装和使用</title>
-      <link>https://keli.tech/database/mysql/3-mysql-mac-intro/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/3-mysql-mac-intro/</guid>
-      <description>&lt;h4 id=&#34;一安装&#34;&gt;一、安装&lt;/h4&gt;
-&lt;p&gt;1、执行安装命令&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install mysql
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;2、安装完后启动mysql&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>二、Mysql 基准测试 mysqlslap 和 sysbench</title>
-      <link>https://keli.tech/database/mysql/3-mysql-sysbench/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/3-mysql-sysbench/</guid>
-      <description>&lt;p&gt;mysqlslap 和 sysbench，必须要掌握；&lt;br&gt;
-还有其他的补充。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;http_load&lt;/li&gt;
-&lt;li&gt;sql-bench&lt;/li&gt;
-&lt;li&gt;dbt2 的 TPC-C&lt;/li&gt;
-&lt;li&gt;percona的 TPCC-mySQL测试工具&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>WEB 安全 - 内容安全策略介绍与使用</title>
-      <link>https://keli.tech/posts/csp/redis-data-types/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/csp/redis-data-types/</guid>
-      <description>&lt;p&gt;内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis 数据类型与适用场景</title>
-      <link>https://keli.tech/database/redis/redis-data-types/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-data-types/</guid>
-      <description>&lt;p&gt;redis 常被拿来与 memcached 来比较，但非常不通的地方就在于 Redis 有非常出色的数据结构，使用非常简便。
-本文介绍常用的数据类型和使用场景 Strings Lists Hashes Sets Sorted-Sets 等。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis 版本信息</title>
-      <link>https://keli.tech/database/redis/redis-version/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-version/</guid>
-      <description>&lt;p&gt;本文介绍 Redis发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis 主从复制</title>
-      <link>https://keli.tech/database/redis/redis-replication/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-replication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>六、MySQL 建表原则</title>
-      <link>https://keli.tech/database/mysql/6-mysql-design-rules/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/6-mysql-design-rules/</guid>
-      <description>&lt;p&gt;MySQL 建表原则， 常见面试题&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis 事务</title>
-      <link>https://keli.tech/database/redis/redis-transaction/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-transaction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>七、Mysql 性能问题定位</title>
-      <link>https://keli.tech/database/mysql/7-mysql-profiling/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/7-mysql-profiling/</guid>
-      <description>&lt;p&gt;本文介绍 Mysql 性能问题定位。&lt;/p&gt;
-&lt;p&gt;慢查询日志 和 Percona Toolkit
-pt-query-digest&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&#34;&gt;https://www.percona.com/doc/percona-toolkit/2.2/installation.html&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis pipelined 管道</title>
-      <link>https://keli.tech/database/redis/redis-pipelined/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-pipelined/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redis 持久化方式RDB和AOF比较</title>
-      <link>https://keli.tech/database/redis/redis-rdb-aof/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-rdb-aof/</guid>
-      <description>&lt;p&gt;Redis的所有数据都是保存在内存中，然后不定期的通过异步方式保存到磁盘上(这称为“半持久化模式”)；也可以把每一次数据变化都写入到一个append only file(aof)里面(这称为“全持久化模式”)。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Redis Module 模块</title>
-      <link>https://keli.tech/database/redis/redis-module/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/redis-module/</guid>
-      <description>&lt;p&gt;todo&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>十、Mysql 版本信息</title>
-      <link>https://keli.tech/database/mysql/10-mysql-version/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/10-mysql-version/</guid>
-      <description>&lt;p&gt;本文介绍 Mysql 发布周期, 版本兼容和版本特性说明&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>git 指定 ssh key 配置多账号</title>
-      <link>https://keli.tech/posts/tools/git/git-github-multi-account-config/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/git/git-github-multi-account-config/</guid>
-      <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
-&lt;p&gt;github 拥有多账号, 需要使用不同的 ssh-key&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>新手Gopher常犯的50个错误</title>
-      <link>https://keli.tech/lang/golang/50-shades-of-go/</link>
-      <pubDate>Tue, 22 Dec 2020 12:12:02 +0000</pubDate>
-      
-      <guid>https://keli.tech/lang/golang/50-shades-of-go/</guid>
-      <description>1.开头大括号不能放在单独的行上  level: beginner  其实，和C一样，Go的正式的语法使用分号来终止语句。和C不同的是，这些分号由词法分析器在扫描源代码过程中使用简单的规则自动插入分号，因此输入源代码多数时候就不需要分号了。 无论任何时候，你都不应该将一个控制结构（(if、for、switch或select）的左大括号放在下一行。如果这样做，将会在大括号的前方插入一个分号，否则编译报错。1
-错误示范  1 2 3 4 5 6  package main import &amp;#34;fmt&amp;#34; func main() { //error, 开头大括号不能独立一行  fmt.Println(&amp;#34;hello there!&amp;#34;) }   Compile Error:
- /tmp/sandbox826898458/main.go:6: syntax error: unexpected semicolon or newline before {
-  正确示范  1 2 3 4 5  package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;works!&amp;#34;) }      2.未使用的变量  level: beginner  如果您有未使用的变量，您的代码将无法编译。但是也有例外: 1.</description>
-    </item>
-    
-    <item>
-      <title>阿里云 Composer 全量镜像php</title>
-      <link>https://keli.tech/lang/php/composer-config-alibaba/</link>
-      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/lang/php/composer-config-alibaba/</guid>
-      <description>&lt;h3 id=&#34;全局配置推荐&#34;&gt;全局配置（推荐）&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;所有项目都会使用该镜像地址：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;  composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>PHP的函数中意想不到的坑</title>
-      <link>https://keli.tech/lang/php/function-unexpected/</link>
-      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/lang/php/function-unexpected/</guid>
-      <description>&lt;h2 id=&#34;strtotimestrtotime&#34;&gt;strtotime&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;php&lt;/span&gt;
-&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;date&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Y-m-d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;strtotime&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;-1 month&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;));&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;假设今天是2019-07-31,
-输出：
-2019-07-01&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;先做-1 month, 那么当前是07-31, 减去一以后就是06-31.&lt;/li&gt;
-&lt;li&gt;再做日期规范化, 因为6月没有31号, 所以就好像2点60等于3点一样, 6月31就等于了7月1&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;trimtrim&#34;&gt;trim&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;php&lt;/span&gt;
-&lt;span style=&#34;display:block;width:100%;background-color:#e1e1e1&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;trim&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;pikachu hello world&amp;lt;/p&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;输出：
-ikachu hello world&lt;/p&gt;
-&lt;p&gt;trim 第二个可选字符串参数 $character_mask 的含义是把第二参数字符串中的所有字符，从输入中剔除；&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>git修改提交邮箱和用户名信息</title>
-      <link>https://keli.tech/posts/tools/git/git-refresh-commit-email/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/git/git-refresh-commit-email/</guid>
-      <description>&lt;h2 id=&#34;场景-audio-src-preloadnone-&#34;&gt;场景 &lt;audio src=&#34;https://keli.tech/&#34; preload=&#34;none&#34; /&gt;&lt;/h2&gt;
-&lt;p&gt;公司项目和个人项目不能耦合特别是发布到公开项目的“提交人”信息最好不要和公司一致；&lt;/p&gt;
-&lt;p&gt;但，难免忘记配置，需要重新刷；&lt;/p&gt;
-&lt;p&gt;推荐的方式是，放弃全局配置，每个项目独立配置 user.name user.email&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go编程语言规范</title>
-      <link>https://keli.tech/posts/cheatsheet/golang/golang-1/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/cheatsheet/golang/golang-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>在任意网页添加弹框注释 Chrome 插件</title>
-      <link>https://keli.tech/concurrency/web/note-anywhere-chrome/</link>
-      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/concurrency/web/note-anywhere-chrome/</guid>
-      <description>&lt;p&gt;在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，&lt;br&gt;
-可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>在任意网页添加弹框注释 Chrome 插件</title>
-      <link>https://keli.tech/database/redis/note-anywhere-chrome/</link>
-      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/redis/note-anywhere-chrome/</guid>
-      <description>&lt;p&gt;在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，&lt;br&gt;
-可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>在任意网页添加弹框注释 Chrome 插件</title>
-      <link>https://keli.tech/ideas/web/note-anywhere-chrome/</link>
-      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/ideas/web/note-anywhere-chrome/</guid>
-      <description>&lt;p&gt;在网页右键菜单新增 新增note， 在网页任意位置点击新增，出现弹框，可以输入与网页相关的备注，&lt;br&gt;
-可以调整文本框大小，可以调整背景颜色，可以固定pin在窗口某个位置；&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>拍照识别汽车玻璃制造年份小程序</title>
-      <link>https://keli.tech/concurrency/apps/car-window/</link>
-      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/concurrency/apps/car-window/</guid>
-      <description>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。</description>
-    </item>
-    
-    <item>
-      <title>拍照识别汽车玻璃制造年份小程序</title>
-      <link>https://keli.tech/database/mysql/car-window/</link>
-      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/database/mysql/car-window/</guid>
-      <description>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。</description>
-    </item>
-    
-    <item>
-      <title>拍照识别汽车玻璃制造年份小程序</title>
-      <link>https://keli.tech/ideas/apps/car-window/</link>
-      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/ideas/apps/car-window/</guid>
-      <description>难度：  不同品牌不同展示形式； 玻璃拍照反光，效果不佳；  点评： 纯粹一次性工具，用户粘性差。</description>
-    </item>
-    
-    <item>
-      <title>Hugo Buttons 按钮</title>
-      <link>https://keli.tech/posts/tools/hugo/book/buttons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/buttons/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo Columns 分列布局</title>
-      <link>https://keli.tech/posts/tools/hugo/book/columns/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/columns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo Expand 展开和隐藏</title>
-      <link>https://keli.tech/posts/tools/hugo/book/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/expand/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo Hints 提示</title>
-      <link>https://keli.tech/posts/tools/hugo/book/hints/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/hints/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo KaTex 公式</title>
-      <link>https://keli.tech/posts/tools/hugo/book/katex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/katex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo Mermaid Chart 图标</title>
-      <link>https://keli.tech/posts/tools/hugo/book/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/mermaid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo Tabs Tab页面</title>
-      <link>https://keli.tech/posts/tools/hugo/book/tabs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/tools/hugo/book/tabs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>关于我</title>
-      <link>https://keli.tech/posts/about-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://keli.tech/posts/about-me/</guid>
-      <description>Fence X 后端研发工程师       邮箱
-yagoodidea@gmail.com  网站
-fencex.github.io  个人技能  Web方向
-Go  PHP  Java  MySQL  Redis  高并发  大数据方向
-Scala  Spark  Hive  Ambari  Flink  ...    </description>
     </item>
     
   </channel>

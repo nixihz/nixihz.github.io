@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PHP注释最佳实践"><meta property="og:title" content="PHP注释最佳实践" />
+<meta property="og:description" content="const 常量 常量方便了全局值替换，也有了可读性的名字，但是背后的说明不一定能完整体现到常量名中，所以最好写上注释，如下：
+const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子 const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质  如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看
+/** @var int 合同类型-电子 */ const CONTRACT_TYPE_ELECTRONIC = 0; /** @var int 合同类型-纸质 */ const CONTRACT_TYPE_PAPER = 1  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2021-10-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-03T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>PHP注释最佳实践 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+
+
+<script defer src="/en.search.min.d2945422d83a4e512f28842aa85941f3285d6260a35053dd3a9171abbc09bb29.js" integrity="sha256-0pRUItg6TlEvKIQqqFlB8yhdYmCjUFPdOpFxq7wJuyk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="/posts/">post</a></li>
+<li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
+<li><a href="/tools/">工具</a></li>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PHP注释最佳实践</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#const-常量">const 常量</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">PHP注释最佳实践</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2021-10-03</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/php/">php</a>, 
+        <a href="/tags/comment/">comment</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h3 id="const-常量">const 常量</h3>
+<p>常量方便了全局值替换，也有了可读性的名字，但是背后的说明不一定能完整体现到常量名中，所以最好写上注释，如下：</p>
+<pre><code>const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子
+const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质
+</code></pre>
+<p><img src="/images/Untitled-98f62f96-20e7-4051-a9a5-9521025b9a5e.png" alt=""></p>
+<p>如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看</p>
+<pre><code>/** @var int 合同类型-电子 */
+const CONTRACT_TYPE_ELECTRONIC = 0;
+/** @var int 合同类型-纸质 */
+const CONTRACT_TYPE_PAPER = 1
+</code></pre>
+<p><img src="/images/Untitled-d6902c6f-f342-4fef-895c-ec19b6304c92.png" alt=""></p>
+</p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#const-常量">const 常量</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

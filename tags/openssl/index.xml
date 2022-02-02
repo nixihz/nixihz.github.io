@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openssl on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/openssl/</link>
+    <description>Recent content in openssl on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenSSL 工具生成密钥</title>
+      <link>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</guid>
+      <description>第一步 生成RSA密钥
+$openssl
+OpenSSL&amp;gt; genrsa -out app_private_key.pem 2048 OpenSSL&amp;gt; pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem OpenSSL&amp;gt; rsa -in app_private_key.pem -pubout -out app_public_key.pem OpenSSL&amp;gt; exit  经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到
+ app_private_key.pem（开发者RSA私钥，非 Java 语言适用）、 app_private_key_pkcs8.pem（pkcs8格式开发者RSA私钥，Java语言适用）、 app_public_key.pem（开发者RSA公钥）3个文件。  开发者将私钥保留，将公钥提交给支付宝配置到开发平台，用于验证签名。以下为私钥文件和公钥文件示例。
+ 注：对于使用Java的开发者，需将生成的pkcs8格式的私钥去除头尾、换行和空格，作为私钥填入代码中，对于.NET和PHP的开发者来说，无需进行pkcs8命令行操作。
+ </description>
+    </item>
+    
+  </channel>
+</rss>

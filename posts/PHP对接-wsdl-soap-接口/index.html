@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PHP 对接 wsdl soap 接口"><meta property="og:title" content="PHP 对接 wsdl soap 接口" />
+<meta property="og:description" content="概念
+SOAP
+WSDL
+WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成代码，可以直接调用；对接就变得非常简单，拢共就2步骤：
+ 自动生成接口代码 封装 service 提供给业务调用  1. 自动生成接口代码 PHP 要处理 SOAP，可以使用这个库，https://github.com/phpro/soap-client
+$ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &gt; common/config/soap-client.php Wsdl location (URL or path to file): &gt; common/config/standard-prod.wsdl Generic name used to name this client (Results in &lt;name&gt;Client &lt;name&gt;Classmap etc.): &gt; GoogleMap Directory where the client should be generated in: &gt; common/libs/googlemap Namespace for your client: &gt; common\libs\googlemap [OK] Config has been written to common/config/soap-client." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-01T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>PHP 对接 wsdl soap 接口 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+
+
+<script defer src="/en.search.min.d2945422d83a4e512f28842aa85941f3285d6260a35053dd3a9171abbc09bb29.js" integrity="sha256-0pRUItg6TlEvKIQqqFlB8yhdYmCjUFPdOpFxq7wJuyk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="/posts/">post</a></li>
+<li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
+<li><a href="/tools/">工具</a></li>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PHP 对接 wsdl soap 接口</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-自动生成接口代码">1. 自动生成接口代码</a></li>
+            <li><a href="#2-封装-service-提供给业务调用">2. 封装 service 提供给业务调用</a></li>
+            <li><a href="#写在结尾">写在结尾</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/">PHP 对接 wsdl soap 接口</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2020-07-01</h5>
+
+
+
+  
+
+  
+
+
+</div>
+
+
+  <p><p>概念</p>
+<p>SOAP</p>
+<p>WSDL</p>
+<p>WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成代码，可以直接调用；对接就变得非常简单，拢共就2步骤：</p>
+<ol>
+<li>自动生成接口代码</li>
+<li>封装 service 提供给业务调用</li>
+</ol>
+<h3 id="1-自动生成接口代码">1. 自动生成接口代码</h3>
+<p>PHP 要处理 SOAP，可以使用这个库，<a href="https://github.com/phpro/soap-client">https://github.com/phpro/soap-client</a></p>
+<pre><code>$ composer require phpro/soap-client
+
+$ ./vendor/bin/soap-client wizard
+
+ Where would you like to store your config file? [config/soap-client.php]:
+ &gt; common/config/soap-client.php
+
+
+ Wsdl location (URL or path to file):
+ &gt; common/config/standard-prod.wsdl
+
+
+ Generic name used to name this client (Results in &lt;name&gt;Client &lt;name&gt;Classmap etc.):
+ &gt; GoogleMap
+
+ Directory where the client should be generated in:
+ &gt; common/libs/googlemap
+
+ Namespace for your client:
+ &gt; common\libs\googlemap
+
+
+ [OK] Config has been written to common/config/soap-client.php
+ Generated class common\libs\googlemap\Type\PingRequest to common/libs/googlemap/Type/PingRequest.php
+ ...
+
+ [OK] All SOAP types generated                                                                                          
+                                                                                                                        
+ [OK] Generated classmap at common/libs/googlemap/GoogleMapClassmap.php                                                     
+                                                                                                                        
+ [OK] Generated client at common/libs/googlemap/GoogleMapClient.php                                                         
+                                                                                                                        
+ [OK] Generated client factory at common/libs/googlemap/GoogleMapClientFactory.php
+</code></pre>
+<h3 id="2-封装-service-提供给业务调用">2. 封装 service 提供给业务调用</h3>
+<pre><code>&lt;?php
+
+namespace service\supplier\googlemap;
+
+use common\libs\googlemap\GooglaMapClientFactory;
+
+class MapService
+{
+    protected $client;
+
+    public function __construct()
+    {
+        $this-&gt;client = GooglaMapClientFactory::factory(&quot;/path/to/config/standard-prod.wsdl&quot;);
+    }
+
+    // 调用 soap 实际业务方法
+    public function getA()
+    {
+        return $this-&gt;client-&gt;getA();
+        }
+
+}
+</code></pre>
+<h3 id="写在结尾">写在结尾</h3>
+<p>越来越多接口提供商都不再使用 wsdl / soap 对外服务了，性能很差，我对接过的服务商基本都改成轻量的  json 格式，甚至改成了 grpc</p>
+</p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-自动生成接口代码">1. 自动生成接口代码</a></li>
+            <li><a href="#2-封装-service-提供给业务调用">2. 封装 service 提供给业务调用</a></li>
+            <li><a href="#写在结尾">写在结尾</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

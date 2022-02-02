@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="函数式编程入门"><meta property="og:title" content="函数式编程入门" />
+<meta property="og:description" content="函数式编程特性：  immutable data 不可变数据 first class functions 尾递归优化  函数式编程技术：  map &amp; reduce pipeline recursing 递归 currying 柯里化 higher order function 高阶函数  函数式编程的好处：  parallelization 并行 lazy evaluation 惰性求值 determinism 确定性  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2021-12-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-07T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>函数式编程入门 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+
+
+<script defer src="/en.search.min.d2945422d83a4e512f28842aa85941f3285d6260a35053dd3a9171abbc09bb29.js" integrity="sha256-0pRUItg6TlEvKIQqqFlB8yhdYmCjUFPdOpFxq7wJuyk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="/posts/">post</a></li>
+<li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
+<li><a href="/tools/">工具</a></li>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>函数式编程入门</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#函数式编程特性">函数式编程特性：</a></li>
+        <li><a href="#函数式编程技术">函数式编程技术：</a></li>
+        <li><a href="#函数式编程的好处">函数式编程的好处：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/">函数式编程入门</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2021-12-07</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/fp/">fp</a>, 
+        <a href="/tags/go/">go</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h2 id="函数式编程特性">函数式编程特性：</h2>
+<ul>
+<li><strong>immutable data 不可变数据</strong></li>
+<li><strong>first class functions</strong></li>
+<li><strong>尾递归优化</strong></li>
+</ul>
+<h2 id="函数式编程技术">函数式编程技术：</h2>
+<ul>
+<li><strong>map &amp; reduce</strong></li>
+<li><strong>pipeline</strong></li>
+<li><strong>recursing 递归</strong></li>
+<li><strong>currying 柯里化</strong></li>
+<li><strong>higher order function 高阶函数</strong></li>
+</ul>
+<h2 id="函数式编程的好处">函数式编程的好处：</h2>
+<ul>
+<li><strong>parallelization 并行</strong></li>
+<li><strong>lazy evaluation 惰性求值</strong></li>
+<li><strong>determinism 确定性</strong></li>
+</ul>
+</p>
+</article>
+
+
+
+
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/blog/new-url/">template</a></li>
+	
+</ul>
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#函数式编程特性">函数式编程特性：</a></li>
+        <li><a href="#函数式编程技术">函数式编程技术：</a></li>
+        <li><a href="#函数式编程的好处">函数式编程的好处：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

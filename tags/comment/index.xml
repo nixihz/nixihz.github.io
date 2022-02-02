@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>comment on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/comment/</link>
+    <description>Recent content in comment on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/comment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP注释最佳实践</title>
+      <link>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>const 常量 常量方便了全局值替换，也有了可读性的名字，但是背后的说明不一定能完整体现到常量名中，所以最好写上注释，如下：
+const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子 const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质  如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看
+/** @var int 合同类型-电子 */ const CONTRACT_TYPE_ELECTRONIC = 0; /** @var int 合同类型-纸质 */ const CONTRACT_TYPE_PAPER = 1  </description>
+    </item>
+    
+  </channel>
+</rss>

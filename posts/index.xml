@@ -1,22 +1,131 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>博客 on FenceX的技术博客</title>
-    <link>https://keli.tech/posts/</link>
-    <description>Recent content in 博客 on FenceX的技术博客</description>
+    <title>posts on nixihz 的技术博客</title>
+    <link>https://nixihz.com/posts/</link>
+    <description>Recent content in posts on nixihz 的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://keli.tech/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>关于我</title>
-      <link>https://keli.tech/posts/about-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>函数式编程入门</title>
+      <link>https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://keli.tech/posts/about-me/</guid>
-      <description>Fence X 后端研发工程师       邮箱
-yagoodidea@gmail.com  网站
-fencex.github.io  个人技能  Web方向
-Go  PHP  Java  MySQL  Redis  高并发  大数据方向
-Scala  Spark  Hive  Ambari  Flink  ...    </description>
+      <guid>https://nixihz.com/posts/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</guid>
+      <description>函数式编程特性：  immutable data 不可变数据 first class functions 尾递归优化  函数式编程技术：  map &amp;amp; reduce pipeline recursing 递归 currying 柯里化 higher order function 高阶函数  函数式编程的好处：  parallelization 并行 lazy evaluation 惰性求值 determinism 确定性  </description>
+    </item>
+    
+    <item>
+      <title>你必须知道的软件开发规范</title>
+      <link>https://nixihz.com/posts/development-standard/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/development-standard/</guid>
+      <description>软件版本控制规范 目前 git 较为主流，仅介绍git相关流程规范。git flow 和 github flow
+git-flow git-flow 是一个 git 扩展集，按 Vincent Driessen 的分支模型提供高层次的库操作。
+一图胜千言
+GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定期进行部署的团队和项目。https://guides.github.com/introduction/flow/ 解释了 GitHub 流程的工作原理和原因。
+流程就是
+ 创建分支 提交代码 创建合代码请求 PullRequest 讨论和代码审查 合并代码  参考资料
+ git-flow:  http://danielkummer.github.io/git-flow-cheatsheet/index.html https://nvie.com/posts/a-successful-git-branching-model/ https://github.com/nvie/gitflow https://github.com/petervanderdoes/gitflow-avh 对 nvie 的git-flow做了补充，是目前的主流版本   GitHub flow:  https://guides.github.com/introduction/flow/    软件版本号规范 软件的更新迭代是常态，软件依赖更是需要严格控制版本号，为什么要约定以及如何约定版本号规范，这里有答案《语义化版本 2.0.0》 https://semver.org/，如果你使用 git 做版本控制，那么版本号通常是 tag 名，同时，release通常从 tag 中选取，并丰富修改内容。
+语义化版本控制的规范是由 Gravatars 创办者兼 GitHub 共同创办者 Tom Preston-Werner 所建立。</description>
+    </item>
+    
+    <item>
+      <title>PHP注释最佳实践</title>
+      <link>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>const 常量 常量方便了全局值替换，也有了可读性的名字，但是背后的说明不一定能完整体现到常量名中，所以最好写上注释，如下：
+const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子 const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质  如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看
+/** @var int 合同类型-电子 */ const CONTRACT_TYPE_ELECTRONIC = 0; /** @var int 合同类型-纸质 */ const CONTRACT_TYPE_PAPER = 1  </description>
+    </item>
+    
+    <item>
+      <title>浏览器静态资源缓存</title>
+      <link>https://nixihz.com/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98/</guid>
+      <description>no-cache
+前后端分离坑，
+nginx 配置
+index index.php index.html index.htm; location / { add_header Cache-Control no-cache; index index.html index.htm; try_files $uri $uri/ /index.html; } </description>
+    </item>
+    
+    <item>
+      <title>PHP自动解析json生成php类文件，自动映射json到php对象</title>
+      <link>https://nixihz.com/posts/PHP%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90json%E7%94%9F%E6%88%90php%E7%B1%BB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%98%A0%E5%B0%84json%E5%88%B0php%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90json%E7%94%9F%E6%88%90php%E7%B1%BB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%98%A0%E5%B0%84json%E5%88%B0php%E5%AF%B9%E8%B1%A1/</guid>
+      <description>业务中经常需要对接第三方服务，常用的对接方式就是使用 http json 接口，有些 json 格式较为复杂，使用php数组进行数据交互非常麻烦，非常容易出错。
+ $responseStr = &#39;{&amp;quot;foo&amp;quot;:&amp;quot;bar&amp;quot;, &amp;quot;hello&amp;quot;:&amp;quot;world&amp;quot;}&#39;; $responseArr = json_decode($responseStr, true); if($responseArr[&amp;quot;fooo&amp;quot;] == &amp;quot;foobar&amp;quot;) { // do sth. }  现在 IDE 比如 PHPStorm 也不能对数组 进行代码提示，上面的代码是不会有错误提示的；如果把 json 返回值直接映射到预先定义好的对象，岂不是很舒心？
+一、映射 json 到 php 对象 我们可以使用 composer 包: nixihz/php-object ，支持复杂 json 到 复杂对象之间的映射。
+ composer require nixihz/php-object class FooBarClass extends PhpObject { /** @var string */ public $foo; /** @var integer */ public $bar; } class DemoClass extends PhpObject { /** @var FooBarClass */ public $foobar; /** @var FooBarClass[] */ public $foobars; } $json = &#39;{&amp;quot;foobar&amp;quot;:{&amp;quot;foo&amp;quot;:&amp;quot;hello world&amp;quot;,&amp;quot;bar&amp;quot;:64100},&amp;quot;foobars&amp;quot;:[{&amp;quot;foo&amp;quot;:&amp;quot;hello&amp;quot;,&amp;quot;bar&amp;quot;:641},{&amp;quot;foo&amp;quot;:&amp;quot;world&amp;quot;,&amp;quot;bar&amp;quot;:664411}]}&#39;; $demo = (new DemoClass())-&amp;gt;fromJson($json); if($demo-&amp;gt;foobar-&amp;gt;foo == &amp;quot;hello world&amp;quot;) { echo count($demo-&amp;gt;foobars); } var_export($demo);  输出</description>
+    </item>
+    
+    <item>
+      <title>前端项目 npm 包管理莫名升级问题排查</title>
+      <link>https://nixihz.com/posts/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-npm-%E5%8C%85%E7%AE%A1%E7%90%86%E8%8E%AB%E5%90%8D%E5%8D%87%E7%BA%A7%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-npm-%E5%8C%85%E7%AE%A1%E7%90%86%E8%8E%AB%E5%90%8D%E5%8D%87%E7%BA%A7%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid>
+      <description>package.json 和 package-lock.json 是控制node_module包版本的两个文件，其中 package.json 由开发者维护，package-lock.json 自动生成。
+一般package.json 指定版本都会使用 ^ 或者 ~ ，举例：
+&amp;quot;dependencies&amp;quot;: { &amp;quot;vue&amp;quot;: &amp;quot;^2.6.11&amp;quot;, &amp;quot;vue-pdf&amp;quot;: &amp;quot;~4.0.8&amp;quot; }  ^2.6.11 表示该模块的小版本向下兼容，
+~4.0.8 表示该模块的中间
+执行 npm install 到底发生了什么；
+~1.2.3 代表 1.2.3 &amp;lt;= 版本号 &amp;lt; 1.3.0
+^1.2.3 代表 1.2.3 &amp;lt;= 版本号 &amp;lt; 2.0.0
+1，^ 符号，它与semantic versioning （语义版本控制）有关系，它表示尽量使用最新版本，但保证不产生兼容问题，换句话说也就是除了大版本号以外，小版本号和补丁版本号都可以变。 但0 开头的版本号是比较特殊的，而因为 ^ 严格遵守 semantic versioning 规则，所以会出现以下情况（早先的 composer 版本并没有这样的处理，后来修正了）：^0.3.0 等于 &amp;gt;=0.3.0; &amp;lt;0.4.0，并不是&amp;lt;1.0.0 ，因为，semantic versioning 的规定是，大版本号以 0 开头表示这是一个非稳定版本（unstable），如果处于非稳定状态，小版本号是允许不向下兼容的！
+2，~符号，表示版本号只能改变最末尾那段（如果是 ~x.y 末尾就是 y，如果是 ~x.y.z 末尾就是 z），比如这种情况:</description>
+    </item>
+    
+    <item>
+      <title>SPA前端项目灰度发布策略</title>
+      <link>https://nixihz.com/posts/SPA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/SPA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83%E7%AD%96%E7%95%A5/</guid>
+      <description>前提 B/S 项目的灰度发布本应完全由服务端控制，但是SPA的出现打破了这个局面，B/S变得越来越像C/S，故发布策略也需要做相应调整。
+灰度发布（又名金丝雀发布），在此基础上，我们可以做内测，也可以做 A/B 测试，战略意义还是很大的。
+简单思路todo： 常规项目 npm 打包，同一版本的代码，每次打包静态文件名必须一致，
+webpack中hash、chunkhash、contenthash 区别
+使用 contenthash 作文件名， 或者使用自定义版本号来维护。
+打包完成，手动提交版本号到服务端，由服务端纳入灰度发布的控制
+项目入口文件 不再直接使用 dist/index.html
+而是由服务端来控制
+用户登录后，服务端可以任意控制用户应该访问哪个版本的前端；
+前端项目的每次请求都必须带上版本号：由服务端处理做后续处理，
+比如：
+有版本太旧，可提示用户刷新，刷新以后依然如此，可以提示向后台反馈；
+好处：
+ 提前获得目标用户的使用反馈； 根据反馈结果，做到查漏补缺； 发现重大问题，可回滚“旧版本”； 补充完善产品不足； 快速验证产品的 idea。  </description>
+    </item>
+    
+    <item>
+      <title>PHP 对接 wsdl soap 接口</title>
+      <link>https://nixihz.com/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/</guid>
+      <description>概念
+SOAP
+WSDL
+WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成代码，可以直接调用；对接就变得非常简单，拢共就2步骤：
+ 自动生成接口代码 封装 service 提供给业务调用  1. 自动生成接口代码 PHP 要处理 SOAP，可以使用这个库，https://github.com/phpro/soap-client
+$ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &amp;gt; common/config/soap-client.php Wsdl location (URL or path to file): &amp;gt; common/config/standard-prod.wsdl Generic name used to name this client (Results in &amp;lt;name&amp;gt;Client &amp;lt;name&amp;gt;Classmap etc.): &amp;gt; GoogleMap Directory where the client should be generated in: &amp;gt; common/libs/googlemap Namespace for your client: &amp;gt; common\libs\googlemap [OK] Config has been written to common/config/soap-client.</description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://nixihz.com/blog/new-url/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/blog/new-url/</guid>
+      <description></description>
     </item>
     
   </channel>
