@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wifi sync on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/wifi-sync/</link>
+    <description>Recent content in wifi sync on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/wifi-sync/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter 音乐 app 之 加一个 WiFi 文件同步功能吧</title>
+      <link>https://nixihz.com/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E5%8A%A0%E4%B8%80%E4%B8%AA-WiFi-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%8A%9F%E8%83%BD%E5%90%A7/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E5%8A%A0%E4%B8%80%E4%B8%AA-WiFi-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%8A%9F%E8%83%BD%E5%90%A7/</guid>
+      <description>既然是音乐播放器，那得搞些资源放进手机吧，兄弟你看小说吗？很多 app 有通过 Wi-Fi 把书传入手机的功能，效果还行，那就这么搞吧。
+简单画一个图：
+那么还是先看下实际效果图吧！
+Flutter 启动 http 服务 使用 内置的 HttpServer ，代码如下：
+import &#39;dart:io&#39;; server = await HttpServer.bind( hostIp, 8080, );  这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍后我先去吃个饭。</description>
+    </item>
+    
+  </channel>
+</rss>

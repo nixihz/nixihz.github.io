@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Golang Module 备忘"><meta property="og:title" content="Golang Module 备忘" />
-<meta property="og:description" content="Golang Module 备忘" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://keli.tech/posts/cheatsheet/golang/golang-module-usage/" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Golang Module 备忘"/><meta property="og:title" content="Golang Module 备忘"/>
+<meta property="og:description" content="Golang Module 备忘"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://keli.tech/posts/cheatsheet/golang/golang-module-usage/"/>
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<meta property="article:published_time" content="2020-01-02T00:00:00+00:00"/>
+<meta property="article:modified_time" content="2020-01-02T00:00:00+00:00"/><meta property="og:site_name" content="Fnece X 的技术博客"/>
 <title>Golang Module 备忘 | FenceX的技术博客</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/x-icon"/>
 
 
-<link rel="stylesheet" href="/book.min.3a20e2abc07af71d43862fa164ed6b47633893071485e58289a48edfa406829b.css" integrity="sha256-OiDiq8B69x1Dhi&#43;hZO1rR2M4kwcUheWCiaSO36QGgps=">
+<link rel="stylesheet" href="/book.min.3a20e2abc07af71d43862fa164ed6b47633893071485e58289a48edfa406829b.css" integrity="sha256-OiDiq8B69x1Dhi+hZO1rR2M4kwcUheWCiaSO36QGgps="/>
 
 
-<script defer src="/en.search.min.0daa3fe8b721cfb8cdff25c50f252cc2cdee6266d581db5a5e444198dc98b618.js" integrity="sha256-Dao/6Lchz7jN/yXFDyUsws3uYmbVgdtaXkRBmNyYthg="></script>
+<script defer="" src="/en.search.min.0daa3fe8b721cfb8cdff25c50f252cc2cdee6266d581db5a5e444198dc98b618.js" integrity="sha256-Dao/6Lchz7jN/yXFDyUsws3uYmbVgdtaXkRBmNyYthg="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -29,7 +26,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 
 <!--
 Made with Book Theme
@@ -37,23 +34,23 @@ https://github.com/alex-shpak/hugo-book
 -->
 
   
-  <link rel=stylesheet href="/js/audiojs/custom.css" >
+  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+  <input type="checkbox" class="hidden" id="menu-control"/>
   <main class="container flex">
     <aside class="book-menu">
       
   <nav>
 <h2 class="book-brand">
-  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  <a href="/"><img src="/image/logo.png" alt="Logo"/><span>FenceX的技术博客</span>
   </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -79,11 +76,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/" >
+  <a href="/posts/">
       博客
   </a>
 
@@ -101,11 +98,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/tools/" >
+  <a href="/posts/tools/">
       工具
   </a>
 
@@ -127,11 +124,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/csp/" >
+  <a href="/posts/csp/">
       内容安全策略
   </a>
 
@@ -153,11 +150,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/mysql1/" >
+  <a href="/posts/mysql1/">
       Spark
   </a>
 
@@ -179,11 +176,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/yii2/" >
+  <a href="/posts/yii2/">
       yii2
   </a>
 
@@ -205,7 +202,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/about-me/" >
+  <a href="/posts/about-me/">
       关于我
   </a>
 
@@ -223,11 +220,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/database/" >
+  <a href="/database/">
       数据库
   </a>
 
@@ -245,11 +242,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/database/redis/" >
+  <a href="/database/redis/">
       Redis
   </a>
 
@@ -271,11 +268,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/database/mysql/" >
+  <a href="/database/mysql/">
       Mysql
   </a>
 
@@ -305,11 +302,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/concurrency/" >
+  <a href="/concurrency/">
       高并发
   </a>
 
@@ -335,11 +332,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/ideas/" >
+  <a href="/ideas/">
       想法💡
   </a>
 
@@ -365,11 +362,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/lang/" >
+  <a href="/lang/">
       编程语言
   </a>
 
@@ -418,26 +415,26 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
   </label>
 
   <strong>Golang Module 备忘</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
+    <input type="checkbox" class="hidden" id="toc-control"/>
     <aside class="hidden clearfix">
       
   <nav id="TableOfContents">
   <ul>
     <li>
       <ul>
-        <li><a href="#golang-module-备忘-audio-src-preloadnone">Golang Module 备忘 <audio src="/" preload="none"/></a></li>
+        <li><a href="#golang-module-备忘-audio-src-preloadnone">Golang Module 备忘 <audio src="/audio/d41d8cd98f00b204e9800998ecf8427e.mp3" preload="none"></audio></a></li>
         <li><a href="#开启环境变量">开启环境变量</a></li>
         <li><a href="#操作">操作</a>
           <ul>
@@ -459,7 +456,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel=stylesheet href="" >
+<link rel="stylesheet" href=""/>
 
 
 <article class="markdown">
@@ -494,40 +491,40 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="golang-module-备忘-audio-src-preloadnone">Golang Module 备忘 <audio src="/" preload="none"/></h2>
+  <p></p><h2 id="golang-module-备忘-audio-src-preloadnone">Golang Module 备忘 <audio src="/audio/19123a17a01ec6fdd46032d6416217e2.mp3" preload="none"></audio></h2>
 <p>终于，在 Go 1.11 版本中，新增了module管理模块功能，用来管理依赖包。
-文章包你<br>
+文章包你<br/>
 一招鲜，走天下</p>
 <h2 id="开启环境变量">开启环境变量</h2>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">export GO111MODULE=on  
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><h2 id="操作">操作</h2>
 <h3 id="初始化">初始化</h3>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">go mod init mytest  
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><h3 id="添加删除依赖">添加/删除依赖</h3>
 <p>自动根据 go 文件中的import 添加或者删除依赖</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">go mod tidy
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
-</div></p>
+</div><p></p>
 </article>
 
 
@@ -539,9 +536,9 @@ https://github.com/alex-shpak/hugo-book
 	
 	<li><a href="/posts/cheatsheet/golang/golang-1/">Go编程语言规范</a></li>
 	
-	<li><a href="/posts/solution/golang/go-imagemagick/">Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</a></li>
+	<li><a href="/posts/solution/golang/go-imagemagick/">Go+ImageMagick使用svg+png绘制复杂图片</a></li>
 	
-	<li><a href="/posts/notes/golang/go-imagemagick/">Go&#43;ImageMagick使用svg&#43;png绘制复杂图片</a></li>
+	<li><a href="/posts/notes/golang/go-imagemagick/">Go+ImageMagick使用svg+png绘制复杂图片</a></li>
 	
 </ul>
 
@@ -578,7 +575,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
-        <li><a href="#golang-module-备忘-audio-src-preloadnone">Golang Module 备忘 <audio src="/" preload="none"/></a></li>
+        <li><a href="#golang-module-备忘-audio-src-preloadnone">Golang Module 备忘 <audio src="/audio/d41d8cd98f00b204e9800998ecf8427e.mp3" preload="none"></audio></a></li>
         <li><a href="#开启环境变量">开启环境变量</a></li>
         <li><a href="#操作">操作</a>
           <ul>
@@ -600,9 +597,6 @@ https://github.com/alex-shpak/hugo-book
 
   <script src="/js/audiojs/audio.min.js"></script>
   <script src="/js/audiojs/custom.js"></script>
-</body>
-
-</html>
 
 
 
@@ -615,3 +609,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+</body></html>

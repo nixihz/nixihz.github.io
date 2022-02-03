@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="WEB 安全 - 内容安全策略介绍与使用"><meta property="og:title" content="WEB 安全 - 内容安全策略介绍与使用" />
-<meta property="og:description" content="WEB 安全 - 内容安全策略介绍与使用" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://keli.tech/posts/csp/redis-data-types/" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="WEB 安全 - 内容安全策略介绍与使用"/><meta property="og:title" content="WEB 安全 - 内容安全策略介绍与使用"/>
+<meta property="og:description" content="WEB 安全 - 内容安全策略介绍与使用"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://keli.tech/posts/csp/redis-data-types/"/>
 <meta property="og:image" content="https://keli.tech/image/roodblauw.png"/>
-<meta property="article:published_time" content="2020-08-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-08-11T00:00:00+00:00" /><meta property="og:site_name" content="Fnece X 的技术博客" />
+<meta property="article:published_time" content="2020-08-11T00:00:00+00:00"/>
+<meta property="article:modified_time" content="2020-08-11T00:00:00+00:00"/><meta property="og:site_name" content="Fnece X 的技术博客"/>
 <title>WEB 安全 - 内容安全策略介绍与使用 | FenceX的技术博客</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/x-icon"/>
 
 
-<link rel="stylesheet" href="/book.min.3a20e2abc07af71d43862fa164ed6b47633893071485e58289a48edfa406829b.css" integrity="sha256-OiDiq8B69x1Dhi&#43;hZO1rR2M4kwcUheWCiaSO36QGgps=">
+<link rel="stylesheet" href="/book.min.3a20e2abc07af71d43862fa164ed6b47633893071485e58289a48edfa406829b.css" integrity="sha256-OiDiq8B69x1Dhi+hZO1rR2M4kwcUheWCiaSO36QGgps="/>
 
 
-<script defer src="/en.search.min.0daa3fe8b721cfb8cdff25c50f252cc2cdee6266d581db5a5e444198dc98b618.js" integrity="sha256-Dao/6Lchz7jN/yXFDyUsws3uYmbVgdtaXkRBmNyYthg="></script>
+<script defer="" src="/en.search.min.0daa3fe8b721cfb8cdff25c50f252cc2cdee6266d581db5a5e444198dc98b618.js" integrity="sha256-Dao/6Lchz7jN/yXFDyUsws3uYmbVgdtaXkRBmNyYthg="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -29,7 +26,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 
 <!--
 Made with Book Theme
@@ -37,23 +34,23 @@ https://github.com/alex-shpak/hugo-book
 -->
 
   
-  <link rel=stylesheet href="/js/audiojs/custom.css" >
+  <link rel="stylesheet" href="/js/audiojs/custom.css"/>
 </head>
 
 <body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+  <input type="checkbox" class="hidden" id="menu-control"/>
   <main class="container flex">
     <aside class="book-menu">
       
   <nav>
 <h2 class="book-brand">
-  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>FenceX的技术博客</span>
+  <a href="/"><img src="/image/logo.png" alt="Logo"/><span>FenceX的技术博客</span>
   </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/"/>
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -79,11 +76,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/" >
+  <a href="/posts/">
       博客
   </a>
 
@@ -101,11 +98,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/tools/" >
+  <a href="/posts/tools/">
       工具
   </a>
 
@@ -127,11 +124,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/csp/" >
+  <a href="/posts/csp/">
       内容安全策略
   </a>
 
@@ -159,11 +156,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/mysql1/" >
+  <a href="/posts/mysql1/">
       Spark
   </a>
 
@@ -185,11 +182,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/posts/yii2/" >
+  <a href="/posts/yii2/">
       yii2
   </a>
 
@@ -211,7 +208,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/posts/about-me/" >
+  <a href="/posts/about-me/">
       关于我
   </a>
 
@@ -229,11 +226,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/database/" >
+  <a href="/database/">
       数据库
   </a>
 
@@ -251,11 +248,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/database/redis/" >
+  <a href="/database/redis/">
       Redis
   </a>
 
@@ -277,11 +274,11 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
       
 
-  <a href="/database/mysql/" >
+  <a href="/database/mysql/">
       Mysql
   </a>
 
@@ -311,11 +308,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/concurrency/" >
+  <a href="/concurrency/">
       高并发
   </a>
 
@@ -341,11 +338,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/ideas/" >
+  <a href="/ideas/">
       想法💡
   </a>
 
@@ -371,11 +368,11 @@ https://github.com/alex-shpak/hugo-book
   
     
 
-  <li >
+  <li>
     
       
 
-  <a href="/lang/" >
+  <a href="/lang/">
       编程语言
   </a>
 
@@ -424,13 +421,13 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu"/>
   </label>
 
   <strong>WEB 安全 - 内容安全策略介绍与使用</strong>
 
   <label for="toc-control">
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents"/>
   </label>
 </div>
 
@@ -442,7 +439,7 @@ https://github.com/alex-shpak/hugo-book
       
 
 
-<link rel=stylesheet href="" >
+<link rel="stylesheet" href=""/>
 
 
 <article class="markdown">
@@ -477,7 +474,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><p>内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。</p>
+  <p></p><p>内容安全策略 (CSP, Content Security Policy) 是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括跨站脚本 (XSS) 和数据注入等攻击。 这些攻击可用于实现从数据窃取到网站破坏或作为恶意软件分发版本等用途。</p>
 <h1 id="一简介">一、简介</h1>
 <p>CSP被设计成向后兼容；不支持的浏览器依然可以运行使用了它的服务器页面，反之亦然。不支持CSP的浏览器会忽略它，像平常一样运行，默认对网页内容使用标准的同源策略。如果网站不提供CSP头部，浏览器同样会使用标准的（同源策略）。</p>
 <p>开启CSP就如配置您的页面服务来返回Content-Security-Policy HTTP 头部一样简单.</p>
@@ -489,12 +486,12 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="31-开启安全策略">3.1 开启安全策略</h2>
 <p>你可以使用  Content-Security-Policy HTTP头部 来指定策略，像这样:</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: policy
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>policy参数是一个包含了各种描述你的CSP策略指令的字符串。</p>
 <h3 id="311-常用示例">3.1.1 常用示例</h3>
@@ -505,15 +502,15 @@ https://github.com/alex-shpak/hugo-book
       <span>所有内容均来自站点的同一个源（不包含子域名）</span>
       <span>展开</span>
     </div>
-    <input type="checkbox" class="hidden" />
+    <input type="checkbox" class="hidden"/>
     <div class="book-expand-content markdown-inner">
       <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#d88200">&#39;self&#39;</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div>
     </div>
@@ -527,15 +524,15 @@ https://github.com/alex-shpak/hugo-book
       <span>允许内容来自信任的域名及其子域名</span>
       <span>展开</span>
     </div>
-    <input type="checkbox" class="hidden" />
+    <input type="checkbox" class="hidden"/>
     <div class="book-expand-content markdown-inner">
       <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#d88200">&#39;self&#39;</span> *.trusted.com
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div>
     </div>
@@ -549,18 +546,18 @@ https://github.com/alex-shpak/hugo-book
       <span>允许加载任何源的图片， 限制音频/视频来源，限制脚本来源</span>
       <span>展开</span>
     </div>
-    <input type="checkbox" class="hidden" />
+    <input type="checkbox" class="hidden"/>
     <div class="book-expand-content markdown-inner">
       <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src <span style="color:#d88200">&#39;self&#39;</span><span style="color:#111">;</span> img-src *<span style="color:#111">;</span> media-src media1.com media2.com<span style="color:#111">;</span> script-src userscripts.example.com
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><ul>
-<li>图片可以从任何地方加载(注意 &ldquo;*&rdquo; 通配符)。</li>
+<li>图片可以从任何地方加载(注意 “*” 通配符)。</li>
 <li>多媒体文件仅允许从 media1.com 和 media2.com 加载(不允许从这些站点的子域名)。</li>
 <li>可运行脚本仅允许来自于userscripts.example.com。</li>
 </ul>
@@ -576,15 +573,15 @@ https://github.com/alex-shpak/hugo-book
       <span>所有内容都要通过SSL方式获取，以避免攻击者窃听用户发出的请求。</span>
       <span>展开</span>
     </div>
-    <input type="checkbox" class="hidden" />
+    <input type="checkbox" class="hidden"/>
     <div class="book-expand-content markdown-inner">
       <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>该服务器仅允许通过HTTPS方式并仅从onlinebanking.jumbobank.com域名来访问文档。</p>
 
@@ -595,7 +592,7 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="32-策略触发上报">3.2 策略触发上报</h2>
 <p>策略触发上报报文示例：</p>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tbody><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
@@ -626,7 +623,7 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#f92672">&#34;status-code&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">,</span>
   <span style="color:#111">}</span>
 <span style="color:#111">}</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>四、实践</p>
 <h2 id="参考">参考</h2>
@@ -634,7 +631,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://www.w3.org/TR/CSP/">官网 https://www.w3.org/TR/CSP</a></li>
 <li><a href="https://caniuse.com/#search=csp">浏览器支持情况 https://caniuse.com/#search=csp</a></li>
 </ul>
-<p>caniuse.com 是一个神奇的网站。：D</p></p>
+<p>caniuse.com 是一个神奇的网站。：D</p><p></p>
 </article>
 
 
@@ -674,9 +671,6 @@ https://github.com/alex-shpak/hugo-book
 
   <script src="/js/audiojs/audio.min.js"></script>
   <script src="/js/audiojs/custom.js"></script>
-</body>
-
-</html>
 
 
 
@@ -689,3 +683,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+</body></html>
