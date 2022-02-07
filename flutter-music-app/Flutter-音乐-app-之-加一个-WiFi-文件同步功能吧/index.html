@@ -7,9 +7,11 @@
 <meta name="description" content="Flutter 音乐 app 之 加一个 WiFi 文件同步功能吧"><meta property="og:title" content="Flutter 音乐 app 之 加一个 WiFi 文件同步功能吧" />
 <meta property="og:description" content="既然是音乐播放器，那得搞些资源放进手机吧，兄弟你看小说吗？很多 app 有通过 Wi-Fi 把书传入手机的功能，效果还行，那就这么搞吧。
 简单画一个图：
-那么还是先看下实际效果图吧！
+先看下实际效果图吧！
 Flutter 启动 http 服务 使用 内置的 HttpServer ，代码如下：
-import &#39;dart:io&#39;; server = await HttpServer.bind( hostIp, 8080, );  这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍后我先去吃个饭。" />
+import &#39;dart:io&#39;; server = await HttpServer.bind( hostIp, 8080, );  这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍候我先去吃个饭。
+服务路由 由于该服务只有特定的几个功能，创建文件夹，获取列表，上传文件，删除文件，以及前端页面文件，所以路由功能直接根据 request uri ，进行 switch case 即可，代码如下：
+// runZoned 捕获异步异常 var runZoned2 = runZoned(() async { await for (var request in server) { switch (request.uri.toString().split(&quot;?&quot;).first) { case &#39;/upload&#39;: _uploadController(request); break; case &#39;/musicList&#39;: _musicListController(request); break; case &#39;/deleteMusicInfo&#39;: _deleteMusicController(request); break; case &#39;/createFold&#39;: _createFoldController(request); break; case &#39;/&#39;: _homeController(request); break; default: _publicController(request); break; } } }, onError: (Object obj, StackTrace stack) { print(obj); print(stack); }); }  请求前端文件 前端功能不复杂，但是有一些交互，直接用 Vue 写一个 SPA，来的快一些。vue 打包以后把所有的文件放在 {project}/assets/httpserver/ 文件夹下即可访问。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nixihz.com/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E5%8A%A0%E4%B8%80%E4%B8%AA-WiFi-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%8A%9F%E8%83%BD%E5%90%A7/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
@@ -22,7 +24,7 @@ import &#39;dart:io&#39;; server = await HttpServer.bind( hostIp, 8080, );  这�
 <link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
 
 
-<script defer src="/en.search.min.fc42d80acbd8133ef3d80f6209453beade25d89c9808fd9425a36afb85a830c6.js" integrity="sha256-/ELYCsvYEz7z2A9iCUU76t4l2JyYCP2UJaNq&#43;4WoMMY="></script>
+<script defer src="/en.search.min.362316bd8cf88ad6d8d5e09fd9a3c918021a40c72b9b0ad16e435d45813f692d.js" integrity="sha256-NiMWvYz4itbY1eCf2aPJGAIaQMcrmwrRbkNdRYE/aS0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -120,6 +122,13 @@ https://github.com/alex-shpak/hugo-book
     <li>
       <ul>
         <li><a href="#flutter-启动-http-服务">Flutter 启动 http 服务</a></li>
+        <li><a href="#服务路由">服务路由</a>
+          <ul>
+            <li><a href="#请求前端文件">请求前端文件</a></li>
+            <li><a href="#请求功能接口">请求功能接口</a></li>
+          </ul>
+        </li>
+        <li><a href="#附录">附录：</a></li>
       </ul>
     </li>
   </ul>
@@ -168,7 +177,7 @@ https://github.com/alex-shpak/hugo-book
   <p><p>既然是音乐播放器，那得搞些资源放进手机吧，兄弟你看小说吗？很多 app 有通过 Wi-Fi 把书传入手机的功能，效果还行，那就这么搞吧。</p>
 <p>简单画一个图：</p>
 <p><img src="/images/image_(10)-dcdf0bf8-3ba9-4f63-88e4-73ac6c9f6897.jpg" alt=""></p>
-<p>那么还是先看下实际效果图吧！</p>
+<p>先看下实际效果图吧！</p>
 <p><img src="/images/image_(11)-0c06e0c2-7dec-493f-9900-26199e5dd531.jpg" alt=""></p>
 <h2 id="flutter-启动-http-服务">Flutter 启动 http 服务</h2>
 <p>使用 内置的  HttpServer ，代码如下：</p>
@@ -180,7 +189,168 @@ server = await HttpServer.bind(
     8080,
 );
 </code></pre>
-<p>这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍后我先去吃个饭。</p>
+<p>这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍候我先去吃个饭。</p>
+<h2 id="服务路由">服务路由</h2>
+<p>由于该服务只有特定的几个功能，创建文件夹，获取列表，上传文件，删除文件，以及前端页面文件，所以路由功能直接根据 request uri ，进行 switch case 即可，代码如下：</p>
+<pre><code>// runZoned 捕获异步异常
+    var runZoned2 = runZoned(() async {
+      await for (var request in server) {
+        switch (request.uri.toString().split(&quot;?&quot;).first) {
+          case '/upload':
+            _uploadController(request);
+            break;
+          case '/musicList':
+            _musicListController(request);
+            break;
+          case '/deleteMusicInfo':
+            _deleteMusicController(request);
+            break;
+          case '/createFold':
+            _createFoldController(request);
+            break;
+          case '/':
+            _homeController(request);
+            break;
+          default:
+            _publicController(request);
+            break;
+        }
+      }
+    }, onError: (Object obj, StackTrace stack) {
+      print(obj);
+      print(stack);
+    });
+  }
+</code></pre>
+<h3 id="请求前端文件">请求前端文件</h3>
+<p>前端功能不复杂，但是有一些交互，直接用 Vue 写一个 SPA，来的快一些。vue 打包以后把所有的文件放在  <code>{project}/assets/httpserver/</code> 文件夹下即可访问。</p>
+<p>比较难受的是，http 响应头  Response Header 中 <code>ContentType</code>  <code>Content-Length</code> 等要自己写，不能自动识别，这个比较考验 http 基本概念的理解了，如果有更好的实现方式，请留言，先谢过了。</p>
+<pre><code>// http 的静态资源资源
+  _publicController(HttpRequest request) {
+    String filePath = &quot;assets/httpserver/public&quot; + request.uri.path.toString();
+    String filetype = filePath.split('.').last;
+    String type1 = 'text';
+    String type2 = 'html';
+    if (filetype == 'html') {
+      type2 = 'html';
+    } else if (filetype == 'js') {
+      type1 = 'application';
+      type2 = 'javascript';
+    } else if (filetype == 'css') {
+      type2 = 'css';
+    } else if (filetype == 'ico') {
+      type2 = 'ico';
+    } else if (filetype == 'png') {
+      type1 = 'image';
+      type2 = 'png';
+    } else if (filetype == 'map') {
+      type2 = 'html';
+    } else if (filetype == 'woff') {
+      type1 = 'font';
+      type2 = 'woff';
+    }
+
+    if (type2 == &quot;woff&quot; || type2 == &quot;ttf&quot; || type2 == &quot;ico&quot; || type2 == &quot;png&quot;) {
+      rootBundle.load(fielPath).then((value) {
+        request.response
+          ..headers.clear()
+          ..headers.contentType =
+              new ContentType(type1, type2, charset: &quot;UTF-8&quot;)
+          ..headers.set(&quot;Accept-Ranges&quot;, &quot;bytes&quot;)
+          ..headers.set(&quot;Connection&quot;, &quot;keep-alive&quot;)
+          ..headers.set(&quot;Content-Length&quot;, value.lengthInBytes)
+          ..add(value.buffer.asUint8List())
+          ..close();
+      });
+    } else {
+      rootBundle.load(fielPath).then((value) {
+        request.response
+          ..headers.clear()
+          ..headers.contentType =
+              new ContentType(type1, type2, charset: &quot;UTF-8&quot;)
+          ..headers.set(&quot;Accept-Ranges&quot;, &quot;bytes&quot;)
+          ..headers.set(&quot;Connection&quot;, &quot;keep-alive&quot;)
+          ..headers.set(&quot;Content-Length&quot;, value.lengthInBytes)
+          ..write(utf8.decode(value.buffer.asUint8List()))
+          ..close();
+      });
+    }
+  }
+</code></pre>
+<h3 id="请求功能接口">请求功能接口</h3>
+<p>相较于静态文件，接口反而简单点，以 <code>音乐列表</code> 示例：</p>
+<p>功能：传入一个 文件路径，获取该路径下的音乐文件列表。</p>
+<ul>
+<li>
+<p>获取 GET 参数 path： <code>request.uri.queryParameters[&quot;path&quot;]</code></p>
+</li>
+<li>
+<p>从 sqlite 读取数据</p>
+</li>
+<li>
+<p>按照与前端约定的格式响应 json</p>
+<p>// 列表页
+_musicListController(HttpRequest request) async {
+HttpBodyHandler.processRequest(request).then((body) async {
+String musicPath = request.uri.queryParameters[&ldquo;path&rdquo;];</p>
+<pre><code>    // 从 sqlite 读取数据
+    DBProvider.db.getMusicInfoByPath(musicPath).then((onValue) {
+      Map map = new Map();
+      map[&quot;List&quot;] = onValue;
+      map[&quot;Total&quot;] = onValue.length;
+
+      // HttpServerUtils 代码文件见附录：
+      HttpServerUtils.response(request, 200, &quot;Success&quot;, map);
+    });
+  });
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="附录">附录：</h2>
+<p>HttpServerUtils.dart</p>
+<pre><code>import 'dart:convert';
+import 'dart:io';
+
+class HttpServerUtils {
+
+  static response(HttpRequest httpRequest, int code, String msg, Map data) {
+    var resp = &quot;{}&quot;;
+
+    Responses response =
+        new Responses(data: data, code: 200, message: &quot;Success&quot;);
+    resp = jsonEncode(response);
+
+    httpRequest.response
+      ..headers.clear()
+      ..headers.contentType =
+          new ContentType(&quot;application&quot;, &quot;json&quot;, charset: &quot;UTF-8&quot;)
+      ..headers.set(&quot;Accept-Ranges&quot;, &quot;bytes&quot;)
+      ..headers.set(&quot;Connection&quot;, &quot;keep-alive&quot;)
+      ..headers.set(&quot;Content-Length&quot;, utf8.encode(musicInfoJson).length)
+      ..add(utf8.encode(resp))
+      ..close();
+  }
+  
+}
+
+// 自定义响应的格式
+class Responses {
+
+  final Map data;
+  final int code;
+  final String message;
+
+  Responses({this.data, this.code, this.message});
+
+  Map toJson() {
+    Map map = new Map();
+    map[&quot;Data&quot;] = this.data;
+    map[&quot;Code&quot;] = this.code;
+    map[&quot;Message&quot;] = this.message;
+    return map;
+  }
+}</code></pre>
 </p>
 </article>
 
@@ -229,6 +399,13 @@ server = await HttpServer.bind(
     <li>
       <ul>
         <li><a href="#flutter-启动-http-服务">Flutter 启动 http 服务</a></li>
+        <li><a href="#服务路由">服务路由</a>
+          <ul>
+            <li><a href="#请求前端文件">请求前端文件</a></li>
+            <li><a href="#请求功能接口">请求功能接口</a></li>
+          </ul>
+        </li>
+        <li><a href="#附录">附录：</a></li>
       </ul>
     </li>
   </ul>
