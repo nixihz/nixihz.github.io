@@ -10,9 +10,8 @@ tags:
 
 第一步 生成RSA密钥
 
-$openssl 
-
-    
+````Shell
+    $openssl
     
     OpenSSL> genrsa -out app_private_key.pem 2048
     
@@ -21,6 +20,7 @@ $openssl
     OpenSSL> rsa -in app_private_key.pem -pubout -out app_public_key.pem
     
     OpenSSL> exit
+````
 
 经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到
 

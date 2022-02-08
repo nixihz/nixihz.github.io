@@ -36,7 +36,9 @@ windows xshell 连接远程服务器后与windows电脑互传文件很方便，�
 
 通过设置环境变量 http_proxy
 
+````Java
     export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;
+````
 
 ## 配置 badge 徽章
 
@@ -46,9 +48,11 @@ windows xshell 连接远程服务器后与windows电脑互传文件很方便，�
 
 ## 快捷键
 
+````PHP
     
     cmd + t	        新建tab
     cmd + d	        垂直分屏
     cmd + shift + d	水平分屏
     cmd + 1~9	      切换tab
     cmd + o	        打开profile
+````

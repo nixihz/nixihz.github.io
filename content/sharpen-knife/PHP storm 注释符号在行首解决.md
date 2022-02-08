@@ -10,24 +10,30 @@ date: 2021-09-09
 
 PHP storm 默认设置 `注释快捷键` 设置的行注释 设置在行首，如下：❌
 
+````PHP
             // todo 使用队列, 替换 raise dispatchNow
             $thread->raise(new Created($thread));
     //        ProcessThreadCreated::dispatchNow($thread);
             ProcessThreadCreated::dispatch($thread);
+````
 
 使用 `格式化` 功能以后，格式又发生错乱，❌
 
+````PHP
             // todo 使用队列, 替换 raise dispatchNow
             $thread->raise(new Created($thread));
             //        ProcessThreadCreated::dispatchNow($thread);
             ProcessThreadCreated::dispatch($thread);
+````
 
 注释时直接 注释在代码前，而非行首，如下：✅
 
+````PHP
             // todo 使用队列, 替换 raise dispatchNow
             $thread->raise(new Created($thread));
             //ProcessThreadCreated::dispatchNow($thread);
             ProcessThreadCreated::dispatch($thread)
+````
 
 ## 解决
 

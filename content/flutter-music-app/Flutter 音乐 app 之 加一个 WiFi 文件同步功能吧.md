@@ -24,6 +24,7 @@ tags:
 
 使用 内置的  HttpServer ，代码如下：
 
+````Dart
     import 'dart:io';
     
     
@@ -31,6 +32,7 @@ tags:
         hostIp,
         8080,
     );
+````
 
 这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍候我先去吃个饭。
 
@@ -40,6 +42,7 @@ tags:
 
 由于该服务只有特定的几个功能，创建文件夹，获取列表，上传文件，删除文件，以及前端页面文件，所以路由功能直接根据 request uri ，进行 switch case 即可，代码如下：
 
+````Dart
     // runZoned 捕获异步异常
         var runZoned2 = runZoned(() async {
           await for (var request in server) {
@@ -69,6 +72,7 @@ tags:
           print(stack);
         });
       }
+````
 
 ### 请求前端文件
 
@@ -78,6 +82,7 @@ tags:
 
  
 
+````Dart
     // http 的静态资源资源
       _publicController(HttpRequest request) {
         String filePath = "assets/httpserver/public" + request.uri.path.toString();
@@ -129,6 +134,7 @@ tags:
           });
         }
       }
+````
 
 ### 请求功能接口
 
@@ -140,6 +146,7 @@ tags:
 - 从 sqlite 读取数据
 - 按照与前端约定的格式响应 json
 
+````Dart
     
     // 列表页
       _musicListController(HttpRequest request) async {
@@ -157,11 +164,13 @@ tags:
           });
         });
       }
+````
 
 ## 附录：
 
 HttpServerUtils.dart
 
+````Dart
     import 'dart:convert';
     import 'dart:io';
     
@@ -204,3 +213,4 @@ HttpServerUtils.dart
         return map;
       }
     }
+````
