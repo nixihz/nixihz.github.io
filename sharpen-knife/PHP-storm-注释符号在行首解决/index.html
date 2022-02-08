@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PHP storm 注释符号在行首"><meta property="og:title" content="PHP storm 注释符号在行首" />
 <meta property="og:description" content="问题 PHP storm 默认设置 注释快捷键 设置的行注释 设置在行首，如下：❌
- // todo 使用队列, 替换 raise dispatchNow $thread-&gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  使用 格式化 功能以后，格式又发生错乱，❌
- // todo 使用队列, 替换 raise dispatchNow $thread-&gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  注释时直接 注释在代码前，而非行首，如下：✅
- // todo 使用队列, 替换 raise dispatchNow $thread-&gt;raise(new Created($thread)); //ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread)  解决  设置， 取消勾选 Line Comment at first column  Settings - Editor - Code Style - PHP - Code Generation" />
+1 2 3 4  // todo 使用队列, 替换 raise dispatchNow  $thread-&gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread);  ProcessThreadCreated::dispatch($thread);   使用 格式化 功能以后，格式又发生错乱，❌
+1 2 3 4  // todo 使用队列, 替换 raise dispatchNow  $thread-&gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread);  ProcessThreadCreated::dispatch($thread);   注释时直接 注释在代码前，而非行首，如下：✅
+1 2 3 4  // todo 使用队列, 替换 raise dispatchNow  $thread-&gt;raise(new Created($thread)); //ProcessThreadCreated::dispatchNow($thread);  ProcessThreadCreated::dispatch($thread)   解决  设置， 取消勾选 Line Comment at first column  Settings - Editor - Code Style - PHP - Code Generation" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nixihz.com/sharpen-knife/PHP-storm-%E6%B3%A8%E9%87%8A%E7%AC%A6%E5%8F%B7%E5%9C%A8%E8%A1%8C%E9%A6%96%E8%A7%A3%E5%86%B3/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
@@ -18,10 +18,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
 
 
-<script defer src="/en.search.min.362316bd8cf88ad6d8d5e09fd9a3c918021a40c72b9b0ad16e435d45813f692d.js" integrity="sha256-NiMWvYz4itbY1eCf2aPJGAIaQMcrmwrRbkNdRYE/aS0="></script>
+<script defer src="/en.search.min.74746acb3cf3c24adbfaf6354534487ada6a4e489ea9983ee2a0a8b9dde0dac2.js" integrity="sha256-dHRqyzzzwkrb&#43;vY1RTRIetpqTkieqZg&#43;4qCoud3g2sI="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -56,7 +56,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -70,9 +70,9 @@ https://github.com/alex-shpak/hugo-book
 
 
   <ul>
-<li><a href="/posts/">post</a></li>
+<li><a href="/posts/">开发札记</a></li>
 <li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
-<li><a href="/tools/">工具</a></li>
+<li><a href="/tools/">软件备忘</a></li>
 <li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
 </ul>
 
@@ -160,24 +160,51 @@ https://github.com/alex-shpak/hugo-book
 
   <p><h2 id="问题">问题</h2>
 <p>PHP storm 默认设置 <code>注释快捷键</code> 设置的行注释 设置在行首，如下：❌</p>
-<pre><code>        // todo 使用队列, 替换 raise dispatchNow
-        $thread-&gt;raise(new Created($thread));
-//        ProcessThreadCreated::dispatchNow($thread);
-        ProcessThreadCreated::dispatch($thread);
-</code></pre>
-<p>使用 <code>格式化</code> 功能以后，格式又发生错乱，❌</p>
-<pre><code>        // todo 使用队列, 替换 raise dispatchNow
-        $thread-&gt;raise(new Created($thread));
-        //        ProcessThreadCreated::dispatchNow($thread);
-        ProcessThreadCreated::dispatch($thread);
-</code></pre>
-<p>注释时直接 注释在代码前，而非行首，如下：✅</p>
-<pre><code>        // todo 使用队列, 替换 raise dispatchNow
-        $thread-&gt;raise(new Created($thread));
-        //ProcessThreadCreated::dispatchNow($thread);
-        ProcessThreadCreated::dispatch($thread)
-</code></pre>
-<h2 id="解决">解决</h2>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">            <span style="color:#75715e">// todo 使用队列, 替换 raise dispatchNow
+</span><span style="color:#75715e"></span>            <span style="color:#111">$thread</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">raise</span><span style="color:#111">(</span><span style="color:#00a8c8">new</span> <span style="color:#75af00">Created</span><span style="color:#111">(</span><span style="color:#111">$thread</span><span style="color:#111">));</span>
+    <span style="color:#75715e">//        ProcessThreadCreated::dispatchNow($thread);
+</span><span style="color:#75715e"></span>            <span style="color:#75af00">ProcessThreadCreated</span><span style="color:#f92672">::</span><span style="color:#75af00">dispatch</span><span style="color:#111">(</span><span style="color:#111">$thread</span><span style="color:#111">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>使用 <code>格式化</code> 功能以后，格式又发生错乱，❌</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">            <span style="color:#75715e">// todo 使用队列, 替换 raise dispatchNow
+</span><span style="color:#75715e"></span>            <span style="color:#111">$thread</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">raise</span><span style="color:#111">(</span><span style="color:#00a8c8">new</span> <span style="color:#75af00">Created</span><span style="color:#111">(</span><span style="color:#111">$thread</span><span style="color:#111">));</span>
+            <span style="color:#75715e">//        ProcessThreadCreated::dispatchNow($thread);
+</span><span style="color:#75715e"></span>            <span style="color:#75af00">ProcessThreadCreated</span><span style="color:#f92672">::</span><span style="color:#75af00">dispatch</span><span style="color:#111">(</span><span style="color:#111">$thread</span><span style="color:#111">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>注释时直接 注释在代码前，而非行首，如下：✅</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">            <span style="color:#75715e">// todo 使用队列, 替换 raise dispatchNow
+</span><span style="color:#75715e"></span>            <span style="color:#111">$thread</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">raise</span><span style="color:#111">(</span><span style="color:#00a8c8">new</span> <span style="color:#75af00">Created</span><span style="color:#111">(</span><span style="color:#111">$thread</span><span style="color:#111">));</span>
+            <span style="color:#75715e">//ProcessThreadCreated::dispatchNow($thread);
+</span><span style="color:#75715e"></span>            <span style="color:#75af00">ProcessThreadCreated</span><span style="color:#f92672">::</span><span style="color:#75af00">dispatch</span><span style="color:#111">(</span><span style="color:#111">$thread</span><span style="color:#111">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="解决">解决</h2>
 <ol>
 <li>设置， 取消勾选 <code>Line Comment at first column</code></li>
 </ol>
@@ -215,6 +242,29 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
   
  
       </footer>

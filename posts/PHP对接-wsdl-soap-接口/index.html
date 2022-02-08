@@ -10,7 +10,7 @@ SOAP
 WSDL
 WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成代码，可以直接调用；对接就变得非常简单，拢共就2步骤：
  自动生成接口代码 封装 service 提供给业务调用  1. 自动生成接口代码 PHP 要处理 SOAP，可以使用这个库，https://github.com/phpro/soap-client
-$ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &gt; common/config/soap-client.php Wsdl location (URL or path to file): &gt; common/config/standard-prod.wsdl Generic name used to name this client (Results in &lt;name&gt;Client &lt;name&gt;Classmap etc.): &gt; GoogleMap Directory where the client should be generated in: &gt; common/libs/googlemap Namespace for your client: &gt; common\libs\googlemap [OK] Config has been written to common/config/soap-client." />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35  $ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &gt; common/config/soap-client." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nixihz.com/posts/PHP%E5%AF%B9%E6%8E%A5-wsdl-soap-%E6%8E%A5%E5%8F%A3/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
@@ -20,10 +20,10 @@ $ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where wou
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
 
 
-<script defer src="/en.search.min.362316bd8cf88ad6d8d5e09fd9a3c918021a40c72b9b0ad16e435d45813f692d.js" integrity="sha256-NiMWvYz4itbY1eCf2aPJGAIaQMcrmwrRbkNdRYE/aS0="></script>
+<script defer src="/en.search.min.74746acb3cf3c24adbfaf6354534487ada6a4e489ea9983ee2a0a8b9dde0dac2.js" integrity="sha256-dHRqyzzzwkrb&#43;vY1RTRIetpqTkieqZg&#43;4qCoud3g2sI="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -58,7 +58,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -72,9 +72,9 @@ https://github.com/alex-shpak/hugo-book
 
 
   <ul>
-<li><a href="/posts/">post</a></li>
+<li><a href="/posts/">开发札记</a></li>
 <li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
-<li><a href="/tools/">工具</a></li>
+<li><a href="/tools/">软件备忘</a></li>
 <li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
 </ul>
 
@@ -175,65 +175,134 @@ https://github.com/alex-shpak/hugo-book
 </ol>
 <h3 id="1-自动生成接口代码">1. 自动生成接口代码</h3>
 <p>PHP 要处理 SOAP，可以使用这个库，<a href="https://github.com/phpro/soap-client">https://github.com/phpro/soap-client</a></p>
-<pre><code>$ composer require phpro/soap-client
-
-$ ./vendor/bin/soap-client wizard
-
- Where would you like to store your config file? [config/soap-client.php]:
- &gt; common/config/soap-client.php
-
-
- Wsdl location (URL or path to file):
- &gt; common/config/standard-prod.wsdl
-
-
- Generic name used to name this client (Results in &lt;name&gt;Client &lt;name&gt;Classmap etc.):
- &gt; GoogleMap
-
- Directory where the client should be generated in:
- &gt; common/libs/googlemap
-
- Namespace for your client:
- &gt; common\libs\googlemap
-
-
- [OK] Config has been written to common/config/soap-client.php
- Generated class common\libs\googlemap\Type\PingRequest to common/libs/googlemap/Type/PingRequest.php
- ...
-
- [OK] All SOAP types generated                                                                                          
-                                                                                                                        
- [OK] Generated classmap at common/libs/googlemap/GoogleMapClassmap.php                                                     
-                                                                                                                        
- [OK] Generated client at common/libs/googlemap/GoogleMapClient.php                                                         
-                                                                                                                        
- [OK] Generated client factory at common/libs/googlemap/GoogleMapClientFactory.php
-</code></pre>
-<h3 id="2-封装-service-提供给业务调用">2. 封装 service 提供给业务调用</h3>
-<pre><code>&lt;?php
-
-namespace service\supplier\googlemap;
-
-use common\libs\googlemap\GooglaMapClientFactory;
-
-class MapService
-{
-    protected $client;
-
-    public function __construct()
-    {
-        $this-&gt;client = GooglaMapClientFactory::factory(&quot;/path/to/config/standard-prod.wsdl&quot;);
-    }
-
-    // 调用 soap 实际业务方法
-    public function getA()
-    {
-        return $this-&gt;client-&gt;getA();
-        }
-
-}
-</code></pre>
-<h3 id="写在结尾">写在结尾</h3>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">    $ composer require phpro/soap-client
+    
+    $ ./vendor/bin/soap-client wizard
+    
+     Where would you like to store your config file? <span style="color:#f92672">[</span>config/soap-client.php<span style="color:#f92672">]</span>:
+     &gt; common/config/soap-client.php
+    
+    
+     Wsdl location <span style="color:#f92672">(</span>URL or path to file<span style="color:#f92672">)</span>:
+     &gt; common/config/standard-prod.wsdl
+    
+    
+     Generic name used to name this client <span style="color:#f92672">(</span>Results in &lt;name&gt;Client &lt;name&gt;Classmap etc.<span style="color:#f92672">)</span>:
+     &gt; GoogleMap
+    
+     Directory where the client should be generated in:
+     &gt; common/libs/googlemap
+    
+     Namespace <span style="color:#00a8c8">for</span> your client:
+     &gt; common<span style="color:#8045ff">\l</span>ibs<span style="color:#8045ff">\g</span>ooglemap
+    
+    
+     <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> Config has been written to common/config/soap-client.php
+     Generated class common<span style="color:#8045ff">\l</span>ibs<span style="color:#8045ff">\g</span>ooglemap<span style="color:#8045ff">\T</span>ype<span style="color:#8045ff">\P</span>ingRequest to common/libs/googlemap/Type/PingRequest.php
+     ...
+    
+     <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> All SOAP types generated                                                                                          
+                                                                                                                            
+     <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> Generated classmap at common/libs/googlemap/GoogleMapClassmap.php                                                     
+                                                                                                                            
+     <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> Generated client at common/libs/googlemap/GoogleMapClient.php                                                         
+                                                                                                                            
+     <span style="color:#f92672">[</span>OK<span style="color:#f92672">]</span> Generated client factory at common/libs/googlemap/GoogleMapClientFactory.php
+    
+    
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-封装-service-提供给业务调用">2. 封装 service 提供给业务调用</h3>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">    <span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+    
+    <span style="color:#00a8c8">namespace</span> <span style="color:#75af00">service\supplier\googlemap</span><span style="color:#111">;</span>
+    
+    <span style="color:#00a8c8">use</span> <span style="color:#75af00">common\libs\googlemap\GooglaMapClientFactory</span><span style="color:#111">;</span>
+    
+    <span style="color:#00a8c8">class</span> <span style="color:#75af00">MapService</span>
+    <span style="color:#111">{</span>
+        <span style="color:#00a8c8">protected</span> <span style="color:#111">$client</span><span style="color:#111">;</span>
+    
+        <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#111">__construct</span><span style="color:#111">()</span>
+        <span style="color:#111">{</span>
+            <span style="color:#111">$this</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">client</span> <span style="color:#f92672">=</span> <span style="color:#75af00">GooglaMapClientFactory</span><span style="color:#f92672">::</span><span style="color:#75af00">factory</span><span style="color:#111">(</span><span style="color:#d88200">&#34;/path/to/config/standard-prod.wsdl&#34;</span><span style="color:#111">);</span>
+        <span style="color:#111">}</span>
+    
+        <span style="color:#75715e">// 调用 soap 实际业务方法
+</span><span style="color:#75715e"></span>        <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">getA</span><span style="color:#111">()</span>
+        <span style="color:#111">{</span>
+            <span style="color:#00a8c8">return</span> <span style="color:#111">$this</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">client</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">getA</span><span style="color:#111">();</span>
+    		<span style="color:#111">}</span>
+    
+    <span style="color:#111">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="写在结尾">写在结尾</h3>
 <p>越来越多接口提供商都不再使用 wsdl / soap 对外服务了，性能很差，我对接过的服务商基本都改成轻量的  json 格式，甚至改成了 grpc</p>
 </p>
 </article>
@@ -262,6 +331,29 @@ class MapService
 
  
         
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
   
  
       </footer>

@@ -14,8 +14,8 @@ https://github.com/aikuyun/iterm2-zmodem
 服务端安装 lrzsz: yum install lrzsz
 注意：可以利用 mac自带控制台应用 来排查
 命令行中使用代理 通过设置环境变量 http_proxy
-export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;  配置 badge 徽章 区分环境
-快捷键 cmd &#43; t	新建tab cmd &#43; d	垂直分屏 cmd &#43; shift &#43; d	水平分屏 cmd &#43; 1~9	切换tab cmd &#43; o	打开profile " />
+1  export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;   配置 badge 徽章 区分环境
+快捷键 1 2 3 4 5 6  cmd &#43; t	新建tab cmd &#43; d	垂直分屏 cmd &#43; shift &#43; d	水平分屏 cmd &#43; 1~9	切换tab cmd &#43; o	打开profile   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nixihz.com/sharpen-knife/Oh-My-ZSH-on-iTerm-2-%E8%AE%A9Mac%E6%9B%B4%E8%B6%81%E6%89%8B/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
@@ -25,10 +25,10 @@ export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
 
 
-<script defer src="/en.search.min.362316bd8cf88ad6d8d5e09fd9a3c918021a40c72b9b0ad16e435d45813f692d.js" integrity="sha256-NiMWvYz4itbY1eCf2aPJGAIaQMcrmwrRbkNdRYE/aS0="></script>
+<script defer src="/en.search.min.74746acb3cf3c24adbfaf6354534487ada6a4e489ea9983ee2a0a8b9dde0dac2.js" integrity="sha256-dHRqyzzzwkrb&#43;vY1RTRIetpqTkieqZg&#43;4qCoud3g2sI="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -63,7 +63,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -77,9 +77,9 @@ https://github.com/alex-shpak/hugo-book
 
 
   <ul>
-<li><a href="/posts/">post</a></li>
+<li><a href="/posts/">开发札记</a></li>
 <li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
-<li><a href="/tools/">工具</a></li>
+<li><a href="/tools/">软件备忘</a></li>
 <li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
 </ul>
 
@@ -188,18 +188,37 @@ https://github.com/alex-shpak/hugo-book
 <p>注意：可以利用 mac自带控制台应用 来排查</p>
 <h2 id="命令行中使用代理">命令行中使用代理</h2>
 <p>通过设置环境变量 http_proxy</p>
-<pre><code>export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;
-</code></pre>
-<h2 id="配置-badge-徽章">配置 badge 徽章</h2>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java">    <span style="color:#111">export</span> <span style="color:#111">http_proxy</span><span style="color:#f92672">=</span><span style="color:#111">http</span><span style="color:#f92672">:</span><span style="color:#75715e">//127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="配置-badge-徽章">配置 badge 徽章</h2>
 <p>区分环境</p>
 <p><img src="/images/image-20210201-145527-161c5151-2a1d-4341-af1b-9e0a1a39a633.png" alt=""></p>
 <h2 id="快捷键">快捷键</h2>
-<pre><code>cmd + t	        新建tab
-cmd + d	        垂直分屏
-cmd + shift + d	水平分屏
-cmd + 1~9	      切换tab
-cmd + o	        打开profile</code></pre>
-</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">    
+    <span style="color:#75af00">cmd</span> <span style="color:#f92672">+</span> <span style="color:#75af00">t</span>	        <span style="color:#75af00">新建tab</span>
+    <span style="color:#75af00">cmd</span> <span style="color:#f92672">+</span> <span style="color:#75af00">d</span>	        <span style="color:#75af00">垂直分屏</span>
+    <span style="color:#75af00">cmd</span> <span style="color:#f92672">+</span> <span style="color:#75af00">shift</span> <span style="color:#f92672">+</span> <span style="color:#75af00">d</span>	<span style="color:#75af00">水平分屏</span>
+    <span style="color:#75af00">cmd</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">~</span><span style="color:#ae81ff">9</span>	      <span style="color:#75af00">切换tab</span>
+    <span style="color:#75af00">cmd</span> <span style="color:#f92672">+</span> <span style="color:#75af00">o</span>	        <span style="color:#75af00">打开profile</span>
+</code></pre></td></tr></table>
+</div>
+</div></p>
 </article>
 
 
@@ -226,6 +245,29 @@ cmd + o	        打开profile</code></pre>
 
  
         
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
   
  
       </footer>

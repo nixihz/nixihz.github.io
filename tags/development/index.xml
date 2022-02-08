@@ -31,7 +31,7 @@ GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定�
       <description>no-cache
 前后端分离坑，
 nginx 配置
-index index.php index.html index.htm; location / { add_header Cache-Control no-cache; index index.html index.htm; try_files $uri $uri/ /index.html; } </description>
+1 2 3 4 5 6 7  index index.php index.html index.htm; location / { add_header Cache-Control no-cache; index index.html index.htm; try_files $uri $uri/ /index.html; }   </description>
     </item>
     
     <item>

@@ -22,8 +22,7 @@
       
       <guid>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</guid>
       <description>第一步 生成RSA密钥
-$openssl
-OpenSSL&amp;gt; genrsa -out app_private_key.pem 2048 OpenSSL&amp;gt; pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem OpenSSL&amp;gt; rsa -in app_private_key.pem -pubout -out app_public_key.pem OpenSSL&amp;gt; exit  经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到
+1 2 3 4 5 6 7 8 9  $openssl OpenSSL&amp;gt; genrsa -out app_private_key.pem 2048 OpenSSL&amp;gt; pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem OpenSSL&amp;gt; rsa -in app_private_key.pem -pubout -out app_public_key.pem OpenSSL&amp;gt; exit   经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到
  app_private_key.pem（开发者RSA私钥，非 Java 语言适用）、 app_private_key_pkcs8.pem（pkcs8格式开发者RSA私钥，Java语言适用）、 app_public_key.pem（开发者RSA公钥）3个文件。  开发者将私钥保留，将公钥提交给支付宝配置到开发平台，用于验证签名。以下为私钥文件和公钥文件示例。
  注：对于使用Java的开发者，需将生成的pkcs8格式的私钥去除头尾、换行和空格，作为私钥填入代码中，对于.NET和PHP的开发者来说，无需进行pkcs8命令行操作。
  </description>
@@ -52,8 +51,8 @@ GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定�
       
       <guid>https://nixihz.com/posts/PHP%E6%B3%A8%E9%87%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
       <description>const 常量 常量方便了全局值替换，也有了可读性的名字，但是背后的说明不一定能完整体现到常量名中，所以最好写上注释，如下：
-const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子 const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质  如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看
-/** @var int 合同类型-电子 */ const CONTRACT_TYPE_ELECTRONIC = 0; /** @var int 合同类型-纸质 */ const CONTRACT_TYPE_PAPER = 1  </description>
+1 2  const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子  const CONTRACT_TYPE_PAPER = 1;//合同类型-纸质   如上注释有个不好的地方，在编辑器 PHPStorm 中，鼠标悬停看不出注释，注释可以做如下调整，即可悬停查看
+1 2 3 4  /** @var int 合同类型-电子 */ const CONTRACT_TYPE_ELECTRONIC = 0; /** @var int 合同类型-纸质 */ const CONTRACT_TYPE_PAPER = 1   </description>
     </item>
     
     <item>
@@ -65,7 +64,7 @@ const CONTRACT_TYPE_ELECTRONIC = 0;//合同类型-电子 const CONTRACT_TYPE_PAP
       <description>no-cache
 前后端分离坑，
 nginx 配置
-index index.php index.html index.htm; location / { add_header Cache-Control no-cache; index index.html index.htm; try_files $uri $uri/ /index.html; } </description>
+1 2 3 4 5 6 7  index index.php index.html index.htm; location / { add_header Cache-Control no-cache; index index.html index.htm; try_files $uri $uri/ /index.html; }   </description>
     </item>
     
     <item>
@@ -75,9 +74,9 @@ index index.php index.html index.htm; location / { add_header Cache-Control no-c
       
       <guid>https://nixihz.com/posts/PHP%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90json%E7%94%9F%E6%88%90php%E7%B1%BB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%98%A0%E5%B0%84json%E5%88%B0php%E5%AF%B9%E8%B1%A1/</guid>
       <description>业务中经常需要对接第三方服务，常用的对接方式就是使用 http json 接口，有些 json 格式较为复杂，使用php数组进行数据交互非常麻烦，非常容易出错。
- $responseStr = &#39;{&amp;quot;foo&amp;quot;:&amp;quot;bar&amp;quot;, &amp;quot;hello&amp;quot;:&amp;quot;world&amp;quot;}&#39;; $responseArr = json_decode($responseStr, true); if($responseArr[&amp;quot;fooo&amp;quot;] == &amp;quot;foobar&amp;quot;) { // do sth. }  现在 IDE 比如 PHPStorm 也不能对数组 进行代码提示，上面的代码是不会有错误提示的；如果把 json 返回值直接映射到预先定义好的对象，岂不是很舒心？
+1 2 3 4 5 6  $responseStr = &amp;#39;{&amp;#34;foo&amp;#34;:&amp;#34;bar&amp;#34;, &amp;#34;hello&amp;#34;:&amp;#34;world&amp;#34;}&amp;#39;; $responseArr = json_decode($responseStr, true); if($responseArr[&amp;#34;fooo&amp;#34;] == &amp;#34;foobar&amp;#34;) { // do sth.  }   现在 IDE 比如 PHPStorm 也不能对数组 进行代码提示，上面的代码是不会有错误提示的；如果把 json 返回值直接映射到预先定义好的对象，岂不是很舒心？
 一、映射 json 到 php 对象 我们可以使用 composer 包: nixihz/php-object ，支持复杂 json 到 复杂对象之间的映射。
- composer require nixihz/php-object class FooBarClass extends PhpObject { /** @var string */ public $foo; /** @var integer */ public $bar; } class DemoClass extends PhpObject { /** @var FooBarClass */ public $foobar; /** @var FooBarClass[] */ public $foobars; } $json = &#39;{&amp;quot;foobar&amp;quot;:{&amp;quot;foo&amp;quot;:&amp;quot;hello world&amp;quot;,&amp;quot;bar&amp;quot;:64100},&amp;quot;foobars&amp;quot;:[{&amp;quot;foo&amp;quot;:&amp;quot;hello&amp;quot;,&amp;quot;bar&amp;quot;:641},{&amp;quot;foo&amp;quot;:&amp;quot;world&amp;quot;,&amp;quot;bar&amp;quot;:664411}]}&#39;; $demo = (new DemoClass())-&amp;gt;fromJson($json); if($demo-&amp;gt;foobar-&amp;gt;foo == &amp;quot;hello world&amp;quot;) { echo count($demo-&amp;gt;foobars); } var_export($demo);  输出</description>
+1 2  composer require nixihz/php-object   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  class FooBarClass extends PhpObject { /** @var string */ public $foo; /** @var integer */ public $bar; } class DemoClass extends PhpObject { /** @var FooBarClass */ public $foobar; /** @var FooBarClass[] */ public $foobars; } $json = &amp;#39;{&amp;#34;foobar&amp;#34;:{&amp;#34;foo&amp;#34;:&amp;#34;hello world&amp;#34;,&amp;#34;bar&amp;#34;:64100},&amp;#34;foobars&amp;#34;:[{&amp;#34;foo&amp;#34;:&amp;#34;hello&amp;#34;,&amp;#34;bar&amp;#34;:641},{&amp;#34;foo&amp;#34;:&amp;#34;world&amp;#34;,&amp;#34;bar&amp;#34;:664411}]}&amp;#39;; $demo = (new DemoClass())-&amp;gt;fromJson($json); if($demo-&amp;gt;foobar-&amp;gt;foo == &amp;#34;hello world&amp;#34;) { echo count($demo-&amp;gt;foobars); } var_export($demo);   输出</description>
     </item>
     
     <item>
@@ -87,9 +86,9 @@ index index.php index.html index.htm; location / { add_header Cache-Control no-c
       
       <guid>https://nixihz.com/sharpen-knife/PHP-storm-%E6%B3%A8%E9%87%8A%E7%AC%A6%E5%8F%B7%E5%9C%A8%E8%A1%8C%E9%A6%96%E8%A7%A3%E5%86%B3/</guid>
       <description>问题 PHP storm 默认设置 注释快捷键 设置的行注释 设置在行首，如下：❌
- // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  使用 格式化 功能以后，格式又发生错乱，❌
- // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread);  注释时直接 注释在代码前，而非行首，如下：✅
- // todo 使用队列, 替换 raise dispatchNow $thread-&amp;gt;raise(new Created($thread)); //ProcessThreadCreated::dispatchNow($thread); ProcessThreadCreated::dispatch($thread)  解决  设置， 取消勾选 Line Comment at first column  Settings - Editor - Code Style - PHP - Code Generation</description>
+1 2 3 4  // todo 使用队列, 替换 raise dispatchNow  $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread);  ProcessThreadCreated::dispatch($thread);   使用 格式化 功能以后，格式又发生错乱，❌
+1 2 3 4  // todo 使用队列, 替换 raise dispatchNow  $thread-&amp;gt;raise(new Created($thread)); // ProcessThreadCreated::dispatchNow($thread);  ProcessThreadCreated::dispatch($thread);   注释时直接 注释在代码前，而非行首，如下：✅
+1 2 3 4  // todo 使用队列, 替换 raise dispatchNow  $thread-&amp;gt;raise(new Created($thread)); //ProcessThreadCreated::dispatchNow($thread);  ProcessThreadCreated::dispatch($thread)   解决  设置， 取消勾选 Line Comment at first column  Settings - Editor - Code Style - PHP - Code Generation</description>
     </item>
     
     <item>
@@ -107,8 +106,8 @@ https://github.com/aikuyun/iterm2-zmodem
 服务端安装 lrzsz: yum install lrzsz
 注意：可以利用 mac自带控制台应用 来排查
 命令行中使用代理 通过设置环境变量 http_proxy
-export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;  配置 badge 徽章 区分环境
-快捷键 cmd + t	新建tab cmd + d	垂直分屏 cmd + shift + d	水平分屏 cmd + 1~9	切换tab cmd + o	打开profile </description>
+1  export http_proxy=http://127.0.0.1:7777;export https_proxy=http://127.0.0.1:7777;   配置 badge 徽章 区分环境
+快捷键 1 2 3 4 5 6  cmd + t	新建tab cmd + d	垂直分屏 cmd + shift + d	水平分屏 cmd + 1~9	切换tab cmd + o	打开profile   </description>
     </item>
     
     <item>
@@ -175,9 +174,9 @@ RendeRenderCollectionViewrCode NYI
 简单画一个图：
 先看下实际效果图吧！
 Flutter 启动 http 服务 使用 内置的 HttpServer ，代码如下：
-import &#39;dart:io&#39;; server = await HttpServer.bind( hostIp, 8080, );  这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍候我先去吃个饭。
+1 2 3 4 5 6 7  import &amp;#39;dart:io&amp;#39;; server = await HttpServer.bind( hostIp, 8080, );   这就启动了一个 http 服务，这不是搞笑呢吗？请求咋处理，静态资源咋放这咋没说呢，稍候我先去吃个饭。
 服务路由 由于该服务只有特定的几个功能，创建文件夹，获取列表，上传文件，删除文件，以及前端页面文件，所以路由功能直接根据 request uri ，进行 switch case 即可，代码如下：
-// runZoned 捕获异步异常 var runZoned2 = runZoned(() async { await for (var request in server) { switch (request.uri.toString().split(&amp;quot;?&amp;quot;).first) { case &#39;/upload&#39;: _uploadController(request); break; case &#39;/musicList&#39;: _musicListController(request); break; case &#39;/deleteMusicInfo&#39;: _deleteMusicController(request); break; case &#39;/createFold&#39;: _createFoldController(request); break; case &#39;/&#39;: _homeController(request); break; default: _publicController(request); break; } } }, onError: (Object obj, StackTrace stack) { print(obj); print(stack); }); }  请求前端文件 前端功能不复杂，但是有一些交互，直接用 Vue 写一个 SPA，来的快一些。vue 打包以后把所有的文件放在 {project}/assets/httpserver/ 文件夹下即可访问。</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  // runZoned 捕获异步异常  var runZoned2 = runZoned(() async { await for (var request in server) { switch (request.</description>
     </item>
     
     <item>
@@ -197,13 +196,12 @@ import &#39;dart:io&#39;; server = await HttpServer.bind( hostIp, 8080, );  这�
       <guid>https://nixihz.com/posts/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-npm-%E5%8C%85%E7%AE%A1%E7%90%86%E8%8E%AB%E5%90%8D%E5%8D%87%E7%BA%A7%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid>
       <description>package.json 和 package-lock.json 是控制node_module包版本的两个文件，其中 package.json 由开发者维护，package-lock.json 自动生成。
 一般package.json 指定版本都会使用 ^ 或者 ~ ，举例：
-&amp;quot;dependencies&amp;quot;: { &amp;quot;vue&amp;quot;: &amp;quot;^2.6.11&amp;quot;, &amp;quot;vue-pdf&amp;quot;: &amp;quot;~4.0.8&amp;quot; }  ^2.6.11 表示该模块的小版本向下兼容，
+1 2 3 4  &amp;#34;dependencies&amp;#34;: { &amp;#34;vue&amp;#34;: &amp;#34;^2.6.11&amp;#34;, &amp;#34;vue-pdf&amp;#34;: &amp;#34;~4.0.8&amp;#34; }   ^2.6.11 表示该模块的小版本向下兼容，
 ~4.0.8 表示该模块的中间
 执行 npm install 到底发生了什么；
 ~1.2.3 代表 1.2.3 &amp;lt;= 版本号 &amp;lt; 1.3.0
 ^1.2.3 代表 1.2.3 &amp;lt;= 版本号 &amp;lt; 2.0.0
-1，^ 符号，它与semantic versioning （语义版本控制）有关系，它表示尽量使用最新版本，但保证不产生兼容问题，换句话说也就是除了大版本号以外，小版本号和补丁版本号都可以变。 但0 开头的版本号是比较特殊的，而因为 ^ 严格遵守 semantic versioning 规则，所以会出现以下情况（早先的 composer 版本并没有这样的处理，后来修正了）：^0.3.0 等于 &amp;gt;=0.3.0; &amp;lt;0.4.0，并不是&amp;lt;1.0.0 ，因为，semantic versioning 的规定是，大版本号以 0 开头表示这是一个非稳定版本（unstable），如果处于非稳定状态，小版本号是允许不向下兼容的！
-2，~符号，表示版本号只能改变最末尾那段（如果是 ~x.y 末尾就是 y，如果是 ~x.y.z 末尾就是 z），比如这种情况:</description>
+1，^ 符号，它与semantic versioning （语义版本控制）有关系，它表示尽量使用最新版本，但保证不产生兼容问题，换句话说也就是除了大版本号以外，小版本号和补丁版本号都可以变。 但0 开头的版本号是比较特殊的，而因为 ^ 严格遵守 semantic versioning 规则，所以会出现以下情况（早先的 composer 版本并没有这样的处理，后来修正了）：^0.3.0 等于 &amp;gt;=0.3.0; &amp;lt;0.4.0，并不是&amp;lt;1.0.0 ，因为，semantic versioning 的规定是，大版本号以 0 开头表示这是一个非稳定版本（unstable），如果处于非稳定状态，小版本号是允许不向下兼容的！</description>
     </item>
     
     <item>
@@ -239,7 +237,7 @@ SOAP
 WSDL
 WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成代码，可以直接调用；对接就变得非常简单，拢共就2步骤：
  自动生成接口代码 封装 service 提供给业务调用  1. 自动生成接口代码 PHP 要处理 SOAP，可以使用这个库，https://github.com/phpro/soap-client
-$ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &amp;gt; common/config/soap-client.php Wsdl location (URL or path to file): &amp;gt; common/config/standard-prod.wsdl Generic name used to name this client (Results in &amp;lt;name&amp;gt;Client &amp;lt;name&amp;gt;Classmap etc.): &amp;gt; GoogleMap Directory where the client should be generated in: &amp;gt; common/libs/googlemap Namespace for your client: &amp;gt; common\libs\googlemap [OK] Config has been written to common/config/soap-client.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35  $ composer require phpro/soap-client $ ./vendor/bin/soap-client wizard Where would you like to store your config file? [config/soap-client.php]: &amp;gt; common/config/soap-client.</description>
     </item>
     
     <item>

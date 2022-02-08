@@ -29,10 +29,10 @@ cmd &#43; ，设置中搜索 sql 选择 code style， 可个性化配置sql代�
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.fbb145840e7c3bc0c3eb2fd8e36c54baceef741a1f9149079a970e3b64924589.css" integrity="sha256-&#43;7FFhA58O8DD6y/Y42xUus7vdBofkUkHmpcOO2SSRYk=">
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
 
 
-<script defer src="/en.search.min.362316bd8cf88ad6d8d5e09fd9a3c918021a40c72b9b0ad16e435d45813f692d.js" integrity="sha256-NiMWvYz4itbY1eCf2aPJGAIaQMcrmwrRbkNdRYE/aS0="></script>
+<script defer src="/en.search.min.74746acb3cf3c24adbfaf6354534487ada6a4e489ea9983ee2a0a8b9dde0dac2.js" integrity="sha256-dHRqyzzzwkrb&#43;vY1RTRIetpqTkieqZg&#43;4qCoud3g2sI="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -67,7 +67,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -81,9 +81,9 @@ https://github.com/alex-shpak/hugo-book
 
 
   <ul>
-<li><a href="/posts/">post</a></li>
+<li><a href="/posts/">开发札记</a></li>
 <li><a href="/sharpen-knife/">工欲善其事，必先利其器</a></li>
-<li><a href="/tools/">工具</a></li>
+<li><a href="/tools/">软件备忘</a></li>
 <li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
 </ul>
 
@@ -224,7 +224,48 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="vim插件">vim插件</h3>
 <p>享受各个 IDE 一致性的体验。</p>
 <h3 id="一些快捷键">一些快捷键</h3>
-<p>RendeRenderCollectionViewrCode NYI</p>
+<table>
+<thead>
+<tr>
+<th>描述</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmd + k</td>
+<td>提交代码</td>
+</tr>
+<tr>
+<td>推送代码</td>
+<td>cmd + shift + k</td>
+</tr>
+<tr>
+<td>格式化代码</td>
+<td>cmd + option + L</td>
+</tr>
+<tr>
+<td>精简 import 引入</td>
+<td>ctrl + option + o</td>
+</tr>
+<tr>
+<td>全局文本搜索</td>
+<td>cmd + shift + f</td>
+</tr>
+<tr>
+<td>可搜索文件名，配置了数据库，可搜索表名</td>
+<td>shift + shift</td>
+</tr>
+<tr>
+<td>最近打开文件</td>
+<td>cmd + e</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="visual-studio-code">Visual Studio Code</h2>
 <h3 id="vim插件-1">vim插件</h3>
 <p>享受各个 IDE 一致性的体验。</p>
@@ -237,14 +278,194 @@ https://github.com/alex-shpak/hugo-book
 <p>做好配置，可以放到 git 托管。</p>
 <p><a href="https://github.com/fencex/myvim.git">https://github.com/fencex/myvim.git</a></p>
 <h3 id="vim-基础">vim 基础</h3>
-<p>RendeRenderCollectionViewrCode NYI</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h j k l</td>
+<td>← ↓ ↑ →</td>
+</tr>
+<tr>
+<td>^</td>
+<td>行首</td>
+</tr>
+<tr>
+<td>$</td>
+<td>行尾</td>
+</tr>
+<tr>
+<td>e</td>
+<td>光标移动下一个单词的结尾</td>
+</tr>
+<tr>
+<td>w</td>
+<td>光标移动下一个单词的开头</td>
+</tr>
+<tr>
+<td>b</td>
+<td>光标移动上一个单词的开头</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>第一行</td>
+</tr>
+<tr>
+<td>shit + g</td>
+<td>最后一行</td>
+</tr>
+<tr>
+<td>ctrl + d</td>
+<td>向下翻半页</td>
+</tr>
+<tr>
+<td>向上翻半页</td>
+<td>ctrl + u</td>
+</tr>
+<tr>
+<td>/</td>
+<td>搜索（ linux命令 less 也用 / 来搜索）</td>
+</tr>
+<tr>
+<td>*</td>
+<td>shift + 8 搜索当前光标所在的单词</td>
+</tr>
+<tr>
+<td>n</td>
+<td>向下搜索</td>
+</tr>
+<tr>
+<td>shift + n</td>
+<td>向上搜索</td>
+</tr>
+</tbody>
+</table>
 <h3 id="编辑操作">编辑操作</h3>
-<p>RendeRenderCollectionViewrCode NYI</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>进入插入模式</td>
+</tr>
+<tr>
+<td>esc</td>
+<td>退出插入模式</td>
+</tr>
+<tr>
+<td>删除行</td>
+<td>dd</td>
+</tr>
+<tr>
+<td>dw</td>
+<td>删除光标之后的单词</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>删除光标到行尾， d^ 同理</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制行</td>
+</tr>
+<tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>u</td>
+<td>撤销操作</td>
+</tr>
+<tr>
+<td>ctrl + r</td>
+<td>重做撤销的操作</td>
+</tr>
+</tbody>
+</table>
 <h3 id="visual-模式">Visual 模式</h3>
-<p>RendeRenderCollectionViewrCode NYI</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v</td>
+<td>选择</td>
+</tr>
+<tr>
+<td>shift + v</td>
+<td>行选</td>
+</tr>
+<tr>
+<td>ctrl + v</td>
+<td>块选</td>
+</tr>
+</tbody>
+</table>
 <p>一般跟其他命令结合使用，比如 shift + v 选择多行， 再按 d， 删除所选行</p>
 <h3 id="命令">命令</h3>
-<p>RendeRenderCollectionViewrCode NYI</p>
+<table>
+<thead>
+<tr>
+<th>说明</th>
+<th>按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保存</td>
+<td>:w</td>
+</tr>
+<tr>
+<td>保存并退出，（按住 shift 再按2下 z）</td>
+<td>:wq （shift + z + z）</td>
+</tr>
+<tr>
+<td>退出，如果有修改未保存在不能退出</td>
+<td>:q</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td>强制退出，有修改未保存也能退出</td>
+</tr>
+<tr>
+<td>返回 shell 模式</td>
+<td>:sh</td>
+</tr>
+<tr>
+<td>返回 vim 模式</td>
+<td>shell 模式中 输入 exit</td>
+</tr>
+<tr>
+<td>按行搜索并替换，不加 g 表示替换每行第一次搜索的词，加g表示替换所有；</td>
+<td>:%s/待替换/替换为/g</td>
+</tr>
+<tr>
+<td>:1,4s/待替换/替换为/g</td>
+<td>% 表示所有行</td>
+</tr>
+<tr>
+<td>自定义行</td>
+<td>shift + v 行选模式:s</td>
+</tr>
+<tr>
+<td>定位到第 1000 行</td>
+<td>:10000</td>
+</tr>
+</tbody>
+</table>
 <h3 id="其他">其他</h3>
 <ul>
 <li>shift + j 当前行移动到上一行行尾, 可以做到单列转单行</li>
@@ -278,6 +499,29 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
   
  
       </footer>
