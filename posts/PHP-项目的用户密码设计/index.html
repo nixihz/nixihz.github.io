@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PHP 项目的用户密码设计"><meta property="og:title" content="PHP 项目的用户密码设计" />
+<meta property="og:description" content="简单聊一聊用户系统的密码存储设计
+历史变迁 首先，最开始大家用的都是明文存储用户的密码，想着，反正存储在服务端，也只有服务端看得到，
+但这些年这么多脱裤事件，终于意识到不能再使用明文了，
+于是，大家改用 md5 等哈希算法，为用户密码“加密”，但数据库泄漏后，仍然可以使用 字典攻击 破解。字典攻击 是用一个字典文件，储存了单词、短语、常用密码和他们 hash 后结果。将密码与 hash 结果对比，就能破解。
+为了解决这个问题，研发工程师又在密码的hash的过程中加 salt， salt是一串随机值，与 hash 后的密码一起保存在数据库。 这恐怕只能使用暴力破解了，但现在GPU的发展，使得暴力破解成为可能，如果被脱裤，则更容易破解。
+同时期的 GPU 的计算单元比CPU多， L1/L2/L3缓存和控制器较少， 所以GPU非常适合做并行且无需内存参与的计算任务。
+解决方案 PHP 5.5 开始， 针对于 password， 给出了轻便的解决方案：password_hash（加密）、 password_verify（验证校验）、 password_need_rehash（判断是否需要重新加密）；
+这一套password解决方案，首先是把 salt 值体现到了 hash 值里面，这样就不需要在维护一个 salt 字段，再者支持了 BCRYPT, ARGON 算法。
+BCRYPT 这个算法，相比md5 是一个慢速hash，比较消耗cpu， md5 毫秒级别， bcrypt 0.1 秒级别 ；我们一直想让代码运行的快点再快点，而加密算法反其道而行。
+针对这个算法， 并且可以设置 cost，来调整耗时，假设后续机器性能大提升，也可以修改 cost；
+上文也提到了，GPU等硬件升级会导致破解速度的加快。
+第二种算法，在2015年密码hash竞赛中诞生，并且拿了冠军， 那就是 argon2， 这种算法使用大量内存和大量计算资源进行 Hash 计算， 内存和GPU的数据传输是很慢的（不展开讲）， 可能就是 0.2 s 的级别。可以设置 memory_cost，time_cost **两种 cost 来调整运算的耗时。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2020-07-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-28T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>PHP 项目的用户密码设计 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
+
+
+<script defer src="/en.search.min.3f6870407c1cf3384015f196ad2d67306d324aebad550e8cc5b4fad9f06d32ce.js" integrity="sha256-P2hwQHwc8zhAFfGWrS1nMG0ySuutVQ6MxbT62fBtMs4="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <hr>
+<ul>
+<li><a href="/posts/">1.开发札记</a></li>
+<li><a href="/tools/">2.软件备忘</a></li>
+<li><a href="/sharpen-knife/">3.工欲善其事，必先利其器</a></li>
+<li><a href="/doc/">4.开发文档照着写</a></li>
+</ul>
+<hr>
+<p>小项目</p>
+<ul>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PHP 项目的用户密码设计</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#历史变迁">历史变迁</a></li>
+        <li><a href="#解决方案">解决方案</a></li>
+        <li><a href="#扩展">扩展</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/">PHP 项目的用户密码设计</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2020-07-28</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/development/">development</a>, 
+        <a href="/tags/php/">php</a>, 
+        <a href="/tags/password/">password</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><p>简单聊一聊用户系统的密码存储设计</p>
+<h2 id="历史变迁">历史变迁</h2>
+<p>首先，最开始大家用的都是明文存储用户的密码，想着，反正存储在服务端，也只有服务端看得到，</p>
+<p>但这些年这么多脱裤事件，终于意识到不能再使用明文了，</p>
+<p>于是，大家改用 md5 等哈希算法，为用户密码“加密”，但数据库泄漏后，仍然可以使用 字典攻击 破解。<strong>字典攻击</strong> 是用一个字典文件，储存了单词、短语、常用密码和他们 hash 后结果。将密码与 hash 结果对比，就能破解。</p>
+<p>为了解决这个问题，研发工程师又在密码的hash的过程中加 salt， salt是一串随机值，与 hash 后的密码一起保存在数据库。  这恐怕只能使用暴力破解了，但现在GPU的发展，使得暴力破解成为可能，如果被脱裤，则更容易破解。</p>
+<p>同时期的 GPU 的计算单元比CPU多， L1/L2/L3缓存和控制器较少， 所以GPU非常适合做并行且无需内存参与的计算任务。</p>
+<h2 id="解决方案">解决方案</h2>
+<p>PHP 5.5 开始， 针对于 password， 给出了轻便的解决方案：<code>password_hash</code>（加密）、 <code>password_verify</code>（验证校验）、 <code>password_need_rehash</code>（判断是否需要重新加密）；</p>
+<p>这一套password解决方案，首先是把 salt 值体现到了 hash 值里面，这样就不需要在维护一个 salt 字段，再者支持了 <strong>BCRYPT, ARGON 算法。</strong></p>
+<p><strong>BCRYPT 这个算法，相比md5 是一个慢速hash，比较消耗cpu， md5 毫秒级别， bcrypt  0.1 秒级别 ；我们一直想让代码运行的快点再快点，而加密算法反其道而行。</strong></p>
+<p><strong>针对这个算法， 并且可以设置 cost，来调整耗时，假设后续机器性能大提升，也可以修改 cost；</strong></p>
+<p>上文也提到了，GPU等硬件升级会导致破解速度的加快。</p>
+<p>第二种算法，在2015年密码hash竞赛中诞生，并且拿了冠军， 那就是 argon2， 这种算法使用大量内存和大量计算资源进行 Hash 计算， 内存和GPU的数据传输是很慢的（不展开讲），  可能就是 0.2 s 的级别。可以设置 <code>memory_cost</code>，<code>time_cost</code> **两种 <em>cost</em> 来调整运算的耗时。</p>
+<h2 id="扩展">扩展</h2>
+<p>argon 有3个分支，详细可以线下去了解： <strong>PHP 版本 7.2+</strong></p>
+<ul>
+<li>Argon2d：更快，使用 data-dependent 的内存访问方式，data 是需要 Hash 的 password 和 salt。适合加密货币和不会收到 <strong>side-channel timing</strong> 攻击的应用。</li>
+<li>Argon2i：使用 data-independent 的内存访问方式，更适合密码哈希等。他比 Argon2d 慢，因为它需要更多次内存计算（passes）来保护免受 <strong>tradeoff</strong> 的攻击。</li>
+<li>Argon2id：是 Argon2i 和 Argon2d 的混合版本，第一次计算用 Argon2i，后续的计算用 Argon2d。如果没有特定的理由，推荐使用 Argon2id。</li>
+</ul>
+<p>Argon 需要 安装 sodium 扩展</p>
+</p>
+</article>
+
+
+
+
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/blog/new-url/">template</a></li>
+	
+</ul>
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#历史变迁">历史变迁</a></li>
+        <li><a href="#解决方案">解决方案</a></li>
+        <li><a href="#扩展">扩展</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

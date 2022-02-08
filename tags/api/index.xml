@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/api/</link>
+    <description>Recent content in api on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一种好用的接口请求和响应格式规范，基于Google Json Style</title>
+      <link>https://nixihz.com/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/</guid>
+      <description>简述  基于较为流行的谷歌 json 风格 google json style  英文 https://google.github.io/styleguide/jsoncstyleguide.xml 中文 https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md   所有字段驼峰命名，接口使用：get post  get 获取数据 post 更新数据   post：请求 body 数据使用 application/json, 不使用 FormData; 响应成功，仅返回 data；响应错误，仅返回 error。如果data和error同时出现，则error对象优先。 HTTP_STATUS 始终200， 如果非 200，则说明出现错误，提示“服务器异常”。  POST 请求： 1 2 3 4 5 6 7 8  { &amp;#34;method&amp;#34;: &amp;#34;thread.review.list 可简化&amp;#34;, &amp;#34;params&amp;#34;: { &amp;#34;id&amp;#34;: 100, &amp;#34;type&amp;#34;: 1 } }   接口响应： 正确响应  列表响应 items  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  { &amp;#34;apiVersion&amp;#34;: &amp;#34;2.</description>
+    </item>
+    
+  </channel>
+</rss>

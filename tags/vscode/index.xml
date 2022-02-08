@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vscode on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/vscode/</link>
+    <description>Recent content in vscode on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>显示 **vscode 的 tab 和空格**</title>
+      <link>https://nixihz.com/sharpen-knife/%E6%98%BE%E7%A4%BA-/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/%E6%98%BE%E7%A4%BA-/</guid>
+      <description>文字中的空白到底是tab和空格？ 开发测试过程中，我们可能需要构造各种tab分割的文本数据，然而默认配置下，输入tab，就被转化成了4个空格，为了避免这些坑，我们来尝试做些处理。
+显示空白 设置中搜索renderWhitespace，设置为all
+RenderImage when len(FileIDs) == 0 NYI 这个时候，就能看出空白到底是tab还是空格，如图：
+RenderImage when len(FileIDs) == 0 NYI 这一步操作不仅能显示tab和空格，而且区分了 tab 和 空格
+ 拷贝文本，保留tab 输入文本，替换tab为4个空格  </description>
+    </item>
+    
+  </channel>
+</rss>

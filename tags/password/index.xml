@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>password on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/password/</link>
+    <description>Recent content in password on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP 项目的用户密码设计</title>
+      <link>https://nixihz.com/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/</guid>
+      <description>简单聊一聊用户系统的密码存储设计
+历史变迁 首先，最开始大家用的都是明文存储用户的密码，想着，反正存储在服务端，也只有服务端看得到，
+但这些年这么多脱裤事件，终于意识到不能再使用明文了，
+于是，大家改用 md5 等哈希算法，为用户密码“加密”，但数据库泄漏后，仍然可以使用 字典攻击 破解。字典攻击 是用一个字典文件，储存了单词、短语、常用密码和他们 hash 后结果。将密码与 hash 结果对比，就能破解。
+为了解决这个问题，研发工程师又在密码的hash的过程中加 salt， salt是一串随机值，与 hash 后的密码一起保存在数据库。 这恐怕只能使用暴力破解了，但现在GPU的发展，使得暴力破解成为可能，如果被脱裤，则更容易破解。
+同时期的 GPU 的计算单元比CPU多， L1/L2/L3缓存和控制器较少， 所以GPU非常适合做并行且无需内存参与的计算任务。
+解决方案 PHP 5.5 开始， 针对于 password， 给出了轻便的解决方案：password_hash（加密）、 password_verify（验证校验）、 password_need_rehash（判断是否需要重新加密）；
+这一套password解决方案，首先是把 salt 值体现到了 hash 值里面，这样就不需要在维护一个 salt 字段，再者支持了 BCRYPT, ARGON 算法。
+BCRYPT 这个算法，相比md5 是一个慢速hash，比较消耗cpu， md5 毫秒级别， bcrypt 0.1 秒级别 ；我们一直想让代码运行的快点再快点，而加密算法反其道而行。
+针对这个算法， 并且可以设置 cost，来调整耗时，假设后续机器性能大提升，也可以修改 cost；
+上文也提到了，GPU等硬件升级会导致破解速度的加快。
+第二种算法，在2015年密码hash竞赛中诞生，并且拿了冠军， 那就是 argon2， 这种算法使用大量内存和大量计算资源进行 Hash 计算， 内存和GPU的数据传输是很慢的（不展开讲）， 可能就是 0.2 s 的级别。可以设置 memory_cost，time_cost **两种 cost 来调整运算的耗时。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>doc on nixihz 的技术博客</title>
+    <link>https://nixihz.com/doc/</link>
+    <description>Recent content in doc on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/doc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发文档模板</title>
+      <link>https://nixihz.com/doc/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/doc/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

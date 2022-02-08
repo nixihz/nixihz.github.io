@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>一种好用的接口请求和响应格式规范，基于Google Json Style</title>
+      <link>https://nixihz.com/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/</guid>
+      <description>简述  基于较为流行的谷歌 json 风格 google json style  英文 https://google.github.io/styleguide/jsoncstyleguide.xml 中文 https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md   所有字段驼峰命名，接口使用：get post  get 获取数据 post 更新数据   post：请求 body 数据使用 application/json, 不使用 FormData; 响应成功，仅返回 data；响应错误，仅返回 error。如果data和error同时出现，则error对象优先。 HTTP_STATUS 始终200， 如果非 200，则说明出现错误，提示“服务器异常”。  POST 请求： 1 2 3 4 5 6 7 8  { &amp;#34;method&amp;#34;: &amp;#34;thread.review.list 可简化&amp;#34;, &amp;#34;params&amp;#34;: { &amp;#34;id&amp;#34;: 100, &amp;#34;type&amp;#34;: 1 } }   接口响应： 正确响应  列表响应 items  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  { &amp;#34;apiVersion&amp;#34;: &amp;#34;2.</description>
+    </item>
+    
+    <item>
       <title>你必须知道的软件开发规范</title>
       <link>https://nixihz.com/posts/development-standard/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
@@ -102,6 +111,26 @@ webpack中hash、chunkhash、contenthash 区别
 有版本太旧，可提示用户刷新，刷新以后依然如此，可以提示向后台反馈；
 好处：
  提前获得目标用户的使用反馈； 根据反馈结果，做到查漏补缺； 发现重大问题，可回滚“旧版本”； 补充完善产品不足； 快速验证产品的 idea。  </description>
+    </item>
+    
+    <item>
+      <title>PHP 项目的用户密码设计</title>
+      <link>https://nixihz.com/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/</guid>
+      <description>简单聊一聊用户系统的密码存储设计
+历史变迁 首先，最开始大家用的都是明文存储用户的密码，想着，反正存储在服务端，也只有服务端看得到，
+但这些年这么多脱裤事件，终于意识到不能再使用明文了，
+于是，大家改用 md5 等哈希算法，为用户密码“加密”，但数据库泄漏后，仍然可以使用 字典攻击 破解。字典攻击 是用一个字典文件，储存了单词、短语、常用密码和他们 hash 后结果。将密码与 hash 结果对比，就能破解。
+为了解决这个问题，研发工程师又在密码的hash的过程中加 salt， salt是一串随机值，与 hash 后的密码一起保存在数据库。 这恐怕只能使用暴力破解了，但现在GPU的发展，使得暴力破解成为可能，如果被脱裤，则更容易破解。
+同时期的 GPU 的计算单元比CPU多， L1/L2/L3缓存和控制器较少， 所以GPU非常适合做并行且无需内存参与的计算任务。
+解决方案 PHP 5.5 开始， 针对于 password， 给出了轻便的解决方案：password_hash（加密）、 password_verify（验证校验）、 password_need_rehash（判断是否需要重新加密）；
+这一套password解决方案，首先是把 salt 值体现到了 hash 值里面，这样就不需要在维护一个 salt 字段，再者支持了 BCRYPT, ARGON 算法。
+BCRYPT 这个算法，相比md5 是一个慢速hash，比较消耗cpu， md5 毫秒级别， bcrypt 0.1 秒级别 ；我们一直想让代码运行的快点再快点，而加密算法反其道而行。
+针对这个算法， 并且可以设置 cost，来调整耗时，假设后续机器性能大提升，也可以修改 cost；
+上文也提到了，GPU等硬件升级会导致破解速度的加快。
+第二种算法，在2015年密码hash竞赛中诞生，并且拿了冠军， 那就是 argon2， 这种算法使用大量内存和大量计算资源进行 Hash 计算， 内存和GPU的数据传输是很慢的（不展开讲）， 可能就是 0.2 s 的级别。可以设置 memory_cost，time_cost **两种 cost 来调整运算的耗时。</description>
     </item>
     
     <item>

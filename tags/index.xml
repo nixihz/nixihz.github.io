@@ -5,7 +5,25 @@
     <link>https://nixihz.com/tags/</link>
     <description>Recent content in Tags on nixihz 的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>https://nixihz.com/tags/development/</link>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>doc</title>
+      <link>https://nixihz.com/tags/doc/</link>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/doc/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>fp</title>
       <link>https://nixihz.com/tags/fp/</link>
@@ -34,11 +52,29 @@
     </item>
     
     <item>
-      <title>development</title>
-      <link>https://nixihz.com/tags/development/</link>
-      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <title>api</title>
+      <link>https://nixihz.com/tags/api/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nixihz.com/tags/development/</guid>
+      <guid>https://nixihz.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backend</title>
+      <link>https://nixihz.com/tags/backend/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frontend</title>
+      <link>https://nixihz.com/tags/frontend/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/frontend/</guid>
       <description></description>
     </item>
     
@@ -88,20 +124,20 @@
     </item>
     
     <item>
+      <title>curl</title>
+      <link>https://nixihz.com/tags/curl/</link>
+      <pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/curl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cache</title>
       <link>https://nixihz.com/tags/cache/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/tags/cache/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>frontend</title>
-      <link>https://nixihz.com/tags/frontend/</link>
-      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nixihz.com/tags/frontend/</guid>
       <description></description>
     </item>
     
@@ -129,6 +165,33 @@
       <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/tags/wifi-sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>password</title>
+      <link>https://nixihz.com/tags/password/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/password/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://nixihz.com/tags/tool/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://nixihz.com/tags/vscode/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/vscode/</guid>
       <description></description>
     </item>
     

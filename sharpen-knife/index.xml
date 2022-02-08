@@ -86,9 +86,20 @@ cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风
 当然这一步仅是启动了屏保，大家设置了以后可能敲击键盘，或者移动鼠标，就退出屏保动画，进入系统了。
 进一步操作，让电脑进入屏保立马锁定电脑。如下图：
 大家可以体验一下，设定启动屏保的触发角，鼠标指针停留一段时间才会触发，而其他则立即触发，这些都是细节，真牛*。
-其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键 /table
-RendeRenderCollectionViewrCode NYI
-一些光标定位快捷键 RendeRenderCollectionViewrCode NYI</description>
+其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键    描述  快捷键     窗口切换，可以加 shift 反向切换 macos cmd + tab   同一应用窗口切换，可以加 shift 反向切换 macos cmd + `(反引号)|   cmd + h 隐藏窗口（可通过 cmd + tab 切换） macos   最小化窗口 （不可通过 cmd + tab 切换） macos cmd + m   切换到左侧窗口空间，四指左滑 macos ctrl + ←   macos ctrl + → 切换到右侧窗口空间， 四指右滑   查看窗口缩略图，四指上滑 macos ctrl + ↑   ctrl + ↓ 查看同应用的窗口缩略图 macos   打开 emoji 选择器🚀 macos ctrl + cmd + space    一些光标定位快捷键    快捷键  描述     cmd + x macos 剪切当前行   cmd + ← macos 光标到行首   cmd + → macos 光标到行尾   选中光标到行首的文本 cmd + shift + ← macos   cmd + shift + → macos 选中光标到行尾的文本   *unix 光标到行首 ahead ctrl + a   ctrl + e *unix 光标到行尾 end   ctrl + f *unix 光标向右1个字符 forward   *unix 光标向左1个字符 backward ctrl + b   ctrl + w *unix 向左清除一个单词 word   *unix 删除当前光标到行尾 ctrl + k   ctrl + u *unix 删除整行输入 undo   ctrl + y *unix 上一步的重做   *unix 取消输入，会保留输入文本 cancel ctrl + c   ctrl + l (小写L) *unix 清屏   ctrl + r *unix 搜索历史命令记录    </description>
+    </item>
+    
+    <item>
+      <title>显示 **vscode 的 tab 和空格**</title>
+      <link>https://nixihz.com/sharpen-knife/%E6%98%BE%E7%A4%BA-/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/sharpen-knife/%E6%98%BE%E7%A4%BA-/</guid>
+      <description>文字中的空白到底是tab和空格？ 开发测试过程中，我们可能需要构造各种tab分割的文本数据，然而默认配置下，输入tab，就被转化成了4个空格，为了避免这些坑，我们来尝试做些处理。
+显示空白 设置中搜索renderWhitespace，设置为all
+RenderImage when len(FileIDs) == 0 NYI 这个时候，就能看出空白到底是tab还是空格，如图：
+RenderImage when len(FileIDs) == 0 NYI 这一步操作不仅能显示tab和空格，而且区分了 tab 和 空格
+ 拷贝文本，保留tab 输入文本，替换tab为4个空格  </description>
     </item>
     
   </channel>
