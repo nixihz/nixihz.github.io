@@ -4,18 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenSSL 工具生成密钥"><meta property="og:title" content="OpenSSL 工具生成密钥" />
-<meta property="og:description" content="第一步 生成RSA密钥
-1 2 3 4 5 6 7 8 9  $openssl OpenSSL&gt; genrsa -out app_private_key.pem 2048 OpenSSL&gt; pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem OpenSSL&gt; rsa -in app_private_key.pem -pubout -out app_public_key.pem OpenSSL&gt; exit   经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到
- app_private_key.pem（开发者RSA私钥，非 Java 语言适用）、 app_private_key_pkcs8.pem（pkcs8格式开发者RSA私钥，Java语言适用）、 app_public_key.pem（开发者RSA公钥）3个文件。  开发者将私钥保留，将公钥提交给支付宝配置到开发平台，用于验证签名。以下为私钥文件和公钥文件示例。
- 注：对于使用Java的开发者，需将生成的pkcs8格式的私钥去除头尾、换行和空格，作为私钥填入代码中，对于.NET和PHP的开发者来说，无需进行pkcs8命令行操作。
- " />
+<meta name="description" content="开发文档模板"><meta property="og:title" content="开发文档模板" />
+<meta property="og:description" content="todo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/" />
+<meta property="og:url" content="https://nixihz.com/doc/%E4%B8%8A%E7%BA%BF%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
-<meta property="article:published_time" content="2021-11-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-11-02T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
-<title>OpenSSL 工具生成密钥 | nixihz 的技术博客</title>
+<meta property="article:published_time" content="2022-02-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-02-09T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>开发文档模板 | nixihz 的技术博客</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
@@ -109,7 +105,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>OpenSSL 工具生成密钥</strong>
+  <strong>开发文档模板</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -137,14 +133,14 @@ https://github.com/alex-shpak/hugo-book
 
 <article class="markdown">
   <h1>
-    <a href="/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/">OpenSSL 工具生成密钥</a>
+    <a href="/doc/%E4%B8%8A%E7%BA%BF%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/">开发文档模板</a>
   </h1>
   <hr/>
 
 
 <div>
 
-  <h5>2021-11-02</h5>
+  <h5>2022-02-09</h5>
 
 
 
@@ -153,7 +149,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-        <a href="/tags/openssl/">openssl</a>
+        <a href="/tags/development/">development</a>, 
+        <a href="/tags/doc/">doc</a>
   </div>
   
 
@@ -161,47 +158,28 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><p>第一步 生成RSA密钥</p>
-<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    <span style="color:#111">$openssl</span>
-    
-    OpenSSL&gt; genrsa -out app_private_key.pem <span style="color:#ae81ff">2048</span>
-    
-    OpenSSL&gt; pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem
-    
-    OpenSSL&gt; rsa -in app_private_key.pem -pubout -out app_public_key.pem
-    
-    OpenSSL&gt; <span style="color:#111">exit</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>经过以上步骤，开发者可以在当前文件夹中（OpenSSL运行文件夹），看到</p>
-<ol>
-<li>app_private_key.pem（开发者RSA私钥，非 Java 语言适用）、</li>
-<li>app_private_key_pkcs8.pem（pkcs8格式开发者RSA私钥，Java语言适用）、</li>
-<li>app_public_key.pem（开发者RSA公钥）3个文件。</li>
-</ol>
-<p>开发者将私钥保留，将公钥提交给支付宝配置到开发平台，用于验证签名。以下为私钥文件和公钥文件示例。</p>
-<blockquote>
-<p>注：对于使用Java的开发者，需将生成的pkcs8格式的私钥去除头尾、换行和空格，作为私钥填入代码中，对于.NET和PHP的开发者来说，无需进行pkcs8命令行操作。</p>
-</blockquote>
+  <p><p>todo</p>
 </p>
 </article>
 
 
 
 
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/doc/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/">开发文档模板</a></li>
+	
+	<li><a href="/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/">一种好用的接口请求和响应格式规范，基于Google Json Style</a></li>
+	
+	<li><a href="/posts/development-standard/">你必须知道的软件开发规范</a></li>
+	
+	<li><a href="/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98/">浏览器静态资源缓存</a></li>
+	
+	<li><a href="/posts/PHP-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E8%AE%BE%E8%AE%A1/">PHP 项目的用户密码设计</a></li>
+	
+</ul>
 
 
 
