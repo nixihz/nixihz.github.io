@@ -195,7 +195,16 @@ cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风
 当然这一步仅是启动了屏保，大家设置了以后可能敲击键盘，或者移动鼠标，就退出屏保动画，进入系统了。
 进一步操作，让电脑进入屏保立马锁定电脑。如下图：
 大家可以体验一下，设定启动屏保的触发角，鼠标指针停留一段时间才会触发，而其他则立即触发，这些都是细节，真牛*。
-其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键    描述  快捷键     窗口切换，可以加 shift 反向切换 macos cmd + tab   同一应用窗口切换，可以加 shift 反向切换 macos cmd + `(反引号)|   cmd + h 隐藏窗口（可通过 cmd + tab 切换） macos   最小化窗口 （不可通过 cmd + tab 切换） macos cmd + m   切换到左侧窗口空间，四指左滑 macos ctrl + ←   macos ctrl + → 切换到右侧窗口空间， 四指右滑   查看窗口缩略图，四指上滑 macos ctrl + ↑   ctrl + ↓ 查看同应用的窗口缩略图 macos   打开 emoji 选择器🚀 macos ctrl + cmd + space    一些光标定位快捷键    快捷键  描述     cmd + x macos 剪切当前行   cmd + ← macos 光标到行首   cmd + → macos 光标到行尾   选中光标到行首的文本 cmd + shift + ← macos   cmd + shift + → macos 选中光标到行尾的文本   *unix 光标到行首 ahead ctrl + a   ctrl + e *unix 光标到行尾 end   ctrl + f *unix 光标向右1个字符 forward   *unix 光标向左1个字符 backward ctrl + b   ctrl + w *unix 向左清除一个单词 word   *unix 删除当前光标到行尾 ctrl + k   ctrl + u *unix 删除整行输入 undo   ctrl + y *unix 上一步的重做   *unix 取消输入，会保留输入文本 cancel ctrl + c   ctrl + l (小写L) *unix 清屏   ctrl + r *unix 搜索历史命令记录    </description>
+其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键    描述  快捷键     窗口切换，可以加 shift 反向切换 macos cmd + tab   同一应用窗口切换，可以加 shift 反向切换 macos cmd + `(反引号)|   隐藏窗口（可通过 cmd + tab 切换） macos cmd + h   最小化窗口 （不可通过 cmd + tab 切换） macos cmd + m   macos ctrl + ← 切换到左侧窗口空间，四指左滑   切换到右侧窗口空间， 四指右滑 macos ctrl + →   查看窗口缩略图，四指上滑 macos ctrl + ↑   查看同应用的窗口缩略图 macos ctrl + ↓   打开 emoji 选择器🚀 macos ctrl + cmd + space    一些光标定位快捷键    快捷键  描述     cmd + x macos 剪切当前行   cmd + ← macos 光标到行首   cmd + → macos 光标到行尾   选中光标到行首的文本 cmd + shift + ← macos   macos 选中光标到行尾的文本 cmd + shift + →   ctrl + a *unix 光标到行首 ahead   ctrl + e *unix 光标到行尾 end   ctrl + f *unix 光标向右1个字符 forward   光标向左1个字符 backward ctrl + b *unix   ctrl + w *unix 向左清除一个单词 word   ctrl + k *unix 删除当前光标到行尾   ctrl + u *unix 删除整行输入 undo   ctrl + y *unix 上一步的重做   ctrl + c *unix 取消输入，会保留输入文本 cancel   清屏 ctrl + l (小写L) *unix   ctrl + r *unix 搜索历史命令记录    </description>
+    </item>
+    
+    <item>
+      <title>Flutter 音乐 app 之 使用 sqlite 存储歌曲信息和歌单文件夹</title>
+      <link>https://nixihz.com/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E4%BD%BF%E7%94%A8-sqlite-%E5%AD%98%E5%82%A8%E6%AD%8C%E6%9B%B2%E4%BF%A1%E6%81%AF%E5%92%8C%E6%AD%8C%E5%8D%95%E6%96%87%E4%BB%B6%E5%A4%B9/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E4%BD%BF%E7%94%A8-sqlite-%E5%AD%98%E5%82%A8%E6%AD%8C%E6%9B%B2%E4%BF%A1%E6%81%AF%E5%92%8C%E6%AD%8C%E5%8D%95%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -305,6 +314,23 @@ WSDL 描述了业务方法，各语言基本都提供了工具可以自动生成
 RenderImage when len(FileIDs) == 0 NYI 这个时候，就能看出空白到底是tab还是空格，如图：
 RenderImage when len(FileIDs) == 0 NYI 这一步操作不仅能显示tab和空格，而且区分了 tab 和 空格
  拷贝文本，保留tab 输入文本，替换tab为4个空格  </description>
+    </item>
+    
+    <item>
+      <title>如何快速有序地接手一个项目</title>
+      <link>https://nixihz.com/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%9C%89%E5%BA%8F%E5%9C%B0%E6%8E%A5%E6%89%8B%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%9C%89%E5%BA%8F%E5%9C%B0%E6%8E%A5%E6%89%8B%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
+      <description>见过一些人在接受一个老项目后，开始阅读~~~~一行一行代码，终于3个月后熟悉了整个项目。
+软件开发生涯中，一定会遇到一只拦路虎『老项目』，循此规蹈此矩，你可能真的可以骑着『老虎』前进。
+一切拦路虎都是纸老虎
+情报收集 既然是老项目，最大的特质就是陌生，面对陌生的事物，切不可着急下手，第一步须收集各种情报，让这个项目在脑子里更立体，更形象。
+情报来源-产品相关 产品体验（前后台）、历代产品迭代文档、相关产品人员沟通等，通过这些手段明确：
+ 产品功能，目标用户，竞品和对标产品 体验中根据经验勾勒出来的大概的代码设计 需要研发经常介入的操作 历史上出现过的重大bug，常现bug 产品人员对之前研发的评价 &amp;hellip;  情报来源-技术相关 之前负责人的交接文档，研发产出的设计文档，开发文档，对接文档，可能至少有2周时间和之前负责团队进行交接，通过这些手段明确：
+ 主流程图，框架图 设计细节：分库， 技术框架、第三方类库， 组件及用途：mysql redis kafka nginx 等 第三方服务：推送等文档 流程上下游：前端，大数据等 你对交接人的评价 &amp;hellip;  如果上述不能给出，需要自己根据产品相关和下面的情报自己整理。
+情报来源-代码和环境 到此『纸老虎』的框架已经出来了， 再来把血肉给拼接上。可以开始分模块阅读手上的代码，同时让运维同事把线上环境各项配置罗列出来，最后需要明确：
+ 线上环境配置：硬件配置，软件配置 线上机器压力和波峰波谷情况 自动任务crontab，常驻任务 上线流程 涉及代码异构，和上下游交互明细，redis key，restful api文档 熟悉单元测试 索要所有的证书，凭证，密码等 &amp;hellip;待续  情报处理 有了如上手段和目标，就可以着手整理属于自己的认知文档了（不同项目可能步骤有不同）。</description>
     </item>
     
     <item>

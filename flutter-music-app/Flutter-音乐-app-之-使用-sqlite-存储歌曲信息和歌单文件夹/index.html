@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Curl 指定 IP 访问等常规用法总结"><meta property="og:title" content="Curl 指定 IP 访问等常规用法总结" />
-<meta property="og:description" content="&ndash; resolve 指定ip访问 1  curl --resolve demo:443:127.0.0.1 https://demo/api.json   " />
+<meta name="description" content="Flutter 音乐 app 之 使用 sqlite 存储歌曲信息和歌单文件夹"><meta property="og:title" content="Flutter 音乐 app 之 使用 sqlite 存储歌曲信息和歌单文件夹" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://nixihz.com/tools/Curl-%E6%8C%87%E5%AE%9A-IP-%E8%AE%BF%E9%97%AE%E7%AD%89%E5%B8%B8%E8%A7%84%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/" />
+<meta property="og:url" content="https://nixihz.com/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E4%BD%BF%E7%94%A8-sqlite-%E5%AD%98%E5%82%A8%E6%AD%8C%E6%9B%B2%E4%BF%A1%E6%81%AF%E5%92%8C%E6%AD%8C%E5%8D%95%E6%96%87%E4%BB%B6%E5%A4%B9/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
-<meta property="article:published_time" content="2021-10-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-10-02T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
-<title>Curl 指定 IP 访问等常规用法总结 | nixihz 的技术博客</title>
+<meta property="article:published_time" content="2021-02-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-09T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>Flutter 音乐 app 之 使用 sqlite 存储歌曲信息和歌单文件夹 | nixihz 的技术博客</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
@@ -105,7 +105,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Curl 指定 IP 访问等常规用法总结</strong>
+  <strong>Flutter 音乐 app 之 使用 sqlite 存储歌曲信息和歌单文件夹</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -117,15 +117,7 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#---resolve-指定ip访问">&ndash; resolve 指定ip访问</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
 
     </aside>
@@ -141,14 +133,14 @@ https://github.com/alex-shpak/hugo-book
 
 <article class="markdown">
   <h1>
-    <a href="/tools/Curl-%E6%8C%87%E5%AE%9A-IP-%E8%AE%BF%E9%97%AE%E7%AD%89%E5%B8%B8%E8%A7%84%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/">Curl 指定 IP 访问等常规用法总结</a>
+    <a href="/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E4%BD%BF%E7%94%A8-sqlite-%E5%AD%98%E5%82%A8%E6%AD%8C%E6%9B%B2%E4%BF%A1%E6%81%AF%E5%92%8C%E6%AD%8C%E5%8D%95%E6%96%87%E4%BB%B6%E5%A4%B9/">Flutter 音乐 app 之 使用 sqlite 存储歌曲信息和歌单文件夹</a>
   </h1>
   <hr/>
 
 
 <div>
 
-  <h5>2021-10-02</h5>
+  <h5>2021-02-09</h5>
 
 
 
@@ -157,7 +149,9 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-        <a href="/tags/curl/">curl</a>
+        <a href="/tags/flutter/">flutter</a>, 
+        <a href="/tags/app/">app</a>, 
+        <a href="/tags/sqlite/">sqlite</a>
   </div>
   
 
@@ -165,21 +159,21 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="---resolve-指定ip访问">&ndash; resolve 指定ip访问</h2>
-<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    curl --resolve demo:443:127.0.0.1 https://demo/api.json
-</code></pre></td></tr></table>
-</div>
-</div></p>
+  <p></p>
 </article>
 
 
 
 
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/flutter-music-app/Flutter-%E9%9F%B3%E4%B9%90-app-%E4%B9%8B-%E5%8A%A0%E4%B8%80%E4%B8%AA-WiFi-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%8A%9F%E8%83%BD%E5%90%A7/">Flutter 音乐 app 之 加一个 WiFi 文件同步功能吧</a></li>
+	
+	<li><a href="/flutter-music-app/%E5%BC%80%E7%AF%87%E8%AF%8D/">开篇词</a></li>
+	
+</ul>
 
 
 
@@ -202,29 +196,6 @@ https://github.com/alex-shpak/hugo-book
  
         
   
-  <div class="book-comments">
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "fence-x" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-  
  
       </footer>
       
@@ -233,15 +204,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#---resolve-指定ip访问">&ndash; resolve 指定ip访问</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
  
     </aside>
