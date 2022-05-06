@@ -12,7 +12,7 @@
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/posts/git-flow/</guid>
-      <description>安装 初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &amp;#34;next release&amp;#34; development: [develop] How to name your supporting branch prefixes? Feature branches? [feature/] Bugfix branches? [bugfix/] Release branches? [release/] Hotfix branches? [hotfix/] Support branches? [support/] Version tag prefix?</description>
+      <description>安装 1  brew install git-flow-avh   初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &amp;#34;next release&amp;#34; development: [develop] How to name your supporting branch prefixes? Feature branches? [feature/] Bugfix branches? [bugfix/] Release branches?</description>
     </item>
     
     <item>
