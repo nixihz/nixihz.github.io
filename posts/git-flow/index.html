@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Git 开发流程 git-flow"><meta property="og:title" content="Git 开发流程 git-flow" />
+<meta property="og:description" content="安装 初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &#34;next release&#34; development: [develop] How to name your supporting branch prefixes? Feature branches? [feature/] Bugfix branches? [bugfix/] Release branches? [release/] Hotfix branches? [hotfix/] Support branches? [support/] Version tag prefix?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/posts/git-flow/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2022-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-06T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>Git 开发流程 git-flow | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
+
+
+<script defer src="/en.search.min.a0cf51e777c44d77b40d171b0edabb9b5b6583760f9b87aaba0d8925399001db.js" integrity="sha256-oM9R53fETXe0DRcbDtq7m1tlg3YPm4equg2JJTmQAds="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <hr>
+<ul>
+<li><a href="/posts/">1.开发札记</a></li>
+<li><a href="/tools/">2.软件备忘</a></li>
+<li><a href="/sharpen-knife/">3.工欲善其事，必先利其器</a></li>
+<li><a href="/doc/">4.开发文档照着写</a></li>
+</ul>
+<hr>
+<p>小项目</p>
+<ul>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Git 开发流程 git-flow</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#初始化项目">初始化项目</a></li>
+        <li><a href="#feature-分支新功能开发">Feature 分支新功能开发</a>
+          <ul>
+            <li><a href="#开发环节">开发环节：</a></li>
+            <li><a href="#上线环节">上线环节：</a></li>
+          </ul>
+        </li>
+        <li><a href="#hotfix-分支功能修复">Hotfix 分支功能修复</a>
+          <ul>
+            <li><a href="#开发环节-1">开发环节：</a></li>
+            <li><a href="#上线环节-1">上线环节：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/git-flow/">Git 开发流程 git-flow</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2022-05-06</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/development/">development</a>, 
+        <a href="/tags/git/">git</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h2 id="安装">安装</h2>
+<h2 id="初始化项目">初始化项目</h2>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    git flow init
+    <span style="color:#75715e"># 然后一路回车</span>
+    
+    Which branch should be used <span style="color:#00a8c8">for</span> bringing forth production releases?
+       - main
+    Branch name <span style="color:#00a8c8">for</span> production releases: <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span>
+    Branch name <span style="color:#00a8c8">for</span> <span style="color:#d88200">&#34;next release&#34;</span> development: <span style="color:#f92672">[</span>develop<span style="color:#f92672">]</span>
+    
+    How to name your supporting branch prefixes?
+    Feature branches? <span style="color:#f92672">[</span>feature/<span style="color:#f92672">]</span>
+    Bugfix branches? <span style="color:#f92672">[</span>bugfix/<span style="color:#f92672">]</span>
+    Release branches? <span style="color:#f92672">[</span>release/<span style="color:#f92672">]</span>
+    Hotfix branches? <span style="color:#f92672">[</span>hotfix/<span style="color:#f92672">]</span>
+    Support branches? <span style="color:#f92672">[</span>support/<span style="color:#f92672">]</span>
+    Version tag prefix? <span style="color:#f92672">[]</span>
+    Hooks and filters directory? <span style="color:#f92672">[</span>/data/demo/.git/hooks<span style="color:#f92672">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="feature-分支新功能开发">Feature 分支新功能开发</h2>
+<h3 id="开发环节">开发环节：</h3>
+<ol>
+<li>开启一个新分支</li>
+<li>立即推送到远端，避免同事推送了相同的分支</li>
+</ol>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    <span style="color:#75715e"># 开启一个分支</span>
+    git flow feature start pre-release-config
+    
+    <span style="color:#75715e"># 推送提交到远端，效果等同于 git push origin feature/pre-release-config</span>
+    git flow publish
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="上线环节">上线环节：</h3>
+<ol>
+<li>feature分支开发完成，代码会合并到本地 develop</li>
+<li>开启一个 release 分支，一般分支名为版本号，如：v1.0.0.0</li>
+<li>完成release分支，会新建一个 release 分支命名的 tag 如： v1.0.0.0</li>
+<li>推送 develop 和 main 分支到远端</li>
+<li>将 tag 推送到远端</li>
+</ol>
+<p>以上 5 步基本都是直接完成，不会穿插其他环节，完成后线上可以基于 main 分支发布或者基于对应版本的 tag 进行部署发布了。</p>
+<p>需要注意的是：在开启 release 分支之前，可以对多个 feature 分支进行合并。</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    <span style="color:#75715e"># feature 分支开发完成，代码会合并到 develop</span>
+    git flow feature finish
+    
+    <span style="color:#75715e"># 开启 release 分支</span>
+    git flow release start v1.0.0.0
+    
+    <span style="color:#75715e"># release 分支完成，新建 release 分支命名的 tag 如：v1.0.0.0，并需填写 tag 的备注信息</span>
+    git flow release finish
+    
+    <span style="color:#75715e"># 以上操作除了 git flow publish 都是本地分支进行操作，</span>
+    
+    <span style="color:#75715e"># 最后需要推送 develop 和 main 分支以及 tag 到远端</span>
+    git checkout develop
+    git flow publish
+    
+    git checkout main
+    git flow publish
+    
+    git push --tag
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="hotfix-分支功能修复">Hotfix 分支功能修复</h2>
+<p>hotfix 与 feature 大同小异，主要差异体现在 release 分支，具体见下文</p>
+<h3 id="开发环节-1">开发环节：</h3>
+<ol>
+<li>开启新分支</li>
+<li>立即推送到到远端，避免同事推送相同的分支</li>
+</ol>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    <span style="color:#75715e"># 开启一个分支</span>
+    git flow feature start typo-fix
+    
+    <span style="color:#75715e"># 推送提交到远端，效果等同于 git push origin hotfix/typo-fix</span>
+    git flow publish
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="上线环节-1">上线环节：</h3>
+<ol>
+<li>hotfix 分支开发完成，会直接创建 tag，并且以hotfix分支命名，但是建议带上参数 -T 重新命名</li>
+<li>推送 develop 和 main 分支到远端</li>
+<li>将 tag 推送到远端</li>
+</ol>
+<p>可以看到与 feature 开发不同的是，hotfix 不需要通过创建 release，可以快速操作，毕竟我们是修复，需要尽快操作完成上线。</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    <span style="color:#75715e"># hotfix 分支开发完成，并且以为 v1.0.0.1 命名建立一个新tag</span>
+    git flow hotfix finish -T v1.0.0.1
+    <span style="color:#75715e"># 如果有多个 hotfix ，建议在 finish 后跟上具体的 hotfix 分支名</span>
+    git flow hotfix finish typo-fix -T v1.0.0.1
+    
+    
+    <span style="color:#75715e"># 最后需要推送 develop 和 main 分支以及 tag 到远端</span>
+    git checkout develop
+    git flow publish
+    
+    git checkout main
+    git flow publish
+    
+    git push --tag
+</code></pre></td></tr></table>
+</div>
+</div></p>
+</article>
+
+
+
+
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/posts/development-standard/">你必须知道的软件开发规范</a></li>
+	
+	<li><a href="/posts/development-standard/">你必须知道的软件开发规范</a></li>
+	
+	<li><a href="/doc/%E4%B8%8A%E7%BA%BF%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/">开发文档模板</a></li>
+	
+	<li><a href="/doc/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/">开发文档模板</a></li>
+	
+	<li><a href="/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/">一种好用的接口请求和响应格式规范，基于Google Json Style</a></li>
+	
+</ul>
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#初始化项目">初始化项目</a></li>
+        <li><a href="#feature-分支新功能开发">Feature 分支新功能开发</a>
+          <ul>
+            <li><a href="#开发环节">开发环节：</a></li>
+            <li><a href="#上线环节">上线环节：</a></li>
+          </ul>
+        </li>
+        <li><a href="#hotfix-分支功能修复">Hotfix 分支功能修复</a>
+          <ul>
+            <li><a href="#开发环节-1">开发环节：</a></li>
+            <li><a href="#上线环节-1">上线环节：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8997196463219106"
+     crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: fixed;bottom: 10px; left:10px; font-size: 12px;">
+  <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022013452号-1</a>
+</div>
+	

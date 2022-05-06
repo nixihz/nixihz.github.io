@@ -5,7 +5,16 @@
     <link>https://nixihz.com/</link>
     <description>Recent content in 关于我 on nixihz 的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git 开发流程 git-flow</title>
+      <link>https://nixihz.com/posts/git-flow/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/git-flow/</guid>
+      <description>安装 初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &amp;#34;next release&amp;#34; development: [develop] How to name your supporting branch prefixes? Feature branches? [feature/] Bugfix branches? [bugfix/] Release branches? [release/] Hotfix branches? [hotfix/] Support branches? [support/] Version tag prefix?</description>
+    </item>
+    
     <item>
       <title>开发文档模板</title>
       <link>https://nixihz.com/doc/%E4%B8%8A%E7%BA%BF%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/</link>
@@ -53,6 +62,22 @@
       
       <guid>https://nixihz.com/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/</guid>
       <description>简述  基于较为流行的谷歌 json 风格 google json style  英文 https://google.github.io/styleguide/jsoncstyleguide.xml 中文 https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md   所有字段驼峰命名，接口使用：get post  get 获取数据 post 更新数据   post：请求 body 数据使用 application/json, 不使用 FormData; 响应成功，仅返回 data；响应错误，仅返回 error。如果data和error同时出现，则error对象优先。 HTTP_STATUS 始终200， 如果非 200，则说明出现错误，提示“服务器异常”。  POST 请求： 1 2 3 4 5 6 7 8  { &amp;#34;method&amp;#34;: &amp;#34;thread.review.list 可简化&amp;#34;, &amp;#34;params&amp;#34;: { &amp;#34;id&amp;#34;: 100, &amp;#34;type&amp;#34;: 1 } }   接口响应： 正确响应  列表响应 items  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  { &amp;#34;apiVersion&amp;#34;: &amp;#34;2.</description>
+    </item>
+    
+    <item>
+      <title>你必须知道的软件开发规范</title>
+      <link>https://nixihz.com/posts/development-standard/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/development-standard/</guid>
+      <description>软件版本控制规范 目前 git 较为主流，仅介绍git相关流程规范。git flow 和 github flow
+git-flow git-flow 是一个 git 扩展集，按 Vincent Driessen 的分支模型提供高层次的库操作。
+一图胜千言
+GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定期进行部署的团队和项目。https://guides.github.com/introduction/flow/ 解释了 GitHub 流程的工作原理和原因。
+流程就是
+ 创建分支 提交代码 创建合代码请求 PullRequest 讨论和代码审查 合并代码  参考资料
+ git-flow:  http://danielkummer.github.io/git-flow-cheatsheet/index.html https://nvie.com/posts/a-successful-git-branching-model/ https://github.com/nvie/gitflow https://github.com/petervanderdoes/gitflow-avh 对 nvie 的git-flow做了补充，是目前的主流版本   GitHub flow:  https://guides.github.com/introduction/flow/    软件版本号规范 软件的更新迭代是常态，软件依赖更是需要严格控制版本号，为什么要约定以及如何约定版本号规范，这里有答案《语义化版本 2.0.0》 https://semver.org/，如果你使用 git 做版本控制，那么版本号通常是 tag 名，同时，release通常从 tag 中选取，并丰富修改内容。
+语义化版本控制的规范是由 Gravatars 创办者兼 GitHub 共同创办者 Tom Preston-Werner 所建立。</description>
     </item>
     
     <item>

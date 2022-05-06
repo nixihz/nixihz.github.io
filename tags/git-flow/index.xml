@@ -22,5 +22,21 @@ GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定�
 语义化版本控制的规范是由 Gravatars 创办者兼 GitHub 共同创办者 Tom Preston-Werner 所建立。</description>
     </item>
     
+    <item>
+      <title>你必须知道的软件开发规范</title>
+      <link>https://nixihz.com/posts/development-standard/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/development-standard/</guid>
+      <description>软件版本控制规范 目前 git 较为主流，仅介绍git相关流程规范。git flow 和 github flow
+git-flow git-flow 是一个 git 扩展集，按 Vincent Driessen 的分支模型提供高层次的库操作。
+一图胜千言
+GitHub flow GitHub 流是一个轻量级、基于分支的工作流，支持定期进行部署的团队和项目。https://guides.github.com/introduction/flow/ 解释了 GitHub 流程的工作原理和原因。
+流程就是
+ 创建分支 提交代码 创建合代码请求 PullRequest 讨论和代码审查 合并代码  参考资料
+ git-flow:  http://danielkummer.github.io/git-flow-cheatsheet/index.html https://nvie.com/posts/a-successful-git-branching-model/ https://github.com/nvie/gitflow https://github.com/petervanderdoes/gitflow-avh 对 nvie 的git-flow做了补充，是目前的主流版本   GitHub flow:  https://guides.github.com/introduction/flow/    软件版本号规范 软件的更新迭代是常态，软件依赖更是需要严格控制版本号，为什么要约定以及如何约定版本号规范，这里有答案《语义化版本 2.0.0》 https://semver.org/，如果你使用 git 做版本控制，那么版本号通常是 tag 名，同时，release通常从 tag 中选取，并丰富修改内容。
+语义化版本控制的规范是由 Gravatars 创办者兼 GitHub 共同创办者 Tom Preston-Werner 所建立。</description>
+    </item>
+    
   </channel>
 </rss>
