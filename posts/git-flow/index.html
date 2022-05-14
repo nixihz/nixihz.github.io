@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Git 开发流程 git-flow"><meta property="og:title" content="Git 开发流程 git-flow" />
-<meta property="og:description" content="安装 1  brew install git-flow-avh   初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &#34;next release&#34; development: [develop] How to name your supporting branch prefixes? Feature branches? [feature/] Bugfix branches? [bugfix/] Release branches?" />
+<meta property="og:description" content="Git-Flow是什么 Git 诸多命令就像一个个零件，代码管理是够用的。但是工程化代码管理尤其是团队协作的工程化，就需要这些零件整合起来，形成一套工作流。Git Flow 就是这么一套工具。
+http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
+安装 1  brew install git-flow-avh   初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &#34;next release&#34; development: [develop] How to name your supporting branch prefixes?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nixihz.com/posts/git-flow/" />
 <meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
@@ -18,7 +20,7 @@
 <link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
 
 
-<script defer src="/en.search.min.b85720f0459feba4d6bd48358dd9fd206b6014eb6f084d37bb26ea7cc95202a5.js" integrity="sha256-uFcg8EWf66TWvUg1jdn9IGtgFOtvCE03uybqfMlSAqU="></script>
+<script defer src="/en.search.min.0161f6b29b58bfd96ae111e04f7955d204fb1f9d2b182299e4b35d2a1f14c479.js" integrity="sha256-AWH2sptYv9lq4RHgT3lV0gT7H50rGCKZ5LNdKh8UxHk="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -121,8 +123,13 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
+        <li><a href="#git-flow是什么">Git-Flow是什么</a></li>
         <li><a href="#安装">安装</a></li>
-        <li><a href="#初始化项目">初始化项目</a></li>
+        <li><a href="#初始化项目">初始化项目</a>
+          <ul>
+            <li><a href="#hotfix-与-bugfix--的区别">Hotfix 与 Bugfix  的区别</a></li>
+          </ul>
+        </li>
         <li><a href="#feature-分支新功能开发">Feature 分支新功能开发</a>
           <ul>
             <li><a href="#开发环节">开发环节：</a></li>
@@ -179,7 +186,10 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-  <p><h2 id="安装">安装</h2>
+  <p><h2 id="git-flow是什么">Git-Flow是什么</h2>
+<p>Git 诸多命令就像一个个零件，代码管理是够用的。但是工程化代码管理尤其是团队协作的工程化，就需要这些零件整合起来，形成一套工作流。Git Flow 就是这么一套工具。</p>
+<p><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html">http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html</a></p>
+<h2 id="安装">安装</h2>
 <div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -207,6 +217,11 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    git flow init
@@ -218,16 +233,26 @@ https://github.com/alex-shpak/hugo-book
     Branch name <span style="color:#00a8c8">for</span> <span style="color:#d88200">&#34;next release&#34;</span> development: <span style="color:#f92672">[</span>develop<span style="color:#f92672">]</span>
     
     How to name your supporting branch prefixes?
+    <span style="color:#75715e"># 功能开发</span>
     Feature branches? <span style="color:#f92672">[</span>feature/<span style="color:#f92672">]</span>
+    <span style="color:#75715e"># bug修复</span>
     Bugfix branches? <span style="color:#f92672">[</span>bugfix/<span style="color:#f92672">]</span>
+    <span style="color:#75715e"># 发布分支</span>
     Release branches? <span style="color:#f92672">[</span>release/<span style="color:#f92672">]</span>
+    <span style="color:#75715e"># hotfix修复</span>
     Hotfix branches? <span style="color:#f92672">[</span>hotfix/<span style="color:#f92672">]</span>
     Support branches? <span style="color:#f92672">[</span>support/<span style="color:#f92672">]</span>
+    <span style="color:#75715e"># tag前缀，一般可以设为v</span>
     Version tag prefix? <span style="color:#f92672">[]</span>
     Hooks and filters directory? <span style="color:#f92672">[</span>/data/demo/.git/hooks<span style="color:#f92672">]</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="feature-分支新功能开发">Feature 分支新功能开发</h2>
+</div><h3 id="hotfix-与-bugfix--的区别">Hotfix 与 Bugfix  的区别</h3>
+<ul>
+<li>Hotfix 热修复，通常是开发完成就需要立即上线，执行 hotfix finish 的时候就合并进入 main 分支，同时打好tag，就可以发布了。</li>
+<li>Bugfix 也是修复bug，不是那么紧急，通常可以认为与 feature 功能分支同步开发，最后放在一个 release 进行发布。</li>
+</ul>
+<h2 id="feature-分支新功能开发">Feature 分支新功能开发</h2>
 <h3 id="开发环节">开发环节：</h3>
 <ol>
 <li>开启一个新分支</li>
@@ -295,10 +320,10 @@ https://github.com/alex-shpak/hugo-book
     
     <span style="color:#75715e"># 最后需要推送 develop 和 main 分支以及 tag 到远端</span>
     git checkout develop
-    git flow publish
+    git push origin develop
     
     git checkout main
-    git flow publish
+    git push origin main
     
     git push --tag
 </code></pre></td></tr></table>
@@ -359,10 +384,10 @@ https://github.com/alex-shpak/hugo-book
     
     <span style="color:#75715e"># 最后需要推送 develop 和 main 分支以及 tag 到远端</span>
     git checkout develop
-    git flow publish
+    git push origin develop
     
     git checkout main
-    git flow publish
+    git push origin main
     
     git push --tag
 </code></pre></td></tr></table>
@@ -427,8 +452,13 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
+        <li><a href="#git-flow是什么">Git-Flow是什么</a></li>
         <li><a href="#安装">安装</a></li>
-        <li><a href="#初始化项目">初始化项目</a></li>
+        <li><a href="#初始化项目">初始化项目</a>
+          <ul>
+            <li><a href="#hotfix-与-bugfix--的区别">Hotfix 与 Bugfix  的区别</a></li>
+          </ul>
+        </li>
         <li><a href="#feature-分支新功能开发">Feature 分支新功能开发</a>
           <ul>
             <li><a href="#开发环节">开发环节：</a></li>

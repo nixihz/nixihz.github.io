@@ -12,7 +12,9 @@
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/posts/git-flow/</guid>
-      <description>安装 1  brew install git-flow-avh   初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &amp;#34;next release&amp;#34; development: [develop] How to name your supporting branch prefixes? Feature branches? [feature/] Bugfix branches? [bugfix/] Release branches?</description>
+      <description>Git-Flow是什么 Git 诸多命令就像一个个零件，代码管理是够用的。但是工程化代码管理尤其是团队协作的工程化，就需要这些零件整合起来，形成一套工作流。Git Flow 就是这么一套工具。
+http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
+安装 1  brew install git-flow-avh   初始化项目 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  git flow init # 然后一路回车 Which branch should be used for bringing forth production releases? - main Branch name for production releases: [main] Branch name for &amp;#34;next release&amp;#34; development: [develop] How to name your supporting branch prefixes?</description>
     </item>
     
     <item>
