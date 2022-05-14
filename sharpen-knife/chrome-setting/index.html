@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="web后端开发chrome浏览器设置"><meta property="og:title" content="web后端开发chrome浏览器设置" />
+<meta property="og:description" content="切换 host 之后，清除 dsn 缓存 访问链接
+chrome://net-internals/#sockets
+点击 Flush socket pools 一次，其他都不用点击了。
+搜索引擎设置 访问搜索引擎设置页面
+chrome://settings/search
+管理搜索引擎和网站搜索-网站搜索-添加
+ cmd/ctrl &#43; L 定位到浏览器链接输入框， 输入 dict 按下 Tab 输入想要翻译的单词 按下 Enter  看似四步，简单上手后一气呵成！
+多搜索引擎管理 不同的搜索内容，应该使用不同的搜索引擎，就像你不能在 baidu 搜索技术关键词一样。
+你可以设置，google搜索，输入 goo 按下 Tab ，输入搜索词，按下回车。
+同样可以设置，baidu搜索，输入 baidu 按下 Tab ，输入搜索词，按下回车。
+链接快捷访问 网址中不使用搜索字词占位符 “%s” ，那么输入快捷字词后可以直接按下回车访问链接了。
+插件 Web开发者助手 FeHelper https://www.baidufe.com/fehelper/index/index.html
+最常用的是 JSON美化工具、 时间戳转换
+还有很多其他工具，随机密码生成，页面取色等等
+结合上文中的 链接快捷访问
+你可以 设置 在 链接栏输入 json 快速访问 JSON美化工具，输入 ts 快速访问 时间戳转换
+Website IP https://chrome." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/sharpen-knife/chrome-setting/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2022-05-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-14T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>web后端开发chrome浏览器设置 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
+
+
+<script defer src="/en.search.min.4dbf2feb91aeb92cfae15cb96a5af2824a140d3f7eb4d3c6cfb5fb89bd9e2642.js" integrity="sha256-Tb8v65GuuSz64Vy5alrygkoUDT9&#43;tNPGz7X7ib2eJkI="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <hr>
+<ul>
+<li><a href="/posts/">1.开发札记</a></li>
+<li><a href="/tools/">2.软件备忘</a></li>
+<li><a href="/sharpen-knife/">3.工欲善其事，必先利其器</a></li>
+<li><a href="/doc/">4.开发文档照着写</a></li>
+</ul>
+<hr>
+<p>小项目</p>
+<ul>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>web后端开发chrome浏览器设置</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#切换-host-之后清除-dsn-缓存">切换 host 之后，清除 dsn 缓存</a></li>
+        <li><a href="#搜索引擎设置">搜索引擎设置</a>
+          <ul>
+            <li><a href="#多搜索引擎管理">多搜索引擎管理</a></li>
+            <li><a href="#链接快捷访问">链接快捷访问</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#插件">插件</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#web开发者助手-fehelper"><strong>Web开发者助手 FeHelper</strong></a></li>
+            <li><a href="#website-ip">Website IP</a></li>
+            <li><a href="#switchyomega"><strong><strong>SwitchyOmega</strong></strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/sharpen-knife/chrome-setting/">web后端开发chrome浏览器设置</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2022-05-14</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/development/">development</a>, 
+        <a href="/tags/chrome/">chrome</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h2 id="切换-host-之后清除-dsn-缓存">切换 host 之后，清除 dsn 缓存</h2>
+<p>访问链接</p>
+<p>chrome://net-internals/#sockets</p>
+<p><img src="/images/Untitled-c5ec35a6-d386-4add-8134-4a5346274483.png" alt=""></p>
+<p>点击 <code>Flush socket pools</code> 一次，其他都不用点击了。</p>
+<h2 id="搜索引擎设置">搜索引擎设置</h2>
+<p>访问搜索引擎设置页面</p>
+<p>chrome://settings/search</p>
+<p>管理搜索引擎和网站搜索-网站搜索-添加</p>
+<p><img src="/images/Untitled-39424c68-fbec-4309-b10a-f352744323ce.png" alt=""></p>
+<ol>
+<li><code>cmd/ctrl</code> + <code>L</code>  定位到浏览器链接输入框，</li>
+<li>输入 <code>dict</code> 按下 <code>Tab</code></li>
+<li>输入想要翻译的单词</li>
+<li>按下 <code>Enter</code></li>
+</ol>
+<p>看似四步，简单上手后一气呵成！</p>
+<h3 id="多搜索引擎管理">多搜索引擎管理</h3>
+<p>不同的搜索内容，应该使用不同的搜索引擎，就像你不能在 baidu 搜索技术关键词一样。</p>
+<p>你可以设置，google搜索，输入 <code>goo</code> 按下 <code>Tab</code> ，输入搜索词，按下回车。</p>
+<p>同样可以设置，baidu搜索，输入 <code>baidu</code> 按下 <code>Tab</code> ，输入搜索词，按下回车。</p>
+<h3 id="链接快捷访问">链接快捷访问</h3>
+<p>网址中不使用搜索字词占位符 “%s” ，那么输入快捷字词后可以直接按下回车访问链接了。</p>
+<h1 id="插件">插件</h1>
+<h3 id="web开发者助手-fehelper"><strong>Web开发者助手 FeHelper</strong></h3>
+<p><a href="https://www.baidufe.com/fehelper/index/index.html">https://www.baidufe.com/fehelper/index/index.html</a></p>
+<p>最常用的是 <code>JSON美化工具</code>、 <code>时间戳转换</code></p>
+<p>还有很多其他工具，随机密码生成，页面取色等等</p>
+<p>结合上文中的 <code>链接快捷访问</code></p>
+<p>你可以 设置 在 链接栏输入 <code>json</code> 快速访问 <code>JSON美化工具</code>，输入 <code>ts</code> 快速访问 <code>时间戳转换</code></p>
+<h3 id="website-ip">Website IP</h3>
+<p><a href="https://chrome.google.com/webstore/detail/website-ip/ghbmhlgniedlklkpimlibbaoomlpacmk">https://chrome.google.com/webstore/detail/website-ip/ghbmhlgniedlklkpimlibbaoomlpacmk</a></p>
+<p>这个插件只有一个用途，就是在网页的右下角显示当前网址的 IP 地址。这非常有用，判断当前是测试环境还是生产环境，切换 host 之后可以快速验证。</p>
+<p>虽然 IP 地址只有一小部分，但是还是遮挡部分页面，插件开发者也考虑到这点，你可以把鼠标移动到 IP 的位置，这是 IP 文字就会乖乖的跑到左下角了，光标再次移到左下角亦然。</p>
+<h3 id="switchyomega"><strong><strong>SwitchyOmega</strong></strong></h3>
+<p>这是一个代理工具</p>
+</p>
+</article>
+
+
+
+
+
+<h3>See Also</h3>
+<ul>
+	
+	<li><a href="/posts/git-flow/">Git 开发流程 git-flow</a></li>
+	
+	<li><a href="/doc/%E4%B8%8A%E7%BA%BF%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/">开发文档模板</a></li>
+	
+	<li><a href="/doc/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF/">开发文档模板</a></li>
+	
+	<li><a href="/posts/%E4%B8%80%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E5%9F%BA%E4%BA%8EGoogle-Json-Style/">一种好用的接口请求和响应格式规范，基于Google Json Style</a></li>
+	
+	<li><a href="/posts/development-standard/">你必须知道的软件开发规范</a></li>
+	
+</ul>
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#切换-host-之后清除-dsn-缓存">切换 host 之后，清除 dsn 缓存</a></li>
+        <li><a href="#搜索引擎设置">搜索引擎设置</a>
+          <ul>
+            <li><a href="#多搜索引擎管理">多搜索引擎管理</a></li>
+            <li><a href="#链接快捷访问">链接快捷访问</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#插件">插件</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#web开发者助手-fehelper"><strong>Web开发者助手 FeHelper</strong></a></li>
+            <li><a href="#website-ip">Website IP</a></li>
+            <li><a href="#switchyomega"><strong><strong>SwitchyOmega</strong></strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8997196463219106"
+     crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: fixed;bottom: 10px; left:10px; font-size: 12px;">
+  <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022013452号-1</a>
+</div>
+	
