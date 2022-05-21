@@ -83,12 +83,32 @@
   </url>
   
   <url>
+    <loc>https://nixihz.com/tags/awk/</loc>
+    <lastmod>2021-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/linux/</loc>
+    <lastmod>2021-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/</loc>
+    <lastmod>2021-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nixihz.com/tags/openssl/</loc>
     <lastmod>2021-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</loc>
+    <lastmod>2021-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/sed/</loc>
     <lastmod>2021-11-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -290,6 +310,10 @@
   <url>
     <loc>https://nixihz.com/blog/new-url/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/doc/%E7%94%BB%E6%95%B0%E6%8D%AE%E6%B5%81%E7%A8%8B%E5%9B%BE-Data-Flow-Diagram/</loc>
   </url>
   
   <url>

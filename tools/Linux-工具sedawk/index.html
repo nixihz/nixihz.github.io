@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux 工具sed,awk"><meta property="og:title" content="Linux 工具sed,awk" />
+<meta property="og:description" content="Sed 行处理
+sed [-nefr] [n1,n2] 动作
+1  cat -n /tmp/passwd | sed &#39;2,5s/old/new/g&#39;  参数 -n 只展示匹配到的数据
+-i 直接修改内容，而不是输出到终端
+-f 输出写入到文件
+-r 支持正则匹配
+动作 a 下一行追加
+c 替换
+d 删除
+i 上一行插入
+p 打印
+s 搜索和替换，类似 vim 的查找替换
+Awk 列处理
+1  awk -F&#34;\t&#34; &#39;{ print $1,$3 }&#39; /var/logs/nginx/access.log   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2021-11-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-02T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>Linux 工具sed,awk | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
+
+
+<script defer src="/en.search.min.dec9fa35d51965ba7ac77012c4fb30d7486678f908ea4cb657a39fc1a24afbe7.js" integrity="sha256-3sn6NdUZZbp6x3ASxPsw10hmePkI6ky2V6OfwaJK&#43;&#43;c="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <hr>
+<ul>
+<li><a href="/posts/">1.开发札记</a></li>
+<li><a href="/tools/">2.软件备忘</a></li>
+<li><a href="/sharpen-knife/">3.工欲善其事，必先利其器</a></li>
+<li><a href="/doc/">4.开发文档照着写</a></li>
+</ul>
+<hr>
+<p>小项目</p>
+<ul>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Linux 工具sed,awk</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sed">Sed</a>
+          <ul>
+            <li><a href="#参数">参数</a></li>
+            <li><a href="#动作">动作</a></li>
+          </ul>
+        </li>
+        <li><a href="#awk">Awk</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/">Linux 工具sed,awk</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2021-11-02</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/linux/">linux</a>, 
+        <a href="/tags/sed/">sed</a>, 
+        <a href="/tags/awk/">awk</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h2 id="sed">Sed</h2>
+<p>行处理</p>
+<p>sed [-nefr] [n1,n2] 动作</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Protobuf" data-lang="Protobuf">    <span style="color:#111">cat</span> <span style="color:#f92672">-</span><span style="color:#111">n</span> <span style="color:#f92672">/</span><span style="color:#111">tmp</span><span style="color:#f92672">/</span><span style="color:#111">passwd</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#111">sed</span> <span style="color:#d88200">&#39;2,5s/old/new/g&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="参数">参数</h3>
+<p>-n 只展示匹配到的数据</p>
+<p>-i 直接修改内容，而不是输出到终端</p>
+<p>-f 输出写入到文件</p>
+<p>-r 支持正则匹配</p>
+<h3 id="动作">动作</h3>
+<p>a 下一行追加</p>
+<p>c 替换</p>
+<p>d 删除</p>
+<p>i 上一行插入</p>
+<p>p 打印</p>
+<p>s 搜索和替换，类似 vim 的查找替换</p>
+<h2 id="awk">Awk</h2>
+<p>列处理</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    awk -F<span style="color:#d88200">&#34;\t&#34;</span>  <span style="color:#d88200">&#39;{ print $1,$3 }&#39;</span> /var/logs/nginx/access.log
+</code></pre></td></tr></table>
+</div>
+</div></p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sed">Sed</a>
+          <ul>
+            <li><a href="#参数">参数</a></li>
+            <li><a href="#动作">动作</a></li>
+          </ul>
+        </li>
+        <li><a href="#awk">Awk</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8997196463219106"
+     crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: fixed;bottom: 10px; left:10px; font-size: 12px;">
+  <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022013452号-1</a>
+</div>
+	

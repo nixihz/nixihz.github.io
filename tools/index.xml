@@ -7,6 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 02 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Linux 工具sed,awk</title>
+      <link>https://nixihz.com/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/</guid>
+      <description>Sed 行处理
+sed [-nefr] [n1,n2] 动作
+1  cat -n /tmp/passwd | sed &amp;#39;2,5s/old/new/g&amp;#39;  参数 -n 只展示匹配到的数据
+-i 直接修改内容，而不是输出到终端
+-f 输出写入到文件
+-r 支持正则匹配
+动作 a 下一行追加
+c 替换
+d 删除
+i 上一行插入
+p 打印
+s 搜索和替换，类似 vim 的查找替换
+Awk 列处理
+1  awk -F&amp;#34;\t&amp;#34; &amp;#39;{ print $1,$3 }&amp;#39; /var/logs/nginx/access.log   </description>
+    </item>
+    
+    <item>
       <title>OpenSSL 工具生成密钥</title>
       <link>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>

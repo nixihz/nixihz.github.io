@@ -70,6 +70,28 @@ http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
     </item>
     
     <item>
+      <title>Linux 工具sed,awk</title>
+      <link>https://nixihz.com/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tools/Linux-%E5%B7%A5%E5%85%B7sedawk/</guid>
+      <description>Sed 行处理
+sed [-nefr] [n1,n2] 动作
+1  cat -n /tmp/passwd | sed &amp;#39;2,5s/old/new/g&amp;#39;  参数 -n 只展示匹配到的数据
+-i 直接修改内容，而不是输出到终端
+-f 输出写入到文件
+-r 支持正则匹配
+动作 a 下一行追加
+c 替换
+d 删除
+i 上一行插入
+p 打印
+s 搜索和替换，类似 vim 的查找替换
+Awk 列处理
+1  awk -F&amp;#34;\t&amp;#34; &amp;#39;{ print $1,$3 }&amp;#39; /var/logs/nginx/access.log   </description>
+    </item>
+    
+    <item>
       <title>OpenSSL 工具生成密钥</title>
       <link>https://nixihz.com/tools/OpenSSL-%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
@@ -227,7 +249,8 @@ cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/sharpen-knife/MacOS%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</guid>
-      <description>Magnet 一款辅助视窗排版的软件，花6块钱实现与windows自带的排版相同的体验吧。</description>
+      <description>Magnet 一款辅助视窗排版的软件，花6块钱实现与windows自带的排版相同的体验吧。
+iTerm warp.dev https://www.warp.dev/</description>
     </item>
     
     <item>
@@ -247,7 +270,7 @@ cmd + ，设置中搜索 sql 选择 code style， 可个性化配置sql代码风
 当然这一步仅是启动了屏保，大家设置了以后可能敲击键盘，或者移动鼠标，就退出屏保动画，进入系统了。
 进一步操作，让电脑进入屏保立马锁定电脑。如下图：
 大家可以体验一下，设定启动屏保的触发角，鼠标指针停留一段时间才会触发，而其他则立即触发，这些都是细节，真牛*。
-其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键    描述  快捷键     窗口切换，可以加 shift 反向切换 macos cmd + tab   同一应用窗口切换，可以加 shift 反向切换 macos cmd + `(反引号)|   隐藏窗口（可通过 cmd + tab 切换） macos cmd + h   最小化窗口 （不可通过 cmd + tab 切换） macos cmd + m   macos ctrl + ← 切换到左侧窗口空间，四指左滑   切换到右侧窗口空间， 四指右滑 macos ctrl + →   查看窗口缩略图，四指上滑 macos ctrl + ↑   查看同应用的窗口缩略图 macos ctrl + ↓   打开 emoji 选择器🚀 macos ctrl + cmd + space    一些光标定位快捷键    快捷键  描述     cmd + x macos 剪切当前行   cmd + ← macos 光标到行首   cmd + → macos 光标到行尾   选中光标到行首的文本 cmd + shift + ← macos   macos 选中光标到行尾的文本 cmd + shift + →   ctrl + a *unix 光标到行首 ahead   ctrl + e *unix 光标到行尾 end   ctrl + f *unix 光标向右1个字符 forward   光标向左1个字符 backward ctrl + b *unix   ctrl + w *unix 向左清除一个单词 word   ctrl + k *unix 删除当前光标到行尾   ctrl + u *unix 删除整行输入 undo   ctrl + y *unix 上一步的重做   ctrl + c *unix 取消输入，会保留输入文本 cancel   清屏 ctrl + l (小写L) *unix   ctrl + r *unix 搜索历史命令记录    </description>
+其他  触摸板双指滑动，切换上一页下一页 双指点击，放大缩小 双指右侧滑动，打开通知窗口， 大家分享时，记得开启勿扰模式  键盘  按键重复 和 重复前延迟设置最快和最短移动光标体验起飞。 开发常用F1-F12功能键，推荐使用按 Fn 键以 显示 F1、F2 等键  一些快捷键    描述  快捷键     macos cmd + tab 窗口切换，可以加 shift 反向切换   macos cmd + `(反引号)|同一应用窗口切换，可以加 shift 反向切换|    隐藏窗口（可通过 cmd + tab 切换） macos cmd + h   最小化窗口 （不可通过 cmd + tab 切换） macos cmd + m   macos ctrl + ← 切换到左侧窗口空间，四指左滑   ctrl + → 切换到右侧窗口空间， 四指右滑 macos   查看窗口缩略图，四指上滑 macos ctrl + ↑   查看同应用的窗口缩略图 macos ctrl + ↓   ctrl + cmd + space 打开 emoji 选择器🚀 macos    一些光标定位快捷键    快捷键  描述     cmd + x macos 剪切当前行   cmd + ← macos 光标到行首   cmd + → macos 光标到行尾   cmd + shift + ← macos 选中光标到行首的文本   cmd + shift + → macos 选中光标到行尾的文本   ctrl + a *unix 光标到行首 ahead   ctrl + e *unix 光标到行尾 end   ctrl + f *unix 光标向右1个字符 forward   ctrl + b *unix 光标向左1个字符 backward   ctrl + w *unix 向左清除一个单词 word   ctrl + k *unix 删除当前光标到行尾   删除整行输入 undo ctrl + u *unix   ctrl + y *unix 上一步的重做   取消输入，会保留输入文本 cancel ctrl + c *unix   ctrl + l (小写L) *unix 清屏   ctrl + r *unix 搜索历史命令记录    </description>
     </item>
     
     <item>
@@ -391,6 +414,15 @@ RenderImage when len(FileIDs) == 0 NYI 这一步操作不仅能显示tab和空�
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/blog/new-url/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nixihz.com/doc/%E7%94%BB%E6%95%B0%E6%8D%AE%E6%B5%81%E7%A8%8B%E5%9B%BE-Data-Flow-Diagram/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/doc/%E7%94%BB%E6%95%B0%E6%8D%AE%E6%B5%81%E7%A8%8B%E5%9B%BE-Data-Flow-Diagram/</guid>
       <description></description>
     </item>
     
