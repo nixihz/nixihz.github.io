@@ -5,22 +5,49 @@
     <link>https://nixihz.com/tags/</link>
     <description>Recent content in Tags on nixihz 的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>chrome</title>
-      <link>https://nixihz.com/tags/chrome/</link>
-      <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+      <title>apple m1</title>
+      <link>https://nixihz.com/tags/apple-m1/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://nixihz.com/tags/chrome/</guid>
+      <guid>https://nixihz.com/tags/apple-m1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debug</title>
+      <link>https://nixihz.com/tags/debug/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/debug/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
       <link>https://nixihz.com/tags/development/</link>
-      <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://nixihz.com/tags/go/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://nixihz.com/tags/chrome/</link>
+      <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/tags/chrome/</guid>
       <description></description>
     </item>
     
@@ -48,15 +75,6 @@
       <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nixihz.com/tags/fp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://nixihz.com/tags/go/</link>
-      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nixihz.com/tags/go/</guid>
       <description></description>
     </item>
     

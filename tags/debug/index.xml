@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debug on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/debug/</link>
+    <description>Recent content in debug on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple M1 调试 Go 1.14 项目的唯一解决方案 Docker 远程调试</title>
+      <link>https://nixihz.com/posts/apple-m1-debug-go-1-14/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/apple-m1-debug-go-1-14/</guid>
+      <description>我为什么选择 Mac Studio 人在上海，居家隔离，2个月终于，顺丰快递新款 Mac Studio 终于到手。作为一个软件开发，我选择了如下配置：
+ 64G 1T M1 max 芯片  开发Go项目用 Goland 其实用不了多少内存，作为一个合格的研发人员，提升效率的软件太多了：
+ 数据库管理 DataGrip 得有吧 Docker 、 Minikube 得有吧 个人知识库 Notion 得有吧 Postman 得有吧 代码管理 后台运行个 UpSource 得有吧 画图 EDraw 得有吧 Jupyter Notebook 得有吧 项目进度把控 OmniPlan 得有吧 服务上云以后，运维管理都使用网页，同时开着大几十个网页不过分吧 业余时间写个 App 等等  这一顿操作下来 即使是 16G i7 Mac 也得卡，更何况这糟糕的散热。Mac Studio 这个配置提高工作效率，提升写代码愉悦度，冲它。
+安装基本环境 安装基本软件，AirDrop迁移数据，iCloud 同步，不到 1 小时就配置完毕，真做到开箱即用。
+开始安装开发环境
+ brew oh-my-zsh go 1.18 go 1.16 go 1.</description>
+    </item>
+    
+  </channel>
+</rss>

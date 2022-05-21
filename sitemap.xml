@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nixihz.com/tags/chrome/</loc>
-    <lastmod>2022-05-14T00:00:00+00:00</lastmod>
+    <loc>https://nixihz.com/tags/apple-m1/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/posts/apple-m1-debug-go-1-14/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/debug/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nixihz.com/tags/development/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/go/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/posts/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/chrome/</loc>
     <lastmod>2022-05-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,17 +53,7 @@
   </url>
   
   <url>
-    <loc>https://nixihz.com/tags/</loc>
-    <lastmod>2022-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nixihz.com/sharpen-knife/chrome-setting/</loc>
-    <lastmod>2022-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nixihz.com/</loc>
     <lastmod>2022-05-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -39,11 +64,6 @@
   
   <url>
     <loc>https://nixihz.com/posts/git-flow/</loc>
-    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nixihz.com/posts/</loc>
     <lastmod>2022-05-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -69,11 +89,6 @@
   
   <url>
     <loc>https://nixihz.com/tags/fp/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nixihz.com/tags/go/</loc>
     <lastmod>2021-12-07T00:00:00+00:00</lastmod>
   </url>
   
