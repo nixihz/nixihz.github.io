@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="天天朋友圈天天鼓吹7天学 python 数据分析到底是个啥"><meta property="og:title" content="天天朋友圈天天鼓吹7天学 python 数据分析到底是个啥" />
+<meta property="og:description" content="python 数据分析怎么回事 python 只是一门脚本语言，真正让它拥有各种能力的是各种各样的包。
+而数据分析基本用到的是这个包：
+Pandas
+pandas 是一个快速、强大、灵活且易于使用的开源数据分析和操作工具。
+分析数据，拢共分几步？
+获取原始数据 → 加工数据 → 输出数据。
+如果你有固定的数据源，比如团队里固定格式的 excel 报表，那么 pandas 是非常适合你的。
+使用 pandas 本质上是编写程序，也就是加工数据这一步，虽然 excel 也能做，但是重复的劳动没人愿意做，懒是第一生厂力。既然是程序了，那就能做到重复使用，更改不同的数据源就可以快速得出结果。同时又因为是程序，使得过程非常便于调试，更容易找出出错的步骤。
+这里得出 2 个优点：
+ 可重复执行，平均成本降低。 便于调试，加工时间降低。  安装工具 安装方式有很多种，这里介绍的是最简单的。
+Visual Studio Code python3 pip3
+1 2  pip3 install pandas jupyter openpyxl python -m pip install pandas jupyter openpyxl notebook -U   读取 excel 数据 1 2 3 4 5  import pandas as pd file_name=&#34;周报数据." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nixihz.com/posts/learn-pandas/" />
+<meta property="og:image" content="https://nixihz.com/image/roodblauw.png"/>
+<meta property="article:published_time" content="2022-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-24T00:00:00+00:00" /><meta property="og:site_name" content="nixihz 的技术博客" />
+<title>天天朋友圈天天鼓吹7天学 python 数据分析到底是个啥 | nixihz 的技术博客</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.4f53610f5664e549d598cefec4da3dee3ddf0860af3ec6cda3d29ee876b73677.css" integrity="sha256-T1NhD1Zk5UnVmM7&#43;xNo97j3fCGCvPsbNo9Ke6Ha3Nnc=">
+
+
+<script defer src="/en.search.min.d6712b8f17c8a9de89bee10ee4f1e90b80fcf7af134c6ee420dfa23e32a65bd2.js" integrity="sha256-1nErjxfIqd6JvuEO5PHpC4D8968TTG7kIN&#43;iPjKmW9I="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-44019270-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <link rel=stylesheet href="/js/audiojs/custom.css" >
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/image/logo.png" alt="Logo" /><span>nixihz 的技术博客</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="🔍搜索" aria-label="🔍搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <hr>
+<ul>
+<li><a href="/posts/">1.开发札记</a></li>
+<li><a href="/tools/">2.软件备忘</a></li>
+<li><a href="/sharpen-knife/">3.工欲善其事，必先利其器</a></li>
+<li><a href="/doc/">4.开发文档照着写</a></li>
+</ul>
+<hr>
+<p>小项目</p>
+<ul>
+<li><a href="/flutter-music-app/">过年没啥事，写一个 flutter 音乐播放器吧</a></li>
+<li><a href="/nes/">nes小游戏</a></li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>天天朋友圈天天鼓吹7天学 python 数据分析到底是个啥</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#python-数据分析怎么回事">python 数据分析怎么回事</a></li>
+    <li><a href="#安装工具">安装工具</a></li>
+    <li><a href="#读取-excel-数据">读取 excel 数据</a></li>
+    <li><a href="#使用-python-处理数据">使用 python 处理数据</a></li>
+    <li><a href="#输出-excel-文件">输出 excel 文件</a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+
+
+<link rel=stylesheet href="" >
+
+
+<article class="markdown">
+  <h1>
+    <a href="/posts/learn-pandas/">天天朋友圈天天鼓吹7天学 python 数据分析到底是个啥</a>
+  </h1>
+  <hr/>
+
+
+<div>
+
+  <h5>2022-05-24</h5>
+
+
+
+  
+
+  
+  <div>
+    
+        <a href="/tags/data-science/">data-**science**</a>, 
+        <a href="/tags/python/">python</a>, 
+        <a href="/tags/pandas/">pandas</a>
+  </div>
+  
+
+
+</div>
+
+
+  <p><h1 id="python-数据分析怎么回事">python 数据分析怎么回事</h1>
+<p>python 只是一门脚本语言，真正让它拥有各种能力的是各种各样的包。</p>
+<p>而数据分析基本用到的是这个包：</p>
+<p><strong>Pandas</strong></p>
+<p>pandas 是一个快速、强大、灵活且易于使用的开源数据分析和操作工具。</p>
+<p>分析数据，拢共分几步？</p>
+<p>获取原始数据 → 加工数据 → 输出数据。</p>
+<p>如果你有固定的数据源，比如团队里固定格式的 excel 报表，那么 pandas 是非常适合你的。</p>
+<p>使用 pandas 本质上是编写程序，也就是加工数据这一步，虽然 excel 也能做，但是重复的劳动没人愿意做，懒是第一生厂力。既然是程序了，那就能做到重复使用，更改不同的数据源就可以快速得出结果。同时又因为是程序，使得过程非常便于调试，更容易找出出错的步骤。</p>
+<p>这里得出 2 个优点：</p>
+<ol>
+<li>可重复执行，平均成本降低。</li>
+<li>便于调试，加工时间降低。</li>
+</ol>
+<h1 id="安装工具">安装工具</h1>
+<p>安装方式有很多种，这里介绍的是最简单的。</p>
+<p>Visual Studio Code python3 pip3</p>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">    pip3 install pandas jupyter openpyxl
+    python -m pip install pandas jupyter openpyxl notebook -U
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="读取-excel-数据">读取 excel 数据</h1>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">    <span style="color:#f92672">import</span> <span style="color:#111">pandas</span> <span style="color:#f92672">as</span> <span style="color:#111">pd</span>
+    <span style="color:#111">file_name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;周报数据.xlsx&#34;</span>
+    
+    <span style="color:#75715e"># 从 excel 文件中导入数据</span>
+    <span style="color:#111">df</span> <span style="color:#f92672">=</span> <span style="color:#111">pd</span><span style="color:#f92672">.</span><span style="color:#111">read_excel</span><span style="color:#111">(</span><span style="color:#111">file_name</span><span style="color:#111">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="使用-python-处理数据">使用 python 处理数据</h1>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">    <span style="color:#75715e"># 筛选我的数据，也就是&#34;员工&#34;这一列等于&#34;老铁&#34;的数据</span>
+    <span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#111">df</span><span style="color:#111">[</span><span style="color:#111">df</span><span style="color:#111">[</span><span style="color:#d88200">&#34;员工&#34;</span><span style="color:#111">]</span><span style="color:#f92672">==</span><span style="color:#d88200">&#34;老铁&#34;</span><span style="color:#111">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="输出-excel-文件">输出 excel 文件</h1>
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">    <span style="color:#75715e"># 输出数据</span>
+    <span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">to_excel</span><span style="color:#111">(</span><span style="color:#111">file_name</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#39;-我的数据.xlsx&#39;</span><span style="color:#111">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></p>
+</article>
+
+
+
+
+
+
+
+
+<script src=""></script>
+
+
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#python-数据分析怎么回事">python 数据分析怎么回事</a></li>
+    <li><a href="#安装工具">安装工具</a></li>
+    <li><a href="#读取-excel-数据">读取 excel 数据</a></li>
+    <li><a href="#使用-python-处理数据">使用 python 处理数据</a></li>
+    <li><a href="#输出-excel-文件">输出 excel 文件</a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+
+  <script src="/js/audiojs/audio.min.js"></script>
+  <script src="/js/audiojs/custom.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8997196463219106"
+     crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: fixed;bottom: 10px; left:10px; font-size: 12px;">
+  <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022013452号-1</a>
+</div>
+	

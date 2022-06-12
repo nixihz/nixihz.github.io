@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pandas on nixihz 的技术博客</title>
+    <link>https://nixihz.com/tags/pandas/</link>
+    <description>Recent content in pandas on nixihz 的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nixihz.com/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>天天朋友圈天天鼓吹7天学 python 数据分析到底是个啥</title>
+      <link>https://nixihz.com/posts/learn-pandas/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nixihz.com/posts/learn-pandas/</guid>
+      <description>python 数据分析怎么回事 python 只是一门脚本语言，真正让它拥有各种能力的是各种各样的包。
+而数据分析基本用到的是这个包：
+Pandas
+pandas 是一个快速、强大、灵活且易于使用的开源数据分析和操作工具。
+分析数据，拢共分几步？
+获取原始数据 → 加工数据 → 输出数据。
+如果你有固定的数据源，比如团队里固定格式的 excel 报表，那么 pandas 是非常适合你的。
+使用 pandas 本质上是编写程序，也就是加工数据这一步，虽然 excel 也能做，但是重复的劳动没人愿意做，懒是第一生厂力。既然是程序了，那就能做到重复使用，更改不同的数据源就可以快速得出结果。同时又因为是程序，使得过程非常便于调试，更容易找出出错的步骤。
+这里得出 2 个优点：
+ 可重复执行，平均成本降低。 便于调试，加工时间降低。  安装工具 安装方式有很多种，这里介绍的是最简单的。
+Visual Studio Code python3 pip3
+1 2  pip3 install pandas jupyter openpyxl python -m pip install pandas jupyter openpyxl notebook -U   读取 excel 数据 1 2 3 4 5  import pandas as pd file_name=&amp;#34;周报数据.</description>
+    </item>
+    
+  </channel>
+</rss>

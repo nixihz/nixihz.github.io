@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nixihz.com/tags/data-science/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/pandas/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/posts/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/python/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/tags/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nixihz.com/posts/learn-pandas/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nixihz.com/tags/apple-m1/</loc>
     <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url>
@@ -24,21 +59,6 @@
   
   <url>
     <loc>https://nixihz.com/tags/go/</loc>
-    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nixihz.com/posts/</loc>
-    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nixihz.com/tags/</loc>
-    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nixihz.com/</loc>
     <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url>
   
