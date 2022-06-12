@@ -2,5 +2,5 @@
 /themes
 .vscode
 /themes/blog
-configs/prod.yaml
+configs/prod.yml
 content/posts
