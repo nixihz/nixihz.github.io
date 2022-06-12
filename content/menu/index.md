@@ -16,4 +16,4 @@ headless: true
 小项目
 
 - [过年没啥事，写一个 flutter 音乐播放器吧]({{< relref "/flutter-music-app" >}})
-- [nes小游戏](/nes/)
+- [nes小游戏]({{< relref "/nes/" >}})

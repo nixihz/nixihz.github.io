@@ -64,12 +64,12 @@ date: 2021-07-26
 
 |描述||快捷键|
 |----|----|----|
-|macos|cmd + tab|窗口切换，可以加 shift 反向切换|
+|窗口切换，可以加 shift 反向切换|macos|cmd + tab|
 |macos|cmd + `(反引号)|同一应用窗口切换，可以加 shift 反向切换|
-|隐藏窗口（可通过 cmd + tab 切换）|macos|cmd + h|
+|macos|cmd + h|隐藏窗口（可通过 cmd + tab 切换）|
 |最小化窗口 （不可通过 cmd + tab 切换）|macos|cmd + m|
-|macos|ctrl + ←|切换到左侧窗口空间，四指左滑|
-|ctrl + →|切换到右侧窗口空间， 四指右滑|macos|
+|切换到左侧窗口空间，四指左滑|macos|ctrl + ←|
+|切换到右侧窗口空间， 四指右滑|macos|ctrl + →|
 |查看窗口缩略图，四指上滑|macos|ctrl + ↑|
 |查看同应用的窗口缩略图|macos|ctrl + ↓|
 |ctrl + cmd + space|打开 emoji 选择器🚀|macos|
@@ -85,12 +85,12 @@ date: 2021-07-26
 |cmd + shift + →|macos|选中光标到行尾的文本|
 |ctrl + a|*unix|光标到行首 ahead|
 |ctrl + e|*unix|光标到行尾 end|
-|ctrl + f|*unix|光标向右1个字符 forward|
+|光标向右1个字符 forward|ctrl + f|*unix|
 |ctrl + b|*unix|光标向左1个字符 backward|
-|ctrl + w|*unix|向左清除一个单词 word|
+|向左清除一个单词 word|ctrl + w|*unix|
 |ctrl + k|*unix|删除当前光标到行尾|
-|删除整行输入 undo|ctrl + u|*unix|
+|ctrl + u|*unix|删除整行输入 undo|
 |ctrl + y|*unix|上一步的重做|
-|取消输入，会保留输入文本 cancel|ctrl + c|*unix|
+|ctrl + c|*unix|取消输入，会保留输入文本 cancel|
 |ctrl + l (小写L)|*unix|清屏|
-|ctrl + r|*unix|搜索历史命令记录|
+|搜索历史命令记录|ctrl + r|*unix|
