@@ -4,3 +4,4 @@
 /themes/blog
 configs/prod.yml
 content/posts
+.idea/
