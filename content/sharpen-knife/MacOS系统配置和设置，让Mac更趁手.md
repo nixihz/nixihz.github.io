@@ -68,7 +68,7 @@ date: 2021-07-26
 |同一应用窗口切换，可以加 shift 反向切换|macos|cmd + `(反引号)|
 |隐藏窗口（可通过 cmd + tab 切换）|macos|cmd + h|
 |最小化窗口 （不可通过 cmd + tab 切换）|macos|cmd + m|
-|切换到左侧窗口空间，四指左滑|macos|ctrl + ←|
+|macos|ctrl + ←|切换到左侧窗口空间，四指左滑|
 |切换到右侧窗口空间， 四指右滑|macos|ctrl + →|
 |查看窗口缩略图，四指上滑|macos|ctrl + ↑|
 |查看同应用的窗口缩略图|macos|ctrl + ↓|
@@ -76,21 +76,21 @@ date: 2021-07-26
 
 ### 一些光标定位快捷键
 
-|快捷键||描述|
+||描述|快捷键|
 |----|----|----|
 |cmd + x|macos|剪切当前行|
-|光标到行首|cmd + ←|macos|
-|cmd + →|macos|光标到行尾|
+|cmd + ←|macos|光标到行首|
+|macos|光标到行尾|cmd + →|
 |cmd + shift + ←|macos|选中光标到行首的文本|
-|macos|选中光标到行尾的文本|cmd + shift + →|
-|光标到行首 ahead|ctrl + a|*unix|
+|cmd + shift + →|macos|选中光标到行尾的文本|
+|ctrl + a|*unix|光标到行首 ahead|
 |ctrl + e|*unix|光标到行尾 end|
-|ctrl + f|*unix|光标向右1个字符 forward|
+|*unix|光标向右1个字符 forward|ctrl + f|
 |光标向左1个字符 backward|ctrl + b|*unix|
-|*unix|向左清除一个单词 word|ctrl + w|
+|ctrl + w|*unix|向左清除一个单词 word|
 |ctrl + k|*unix|删除当前光标到行尾|
 |ctrl + u|*unix|删除整行输入 undo|
 |ctrl + y|*unix|上一步的重做|
 |ctrl + c|*unix|取消输入，会保留输入文本 cancel|
 |ctrl + l (小写L)|*unix|清屏|
-|ctrl + r|*unix|搜索历史命令记录|
+|搜索历史命令记录|ctrl + r|*unix|
