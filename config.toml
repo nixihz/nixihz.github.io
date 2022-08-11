@@ -8,6 +8,7 @@ theme = 'book'
 googleAnalytics = "UA-44019270-5"
 disqusShortname = "fence-x"
 
+refLinksErrorLevel = "WARNING"
 
 # Book configuration
 disablePathToLower = true
@@ -30,7 +31,7 @@ disablePathToLower = true
     style = "monokailight"
     tabWidth = 4
   [markup.blackFriday]
-    angledQuotes = true 
+    angledQuotes = true
     footnoteAnchorPrefix = ""
     footnoteReturnLinkContents = ""
     fractions = true
