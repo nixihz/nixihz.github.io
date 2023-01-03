@@ -83,27 +83,27 @@ date: 2021-07-26
 |最小化窗口 （不可通过 cmd + tab 切换）|macos|cmd + m|
 |切换到左侧窗口空间，四指左滑|macos|ctrl + ←|
 |切换到右侧窗口空间， 四指右滑|macos|ctrl + →|
-|查看窗口缩略图，四指上滑|macos|ctrl + ↑|
+|ctrl + ↑|查看窗口缩略图，四指上滑|macos|
 |查看同应用的窗口缩略图|macos|ctrl + ↓|
 |打开 emoji 选择器🚀|macos|ctrl + cmd + space|
 
 ### 一些光标定位快捷键
 
-||描述|快捷键|
+|快捷键||描述|
 |----|----|----|
-|macos|剪切当前行|cmd + x|
+|cmd + x|macos|剪切当前行|
 |cmd + ←|macos|光标到行首|
-|cmd + →|macos|光标到行尾|
+|macos|光标到行尾|cmd + →|
 |cmd + shift + ←|macos|选中光标到行首的文本|
-|选中光标到行尾的文本|cmd + shift + →|macos|
+|cmd + shift + →|macos|选中光标到行尾的文本|
 |光标到行首 ahead|ctrl + a|*unix|
 |ctrl + e|*unix|光标到行尾 end|
 |ctrl + f|*unix|光标向右1个字符 forward|
 |*unix|光标向左1个字符 backward|ctrl + b|
-|ctrl + w|*unix|向左清除一个单词 word|
-|删除当前光标到行尾|ctrl + k|*unix|
-|*unix|删除整行输入 undo|ctrl + u|
-|ctrl + y|*unix|上一步的重做|
+|向左清除一个单词 word|ctrl + w|*unix|
+|ctrl + k|*unix|删除当前光标到行尾|
+|ctrl + u|*unix|删除整行输入 undo|
+|上一步的重做|ctrl + y|*unix|
 |ctrl + c|*unix|取消输入，会保留输入文本 cancel|
-|*unix|清屏|ctrl + l (小写L)|
+|ctrl + l (小写L)|*unix|清屏|
 |ctrl + r|*unix|搜索历史命令记录|
